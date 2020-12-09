@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+}
+
+
+@import "../src/components/Header/header";
+@import "./variables";
+@import "../src/components/WallFour/fitness";
+@import "../src/components/SeekLogo/seekLogo";
+@import "../src/Pages/components/floatBox";
+@import "../src/components/Counter/counter";
+@import "../src/components/Floor/floor";
+@import "../src/components/Floor/devSkills";
+@import "../src/components/WallFour/wallFour";
+@import "../src/components/WallOne/projectNav";
+@import "../src/components/WallOne/wallOne";
+@import "../src/components/WallThree/wallThree";
+@import "../src/components/WallTwo/walltwo";
+// @import "";
+
+
+
+body {
+    margin:0;
+    padding:0;
+    // background-color: rgba(50,50,50,.8);
+    font-family: 'Courier New', Courier, monospace;
+    // font-family: 'Indie Flower', cursive, 'Courier New', Courier, monospace;
+    color: $textColor;
+    font-size: 20px;
+}
+
+
+
+main {
+    // margin-top: 9vh;
+    background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/UploadPhotosToWeb/IMG_0257.PNG");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* HTML TAGS */
+div {
+    border: 1px dotted rgba(40,40,40,.8);
+}
+
+h2 {
+    font-size: 40px;
+    border: 10px solid red;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    color: pink;
+}    
+
+
+img {
+    width: 50px;
+}
+
+/* ———————————————————————————————————————————————————— */
+
+
+/* IDS */
+
+#room {
+    border: none;
+}
+
+.wall {
+
+}
+
+.project {
+    .projectDescription{
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.stillObject {
+    /* position: relative; */
+    background-color: transparent;
+    background: transparent;
+}
+
+.shelf {
+
+}
+
+/*(query)*/
+.animate {
+    /* position: absolute; */
+    // background-color: transparent;
+    // background: transparent;
+}
+
+
+
+
+
+/* WALL TWO */
+#wallTwo {
+    // background-color: rgba(50,150,50,.7);
+    // position: absolute;
+    // left: 15vw;
+}
+
+
+.fitness {
+
+}
+
+.refMinifi {
+
+}
+
+.music {
+
+}
+
+.maps {
+
+}
+
+.map {
+
+}
+
+.book {
+
+}
+
+
+.educationLife {
+
+}
+
+#familyPhoto {
+
+}
+
+#ZackLiz {
+
+}
+
+#NAUBA {
+    /* background-color: transparent; */
+    /* background: transparent; */
+}
+
+#NAUMA {
+
+}
+
+#GASEI {
+
+}
+
+
+.art {
+}
+
+#artbox {
+    z-index: 5;
+
+}
+
+#books {
+
+}
+
+#ipad {
+    z-index: 5;
+
+}
+
+#paintset {
+    z-index: 5;
+
+}
+
+#cantippedover {
+    z-index: 5;
+
+}
+
+
+
+
+#guitar {
+
+}
+
+#mic {
+
+}
+
+#amplifier {
+
+}
+
+#musicShelf {
+
+}
+
+#musicshelfobj {
+
+}
+
+#cds {
+
+}
+
+#journals {
+
+}
+
+#pen {
+
+}
+
+#headphones {
+
+}
+
+
+#arizona {
+
+}
+
+#newMexico {
+
+}
+
+#france {
+
+}
+
+#california {
+
+}
+
+#worldMap {
+
+}
+
+
+
+/* WALL THREE */
+#wallThree {
+    /* background-color: rgba(50,50,150,.7); */
+}
+
+
+#window {
+
+}
+
+#bench {
+
+}
+
+#openBook {
+
+}
+
+#blanket {
+
+}
+
+
+
+/* WALLFOUR */
+#wallFour {
+    /* background-color: rgba(75,75,50,.7); */
+}
+
+
+#bookshelf {
+
+}
+
+#vase {
+
+}
+
+#bikeend {
+
+}
+
+#book1 {
+
+}
+
+#book2 {
+
+}
+
+#book3 {
+
+}
+
+#book4 {
+
+}
+
+#bikeend {
+
+}
+
+——
+#typewritershelf {
+
+}
+
+#pen cup {
+
+}
+
+#typewriter {
+
+}
+
+#paperstack {
+
+}
+
+——
+#bookcase {
+    /* background-image: url("/UploadPhotosToWeb/new/IMG_0183\ 2.png"); */
+}
+
+#bookcaseShelf4 {
+
+}
+
+#bookcaseShelf3 {
+
+}
+
+#bookcaseShelf2 {
+
+}
+
+#bookcaseShelf1 {
+
+}
+
+#bookcaseShelf0 {
+
+}
+
+——
+#refMBCrunch {
+
+}
+
+#cup1 {
+
+}
+
+#cup2 {
+
+}
+
+#cup3 {
+
+}
+
+#paperball {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* COUNTER */
+
+#counter {
+    /* background-color: rgba(75,50,75,.7); */
+}
+
+
+.letter {
+    /* background-color: ; */
+    /* width: 100px; */
+    /* height: 50px; */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#letter-resume {
+    position: absolute;
+    z-index: 5;
+}
+
+#letter-gaCertificate {
+    margin: 50px;
+}
+
+#coffeeMug {
+
+}
+
+

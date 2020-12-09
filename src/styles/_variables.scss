@@ -1,0 +1,68 @@
+
+:root {
+    /* FONTS */
+    --base-font: 'Indie Flower', cursive, 'Courier New', Courier, monospace;
+}
+    /* LIGHT MODE */
+    /* --lightcolor1: ;
+    --lightcolor2: ;
+    --lightcolor3: ;
+    --lightcolor4: ;
+    --lightcolor5: ;
+    --lightcolor6: ;
+    --lightcolor7: ;
+    --lightcolor8: ;
+    --lightcolor9: ;
+    --lightcolor10: ; */
+
+    /* DARK MODE */
+    /* --darkcolor1: ;
+    --darkcolor2: ;
+    --darkcolor3: ;
+    --darkcolor4: ;
+    --darkcolor5: ;
+    --darkcolor6: ;
+    --darkcolor7: ;
+    --darkcolor8: ;
+    --darkcolor9: ;
+    --darkcolor10: ; */
+
+
+
+
+$primaryBtn : rgb(160, 89, 89);
+$secondaryBtn : rgb(85, 34, 167);
+$textColor: rgb(245, 243, 243);
+$iceblue: rgb(161, 202, 216);
+$semiTransparent: rgba(235,235,235,.7);
+
+@mixin buttonMix {
+    &::before{
+        background-color: $primaryBtn;
+        color: $textColor;
+        // transition: ;
+    }
+    &:hover{
+        transform: 1.2;
+
+    }
+    &::after{
+
+    }
+
+}
+
+
+// z-index guidelines
+    // 0s       reserved for    static images & regular html tags
+    // 10s      reserved for    seek w/ scroll animation
+    // 20s      reserved for    seek w/ scroll animation
+    // 30s      reserved for
+    // 40s      reserved for
+    // 50s      reserved for
+    // 60s      reserved for
+    // 70s      reserved for
+    // 80s      reserved for
+    // 90s      reserved for    _floatBox & contents
+
+

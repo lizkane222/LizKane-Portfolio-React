@@ -1,0 +1,222 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  /* FONTS */
+  --base-font: 'Courier New', Courier, monospace;
+}
+
+/* LIGHT MODE */
+/* --lightcolor1: ;
+    --lightcolor2: ;
+    --lightcolor3: ;
+    --lightcolor4: ;
+    --lightcolor5: ;
+    --lightcolor6: ;
+    --lightcolor7: ;
+    --lightcolor8: ;
+    --lightcolor9: ;
+    --lightcolor10: ; */
+/* DARK MODE */
+/* --darkcolor1: ;
+    --darkcolor2: ;
+    --darkcolor3: ;
+    --darkcolor4: ;
+    --darkcolor5: ;
+    --darkcolor6: ;
+    --darkcolor7: ;
+    --darkcolor8: ;
+    --darkcolor9: ;
+    --darkcolor10: ; */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid black;
+  height: 7vh;
+  background: lightblue;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header .button {
+  background-color: #a05959;
+  background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/lizkane-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 10vw;
+  min-width: 6vw;
+  max-height: 8vh;
+  min-height: 4vh;
+}
+
+header .button:hover {
+  background-color: #5522a7;
+  cursor: pointer;
+  color: lightblue;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid black;
+  width: 100vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid black;
+}
+
+header nav h3 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 5%;
+  border: 1px solid black;
+}
+
+
+/* FLOOR */
+#floor {
+  /* background-color: rgba(50,75,75,.7); */
+}
+
+.skill {
+  max-width: 20px;
+}
+
+
+/* WALL ONE */
+#wallOne {
+  /* background-color: rgba(150,50,50,.7); */
+}
+
+.projectboard {
+  /* background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/new/IMG_0174_2.PNG"); */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(50, 50, 50, 0.8);
+  font-family: 'Indie Flower', cursive, 'Courier New', Courier, monospace;
+  color: #f5f3f3;
+  font-size: 20px;
+}
+
+main {
+  /* background-image: url("/UploadPhotosToWeb/IMG_0257.PNG"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* HTML TAGS */
+div {
+  border: 1px dotted rgba(40, 40, 40, 0.8);
+  /* position: relative; */
+}
+
+/* ———————————————————————————————————————————————————— */
+/* IDS */
+#room {
+  border: none;
+}
+
+.stillObject {
+  /* position: relative; */
+  background-color: transparent;
+  background: transparent;
+}
+
+/*(query)*/
+.animate {
+  /* position: absolute; */
+}
+
+/* WALL TWO */
+#wallTwo {
+  /* background-color: rgba(50,150,50,.7); */
+}
+
+#NAUBA {
+  /* background-color: transparent; */
+  /* background: transparent; */
+}
+
+#artbox {
+  z-index: 5;
+}
+
+#ipad {
+  z-index: 5;
+}
+
+#paintset {
+  z-index: 5;
+}
+
+#cantippedover {
+  z-index: 5;
+}
+
+/* WALL THREE */
+#wallThree {
+  /* background-color: rgba(50,50,150,.7); */
+}
+
+/* WALLFOUR */
+#wallFour {
+  /* background-color: rgba(75,75,50,.7); */
+}
+
+——
+#bookcase {
+  /* background-image: url("/UploadPhotosToWeb/new/IMG_0183\ 2.png"); */
+}
+
+/* COUNTER */
+#counter {
+  /* background-color: rgba(75,50,75,.7); */
+}
+
+.letter {
+  /* background-color: ; */
+  /* width: 100px; */
+  /* height: 50px; */
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#letter-resume {
+  position: absolute;
+  z-index: 5;
+}
+
+#letter-gaCertificate {
+  margin: 50px;
+}
+/*# sourceMappingURL=style.css.map */
