@@ -1,10 +1,11 @@
 import React from "react";
 import Item from "./Item"
 import Project from "./Project"
+import FloatBox from "./FloatBox/FloatBox"
 // import ProjectBoardImg from "./UploadPhotosToWeb/new/IMG_0174 2.PNG"
 
 // EKSEED IMGS
-import EkseedLogo from "./UploadPhotosToWeb/ekseed/ekseedLOGO.png"
+import EkseedLogo from "./UploadPhotosToWeb/ekseed/ekseed.png"
 import API from "./UploadPhotosToWeb/ekseed/1-API.jpeg"
 import Login from "./UploadPhotosToWeb/ekseed/2-Login.jpeg"
 import UserPage from "./UploadPhotosToWeb/ekseed/2b-UserPage.jpeg"
@@ -23,6 +24,7 @@ import DeviantLogo from "./UploadPhotosToWeb/deviant/deviant1.png"
 // MINIFI IMGS
 import MinifiLogo from "./UploadPhotosToWeb/minifi/minifi.png"
 // import  from "./UploadPhotosToWeb"
+
 import MBCrunchLogo from "./UploadPhotosToWeb/mbcrunch/mbcrunch.png"
 // import  from "./UploadPhotosToWeb"
 
@@ -44,10 +46,18 @@ import FemanonLogo from "./UploadPhotosToWeb/femanon/IMG_0172_2.PNG"
 
 const ProjectList = () => {
     
-    // const EkseedGalleryArray = [{img: API, descImg:"Collection of Companies where users have connections within Ekseed"},{img: Login, descImg: "User can login or signup using a modal"},{img: UserPage, descImg: "Upon signing up user is brought to Profile page to add personal information so that he can share this data with future connections."},{img: UserNetworks, descImg: "If already existing user upon logging in the user is directed to their ekseed page displaying all of their networks with the user's various connections"},{img: NetworkConnections, descImg: "Upon clicking on a networks main image all of the user's connections that exist within that network are displayed on scroll on the left. To view connection click on an image."},{img: SkeletonPage, descImg: "While the connection content is loading the connection skeleton page is displayed"},{img: ConnectionPage, descImg: "Upon loading the user's connection information is displayed. The content is blank by default, only existing once the user creates notes or contact details for the connection"},{img: ShareConnection, descImg: "By clicking share on the connection's page the user can share that connection's data with the user's other connections or even export."},{img: ViewConnectionsAtCompany, descImg: "If at the origin Ekseed company api page, the user can click on any company and add connections that are affiliated with a company or if connections have already been made then their affiliated companies will auto-fill with the user's connection images."}]
-
+    const EkseedGalleryArray = [{img: API, descImg:"Collection of Companies where users have connections within Ekseed"},{img: Login, descImg: "User can login or signup using a modal"},{img: UserPage, descImg: "Upon signing up user is brought to Profile page to add personal information so that he can share this data with future connections."},{img: UserNetworks, descImg: "If already existing user upon logging in the user is directed to their ekseed page displaying all of their networks with the user's various connections"},{img: NetworkConnections, descImg: "Upon clicking on a networks main image all of the user's connections that exist within that network are displayed on scroll on the left. To view connection click on an image."},{img: SkeletonPage, descImg: "While the connection content is loading the connection skeleton page is displayed"},{img: ConnectionPage, descImg: "Upon loading the user's connection information is displayed. The content is blank by default, only existing once the user creates notes or contact details for the connection"},{img: ShareConnection, descImg: "By clicking share on the connection's page the user can share that connection's data with the user's other connections or even export."},{img: ViewConnectionsAtCompany, descImg: "If at the origin Ekseed company api page, the user can click on any company and add connections that are affiliated with a company or if connections have already been made then their affiliated companies will auto-fill with the user's connection images."}]
+    const DeviantGalleryArray = [{img: DeviantLogo, descImg: "logo"}] 
+    const MinifiGalleryArray = [{img: MinifiLogo, descImg: "logo"}] 
+    const MBCrunchGalleryArray = [{img: MBCrunchLogo, descImg: "logo"}] 
+    const NoshGalleryArray = [{img: NoshLogo, descImg: "logo"}] 
+    const WayfarerGalleryArray = [{img: WayfarerLogo, descImg: "logo"}] 
+    const FemanonGalleryArray = [{img: FemanonLogo, descImg: "logo"}] 
+    // const PozersGalleryArray = [] 
+    // const EkseedGalleryArray = [] 
     // const DeviantGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
     // const MinifiGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
+    // const MBCrunchGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
     // const NoshGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
     // const WayfarerGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
     // const FemanonGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
@@ -65,21 +75,36 @@ const ProjectList = () => {
     // const Description = "An organizational app to help you exseed expectations when networking"
     // const EkseedGallery = EkseedGalleryArray.map(image => <Photo imageItem={image.img} imageDesc={image.descImg}/>)
 
-    // const roomArray = [ {name: "projectBoard", img: ProjectBoardImg, x:200}, {name: "basketball"}, {name: "vase"}]
-    // const projectArray = [ {name: "Ekseed", logo: EkseedLogo, proDescription: EkseedDescription, proGallery:EkseedGalleryArray, x:100, y: 200, width: 100, zindex:1, classes="project animate", proId:"Ekseed"}
+    const EkseedGitHub = "https://github.com/lizkane222/Fem-Anon";
+    const DeviantGitHub = "https://github.com/lizkane222/Deviant-Decrypt";
+    const MinifiGitHub = "https://github.com/lizkane222/TamagachiFit";
+    const MBCrunchGitHub = "https://github.com/lizkane222/MunchBunchCrunch";
+    const NoshGitHub = "https://github.com/lizkane222/nosh";
+    const WayfarerGitHub = "https://github.com/lizkane222/WAYFARER";
+    const FemanonGitHub = "https://github.com/lizkane222/Fem-Anon";
+    // const PozersGitHub = "";
+    // const Ekseed GitHub = "";
+
+
+
     
-    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, proDescription:EkseedDescription, 
-    x:100, y:100, width:100, zindex:1, classes:"project animate", proId:"Ekseed"}, {name: "Deviant", logo: DeviantLogo, proDescription: DeviantDescription, x:200, y: 200, width: 100, zindex:1, classes:"project animate", proId:"Deviant"}, {name: "Minifi", logo: MinifiLogo, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, classes:"project animate", proId:"Minifi"}, {name: "MBCrunch", logo: MBCrunchLogo, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, classes:"project animate", proId:"MBCrunch"}, {name: "Nosh", logo: NoshLogo, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, classes:"project animate", proId:"Nosh"}, {name: "Wayfarer", logo: WayfarerLogo, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, classes:"project animate", proId:"Wayfarer"}, {name: "Femanon", logo: FemanonLogo, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, classes:"project animate", proId:"Femanon"},
-    ]
+    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed"}, {name: "Deviant", logo: DeviantLogo, github: DeviantGitHub, proGallery:DeviantGalleryArray, proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant"}, {name: "Minifi", logo: MinifiLogo, github: MinifiGitHub, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi"}, {name: "MBCrunch", logo: MBCrunchLogo, github: MBCrunchGitHub, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch"}, {name: "Nosh", logo: NoshLogo, github: NoshGitHub, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh"}, {name: "Wayfarer", logo: WayfarerLogo, github: WayfarerGitHub, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer"}, {name: "Femanon", logo: FemanonLogo, github: FemanonGitHub, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon"}]
 
-    // const roomItems = roomArray.map(item => {return <Item name={item.name} img={item.img} style={{"left":item.x, "position":"absolute"}}/>})
-    // const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} gallery={project.proGallery} style={{"class":project.classes, "left":project.x, "top":project.y, "width":project.width, "zindex":project.zindex, "id":project.proId}}/>})
+    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} gallery={project.proGallery} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId}}/>})
 
-    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} style={{"className":project.classes, "left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId}}/>})
+
+
+    // for(item in projectItems){
+    //     useState
+    // }
+
+
 
     return (
     <div>
-        {projectItems}
+        <div className="projectBoard">
+                {projectItems}
+        </div>
     </div>
     )
 }

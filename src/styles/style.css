@@ -1,8 +1,9 @@
 @charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
+@import url("https://www.w3schools.com/w3css/4/w3.css");
 
 :root {
   /* FONTS */
@@ -31,6 +32,30 @@
     --darkcolor8: ;
     --darkcolor9: ;
     --darkcolor10: ; */
+
+  body {
+    /* <img src={Seek7} alt="seek logo layer" id="seekPhoto11" class="seekLogo layer"></img> */
+    background-image: url("../components/Room/UploadPhotosToWeb/seek/Seek-1-7.png");
+    margin: 0;
+    padding: 0;
+    background-color: rgba(50, 50, 50, 1);
+    font-family: 'Courier New', Courier, monospace;
+    color: #f5f3f3;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+  }
+
+  #seekPhoto11 {
+    grid-area: "seek";
+  
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  z-index:-1;
+  
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,10 +67,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 7vh;
-  background: lightblue;
+  /* background: lightblue; */
   width: 100vw;
+  z-index:200;
   position: fixed;
   top: 0;
   left: 0;
@@ -64,7 +90,7 @@ header .button {
 }
 
 header .button:hover {
-  background-color: #5522a7;
+  /* background-color: #5522a7; */
   cursor: pointer;
   color: lightblue;
   width: -webkit-fit-content;
@@ -73,6 +99,7 @@ header .button:hover {
 }
 
 header nav {
+  z-index:200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,12 +110,13 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  text-decoration-line: none;
   width: 100vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 header nav h3 {
@@ -96,7 +124,7 @@ header nav h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 5%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 
@@ -109,36 +137,247 @@ header nav h3 {
   max-width: 20px;
 }
 
+main {
+  background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/IMG_0256.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  left:0;
+}
 
+/* HTML TAGS */
+/* div {
+  border: 1px dotted rgba(40, 40, 40, 0.8); */
+  /* position: relative; */
+/* } */
 /* WALL ONE */
 #wallOne {
   /* background-color: rgba(150,50,50,.7); */
 }
+.wrapperFloatBox{
+  background-color: rgba(40, 40, 40, 1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
-.projectboard {
+.floatBox {
+  position: relative;
+  min-width: 85vw;
+  min-height: 85vh;
+  z-index: 99;
+  margin: none;
+}
+
+.projectBoard {
   /* background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/new/IMG_0174_2.PNG"); */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgba(50, 50, 50, 0.8);
-  font-family: 'Indie Flower', cursive, 'Courier New', Courier, monospace;
-  color: #f5f3f3;
-  font-size: 20px;
-}
-
-main {
-  /* background-image: url("/UploadPhotosToWeb/IMG_0257.PNG"); */
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
+  position: absolute;
+  max-width: 30vw;
+  max-height: 15vh;
+  z-index: 9;
+  top: 125vh;
+  
 }
 
-/* HTML TAGS */
-div {
-  border: 1px dotted rgba(40, 40, 40, 0.8);
-  /* position: relative; */
+.projectboard > .projectNameLogo {
+
 }
+
+.projectLogoInactive {
+  /* min-width: 30%; */
+  margin: 5% 3%;
+}
+.visitedProject {
+box-shadow: indigo;
+}
+
+.activeProject {
+  
+}
+
+.droppable {
+  border: 1.5px ridge green;
+}
+
+.projectNameLogo {
+  grid-area: nameLogo;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 5px;
+  overflow: hidden;
+  /* grid-column: 1/-1;
+  grid-row: 1/2; */
+}
+
+.projectName {
+  text-shadow: -2px 2px 0px indianred;
+  font-size: 2.5em;
+  margin: 0 5%;
+}
+
+.projectLogoActive {
+  margin: 0 15px;
+  width: 30%;
+  
+}
+
+.projectDescription{
+  grid-area: description;
+  /* grid-column: 1/4;
+  grid-row: 2/3; */
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px groove gainsboro;
+  margin: 5px;
+  overflow: scroll;
+}
+.carousel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  contain: content;
+}
+
+.carousel-image-container {
+
+}
+
+/* Wrap the image and alt text */
+  /* Will be added with js */
+    .alt-wrap { 
+      display: block;
+      position: relative;
+      margin: 20px;
+      color: whitesmoke;
+      border: 1px solid mediumorchid;
+    }
+
+  /* The alt text itself */
+  /* Will be added with js */
+    .alt-wrap p.alt {
+      position: absolute;
+      opacity: 0; /* hide initially */
+      left: 0; right: 0; bottom: 0;
+      margin: 0;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 22px;
+      background-color: rgba(0,0,0,0.8);
+      transition: all 300ms ease;
+      transition-delay: 300ms;
+    }
+
+  /* Hovering over the wrapper shows its alt p*/
+    .alt-wrap:hover > p.alt { 
+      opacity: 1; 
+      transition-delay: 0s;
+    }
+
+    
+.projectGalleryImage {
+  max-width: 95%;
+  
+}
+
+.left-button {
+
+}
+
+.right-button {
+
+}
+
+.projectMore {
+  grid-area: more;
+  /* grid-column: 1/4;
+  grid-row: 3/4; */
+  border: 2px groove gainsboro;
+  margin: 5px;
+}
+
+.projectGallery {
+  grid-area: gallery;
+  /* grid-column: 5/7;
+  grid-row: 2/4; */
+  border: 2px groove gainsboro;
+  margin: 5px;
+  display: flexbox;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.projectPhotos {
+  margin: 5px;
+}
+
+.projectCode {
+  margin: 5px;
+}
+
+.projectContainer {
+  display: grid;
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: 5px auto;
+  border: 4px solid salmon;
+  contain: content;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-areas:
+  "nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo"
+  "description description description description gallery gallery gallery"
+  "more more more more gallery gallery gallery";
+
+}
+
+
+#Ekseed {
+
+}
+
+#Deviant {
+
+}
+
+#Minifi {
+
+}
+
+#MBCrunch {
+
+}
+
+#Nosh {
+
+}
+
+#Wayfarer {
+
+}
+
+#Femanon {
+  max-width: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ———————————————————————————————————————————————————— */
 /* IDS */
@@ -220,3 +459,194 @@ div {
   margin: 50px;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+/* OPENING VIEW */
+.citeArrival {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:"intro seek";
+  /* z-index: -1; */
+  z-index: 200;
+  top:10vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.lizKaneIntro {
+  grid-area: "intro";
+  padding-top: 15vh;
+  margin-left: 5vw;
+  position: relative;
+  /* width:  */
+}
+
+.myName {
+  grid-area: "intro";
+
+  color: rgb(64, 75, 109);
+}
+#portraitDiv {
+  grid-area: "intro";
+  width: 100%;
+  border-radius: 50%;
+  contain: fit;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border:8px groove rgba(10,10,10,.4)
+}
+
+#selfPortrait {
+  grid-area: "intro";
+  /* -webkit-filter: invert(1);
+  filter: invert(1); */
+  display: relative;
+  background-color: white;
+  max-width: 100%;
+  /* align-content: center;
+  align-items: center; */
+
+}
+
+#seekLogoContainer {
+  grid-area: "seek";
+  /* width: 90vw; */
+  /* height: 80vh; */
+  position: relative;
+  /* top: 0; */
+  bottom: -10;
+  /* left: 29.427%; */
+  /* bottom: 50; */
+  /* left:30; */
+  /* height: 1385px; */
+  /* width: 1385px; */
+  /* margin-top: 15vh; */
+  contain: content;
+  display: flex;
+  /* align-self: flex-end; */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#seekLogoContainer>img {
+  /* display: ; */
+}
+
+.seekLogo {
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+
+/* #seekPhoto11 {
+    grid-area: "seek";
+  
+  position: absolute;
+
+  z-index:-1;
+
+} */
+
+#seekLayer11 {
+  /* background-image: url(./UploadPhotosToWeb/new/seek/Seek-1-7.png); */
+  /* transform: translate3d(-4.4px, 1px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute;
+  /* display: block; */
+  /* left: 0;
+  top: 0;  */
+}
+#seekPhoto13 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 13;
+}
+
+#seekLayer13 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-3.png); */
+}
+
+#seekPhoto15 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 15;
+}
+
+#seekLayer15 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-5.png); */
+
+}
+
+#seekPhoto17 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 17;
+}
+
+#seekLayer17 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-2.png); */
+
+}
+
+#seekPhoto19 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 19;
+}
+
+#seekLayer19 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-1.png); */
+
+}
+
+#seekPhoto21 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 21;
+}
+
+#seekLayer21 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-4.png); */
+
+}
+
+#seekLayer23 {
+  /* background-image: url(/UploadPhotosToWeb/new/seek/Seek-1-6.png); */
+  /* transform: translate3d(-16.8px, 2.4px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute;
+  /* display: block;
+  left: 0;
+  top: 0; */ 
+}
+
+#seekPhoto23 {
+    grid-area: "seek";
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 23;
+}

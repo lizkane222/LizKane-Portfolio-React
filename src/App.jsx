@@ -3,6 +3,7 @@ import "./styles/style.css";
 import Header from "./components/Header/Header"
 import ItemList from "./components/Room/ItemList"
 import ProjectList from "./components/Room/ProjectList"
+import KaneLogo from "./components/KaneLogo/KaneLogo"
 
 {/* <header className="App-header"> */}
   {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -23,9 +24,9 @@ import ProjectList from "./components/Room/ProjectList"
 function App() {
   return (
     <div className="App">
-      {/* <p>"HI"</p> */}
-      {/* <h2>working!</h2> */}
+
       <Header />
+      <KaneLogo />
       <ItemList />
       <ProjectList />
     </div>
