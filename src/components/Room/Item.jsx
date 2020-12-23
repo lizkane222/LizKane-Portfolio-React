@@ -8,10 +8,10 @@ class Item extends Component {
 
     render() {
         return(
-            <div>
-                {/* {this.props.name} */}
+
+
                 <img src={this.props.img} alt={this.props.name} style={this.props.style} id={this.props.name}/>
-            </div>
+
         )
     }
 }

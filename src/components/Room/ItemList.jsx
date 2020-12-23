@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Item from "./Item"
 import "../../styles/itemStyle.css"
 // import "../../"
@@ -211,8 +211,16 @@ const ItemList = () => {
     const roomItems = roomArray.map(item => {return <Item name={item.name} img={item.img} style={{"left":item.x, "position":"absolute"}}/>})
     // const projectItems = projectArray.map(project => {return <Project name={} logo={} style={{"":,}}/>})
 
+    // const lateLoad = useEffect(() => {
+    //     const timeout = setTimeout(() =>{
+    //         {roomItems};
+    //     }, 3000);
+    //     return() => clearTimeout(timeout);
+    // },[]);
+
     return (
         <div>
+            {/* {lateLoad()} */}
             {roomItems}
         </div>
     )

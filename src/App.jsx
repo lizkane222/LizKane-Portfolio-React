@@ -4,6 +4,7 @@ import Header from "./components/Header/Header"
 import ItemList from "./components/Room/ItemList"
 import ProjectList from "./components/Room/ProjectList"
 import KaneLogo from "./components/KaneLogo/KaneLogo"
+import MainPage from "./components/Room/MainPage"
 
 {/* <header className="App-header"> */}
   {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -24,11 +25,11 @@ import KaneLogo from "./components/KaneLogo/KaneLogo"
 function App() {
   return (
     <div className="App">
-
-      <Header />
-      <KaneLogo />
-      <ItemList />
-      <ProjectList />
+      <MainPage/>
+      {/* <Header /> */}
+      {/* <KaneLogo /> */}
+      {/* <ItemList /> */}
+      {/* <ProjectList /> */}
     </div>
   );
 }
