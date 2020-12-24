@@ -24,12 +24,12 @@ const Carousel = (props) => {
 
     return (
         <div className="carousel-container">
-            {props.gallery.length > 1 && <button className="left-button" onClick={selectLeft}>&lt;</button>}
+            {props.gallery.length > 1 && <button id="left-button" className="carouselBtn" onClick={selectLeft}>&lt;</button>}
             <div className="carousel-image-container w3-animate-opacity alt-wrap">
                 {gallery[currentImage]}
             {/* <p>{gallery[currentImage].descImg}</p> */}
             </div>
-            {props.gallery.length > 1 && <button className="right-button"  onClick={selectRight}>&gt;</button>}
+            {props.gallery.length > 1 && <button id="right-button" className="carouselBtn"  onClick={selectRight}>&gt;</button>}
         </div>
     )
 }

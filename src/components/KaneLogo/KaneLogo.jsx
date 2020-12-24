@@ -19,14 +19,14 @@ const KaneLogo = () => {
                 </div>
             </div>
             <div id="seekLogoContainer">
-                {/* <img src="./UploadPhotosToWeb/new/Seek-2.png" alt="seek logo layer" id="seekPhotoAllLayers" class="seekLogo layer"/> */}
-                {/* <img src={Seek7} alt="seek logo layer" id="seekPhoto11" class="seekLogo layer"></img> */}
-                <img src={Seek3} alt="seek logo layer" id="seekPhoto13" class="seekLogo layer"></img>
-                <img src={Seek5} alt="seek logo layer" id="seekPhoto15" class="seekLogo layer"></img>
-                <img src={Seek2} alt="seek logo layer" id="seekPhoto17" class="seekLogo layer"></img>
-                <img src={Seek1} alt="seek logo layer" id="seekPhoto19" class="seekLogo layer"></img>
-                <img src={Seek4} alt="seek logo layer" id="seekPhoto21" class="seekLogo layer"></img>
-                <img src={Seek6} alt="seek logo layer" id="seekPhoto23" class="seekLogo layer"></img>
+                {/* <img src="./UploadPhotosToWeb/new/Seek-2.png" alt="seek logo layer" id="seekPhotoAllLayers" className="seekLogo layer"/> */}
+                {/* <img src={Seek7} alt="seek logo layer" id="seekPhoto11" className="seekLogo layer"></img> */}
+                <img src={Seek3} alt="seek logo layer" id="seekPhoto13" className="seekLogo layer"></img>
+                <img src={Seek5} alt="seek logo layer" id="seekPhoto15" className="seekLogo layer"></img>
+                <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo layer"></img>
+                <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo layer"></img>
+                <img src={Seek4} alt="seek logo layer" id="seekPhoto21" className="seekLogo layer"></img>
+                <img src={Seek6} alt="seek logo layer" id="seekPhoto23" className="seekLogo layer"></img>
                 {/* <img src="" alt=""/> */}
                 {/* src/components/Room/UploadPhotosToWeb/seek/Seek-1-1.png */}    
             </div>

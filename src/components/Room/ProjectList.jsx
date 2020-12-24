@@ -75,10 +75,11 @@ const ProjectList = () => {
     // const Description = "An organizational app to help you exseed expectations when networking"
     // const EkseedGallery = EkseedGalleryArray.map(image => <Photo imageItem={image.img} imageDesc={image.descImg}/>)
 
-    const EkseedGitHub = "https://github.com/lizkane222/Fem-Anon";
+    const EkseedGitHub = "https://github.com/lizkane222/Ekseed";
+    const EkseedGitHub2 = "https://github.com/lizkane222/Ekseed-Backend";
     const DeviantGitHub = "https://github.com/lizkane222/Deviant-Decrypt";
-    const MinifiGitHub = "https://github.com/lizkane222/TamagachiFit";
-    const MBCrunchGitHub = "https://github.com/lizkane222/MunchBunchCrunch";
+    const MinifiGitHub = "https://github.com/lizkane222/Minifi";
+    const MBCrunchGitHub = "https://github.com/lizkane222/MBCrunch";
     const NoshGitHub = "https://github.com/lizkane222/nosh";
     const WayfarerGitHub = "https://github.com/lizkane222/WAYFARER";
     const FemanonGitHub = "https://github.com/lizkane222/Fem-Anon";
@@ -88,9 +89,9 @@ const ProjectList = () => {
 
 
     
-    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed"}, {name: "Deviant", logo: DeviantLogo, github: DeviantGitHub, proGallery:DeviantGalleryArray, proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant"}, {name: "Minifi", logo: MinifiLogo, github: MinifiGitHub, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi"}, {name: "MBCrunch", logo: MBCrunchLogo, github: MBCrunchGitHub, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch"}, {name: "Nosh", logo: NoshLogo, github: NoshGitHub, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh"}, {name: "Wayfarer", logo: WayfarerLogo, github: WayfarerGitHub, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer"}, {name: "Femanon", logo: FemanonLogo, github: FemanonGitHub, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon"}]
+    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed", github2:EkseedGitHub2}, {name: "Deviant", logo: DeviantLogo, proGallery:DeviantGalleryArray, proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant", github:DeviantGitHub}, {name: "Minifi", logo: MinifiLogo, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi", github:MinifiGitHub}, {name: "MBCrunch", logo: MBCrunchLogo, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch", github:MBCrunchGitHub}, {name: "Nosh", logo: NoshLogo, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh", github:NoshGitHub}, {name: "Wayfarer", logo: WayfarerLogo, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer", github:WayfarerGitHub}, {name: "Femanon", logo: FemanonLogo, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon", github:FemanonGitHub}]
 
-    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} gallery={project.proGallery} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId}}/>})
+    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} gallery={project.proGallery} github={project.github} github2={project.github2} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId }}/>})
 
 
 
