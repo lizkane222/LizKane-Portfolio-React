@@ -13,16 +13,19 @@ const Carousel = (props) => {
 
     const gallery = props.gallery.map(image => {
     return (
-        <div>
+        // <div className="carousel-return">
+        <>
             <img src={image.img} alt={image.descImg} className="projectGalleryImage"/>
-            <p>{image.descImg}</p>
-        </div>
+                <p className="carousel-description">{image.descImg}</p>
+        </>
+        //  </div> 
     )
     })
     
 
 
     return (
+        // <div className="carousel-container">
         <div className="carousel-container">
             {props.gallery.length > 1 && <button id="left-button" className="carouselBtn" onClick={selectLeft}>&lt;</button>}
             <div className="carousel-image-container w3-animate-opacity alt-wrap">

@@ -4,6 +4,7 @@ import React from 'react';
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
 // import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Resource from '../Room/Resource';
+import NavItem from "./NavItem"
 // import "../Header/header.scss"
 import ResourceList from "../Room/ResourceList";
 import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
@@ -14,93 +15,17 @@ import GACertDoc from "../Room/Docs/GACertDoc.jsx";
 
 import Dropdown from "./Dropdown"
 
-// {ResumeDoc}
-//             {MastersDoc}
-//             {BachelorsDoc}
-//             {GACertDoc}
 
-
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       width: '100%',
-//       maxWidth: 360,
-//       backgroundColor: theme.palette.background.paper,
-//     },
-//     nested: {
-//       paddingLeft: theme.spacing(4),
-//     },
-//   }));
-  
-//   export default function NestedList() {
-//     const classes = useStyles();
-//     const [open, setOpen] = React.useState(true);
-  
-//     const handleClick = () => {
-//       setOpen(!open);
-//     };
-  
-//     return (
-      
-//     );
-//   }
-
-const Header = () => {
+const NavBar = (props) => {
         return (
-        <header className="header">
-                <nav className="navbar">
-                    <ul classname="navbar-nav">
-                        <h5 id="nameButton">L I Z   K A N E </h5>
-                    </ul>
-
-                    <div className="dropdown">
-                        <div className="dropbtn" onClick={<ResumeDoc/>}><h5 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h5></div>
-                    </div>
-
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Projects">Projects</h5></div>
-                            <h6>Ekseed</h6>
-                            <h6>Wayfarer</h6>
-                            <h6>Deviant</h6>
-                            <h6>MBCrunch</h6>
-                            <h6>Minifi</h6>
-                            <h6>Femanon</h6>
-                    </div>
-
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Education">Education</h5></div>
-                            <h6>Software Engineering</h6>
-                            <h6>Masters</h6>
-                            <h6>Bachelors</h6>
-                    </div>
-
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="WorkExperience">WorkExperience</h5></div>
-                            <h6>English Professor - Univeristy - France</h6>
-                            <h6>Special Education Teacher - Elementary - New Mexico</h6>
-                            <h6>ESL Teacher - PreK-9thGrade - Online</h6>
-                    </div>
-
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Interests">Interests</h5></div>
-                    </div>
-
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="About">MORE+</h5></div>
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                </nav>
-        </header>
+        <nav className="navbar">
+            <ul className="navbar-nav">{props.children}</ul>
+        </nav>
         
     );
 }
 
-export default Header;
+export default NavBar;
 
 
 {/* <header>

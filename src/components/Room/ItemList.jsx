@@ -1,7 +1,13 @@
 import React, {useEffect} from "react";
 import Item from "./Item"
 import "../../styles/itemStyle.css"
+
+// FROM TUTORIAL
+// import {ReactComponent as AZFlag} from "./UploadPhotosToWeb/badPNGs/SVG/arizonaFlag.svg"
+
+
 // import "../../"
+
 
 // import ProjectBoardImg from "./UploadPhotosToWeb/new/IMG_0174_2.PNG"
 import Amp from "./UploadPhotosToWeb/badPNGs/SVG/amp.svg"
@@ -210,17 +216,22 @@ const ItemList = () => {
 
     const roomItems = roomArray.map(item => {return <Item name={item.name} img={item.img} style={{"left":item.x, "position":"absolute"}}/>})
     // const projectItems = projectArray.map(project => {return <Project name={} logo={} style={{"":,}}/>})
-
+    
+     
+    
+    
     // const lateLoad = useEffect(() => {
-    //     const timeout = setTimeout(() =>{
-    //         {roomItems};
-    //     }, 3000);
-    //     return() => clearTimeout(timeout);
-    // },[]);
-
+        //     const timeout = setTimeout(() =>{
+            //         {roomItems};
+            //     }, 3000);
+            //     return() => clearTimeout(timeout);
+            // },[]);
+            
+            // {roomItems}
+            {/* {lateLoad()} */}
     return (
         <div>
-            {/* {lateLoad()} */}
+            
             {roomItems}
         </div>
     )

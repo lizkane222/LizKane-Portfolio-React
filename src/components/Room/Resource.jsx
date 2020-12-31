@@ -9,13 +9,16 @@ import Header from "../Header/Header";
 import FloatDocBox from "./FloatBox/FloatDocBox";
 
 import BachelorsDegree from "./UploadPhotosToWeb/docs/bachelors-undergrad-psychdegree-diploma.pdf"
+import BachelorsDoc from "./Docs/BachelorsDoc"
 
 import MastersDegree from "./UploadPhotosToWeb/docs/MastersDegree.pdf"
+import MastersDoc from "./Docs/MastersDoc"
 
 import GACertificate from "./UploadPhotosToWeb/docs/GA-Certificate.pdf"
+import GACert from "./Docs/GACertDoc"
 
 import Resume from "./UploadPhotosToWeb/docs/Liz_Kane_Resume.pdf"
-
+import ResumeDoc from "./Docs/ResumeDoc"
 
 class Resource extends Component {
     state={
@@ -54,7 +57,7 @@ class Resource extends Component {
         return(
             <>
                 <div className="ResourceListComponent">
-                    <h3 onClick={this.setActive}>{this.props.name}</h3>
+                    <h5 onClick={this.setActive} className="Resume">{this.props.name}</h5>
                 </div>
                 {this.state.active &&
                 <>

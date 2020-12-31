@@ -33,11 +33,12 @@ import NoshLogo from "./UploadPhotosToWeb/nosh/nosh.png"
 // import  from "./UploadPhotosToWeb"
 
 // WAYFARER IMGS
-import WayfarerLogo from "./UploadPhotosToWeb/wayfarer/wayfarer1line.png"
+import WayfarerLogo from "./UploadPhotosToWeb/wayfarer/wayfarer1line.png";
 // import  from "./UploadPhotosToWeb"
 
 // FEMANON IMGS
-import FemanonLogo from "./UploadPhotosToWeb/femanon/IMG_0172_2.PNG"
+import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png"
+// import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png"
 // import  from "./UploadPhotosToWeb"
 
 // POZERS IMGS
@@ -52,7 +53,7 @@ const ProjectList = () => {
     const MBCrunchGalleryArray = [{img: MBCrunchLogo, descImg: "logo"}] 
     const NoshGalleryArray = [{img: NoshLogo, descImg: "logo"}] 
     const WayfarerGalleryArray = [{img: WayfarerLogo, descImg: "logo"}] 
-    const FemanonGalleryArray = [{img: FemanonLogo, descImg: "logo"}] 
+    const FemanonGalleryArray = [{img: FemanonLogo1, descImg: "logo"}] 
     // const PozersGalleryArray = [] 
     // const EkseedGalleryArray = [] 
     // const DeviantGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
@@ -86,12 +87,16 @@ const ProjectList = () => {
     // const PozersGitHub = "";
     // const Ekseed GitHub = "";
 
-
-
+    // GISTS
+    // const WayfarerGist1 = "https://gist.github.com/lizkane222/6c80c67493bb047ee41c84bfe6bf0f33.js";
     
-    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed", github2:EkseedGitHub2}, {name: "Deviant", logo: DeviantLogo, proGallery:DeviantGalleryArray, proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant", github:DeviantGitHub}, {name: "Minifi", logo: MinifiLogo, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi", github:MinifiGitHub}, {name: "MBCrunch", logo: MBCrunchLogo, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch", github:MBCrunchGitHub}, {name: "Nosh", logo: NoshLogo, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh", github:NoshGitHub}, {name: "Wayfarer", logo: WayfarerLogo, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer", github:WayfarerGitHub}, {name: "Femanon", logo: FemanonLogo, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon", github:FemanonGitHub}]
 
-    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} gallery={project.proGallery} github={project.github} github2={project.github2} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId }}/>})
+
+    const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, github2:EkseedGitHub2, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed"}, {name: "Deviant", logo: DeviantLogo, proGallery:DeviantGalleryArray, github:DeviantGitHub, github2:"", proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant", }, {name: "Minifi", logo: MinifiLogo, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi", github:MinifiGitHub, github2:"",}, {name: "MBCrunch", logo: MBCrunchLogo, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch", github:MBCrunchGitHub, github2:"",}, {name: "Nosh", logo: NoshLogo, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh", github:NoshGitHub, github2:"",}, {name: "Wayfarer", logo: WayfarerLogo, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer", github:WayfarerGitHub, github2:""}, {name: "Femanon", logo: FemanonLogo1, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon", github:FemanonGitHub, github2:"",}]
+    // const projectArray = [ {name:"Ekseed", logo:EkseedLogo, github:EkseedGitHub, github2:EkseedGitHub2, proDescription:EkseedDescription, proGallery:EkseedGalleryArray, x:100, y:100, width:100, zindex:1, proId:"Ekseed"}, {name: "Deviant", logo: DeviantLogo, proGallery:DeviantGalleryArray, github:DeviantGitHub, github2:"", proDescription: DeviantDescription,  x:200, y: 200, width: 100, zindex:1, proId:"Deviant", }, {name: "Minifi", logo: MinifiLogo, proGallery:MinifiGalleryArray, proDescription: MinifiDescription, x:300, y: 200, width: 100, zindex:1, proId:"Minifi", github:MinifiGitHub, github2:"",}, {name: "MBCrunch", logo: MBCrunchLogo, proGallery:MBCrunchGalleryArray, proDescription: MBCrunchDescription, x:300, y: 300, width: 100, zindex:1, proId:"MBCrunch", github:MBCrunchGitHub, github2:"",}, {name: "Nosh", logo: NoshLogo, proGallery:NoshGalleryArray, proDescription: NoshDescription, x:400, y: 400, width: 100, zindex:1, proId:"Nosh", github:NoshGitHub, github2:"",}, {name: "Wayfarer", logo: WayfarerLogo, proGallery:WayfarerGalleryArray, proDescription: WayfarerDescription, x:500, y: 500, width: 100, zindex:1, proId:"Wayfarer", github:WayfarerGitHub, github2:"", gist:WayfarerGist1}, {name: "Femanon", logo: FemanonLogo1, proGallery:FemanonGalleryArray, proDescription: FemanonDescription, x:600, y: 600, width: 100, zindex:1, proId:"Femanon", github:FemanonGitHub, github2:"",}]
+
+    // const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} github2={project.github2} gist={project.gist} gallery={project.proGallery} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId }}/>})
+    const projectItems = projectArray.map(project => {return <Project name={project.name} logo={project.logo} description={project.proDescription} github={project.github} github2={project.github2} gallery={project.proGallery} style={{"left":project.x+"px", "top":project.y+"px", "width":project.width+"px", "zindex":project.zindex, "id":project.proId }}/>})
 
 
 

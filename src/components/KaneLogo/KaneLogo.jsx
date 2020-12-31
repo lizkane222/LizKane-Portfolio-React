@@ -13,10 +13,10 @@ const KaneLogo = () => {
     return (
         <div className="citeArrival">
             <div className="lizKaneIntro">
-                <h1 className="myName">Liz Kane</h1>
-                <div id="portraitDiv">
+                {/* <h1 className="myName">Liz Kane</h1> */}
+                {/* <div id="portraitDiv">
                     <img src={LizPortrait} alt="Liz Kane Self-Portrait Sketch" id="selfPortrait"/>
-                </div>
+                </div> */}
             </div>
             <div id="seekLogoContainer">
                 {/* <img src="./UploadPhotosToWeb/new/Seek-2.png" alt="seek logo layer" id="seekPhotoAllLayers" className="seekLogo layer"/> */}
