@@ -9,6 +9,7 @@ import ResourceList from "./ResourceList";
 import Dropdown from "../Header/Dropdown"
 import NavBar from "../Header/NavBar"
 import NavItem from "../Header/NavItem"
+import NavHeader from "../Header/NavHeader";
 import TodoList from "../Todos/TodoList";
 
 import ResumeDoc from "./Docs/ResumeDoc.jsx";
@@ -37,21 +38,8 @@ const MainPage = () => {
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/X4t0JxiBeO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
             {/* <ItemList/> */}
 
-            <NavBar >
-                <NavItem icon="🧘‍♀️" />
-                <NavItem icon={<AiFillCaretRight />} >
-                    {/* dropdown menu */}
-                    {/* <p>Hello Liz</p> */}
-                    <DropdownMenu>
-                        
-                    </DropdownMenu>
-                </NavItem>
-                <NavItem icon="🙋🏻‍♀️" />
-                <NavItem icon="🎯" />
-                <NavItem icon="👾" />
-
-            </NavBar>
-
+            
+            <NavHeader />
 
 
             <KaneLogo/>

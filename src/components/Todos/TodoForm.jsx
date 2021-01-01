@@ -11,7 +11,7 @@ const TodoForm= ({ addTodo }) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="comment-form">
             <input 
             type="text" 
             className="input" 

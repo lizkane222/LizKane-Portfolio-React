@@ -7,21 +7,18 @@ import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
 import MastersDoc from "../Room/Docs/MastersDoc.jsx";
 import GACertDoc from "../Room/Docs/GACertDoc.jsx";
 import { Dropdown } from "materialize-css";
-
-
-
+import { FaDivide } from "react-icons/fa";
 
 const DropdownItem = (props) => {
-  return(
-    <div className="dropdown">
-        <a href="#" className="menu-item">
+    return(
+      // <div onClick={(e) => e.stopPropagation()}>
+        <a className="menu-item" onClick={() => props.goToMenu && props.setActiveMenu(props.goToMenu)}>
             <span className="icon-button">{props.leftIcon}</span>
-            {props.children}
-
+                {props.children}
             <span className="icon-right">{props.rightIcon}</span>
-
         </a>
-    </div>
+      // </div>
+
   )
 }
 
