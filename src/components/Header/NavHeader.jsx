@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-scroll';
+
 import NavBar from "./NavBar";
 import NavItem from "./NavItem";
 import DropdownMenuLiz from "./DropdownMenuLiz"
@@ -34,23 +36,25 @@ const NavHeader= () => {
             <NavItem icon="Resume" id="navResume">
                 {/* dropdown menu  */}
                 {/* <p>ZACK</p> */}
-                <DropdownMenuResume>
-                    
-
-                </DropdownMenuResume>
+                <DropdownMenuResume></DropdownMenuResume>
             </NavItem>
+
             <NavItem icon="Projects" >
                 <DropdownMenuProjects></DropdownMenuProjects>
             </NavItem>
+            
             <NavItem icon="Education" >
                 <DropdownMenuEducation></DropdownMenuEducation>
             </NavItem>
+            
             <NavItem icon="Work" >
                 <DropdownMenuWork></DropdownMenuWork>
             </NavItem>
+            
             <NavItem icon="Interests" >
                 <DropdownMenuInterests></DropdownMenuInterests>
             </NavItem>
+            
             <NavItem icon="Contact" >
                 <DropdownMenuContact></DropdownMenuContact>
             </NavItem>

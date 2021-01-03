@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-
+import {Link} from 'react-scroll';
 
 import "./styles/style.css";
 
 
-// import Header from "./components/Header/Header"
+import Header from "./components/Header/Header"
 // import ItemList from "./components/Room/ItemList"
 // import ProjectList from "./components/Room/ProjectList"
 // import KaneLogo from "./components/KaneLogo/KaneLogo"
@@ -28,7 +28,9 @@ function App() {
   return (
     <div className="App">
       {/* <MainPage/> */}
-      <NavHeader />
+      {/* <NavHeader /> */}
+      <Header/>
+      
       <LandingPage/>
       <ResumePage/>
       <EducationPage/>

@@ -72,7 +72,7 @@
     --AcierBatTextStrokesFS: normal;
 }
 
-body {
+/* body {
   margin: 0;
   background: #151616;
   font-family: var(--AcierBatTextNoirFF);
@@ -80,7 +80,7 @@ body {
   font-size: var(--AcierBatTextNoirFS);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 
 
@@ -92,12 +92,38 @@ ul {
 
 a {
   color: var(--text-color);
-  text-decoration: none;
+  /* text-decoration: none; */
   text-align: left;
   font-size: 2em;
 }
 
 /* Top Navigation Bar */
+header {
+  height: 7vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 111;
+  top:0;
+  left:0;
+  /* cursor: pointer;
+  z-index:180; */
+}
+
+Link:hover {
+  filter: brightness(1.2);
+text-shadow: -1px 1px 3px #242526;
+}
+
+/* .navLinks {
+  font-size: 1.7em;
+  text-decoration: none;
+  margin: 2.3%;
+}
+
+.navLinks:hover {
+  filter: brightness(1.2);
+  text-shadow: -1px 1px 3px #242526;
+} */
 
 /* <nav> */
 .navbar {
@@ -105,6 +131,7 @@ a {
   background-color: var(--bg);
   padding: 0 1rem;
   border-bottom: var(--border);
+  width: 100vw;
 }
 
 /* <ul> */

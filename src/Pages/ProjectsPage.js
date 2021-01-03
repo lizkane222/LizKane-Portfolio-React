@@ -1,28 +1,28 @@
 import React from "react";
+import Wrapper from '../components/Header/Wrapper';
+import styled from 'styled-components';
 
 
-// import ProjectList from "./ProjectList";
 import ProjectList from "../components/Room/ProjectList";
 
-import Obsessions from "../components/Room/UploadPhotosToWeb/docs/obsessions.png";
 
 import TeamWork from "../components/Room/UploadPhotosToWeb/docs/teamWork.png";
 
 
 
-
+// const ProjectsPageStyled = styled.div;
 
 const ProjectsPage=() => {
     return(
-        <div>
-        <ProjectList/>
-            <div className="redbox">
-                <img src={TeamWork} alt="" id="teamWorkImg" className="thematicImg responsive-img"/>
-            </div>
-            <div className="redbox">
-                <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img"/>
-            </div>
-        </div>
+        <section id="projectsPage">
+            <Wrapper>
+                <ProjectList/>
+                <div className="redbox">
+                    <img src={TeamWork} alt="" id="teamWorkImg" className="thematicImg responsive-img"/>
+                </div>
+                
+            </Wrapper>
+        </section>
     )
 }
 

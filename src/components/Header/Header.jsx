@@ -1,18 +1,33 @@
 import React from 'react';
+import {Link} from 'react-scroll';
+// import OnScreenScrolling from './OnScreenScrolling';
+import OnScreenScrolling from './OnScreenScrolling';
+import Wrapper from './Wrapper';
+import styled from 'styled-components';
+
 // import 'materialize-css';
 // import 'materialize-css/dist/css/materialize.min.css'
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
 // import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import Resource from '../Room/Resource';
-// import "../Header/header.scss"
+// import "../Header/dropdown.css"
 import ResourceList from "../Room/ResourceList";
 import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
 import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
 import MastersDoc from "../Room/Docs/MastersDoc.jsx";
 import GACertDoc from "../Room/Docs/GACertDoc.jsx";
-// import { Dropdown } from 'materialize-css';
 
-// import Dropdown from "./Dropdown"
+
+
+
+import LandingPage from "../../Pages/LandingPage";
+import ResumePage from "../../Pages/ResumePage";
+import EducationPage from "../../Pages/EducationPage";
+import WorkPage from "../../Pages/WorkPage";
+import ProjectsPage from "../../Pages/ProjectsPage";
+import InterestsPage from "../../Pages/InterestsPage";
+import ContactPage from "../../Pages/ContactPage";
+
 
 // {ResumeDoc}
 //             {MastersDoc}
@@ -20,74 +35,119 @@ import GACertDoc from "../Room/Docs/GACertDoc.jsx";
 //             {GACertDoc}
 
 
+const NavbarStyled = styled.div`
+  font-size: 24px;
+  position: fixed;
+  width: 100%;
+  .header {
+    background: black;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    color: white;
+    z-index: 299;
+    * {
+      cursor: pointer;
+    }
+    .active {
+        border-bottom: 1px solid white;
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       width: '100%',
-//       maxWidth: 360,
-//       backgroundColor: theme.palette.background.paper,
-//     },
-//     nested: {
-//       paddingLeft: theme.spacing(4),
-//     },
-//   }));
+    }
+  }
+  .scrolling-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .navLinks {
+    font-size: 1.7em;
+    margin: 2.3%;
+    color:#8B0124;
+  }
   
-//   export default function NestedList() {
-//     const classes = useStyles();
-//     const [open, setOpen] = React.useState(true);
-  
-//     const handleClick = () => {
-//       setOpen(!open);
-//     };
-  
-//     return (
-      
-//     );
-//   }
+  .navLinks:hover {
+    filter: brightness(1.5);
+    text-shadow: -1px 1px 3px #242526;
+  }
+`;
+
 
 const Header = () => {
         return (
-        <header className="header">
+        <NavbarStyled>
+            {/* <header className="header"> */}
                 <nav className="navbar">
-                    <ul classname="navbar-nav">
-                        <h5 id="nameButton">L I Z   K A N E </h5>
-                    </ul>
 
-                    <div className="dropdown">
-                        <div className="dropbtn" onClick={<ResumeDoc/>}><h5 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h5></div>
-                    </div>
+                        {/* <h5 id="nameButton">L I Z   K A N E </h5> */}
+                        
+{/* <ResumePage/>
+<EducationPage/>
+<WorkPage/>
+<ProjectsPage/>
+<InterestsPage/>
+<ContactPage/> */}
 
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Projects">Projects</h5></div>
-                            <h6>Ekseed</h6>
+                        {/* <div className="dropbtn" onClick={<ResumeDoc/>}><h5 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h5></div> */}
+
+                    <Link activeClass="active" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
+                        LK
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="resumePage" spy={true} smooth={true} duration={1000}>
+                        Resume
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
+                        Projects
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1000}>
+                        Education
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
+                        Work
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1000}>
+                        Interests
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
+                        Contact
+                    </Link>
+        
+
+
+                        {/* <div className="dropbtn"><h5 className="Projects">Projects</h5></div> */}
+                            {/* <h6>Ekseed</h6>
                             <h6>Wayfarer</h6>
                             <h6>Deviant</h6>
                             <h6>MBCrunch</h6>
                             <h6>Minifi</h6>
                             <h6>Femanon</h6>
-                    </div>
+                    </div> */}
 
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Education">Education</h5></div>
-                            <h6>Software Engineering</h6>
+                        {/* <div className="dropbtn"><h5 className="Education">Education</h5></div> */}
+                            {/* <h6>Software Engineering</h6>
                             <h6>Masters</h6>
                             <h6>Bachelors</h6>
-                    </div>
+                    </div> */}
 
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="WorkExperience">WorkExperience</h5></div>
-                            <h6>English Professor - Univeristy - France</h6>
+                    {/* <div className="dropdown"> */}
+                        {/* <div className="dropbtn"><h5 className="WorkExperience">WorkExperience</h5></div> */}
+                            {/* <h6>English Professor - Univeristy - France</h6>
                             <h6>Special Education Teacher - Elementary - New Mexico</h6>
                             <h6>ESL Teacher - PreK-9thGrade - Online</h6>
-                    </div>
+                    </div> */}
 
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="Interests">Interests</h5></div>
-                    </div>
+                    {/* <div className="dropdown"> */}
+                        {/* <div className="dropbtn"><h5 className="Interests">Interests</h5></div> */}
+                    {/* </div> */}
 
-                    <div className="dropdown">
-                        <div className="dropbtn"><h5 className="About">MORE+</h5></div>
-                    </div>
+                    {/* <div className="dropdown"> */}
+                        {/* <div className="dropbtn"><h5 className="About">MORE+</h5></div> */}
+                    {/* </div> */}
 
                     
                     
@@ -95,8 +155,13 @@ const Header = () => {
                     
                     
                 </nav>
-        </header>
-        
+                {/* <div className="scrolling-buttons">
+                    <Wrapper>
+                        <OnScreenScrolling />
+                    </Wrapper>
+                </div> */}
+            {/* </header> */}
+        </NavbarStyled>
     );
 }
 

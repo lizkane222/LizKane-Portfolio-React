@@ -65,26 +65,20 @@
 }
 
 
-
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    font-size: 1em;
-    top: 0;
-    left: 0;
-    /* background-color: var(--white-pretty); */
-    background-color: var(--grey-dark);
-  }
-
-  #seekPhoto11 {
-  grid-area: "seek";
-  position: absolute;
-  z-index:-1;
-  
+body {
+  margin: 0;
+  padding: 0;
+  background: #151616;
+  font-size: 1em;
+  font-family: var(--AcierBatTextNoirFF);
+  font-weight: var(--AcierBatTextNoirFW);
+  font-size: var(--AcierBatTextNoirFS);
+  top: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .redText {
   color: var(--red)
@@ -97,6 +91,10 @@
 .yellowText {
   color: var(--yellow)
 }
+
+/* -------------------------------------- */
+/* ----- HEADER & ref dropdown.css ------ */
+/* -------------------------------------- */
 
 header {
   display: -webkit-box;
@@ -119,37 +117,12 @@ header {
 }
 
 
-#sidebar{
-  /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 100vh;
-  width: 10vw;
-  z-index:200;
-  top: 0;
-  left: 0;
-  color: var(--yellow);
-  overflow: visible; */
-
-}
-
-
-
 #nameButton {
   /* background-image: url("../components/Room/UploadPhotosToWeb/badPNGs/lizkane-1.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  /* background-color: #EDC168; */
   color: var(--red);
-  /* max-width: 10vw; */
   width: fit-content;
   min-width: 6vw;
   max-height: 8vh;
@@ -160,7 +133,7 @@ header {
   font-size: 1.7em;
   display: inline-block;
 }
-
+/* 
 header #nameButton:hover {
   cursor: pointer;
   color: var(--red);
@@ -175,7 +148,6 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: block;
-  /* overflow: hidden; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -187,122 +159,29 @@ header nav {
   width: 100vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          /* justify-content: space-between; */
 }
 
 header nav h5 {
   font-family: 'Philosopher', sans-serif;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          /* justify-content: space-between; */
   margin: 0 1.5%;
   color: var(--red);
   float: left;
   text-align: center;
   padding: 0 2%;
   text-decoration: none;
-
-}
-
-
-
-
-
-
-
-
-/* .dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  border: none;
-  outline: none;
-  color: var(--blue);
-  padding: .2em .3em;
-  background-color: inherent;
-  font-family: inherent;
-  margin: 0;
-}
-
-.navbar h5:hover, .dropdown:hover .dropbtn {
-  background-color: var(--purple)
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: pink;
-  color: var(--blue);
-
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content h5:hover {
-  background-color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 } */
 
 
 
 
+/* ------------------------ */
+/* ----- FLOAT BOX ------ */
+/* ------------------------ */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* BACKGROUND STRIPES */
-.background-stripes{
-  left: 0;
-  /* background: repeating-linear-gradient(
-    45deg,
-    var(--red) 20px,
-    var(--red) 20px,
-    var(--red) 20px,
-  ); */
-  background: linear-gradient(45deg, #98CD8D 7.14%, #F6F0CF 7.14%, #F6F0CF 14.29%, #fff 14.29%, #fff 21.43%, #fff 21.43%, #fff 28.57%, #fff 28.57%, #fff 35.71%, #fff 35.71%, #fff 42.86%, #fff 42.86%, #fff 50%, #98CD8D 50%, #98CD8D 57.14%, #F6F0CF 57.14%, #F6F0CF 64.29%, #fff 64.29%, #fff 71.43%, #fff 71.43%, #fff 78.57%, #fff 78.57%, #fff 85.71%, #fff 85.71%, #fff 92.86%, #fff 92.86%, #fff 100%);
-
-  z-index: -3;
-}
-
-.red-stripe{
-
-}
-
-/* FLOOR */
-#floor {
-}
-
-.skill {
-  max-width: 20px;
-}
-
-main {
-}
-
-/* HTML TAGS */
-/* div {
-/* } */
-
-/* WALL ONE */
-#wallOne {
-  /* background-color: rgba(150,50,50,.7); */
-}
 .wrapperFloatBox{
   /* background-color: var(--white-semi-trans); */
   position: fixed;
@@ -325,7 +204,8 @@ main {
 
 .floatBox {
   position: relative;
-  min-width: 85vw;
+  min-width: 80vw;
+  max-width: 80vw;
   min-height: 85vh;
   /* z-index: 299; */
   margin: none;
@@ -471,12 +351,13 @@ align-content: center;
 .carouselBtn {
   position: relative;
   /* margin-top: 10%; */
-  padding: 50% 2%;
+  /* padding: 50% 2%; */
+  padding: 0% auto;
   background-color: var(--red);
   color: var(--yellow);
   font-weight: 900;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 50%;
+  max-height: 50%;
 }
 #right-button {
   /* margin-top: 50%; */
@@ -571,6 +452,10 @@ align-content: center;
 
 }
 
+/* ------------------------ */
+/* ----- PROJECT ID's INSIDE FLOATBOX ------ */
+/* ------------------------ */
+
 
 #Ekseed {
 
@@ -601,140 +486,14 @@ align-content: center;
 }
 
 
-/* RESOURCE DATA */
-.ResourceListComponent {
-
-}
-
-.wrapperFloatDocBox{
-  /* background-color: var(--yellow); */
-  position: fixed;
-  /* position: absolute; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  /* top: 10vh; */
-  /* left: 7.5vw; */
-  width: 100vw;
-  height: 100vh;
-
-  /* box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-    -moz-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-    -webkit-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-    -o-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-  border-radius:25px; */
-}
-
-.floatDocBox {
-  background-color: var(--yellow);
-  position: relative;
-  min-width: 80vw;
-  min-height: 80vh;
-  z-index: 99;
-  margin: none;
-  background-color: var(--white-semi-trans);
-  box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-  -moz-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-  -webkit-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-  -o-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
-  border-radius:25px;
-  overflow: scroll;
-
-}
-
-.resourceDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: .2fr .2fr .7fr 3.5fr 3.5;
-  grid-template-areas: 
-  "category iframe iframe iframe"
-  "name iframe iframe iframe"
-  "logo iframe iframe iframe"
-  "description iframe iframe iframe"
-  "emblem iframe iframe iframe"
-  ;
-  contain: content;
-  position: absolute;
-  max-width: 100%;
-  min-height: 100%;
-  margin:0 auto;
-  border-radius:25px;
-  /* left: 55%; */
-  /* top: 10%; */
-}
-
-.resourceCategory {
-  grid-area: category;
-  position: relative;
-  /* contain: content; */
-  align-self: flex-start;
-  /* top: 0; */
-  margin: -1% 0 0 0;
-  text-align: center;
-  color: var(--yellow);
-  background-color: var(--blue);
-  padding: 5% 0;
-}
-
-.resourceName {
-  grid-area: name;
-  position: relative;
-  contain: content;
-  align-self: center;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.resourceLogo {
-  grid-area: logo;
-  position: relative;
-  max-width: 100%;
-  contain: content;
-  margin: 0 auto;
-  align-self: center;
-}
-
-.resourceEmblem{
-  grid-area: emblem;
-  position: relative;
-  contain: content;
-  max-width: 100%;
-  margin-top: 0;
-  align-self: center;
-}
-
-.iframeDescription {
-  grid-area: description; 
-  /* position: relative;  */
-  contain: content;
-  align-self: center;
-  text-align: center;
-}
-
-
-.responsiveIframe {
-  grid-area: iframe;
-  width: 100%;
-  height: 0;
-  /* padding-bottom: 56.25%; */
-  padding-bottom: 80%;
-  position: relative;
-}
-
-.responsiveIframe iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 
 
 
 
 
-
-/* BLOCK IMAGES THEMATIC */
+/* ----------------------------------  */
+/* ----- THEMATIC PAGE IMAGES  ------ */
+/* ----------------------------------  */
 .thematicImg{
   position: relative;
   max-width: 70vw;
@@ -767,78 +526,13 @@ align-content: center;
 
 
 
-/* ———————————————————————————————————————————————————— */
-/* IDS */
-/* #room {
-}
-
-.stillObject { */
-/* } */
-
-/*(query)*/
-.animate {
-}
-
-/* WALL TWO */
-#wallTwo {
-}
-
-#NAUBA {
-}
-
-#artbox {
-  z-index: 5;
-}
-
-#ipad {
-  z-index: 5;
-}
-
-#paintset {
-  z-index: 5;
-}
-
-#cantippedover {
-  z-index: 5;
-}
-
-/* WALL THREE */
-#wallThree {
-}
-
-/* WALLFOUR */
-#wallFour {
-}
-
-#bookcase {
-}
-
-/* COUNTER */
-#counter {
-}
-
-.letter {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-#letter-resume {
-  position: absolute;
-  z-index: 5;
-}
-
-#letter-gaCertificate {
-  margin: 50px;
-}
-/*# sourceMappingURL=style.css.map */
 
 
 
 
-
-
-
-/* OPENING VIEW */
+/* ------------------------ */
+/* ----- LANDING PAGE ------ */
+/* ------------------------ */
 .citeArrival {
   position: relative;
   display: grid;
@@ -873,7 +567,6 @@ align-content: center;
   display: flex;
   align-content: center;
   align-items: center;
-  /* border:8px groove rgba(10,10,10,.4) */
 }
 
 #selfPortrait {
@@ -883,10 +576,12 @@ align-content: center;
   max-width: 100%;
 }
 
+
 #seekLogoContainer {
   grid-area: "seek";
   position: relative;
-  bottom: -10;
+  top: 0;
+  bottom: -20;
   contain: content;
   display: flex;
   align-items: center;
@@ -916,7 +611,7 @@ align-content: center;
 #seekPhoto15 {
     grid-area: "seek";
   position: absolute;
-  top: 10;
+  top: 5;
   left: 0;
   z-index: 15;
 }
@@ -927,7 +622,7 @@ align-content: center;
 #seekPhoto17 {
     grid-area: "seek";
   position: absolute;
-  top: 10;
+  top: 5;
   left: 0;
   z-index: 17;
 }
@@ -938,7 +633,7 @@ align-content: center;
 #seekPhoto19 {
     grid-area: "seek";
   position: absolute;
-  top: 10;
+  top: 5;
   left: 0;
   z-index: 19;
 }
@@ -967,3 +662,394 @@ align-content: center;
   left: 0;
   z-index: 23;
 }
+
+
+/* ------------------------ */
+/* ----- LANDING PAGE ------ */
+/* ------------------------ */
+
+#landingPage {
+
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* ----------------- RESUME PAGE ------------------------------ */
+/* ------- ref classes = .thematicImg .responsive-img --------- */
+/* ---------------- ref FLOAT DOC BOX  ------------------------ */
+/* ------------------------------------------------------------ */
+
+#resumePage {
+
+}
+
+/* thematic img container */
+.redbox {
+
+}
+
+#blocksImg {
+
+}
+
+
+/* ------------------------ */
+/* ----- EDUCATION PAGE ------ */
+/* ------- ref classes = .thematicImg .responsive-img --------- */
+/* ------------------------ */
+
+#educationPage {
+
+}
+
+#grandCanyonImg {
+
+}
+
+    /* ------------------------ */
+    /* ----- FLOAT DOC BOX ------ */
+    /* ------------------------ */
+
+    .ResourceListComponent {
+
+    }
+
+    .wrapperFloatDocBox{
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+    }
+
+    .floatDocBox {
+      background-color: var(--yellow);
+      position: relative;
+      min-width: 80vw;
+      min-height: 80vh;
+      z-index: 99;
+      margin: none;
+      background-color: var(--white-semi-trans);
+      box-shadow: 0px 0px 5px rgba(10,10,10,.4);
+      -moz-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
+      -webkit-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
+      -o-box-shadow: 0px 0px 5px rgba(10,10,10,.4);
+      border-radius:25px;
+      overflow: scroll;
+      overflow: hidden;
+
+    }
+
+    .resourceDiv {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: .05fr .06fr .07fr .1fr .1fr 4.4fr;
+      grid-template-areas: 
+      "category iframe iframe iframe "
+      "name iframe iframe iframe"
+      "logo iframe iframe iframe"
+      "description iframe iframe iframe"
+      "emblem iframe iframe iframe"
+      ".  iframe iframe iframe"
+      ;
+      contain: content;
+      position: absolute;
+      max-width: 100%;
+      min-height: 100%;
+      margin:0 auto;
+      border-radius:25px;
+    }
+
+    .resourceCategory {
+      grid-area: category;
+      position: relative;
+      align-self: flex-start;
+      margin: -1% 0 0 0;
+      text-align: center;
+      color: var(--yellow);
+      background-color: var(--blue);
+      padding: 5% 0;
+      font-family: var(--AcierBatTextOutlineFF);
+      font-weight: var(--AcierBatTextOutlineFW);
+      font-style: var(--AcierBatTextOutlineFS);
+      font-size: 2.5em;
+    }
+
+    .resourceName {
+      grid-area: name;
+      position: relative;
+      contain: content;
+      align-self: center;
+      padding-top: 3%;
+      margin: 0 auto;
+      text-align: center;
+      font-family: var(--AcierBatTextOutlineFF);
+      font-weight: var(--AcierBatTextOutlineFW);
+      font-style: var(--AcierBatTextOutlineFS);
+      font-size: 2.3em;
+      line-height: .7em;
+      color: var(--blue);
+    }
+
+    .resourceLogo {
+      grid-area: logo;
+      position: relative;
+      max-width: 100%;
+      contain: content;
+      margin: 0 auto;
+      align-self: center;
+    }
+
+    .resourceEmblem{
+      grid-area: emblem;
+      position: relative;
+      contain: content;
+      max-width: 98%;
+      margin: 0 auto;
+      align-self: center;
+    }
+
+    #GACertificateEmblem {
+      margin-top: 25%;
+    }
+
+    #BachelorsDegreeEmblem {
+      margin-top: 5%;
+      width: 72%;
+    }
+
+    #MastersDegreeEmblem {
+      width: 72%;
+    }
+
+    .iframeDescription {
+      grid-area: description; 
+      /* position: relative;  */
+      contain: content;
+      align-self: center;
+      text-align: center;
+      margin: 0 auto;
+      bottom: 0;
+      font-family: var(--AcierBatTextOutlineFF);
+      font-weight: var(--AcierBatTextOutlineFW);
+      font-style: var(--AcierBatTextOutlineFS);
+      font-size: 1.5em;
+      color: var(--red);
+    }
+
+
+    .responsiveIframe {
+      grid-area: iframe;
+      width: 100%;
+      height: 0;
+      /* padding-bottom: 56.25%; */
+      /* padding-bottom: 89%; */
+      padding-bottom: 67.5%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .responsiveIframe iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+
+
+/* ------------------------ */
+/* ----- PROJECT PAGE ------ */
+/* ------- ref classes = .thematicImg .responsive-img --------- */
+/* --------- ref ProjectList --------------- */
+
+#projectsPage {
+
+}
+
+#teamWorkImg {
+
+}
+
+
+/* ------------------------ */
+/* ----- WORK PAGE ------ */
+/* ------- ref classes = .thematicImg .responsive-img --------- */
+/* ------------------------ */
+
+#workPage {
+
+}
+
+#desertImg {
+
+}
+
+
+/* ------------------------ */
+/* ----- INTERESTS PAGE ------ */
+/* ------- ref classes = .thematicImg .responsive-img --------- */
+/* ------------------------ */
+
+#interestsPage {
+
+}
+
+#obessionsImg {
+
+}
+
+/* --------------------------------------- */
+/* ------------ CONTACT PAGE ------------- */
+/* ----------- & REF todo.css ------------ */
+/* --------------------------------------- */
+
+#contactPage {
+  min-width: 100vw;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "todo" "socialMedia" ;
+}
+
+.todoListGrid {
+  grid-area: "todo"
+}
+
+#socialMedia{
+  min-width: 100vw;
+  max-width: 100vw;
+  max-height: 20vh;
+  grid-area: "socialMedia";
+  margin: 5%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-areas: "LinkedIn Github Twitter Phone Email Location";
+  align-content: center;
+
+}
+
+i > svg{
+  font-size: 4em;
+  margin: 5% 10%;
+  align-self: center;
+  color: var(--blue)
+}
+
+i:hover {
+  color: var(--yellow);
+}
+
+.iconText {
+  font-size: .8em;
+  align-self: center;
+}
+
+#linkedIn {
+
+}
+
+#github {
+
+}
+
+#twitter {
+
+}
+
+#phone {
+
+}
+
+#email {
+
+}
+
+#location {
+
+}
+
+
+
+#footer{
+  background-color: var(--yellow);
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  height: 3vh;
+}
+
+
+
+
+
+
+
+/* ———————————————————————————————————————————————————— */
+/* IDS */
+/* #room {
+}
+
+.stillObject { */
+/* } */
+
+/*(query)*/
+/* .animate {
+} */
+
+/* WALL TWO */
+/* #wallTwo {
+}
+
+#NAUBA {
+}
+
+#artbox {
+  z-index: 5;
+}
+
+#ipad {
+  z-index: 5;
+}
+
+#paintset {
+  z-index: 5;
+}
+
+#cantippedover {
+  z-index: 5;
+} */
+
+/* WALL THREE */
+/* #wallThree {
+} */
+
+/* WALLFOUR */
+/* #wallFour {
+}
+
+#bookcase {
+} */
+
+/* COUNTER */
+/* #counter {
+}
+
+.letter {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#letter-resume {
+  position: absolute;
+  z-index: 5;
+}
+
+#letter-gaCertificate {
+  margin: 50px;
+} */

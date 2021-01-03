@@ -14,7 +14,7 @@ import ContactPage from "../Pages/ContactPage";
 const Routes = (props) => {
     return (
         <Switch>
-            <Route path="/" component={<LandingPage/>} />
+            <Route exact path="/" component={<LandingPage/>} />
             <Route path="/resume" component={<ResumePage/>} />
             <Route path="/education" component={<EducationPage/>} />
             <Route path="/work" component={<WorkPage/>} />

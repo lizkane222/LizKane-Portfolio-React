@@ -8,15 +8,19 @@ import "./dropdown.css";
 import {AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai"
 
 import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
+import ResumePage from "../../Pages/ResumePage"
+
 import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
 import MastersDoc from "../Room/Docs/MastersDoc.jsx";
 import GACertDoc from "../Room/Docs/GACertDoc.jsx";
 // import { Dropdown } from "materialize-css";
 
 
+
+
 import {GiBookshelf as Book} from "react-icons/gi";
 import {GiLargePaintBrush as Brush} from "react-icons/gi";
-import {GiScrollUnfurled as Scroll} from "react-icons/gi";
+import {GiScrollUnfurled as Scrollicon} from "react-icons/gi";
 import {FaCode as Code} from "react-icons/fa";
 import {GrCaretNext as Left} from "react-icons/gr";
 import {GrCaretPrevious as Right} from "react-icons/gr";
@@ -27,6 +31,21 @@ import {SiPython as Python} from "react-icons/si";
 import {SiReact as Reacticon} from "react-icons/si";
 import {SiDjango as Django} from "react-icons/si";
 import {SiSass as Sass} from "react-icons/si";
+
+
+const Scroll = (props) => {
+  const myRef = useRef(null)
+
+  const executeScroll = () => myRef.current.scrollIntoView();
+
+  return(
+    <>
+      <div ref={myRef} onClick={executeScroll}>
+        {`<`,props.element,`/>`}
+      </div>
+    </>
+  )
+}
 
 
 
@@ -70,10 +89,12 @@ const DropdownMenuResume = () => {
         unmountOnExit>
         <div className="menu">
           <DropdownItem>
-          <NavLink className="navlink" to="/resume" ><p className="link">Resume</p></NavLink>
+          <Scroll element={ResumePage}/>
+          {/* <NavLink className="navlink" to="/resume" ><p className="link">Resume</p></NavLink> */}
+          {/* <NavLink className="navlink" to="/resume" ><p className="link">Resume</p></NavLink> */}
             {/* <a href='#'>{<ResumeDoc/>}</a> */}
             </DropdownItem>
-          {<ResumeDoc/>}
+          {/* {<ResumeDoc/>} */}
           
           {/* <DropdownItem
             leftIcon={Left}
@@ -106,7 +127,7 @@ const DropdownMenuResume = () => {
           <DropdownItem goToMenu="resume" leftIcon={<Left />}>
             {/* <h2><ResumeDoc/</h2> */}
           </DropdownItem>
-          <DropdownItem leftIcon={ <Scroll/>}>
+          <DropdownItem leftIcon={ <Scrollicon/>}>
           {<ResumeDoc/>}
           </DropdownItem>
         </div>
@@ -119,7 +140,7 @@ const DropdownMenuResume = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Scrollicon />}>
             <h2>Animals</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
