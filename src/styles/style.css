@@ -68,7 +68,11 @@
 body {
   margin: 0;
   padding: 0;
-  background: #151616;
+  /* background: #151616; */
+  /* background: var(--yellow); */
+  /* background: var(--blue); */
+  /* background: var(--red); */
+  background: var(--white-pretty);
   font-size: 1em;
   font-family: var(--AcierBatTextNoirFF);
   font-weight: var(--AcierBatTextNoirFW);
@@ -113,7 +117,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  /* background-color: var(--yellow); */
+  background-color: var(--white-pretty);
 }
 
 

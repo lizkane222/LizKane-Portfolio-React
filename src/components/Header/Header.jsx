@@ -40,7 +40,7 @@ const NavbarStyled = styled.div`
   position: fixed;
   width: 100%;
   .header {
-    background: black;
+    background: #fff;
     padding: 40px;
     display: flex;
     justify-content: space-around;
@@ -62,7 +62,8 @@ const NavbarStyled = styled.div`
   .navLinks {
     font-size: 1.7em;
     margin: 2.3%;
-    color:#8B0124;
+    // color:#8B0124;
+    color:#327E8A;
   }
   
   .navLinks:hover {

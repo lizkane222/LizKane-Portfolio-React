@@ -128,7 +128,7 @@ text-shadow: -1px 1px 3px #242526;
 /* <nav> */
 .navbar {
   height: var(--nav-size);
-  background-color: var(--bg);
+  background-color: var(--white-pretty);
   padding: 0 1rem;
   border-bottom: var(--border);
   width: 100vw;
@@ -160,7 +160,8 @@ text-shadow: -1px 1px 3px #242526;
   width: var(--button-size);
   height: var(--button-size);
   /* background-color: var(--blue); */
-  color: var(--red);
+  /* color: var(--red); */
+  color: var(--blue);
   /* text-shadow: -1px 1px 3px #242526; */
   /* border-radius: 15px; */
   /* padding: 15%; */
