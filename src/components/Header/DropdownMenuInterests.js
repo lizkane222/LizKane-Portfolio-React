@@ -1,8 +1,9 @@
 import React, {useState, useRef, useEffect} from "react";
 import { CSSTransition } from 'react-transition-group';
+import { NavLink, Link } from "react-router-dom";
 
-// import "./dropdown.css";
-import DropdownItem from "./DropdownItem";
+import "./dropdown.css";
+// import DropdownItem from "./DropdownItem";
 
 import {AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai"
 
@@ -29,8 +30,11 @@ import {SiSass as Sass} from "react-icons/si";
 
 
 
-const DropdownMenu = () => {
-  const [activeMenu, setActiveMenu] = useState('main');
+const DropdownMenuInterests = () => {
+  const [activeMenu, setActiveMenu] = useState('interests');
+  // const [activeMenuResume, setActiveMenuResume] = useState('Liz');
+  // const [activeMenuProjects, setActiveMenuProjects] = useState('Liz');
+  // const [activeMenuEducation, setActiveMenuEducation] = useState('Liz');
   const [menuHeight, setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
 
@@ -47,7 +51,7 @@ const DropdownMenu = () => {
     return (
 
         <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-          <span className="icon-button">{props.leftIcon}</span>
+          <span className="icon-button icon-left">{props.leftIcon}</span>
             {props.children}
           <span className="icon-right">{props.rightIcon}</span>
         </a>
@@ -58,29 +62,28 @@ const DropdownMenu = () => {
   return (
     <>
     <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
-
       <CSSTransition
-        in={activeMenu === 'Liz'}
+        in={activeMenu === 'interests'}
         timeout={500}
         classNames="menu-primary"
-        unmountOnExit
-        onEnter={calcHeight}>
+        onEnter={calcHeight}
+        unmountOnExit>
         <div className="menu">
           <DropdownItem>Liz Kane</DropdownItem>
           <DropdownItem
-            leftIcon={<Left />}
+            leftIcon={Left}
             rightIcon={<Right />}
             goToMenu="languages">
             Languages
           </DropdownItem>
           <DropdownItem
-            leftIcon={<Left />}
+            leftIcon={Left}
             rightIcon={<Right />}
             goToMenu="bio">
             Bio
           </DropdownItem>
           <DropdownItem
-            leftIcon={<Left/>}
+            leftIcon={Left}
             rightIcon={<Right />}
             goToMenu="brand">
             Brand
@@ -95,8 +98,8 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="Liz" leftIcon={<Code />}>
-            <h2>Languages</h2><br/>
+          <DropdownItem goToMenu="Liz" leftIcon={<Left />}>
+            <h2>Languages</h2>
           </DropdownItem>
           <DropdownItem goToMenu="HTMLProjects" leftIcon={<HTML />}>HTML</DropdownItem>
           <DropdownItem goToMenu="CSSProjects" leftIcon={<CSS />}>CSS</DropdownItem>
@@ -140,6 +143,7 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
+
       <CSSTransition
         in={activeMenu === 'JavaScriptProjects'}
         timeout={500}
@@ -147,7 +151,7 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Left />}>
             <h2>JavaScript Projects</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
@@ -156,6 +160,7 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
+
       <CSSTransition
         in={activeMenu === 'PythonProjects'}
         timeout={500}
@@ -163,13 +168,14 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Left />}>
             <h2>Python Projects</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Wayfarer</DropdownItem>
           <DropdownItem leftIcon="🦔">PetPro</DropdownItem>
         </div>
       </CSSTransition>
+
       <CSSTransition
         in={activeMenu === 'ReactProjects'}
         timeout={500}
@@ -177,7 +183,7 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Left />}>
             <h2>React Projects</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Ekseed</DropdownItem>
@@ -185,6 +191,7 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Portfolio</DropdownItem>
         </div>
       </CSSTransition>
+
       <CSSTransition
         in={activeMenu === 'DjangoProjects'}
         timeout={500}
@@ -192,13 +199,14 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Left />}>
             <h2>Django Projects</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Wayfarer</DropdownItem>
           <DropdownItem leftIcon="🐸">MBCrunch</DropdownItem>
         </div>
       </CSSTransition>
+
       <CSSTransition
         in={activeMenu === 'SassProjects'}
         timeout={500}
@@ -206,7 +214,7 @@ const DropdownMenu = () => {
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
-          <DropdownItem goToMenu="languages" leftIcon={<Scroll />}>
+          <DropdownItem goToMenu="languages" leftIcon={<Left />}>
             <h2>Sass Projects</h2>
           </DropdownItem>
           <DropdownItem leftIcon="🦘">Minifi</DropdownItem>
@@ -214,14 +222,10 @@ const DropdownMenu = () => {
         </div>
       </CSSTransition>
     </div>
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
 
 
-
-
-
-
-
+    
+    {/* <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
       <CSSTransition
         in={activeMenu === 'main'}
         timeout={500}
@@ -282,9 +286,9 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
-    </div>
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    </div>*/}
 
+    {/* <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}> 
       <CSSTransition
         in={activeMenu === 'main'}
         timeout={500}
@@ -345,9 +349,9 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
-    </div>
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    </div> */}
 
+    {/* <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
       <CSSTransition
         in={activeMenu === 'main'}
         timeout={500}
@@ -408,9 +412,9 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
-    </div>
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+    </div> */}
 
+    {/* <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
       <CSSTransition
         in={activeMenu === 'main'}
         timeout={500}
@@ -471,70 +475,7 @@ const DropdownMenu = () => {
           <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
         </div>
       </CSSTransition>
-    </div>
-    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
-
-      <CSSTransition
-        in={activeMenu === 'main'}
-        timeout={500}
-        classNames="menu-primary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem>Liz Kane</DropdownItem>
-          <DropdownItem
-            leftIcon={<Left />}
-            rightIcon={<Right />}
-            goToMenu="settings">
-            Settings
-          </DropdownItem>
-          <DropdownItem
-            leftIcon={<Left/>}
-            rightIcon={<Right />}
-            goToMenu="animals">
-            Animals
-          </DropdownItem>
-
-        </div>
-      </CSSTransition>
-
-      <CSSTransition
-        in={activeMenu === 'settings'}
-        timeout={500}
-        classNames="menu-secondary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<Code />}>
-            <h2>Languages</h2><br/>
-          </DropdownItem>
-          <DropdownItem leftIcon={<HTML />}>HTML</DropdownItem>
-          <DropdownItem leftIcon={<CSS />}>CSS</DropdownItem>
-          <DropdownItem leftIcon={<JS />}>JavaScript</DropdownItem>
-          <DropdownItem leftIcon={<Python />}>Python</DropdownItem>
-          <DropdownItem leftIcon={<Reacticon />}>React</DropdownItem>
-          <DropdownItem leftIcon={<Django />}>Django</DropdownItem>
-          <DropdownItem leftIcon={<Sass />}>Sass!</DropdownItem>
-        </div>
-      </CSSTransition>
-
-      <CSSTransition
-        in={activeMenu === 'animals'}
-        timeout={500}
-        classNames="menu-secondary"
-        unmountOnExit
-        onEnter={calcHeight}>
-        <div className="menu">
-          <DropdownItem goToMenu="main" leftIcon={<Scroll />}>
-            <h2>Animals</h2>
-          </DropdownItem>
-          <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
-          <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
-          <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
-        </div>
-      </CSSTransition>
-    </div>
+    </div> */}
     
     </>
   );
@@ -566,7 +507,7 @@ const DropdownMenu = () => {
 //   )
 // }
 
-export default DropdownMenu;
+export default DropdownMenuInterests;
 
 // const DropdownItem = (props) => {
 //   return(

@@ -3,31 +3,38 @@ import iframe from 'react-iframe';
 
 import Header from "../Header/Header";
 import ItemList from "./ItemList";
-import ProjectList from "./ProjectList";
-import KaneLogo from "../KaneLogo/KaneLogo";
+// import ProjectList from "./ProjectList";
+// import KaneLogo from "../KaneLogo/KaneLogo";
 import ResourceList from "./ResourceList";
 import Dropdown from "../Header/Dropdown"
 import NavBar from "../Header/NavBar"
 import NavItem from "../Header/NavItem"
-import NavHeader from "../Header/NavHeader";
-import TodoList from "../Todos/TodoList";
+// import NavHeader from "../Header/NavHeader";
+// import TodoList from "../Todos/TodoList";
 
-import ResumeDoc from "./Docs/ResumeDoc.jsx";
-import BachelorsDoc from "./Docs/BachelorsDoc.jsx";
-import MastersDoc from "./Docs/MastersDoc.jsx";
-import GACertDoc from "./Docs/GACertDoc.jsx";
+// import ResumeDoc from "./Docs/ResumeDoc.jsx";
+// import BachelorsDoc from "./Docs/BachelorsDoc.jsx";
+// import MastersDoc from "./Docs/MastersDoc.jsx";
+// import GACertDoc from "./Docs/GACertDoc.jsx";
+
+import LandingPage from "../Pages/LandingPage";
+import ResumePage from "../Pages/ResumePage";
+import EducationPage from "../Pages/EducationPage";
+import WorkPage from "../Pages/WorkPage";
+import ProjectsPage from "../Pages/ProjectsPage";
+import InterestsPage from "../Pages/InterestsPage";
+import ContactPage from "../Pages/ContactPage";
 
 
-
-import Blocks from "./UploadPhotosToWeb/docs/blocks.png";
-import GrandCanyon from "./UploadPhotosToWeb/docs/grandCanyon.png";
-import Desert from "./UploadPhotosToWeb/docs/desert.png";
-import Obsessions from "./UploadPhotosToWeb/docs/obsessions.png";
-import TeamWork from "./UploadPhotosToWeb/docs/teamWork.png";
+// import Blocks from "./UploadPhotosToWeb/docs/blocks.png";
+// import GrandCanyon from "./UploadPhotosToWeb/docs/grandCanyon.png";
+// import Desert from "./UploadPhotosToWeb/docs/desert.png";
+// import Obsessions from "./UploadPhotosToWeb/docs/obsessions.png";
+// import TeamWork from "./UploadPhotosToWeb/docs/teamWork.png";
 
 import {AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai";
 
-import DropdownMenu from "../Header/DropdownMenu"
+// import DropdownMenu from "../Header/DropdownMenuLiz"
 
 const MainPage = () => {
 
@@ -39,36 +46,36 @@ const MainPage = () => {
             {/* <ItemList/> */}
 
             
-            <NavHeader />
+            {/* <NavHeader /> */}
 
 
-            <KaneLogo/>
+            {/* <KaneLogo/> */}
 
-            <div className="redbox">
+            {/* <div className="redbox">
                 <img src={Blocks} alt="" id="blocksImg" className="thematicImg responsive-img"/>
             </div>
-            {<ResumeDoc/>}
-            {<MastersDoc/>}
+            {<ResumeDoc/>} */}
+            {/* {<MastersDoc/>}
             {<BachelorsDoc/>}
-            {<GACertDoc/>}
+            {<GACertDoc/>} */}
 
-            <div className="redbox">
+            {/* <div className="redbox">
                 <img src={GrandCanyon} alt="" id="grandCanyonImg" className="thematicImg responsive-img"/>
-            </div>
-            <div className="redbox">
+            </div> */}
+            {/* <div className="redbox">
                 <img src={Desert} alt="" id="desertImg" className="thematicImg responsive-img"/>
-            </div>
+            </div> */}
             
-            <ProjectList/>
+            {/* <ProjectList/>
             <div className="redbox">
                 <img src={TeamWork} alt="" id="teamWorkImg" className="thematicImg responsive-img"/>
             </div>
             <div className="redbox">
                 <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img"/>
-            </div>
+            </div> */}
 
 
-            <TodoList />
+            {/* <TodoList /> */}
         </div>
     )
 }

@@ -92,7 +92,9 @@ ul {
 
 a {
   color: var(--text-color);
-  text-decoration: none;;
+  text-decoration: none;
+  text-align: left;
+  font-size: 2em;
 }
 
 /* Top Navigation Bar */
@@ -111,7 +113,8 @@ a {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-left: 12%;
+  /* justify-content: flex-end; */
+  /* margin-left: 5%; */
 }
 
 /* <li> */
@@ -120,15 +123,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10%;
+  margin-right: 3%;
   /* padding: */
 }
 
 /* Icon Button */
 .icon-button {
-  /* --button-size: calc(var(--nav-size) * 0.5); */
-  /* width: var(--button-size); */
-  /* height: var(--button-size); */
+  --button-size: calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
   /* background-color: var(--blue); */
   color: var(--red);
   /* text-shadow: -1px 1px 3px #242526; */
@@ -144,9 +147,9 @@ a {
 
 .icon-button { 
   /* fill: var(--text-color); */
-  width: 200%;
-  height: 80%;
-  font-size: 2em;
+  /* width: 200%; */
+  /* height: 80%; */
+  /* font-size: 2em; */
   margin-right: 5%;
 }
 
@@ -157,7 +160,7 @@ a {
 
 
 .icon-button svg { 
-  /* fill: var(--text-color); */
+  /* fill: var(--white-pretty); */
   /* width: 200%; */
   /* height: 80%; */
   /* font-size: 2em; */
@@ -170,34 +173,39 @@ a {
   position: absolute;
   top: 58px;
   width: 300px;
+  /* height: fit-content; */
   transform: translateX(29%);
   background-color: var(--bg);
   border: var(--border);
   border-radius: var(--border-radius);
-  padding: 1rem;
-  padding-bottom: 2em;
-  /* overflow: hidden; */
-  overflow: auto;
+  /* padding: 1rem; */
+  padding-bottom: 3em;
+  height: 120%;
+  overflow: hidden;
+  /* overflow: auto; */
+
   transition: height var(--speed) ease;
 }
 
 .menu {
   width: 100%;
-  
+  height: fit-content;
+  /* margin: 0 auto; */
 }
 
 .menu-item {
-  height: 50px;
+  height: 2em;
   display: flex;
   align-items: center;
   border-radius: var(--border-radius);
   transition: background var(--speed);
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-size: 1.4em;
+  /* margin: 0 a; */
 }
 
 .menu-item .icon-button {
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
 }
 
 
@@ -215,6 +223,11 @@ a {
 
 .icon-right {
   margin-left: auto;
+}
+
+.whiteIcon {
+  color: white;
+  fill: white;
 }
 
 /* CSSTransition classes  */
@@ -250,10 +263,10 @@ a {
   transition: all var(--speed) ease;
 }
 
-span {
+/* span {
   background-color: none;
   width: 100%;
-}
+} */
 
 li {
   background-color: var(--blue);
@@ -262,6 +275,7 @@ li {
   border-radius: 10px;
   margin: .5%;
   padding: 0 5%;
+
 
 }
 
@@ -272,7 +286,8 @@ li:hover {
 }
 
 h2 {
-  display: block;
+  /* display: block; */
+
 }
 
 #navLizKane {

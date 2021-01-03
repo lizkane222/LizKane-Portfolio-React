@@ -1,7 +1,14 @@
 import React from "react";
 import NavBar from "./NavBar";
 import NavItem from "./NavItem";
-import DropdownMenu from "./DropdownMenu"
+import DropdownMenuLiz from "./DropdownMenuLiz"
+import DropdownMenuResume from "./DropdownMenuResume"
+import DropdownMenuProjects from "./DropdownMenuProjects"
+import DropdownMenuWork from "./DropdownMenuWork"
+import DropdownMenuEducation from "./DropdownMenuEducation"
+import DropdownMenuInterests from "./DropdownMenuInterests"
+import DropdownMenuContact from "./DropdownMenuContact"
+// import DropdownMenu from "./DropdownMenu"
 
 import {AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai";
 
@@ -20,31 +27,32 @@ const NavHeader= () => {
 
     return (
         <NavBar >
+
             <NavItem icon="LK" id="navLizKane">
-                <DropdownMenu ></DropdownMenu>
+                <DropdownMenuLiz></DropdownMenuLiz>
             </NavItem>
             <NavItem icon="Resume" id="navResume">
                 {/* dropdown menu  */}
-
-                <DropdownMenu>
+                {/* <p>ZACK</p> */}
+                <DropdownMenuResume>
                     
 
-                </DropdownMenu>
+                </DropdownMenuResume>
             </NavItem>
             <NavItem icon="Projects" >
-                <DropdownMenu></DropdownMenu>
+                <DropdownMenuProjects></DropdownMenuProjects>
             </NavItem>
             <NavItem icon="Education" >
-                <DropdownMenu></DropdownMenu>
+                <DropdownMenuEducation></DropdownMenuEducation>
             </NavItem>
             <NavItem icon="Work" >
-                <DropdownMenu></DropdownMenu>
+                <DropdownMenuWork></DropdownMenuWork>
             </NavItem>
             <NavItem icon="Interests" >
-                <DropdownMenu></DropdownMenu>
+                <DropdownMenuInterests></DropdownMenuInterests>
             </NavItem>
             <NavItem icon="Contact" >
-                <DropdownMenu></DropdownMenu>
+                <DropdownMenuContact></DropdownMenuContact>
             </NavItem>
 
         </NavBar>

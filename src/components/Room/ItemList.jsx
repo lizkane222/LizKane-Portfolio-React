@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import Item from "./Item"
 import "../../styles/itemStyle.css"
 
+
 // FROM TUTORIAL
 // import {ReactComponent as AZFlag} from "./UploadPhotosToWeb/badPNGs/SVG/arizonaFlag.svg"
 
