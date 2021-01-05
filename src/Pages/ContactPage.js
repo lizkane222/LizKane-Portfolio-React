@@ -21,37 +21,37 @@ const ContactPage=() => {
 
             <div id="socialMedia">
                 <div id="linkedIn">
-                <a href="linkedin.com/in/lizkane">
+                <a href="linkedin.com/in/lizkane" target="_blank">
                 <i><FiLinkedin/></i>
                 <p className="iconText">linkedin.com/in/lizkane</p></a>
                 </div>
 
                 <div id="github">
-                <a href="https://github.com/lizkane222">
+                <a href="https://github.com/lizkane222" target="_blank">
                 <i><FiGithub/></i>
                 <p className="iconText">https://github.com/lizkane222</p></a>
                 </div>
 
                 <div id="twitter">
-                <a href="https://twitter.com/lizaykay">
+                <a href="https://twitter.com/lizaykay" target="_blank">
                 <i><FiTwitter/></i>
                 <p className="iconText">https://twitter.com/lizaykay</p></a>
                 </div>
 
                 <div id="phone">
-                <a href="#">
+                <a href="#" target="_blank">
                 <i><FiSmartphone/></i>
                 <p className="iconText">669-241-8922</p></a>
                 </div>
 
                 <div id="email">
-                <a href="#">
+                <a href="#" target="_blank">
                 <i><SiMinutemailer/></i>
                 <p className="iconText">lizkane222@gmail.com</p></a>
                 </div>
 
                 <div id="location">
-                <a href="#">
+                <a href="#" >
                 <i><VscLocation/></i>
                 <p className="iconText">San Francisco, California</p></a>
                 </div>
@@ -62,8 +62,8 @@ const ContactPage=() => {
                 </div> */}
 
             </div>
-            <Footer/>
             </Wrapper>
+            <Footer/>
         </section>
     )
 }

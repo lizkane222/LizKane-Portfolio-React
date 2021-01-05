@@ -21,7 +21,7 @@ const FloatDocBox =(props) => {
                 <div className="resourceDiv" id={props.name+'ParentDiv'} >
                     <h3 className="resourceCategory">{props.category}</h3>
                     <h2 className="resourceName">{props.name}</h2>
-                    {/* <h2 className="resourceName">{props.namePrint}</h2> */}
+                    {/* <h2 className="resourceName">{props.print}</h2> */}
                     <div className="responsiveIframe">
                         <iframe id={props.name+'iframe'} className="iframeResize" title={props.name} src={props.iframe} width="560" height="315" frameBorder="0" allowFullScreen></iframe>
                     </div>

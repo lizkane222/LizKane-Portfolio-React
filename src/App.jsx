@@ -20,6 +20,7 @@ import WorkPage from "./Pages/WorkPage";
 import ProjectsPage from "./Pages/ProjectsPage";
 import InterestsPage from "./Pages/InterestsPage";
 import ContactPage from "./Pages/ContactPage";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -38,6 +39,7 @@ function App() {
       <ProjectsPage/>
       <InterestsPage/>
       <ContactPage/>
+      {/* <Footer/> */}
       
     </div>
   );
