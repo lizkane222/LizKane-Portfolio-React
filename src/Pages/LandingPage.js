@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import Wrapper from '../components/Header/Wrapper';
 import styled from 'styled-components';
+
 
 import KaneLogo from "../components/KaneLogo/KaneLogo";
 
@@ -95,30 +96,36 @@ const LandingPage=() => {
     //     container.onmousemove = onMouseMoveHandler;
     // }
 
+    const [text, setText] = useState("strokes")
+
+    const handleHover = (e) => {
+        e.target.className = "solid"
+    }
+
     return(
         <section id="landingPage">
             <Wrapper>
                 <div className="citeArrival">
                     <div className="lizKaneIntro">
-                        <p id="Liz" className="myName">
+                        <p id="Liz" className="myName" onMouseOver={() => setText(!handleHover)}>
                             Liz Kane
                         </p>
-                        <p id="p1">Moralistically Driven that Everything Should Have a Purpose.</p>
-                        <p id="p2">Realistically Optimistic</p>
-                        <p id="p3">Direct & Patient in Leading Conflict Resolution.</p>
-                        <p id="p4">Gifted in Creating Communities.</p>
+                        <p id="p1" onMouseOver={handleHover}>Moralistically Driven that Everything Should Have a Purpose.</p>
+                        <p id="p2" onMouseOver={handleHover}>Realistically Optimistic</p>
+                        <p id="p3" onMouseOver={handleHover}>Direct & Patient in Leading Conflict Resolution.</p>
+                        <p id="p4" onMouseOver={handleHover}>Gifted in Creating Communities.</p>
 
                         
 
                     </div>  
 
                     <div id="seekLogoContainer">
-                        <img src={Seek3} alt="seek logo layer" id="seekPhoto13" className="seekLogo"></img>
-                        <img src={Seek5} alt="seek logo layer" id="seekPhoto15" className="seekLogo"></img>
+                        {/* <img src={Seek3} alt="seek logo layer" id="seekPhoto13" className="seekLogo"></img> */}
+                        {/* <img src={Seek5} alt="seek logo layer" id="seekPhoto15" className="seekLogo"></img> */}
                         <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo"></img>
                         <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo"></img>
-                        <img src={Seek4} alt="seek logo layer" id="seekPhoto21" className="seekLogo"></img>
-                        <img src={Seek6} alt="seek logo layer" id="seekPhoto23" className="seekLogo"></img>
+                        {/* <img src={Seek4} alt="seek logo layer" id="seekPhoto21" className="seekLogo"></img> */}
+                        {/* <img src={Seek6} alt="seek logo layer" id="seekPhoto23" className="seekLogo"></img> */}
                     </div>
 
                 </div>

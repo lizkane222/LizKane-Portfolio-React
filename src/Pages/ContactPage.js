@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Wrapper from '../components/Header/Wrapper';
 import styled from 'styled-components';
@@ -12,45 +12,54 @@ import {VscLocation} from 'react-icons/vsc';
 // const ContactPageStyled = styled.div;
 
 const ContactPage=() => {
+    const [count, setCount] = useState(0)
+
+    const selectiveCounter=(e) => {
+        e.target.className !='alreadyCounted' ? setCount(count+1) : e.target.className = 'alreadyCounted'
+    }
+
+
     return(
         <section id="contactPage">
             <Wrapper>
                 <TodoList className="todoListGrid"/>
 
-
+                <div>
+            <p>You viewed {count} components on my site. Thanks & Come Back Soon!</p>
+                </div>
 
             <div id="socialMedia">
-                <div id="linkedIn">
-                <a href="linkedin.com/in/lizkane" target="_blank">
+                <div id="linkedIn" onClick={() => selectiveCounter}>
+                <a href="linkedin.com/in/lizkane" target="_blank" >
                 <i><FiLinkedin/></i>
                 <p className="iconText">linkedin.com/in/lizkane</p></a>
                 </div>
 
-                <div id="github">
-                <a href="https://github.com/lizkane222" target="_blank">
+                <div id="github" onClick={() => setCount(count+1)}>
+                <a href="https://github.com/lizkane222" target="_blank" >
                 <i><FiGithub/></i>
                 <p className="iconText">https://github.com/lizkane222</p></a>
                 </div>
 
-                <div id="twitter">
-                <a href="https://twitter.com/lizaykay" target="_blank">
+                <div id="twitter" onClick={() => setCount(count+1)}>
+                <a href="https://twitter.com/lizaykay" target="_blank" >
                 <i><FiTwitter/></i>
                 <p className="iconText">https://twitter.com/lizaykay</p></a>
                 </div>
 
-                <div id="phone">
-                <a href="#" target="_blank">
+                <div id="phone" onClick={() => setCount(count+1)}>
+                <a href="#" target="_blank" >
                 <i><FiSmartphone/></i>
                 <p className="iconText">669-241-8922</p></a>
                 </div>
 
-                <div id="email">
-                <a href="#" target="_blank">
+                <div id="email" onClick={() => setCount(count+1)}>
+                <a href="#" target="_blank" >
                 <i><SiMinutemailer/></i>
                 <p className="iconText">lizkane222@gmail.com</p></a>
                 </div>
 
-                <div id="location">
+                <div id="location" onClick={() => setCount(count+1)}>
                 <a href="#" >
                 <i><VscLocation/></i>
                 <p className="iconText">San Francisco, California</p></a>
@@ -60,6 +69,7 @@ const ContactPage=() => {
                 </>
                 <p></p>
                 </div> */}
+
 
             </div>
             </Wrapper>
