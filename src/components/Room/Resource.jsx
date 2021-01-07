@@ -58,13 +58,12 @@ class Resource extends Component {
             <>
                 <div className="ResourceListComponent">
                     {this.props.name == 'Curriculum Vitae' ? 
-                        <h5 onClick={this.setActive} className="docName">Resume</h5>
+                        <h2 onClick={this.setActive} className="docName">Resume</h2>
                         :
-                        <h5 onClick={this.setActive} className="docName">{this.props.name}</h5>
+                        <h2 onClick={this.setActive} className="docName">{this.props.name}</h2>
                     }
-
-
                 </div>
+
                 {this.state.active &&
                 <>
                 <FloatDocBox key={this.props.name} name={this.props.name} print={this.props.print} category={this.props.category} iframe={this.props.iframe} description1={this.props.description1} description2={this.props.description2} description3={this.props.description3} emblem={this.props.emblem} logo={this.props.logo} setActive={this.setActive}/>
