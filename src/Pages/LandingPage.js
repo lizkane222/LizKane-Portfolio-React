@@ -102,6 +102,10 @@ const LandingPage=() => {
         e.target.className = "solid"
     }
 
+    
+
+
+
     return(
         <section id="landingPage">
             <Wrapper>
@@ -114,9 +118,6 @@ const LandingPage=() => {
                         <p id="p2" onMouseOver={handleHover}>Realistically Optimistic</p>
                         <p id="p3" onMouseOver={handleHover}>Direct & Patient in Leading Conflict Resolution.</p>
                         <p id="p4" onMouseOver={handleHover}>Gifted in Creating Communities.</p>
-
-                        
-
                     </div>  
 
                     <div id="seekLogoContainer">

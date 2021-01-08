@@ -28,7 +28,18 @@ const InterestsPage=() => {
         // }
     // };
 
+    let list = document.getElementsByClassName('content__container__list');
+    let items = null;
+    const anApple =()=> {
+    for (let i=0; i<list.childNodes.length; i++){
+        if(list.childNodes[i].className =='vowel') {
+            return 'n'
+        }
+    }}
 
+    let redColor = "#8B0124";
+    let blueColor = "#327E8A";
+    let yellowColor = "#EDC168";
 
     return(
         <section id="interestsPage">
@@ -50,6 +61,32 @@ const InterestsPage=() => {
                 <button onClick={() => toggle(true)}>set ON</button>
                 <button onClick={() => toggle(false)}>set OFF</button>
                 </div>
+
+                <div className="rollerContainer">
+                    <div class="content">
+                        <div class="content__container">
+                            <h5 class="content__container__text">
+                                more than just a
+                                
+                            </h5>
+
+                            <ul class="content__container__list">
+                                <li class="content__container__list__item blueRoll">Software Engineer</li>
+                                <li class="content__container__list__item yellowRoll">Teacher</li>
+                                <li class="content__container__list__item redRoll vowel" id="vowelArtist">Artist</li>
+                                <li class="content__container__list__item blueRoll">Musician</li>
+                                <li class="content__container__list__item yellowRoll">Writer</li>
+                                <li class="content__container__list__item redRoll">Feminist</li>
+                                <li class="content__container__list__item yellowRoll vowel">Athlete</li>
+                                <li class="content__container__list__item redRoll">Nomad</li>
+                                <li class="content__container__list__item yellowRoll">Woman in Tech</li>
+                                <li class="content__container__list__item blueRoll">Software Engineer</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </Wrapper>
         </section>
     )

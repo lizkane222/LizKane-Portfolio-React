@@ -3,8 +3,8 @@ import React from "react";
 const Card = () => {
     return(
         <>
-            <div className="cardFront">
-                <img href="#"/>
+            <div className="cardFront" style={{}}>
+
             </div>
 
             <div className="cardBack">

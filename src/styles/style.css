@@ -10,6 +10,7 @@
   --red:#8B0124;
   --blue:#327E8A;
   --yellow: #EDC168;
+  --yellowDark: rgba(124,85,32,1);
   --white: rgba(248,248,248,1);
   --white-semi-trans: rgba(248,248,248,1);
   --white-semi-grey: rgba(248,248,248,.8);
@@ -95,6 +96,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.lightMode {
+  background: var(--white-pretty); 
+}
+body.darkMode {
+  background: var(--grey-dark); 
+}
 
 .redText {
   color: var(--red)
@@ -563,9 +570,6 @@ align-content: center;
   grid-template-areas: ; */
 }
 
-
-
-
 .citeArrival {
   position: relative;
   display: grid;
@@ -776,6 +780,15 @@ align-content: center;
 
 
 
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------ */
 /* ----------------- RESUME PAGE ------------------------------ */
 /* ------- ref classes = .thematicImg .responsive-img --------- */
@@ -952,7 +965,7 @@ h2 {
   opacity: 1;
 }
 
-svg{
+svg #educationSVG{
   /* height:100%;margin:0;padding:0;background:#E3DFD2; */
   /* font-size: 10em; */
   background:url('../components/Room/UploadPhotosToWeb/docs/grandCanyon.png');
@@ -967,7 +980,7 @@ svg{
 }
 .edFloatText {
   font-size:10em;
-  transition:font-size .4s ease-out;
+  transition:font-size .6s ease-out;
   font-weight:800;
   font-family:arial;
 }
@@ -980,7 +993,7 @@ svg{
 } */
 svg:hover .edFloatText{
   font-size: 300em;
-  transition:font-size .4s ease-in-out;
+  transition:font-size .5s ease-in-out;
   /* 18em? */
 }
 /* svg:hover text{
@@ -1134,6 +1147,7 @@ svg:hover .edFloatText{
       contain: content;
       align-self: center;
       text-align: center;
+      line-height: 1em;
       margin: 0 auto;
       bottom: 0;
       font-family: var(--AcierBatTextOutlineFF);
@@ -1214,28 +1228,127 @@ svg:hover .edFloatText{
 }
 
 #blogListContainer {
-
+  width: 100vw;
+  height: 60vh;
+  overflow: scroll;
 }
 
 #blogListUL {
-
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* padding: 2%; */
+  box-sizing: border-box;
+  flex-flow: row wrap;
 }
 
 #blogTitleList {
 
 }
-
 .wrapperBlogPost {
-
+  width: 25%;
 }
-
 #blogPostContainer {
-
+  
 }
+
+.blogBox {
+  flex: 1;
+  overflow: hidden;
+  transition: 450ms;
+  margin: 2.5%;
+  box-shadow: 0 1em 1.5em rgba(0,0,0,.1);
+  line-height: 0;
+  min-width: 23%;
+  width: 25%;
+  max-width: 30%;
+  /* max-width: 25%; */
+  /* min-height: 50%; */
+  /* max-height: 80%; */
+  height: 40vh;
+
+  /* background-color: blue; */
+}
+
+.blogBox > .blogImg {
+  width: 150%;
+  min-height: 70%;
+  max-height: 70%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  transition: 450ms ease-in-out;
+}
+
+.blogTitle {
+  max-height: 10%;
+}
+
+.blogTitle > span {
+  font-size: 1.2em;
+  background-color: var(--yellowDark);
+  display: block;
+  text-align: center;
+  max-height: 100%;
+  line-height: 1em;
+  position: relative;
+}
+
+/* .blogBox:hover >.blogImg {
+  width: 100%;
+  height: 50%;
+} */
+
+
+
 
 #blogSection {
-
+  /* opacity: 0; */
 }
+
+
+
+#blogBox1:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox2:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox3:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox4:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox5:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox6:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox7:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox8:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+#blogBox9:hover > .blogImg {
+  width: 100%;
+  height: 30%;
+}
+
+.blogBox:hover {
+  flex: 1 1 30%;
+}
+
 
 #blogP1 {
 
@@ -1317,9 +1430,202 @@ svg:hover .edFloatText{
 
 }
 
-#blogImg {
 
-}
+    /* ------------------------ */
+    /* --- Rolling Container -- */
+    /* ------------------------ */
+    .rollerContainer {
+      display: flex;
+      position: relative;
+      width: 40%;
+      height: 15%;
+      margin: 5vh 0;
+      align-content: center;
+      align-items: center;
+    }
+
+    .content {
+      position: absolute;
+      top:  60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 2.5em;
+      font-size: 2em;
+      /* width: 30em; */
+      width: 100%;
+      overflow: hidden;
+      /* font-family: "Lato", sans-serif; */
+      font-size: 1em;
+      line-height: 1.5em;
+      
+      background-color: none;
+      display: flex;
+      align-content: center;
+    }
+    .content__container {
+      width: 95%;
+      font-weight: 600;
+      overflow: hidden;
+      height: 5em;
+      padding: 0 2em;
+    }
+    .content__container:before {
+      content: "[";
+      left: 0;
+      text-shadow: 2px 2px 4px var(--yellowDark);
+    }
+    .content__container:after {
+      content: "]";
+      position: absolute;
+      right: 0;
+      text-shadow: -2px 2px 4px var(--yellowDark);
+    }
+    .content__container:after, .content__container:before {
+      position: absolute;
+      top: 0;
+      color: var(--yellow);
+      /* text-shadow: 2px 2px 4px var(--yellowDark); */
+      /* color: #16a085; */
+      font-size: 3.4em;
+      line-height: .7em;
+      -webkit-animation-name: opacity;
+      -webkit-animation-duration: 2.5s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(.48,0,.47,1);
+      animation-name: opacity;
+      animation-duration: 2.5s;
+      animation-timing-function: cubic-bezier(.48,0,.47,1);
+      animation-iteration-count: infinite;
+    }
+    .content__container__text {
+      font-size: 2em;
+      color: var(--yellow);
+      line-height: 1em;
+      display: inline;
+      float: left;
+      margin: 0;
+    }
+    .content__container__list {
+      margin-top: 0;
+      /* padding-left: 2em; */
+      text-align: center;
+      list-style: none;
+      -webkit-animation-name: change;
+      -webkit-animation-duration: 15s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: change;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      overflow: hidden;
+    }
+    .content__container__list__item {
+      background-color: var(--white-pretty);
+      /* background-color: red; */
+      font-size: 1.55em;
+      line-height: 1.3em;
+      /* padding: .2em 0; */
+      margin: 0;
+      text-align: center;
+    }
+
+    @-webkit-keyframes opacity {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes change {
+      0%, 10% {
+        transform: translate3d(0, 0, 0);
+      }
+      20% {
+        transform: translate3d(0, -10%, 0);
+      }
+      30%{
+        transform: translate3d(0, -20%, 0);
+      }
+      40%{
+        transform: translate3d(0, -30%, 0);
+      }
+      50% {
+        transform: translate3d(0, -40%, 0);
+      }
+      60% {
+        transform: translate3d(0, -50%, 0);
+      }
+      70% {
+        transform: translate3d(0, -60%, 0);
+      }
+      80% {
+        transform: translate3d(0, -70%, 0);
+      }
+      90% {
+        transform: translate3d(0, -80%, 0);
+      }
+      100% {
+        transform: translate3d(0, -90%, 0);
+      }
+      110% {
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+    @keyframes opacity {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @keyframes change {
+      0%, 10% {
+        transform: translate3d(0, 0, 0);
+      }
+      20% {
+        transform: translate3d(0, -10%, 0);
+      }
+      30%{
+        transform: translate3d(0, -20%, 0);
+      }
+      40%{
+        transform: translate3d(0, -30%, 0);
+      }
+      50% {
+        transform: translate3d(0, -40%, 0);
+      }
+      60% {
+        transform: translate3d(0, -50%, 0);
+      }
+      70% {
+        transform: translate3d(0, -60%, 0);
+      }
+      80% {
+        transform: translate3d(0, -70%, 0);
+      }
+      90% {
+        transform: translate3d(0, -80%, 0);
+      }
+      100% {
+        transform: translate3d(0, -90%, 0);
+      }
+      110% {
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+
+
+    .blueRoll {
+      color: var(--blue);
+    }
+    .redRoll {
+      color: var(--red);
+    }
+    .yellowRoll {
+      color: var(--yellow);
+    }
+
 
 /* --------------------------------------- */
 /* ------------ CONTACT PAGE ------------- */

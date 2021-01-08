@@ -2,6 +2,18 @@ import React, { useState } from "react";
 import BlogPost from "./BlogPost";
 import BlogPostContainer from "./BlogPostContainer";
 
+import Athlete from "../Room/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg";
+import Feminist from "../Room/UploadPhotosToWeb/blog/flowersWoman.jpg";
+import WomanInTech from "../Room/UploadPhotosToWeb/blog/office.jpg";
+import Music from "../Room/UploadPhotosToWeb/blog/musicCasetteTape.jpg";
+import Nomad from "../Room/UploadPhotosToWeb/blog/nomadPlane.jpg";
+import Artist from "../Room/UploadPhotosToWeb/blog/whitePaint.jpg";
+import SoftwareDev from "../Room/UploadPhotosToWeb/blog/softwareDeveloper.jpg";
+import Writer from "../Room/UploadPhotosToWeb/blog/typeWriter.jpg";
+import WhyBlog from "../Room/UploadPhotosToWeb/blog/whyBlog.jpg";
+// import Athlete from "../Room/UploadPhotosToWeb/blog/"
+// import Athlete from "../Room/UploadPhotosToWeb/blog/"
+// import Athlete from "../Room/UploadPhotosToWeb/blog/"
 
 
 const BlogPostWhyBlog = [{
@@ -26,7 +38,8 @@ const BlogPostWhyBlog = [{
  blogP18: "Liz Kane",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/whyBlog.jpg",
+ imgSrc: WhyBlog,
  imgDesc: "",
 }]
 
@@ -52,7 +65,8 @@ const BlogPostArtist = [{
  blogP18: "",
  blogP19: "",
  blogP20: "", 
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/whitePaint.jpg",
+ imgSrc: Artist,
  imgDesc: "",
  
 }]
@@ -79,13 +93,14 @@ const BlogPostMusician = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/musicCasetteTape.jpg",
+ imgSrc: Music,
  imgDesc: "",
  
 }]
 
 const BlogPostSoftwareEngineer = [{
- title: "",
+ title: "A Software Engineer Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -106,13 +121,14 @@ const BlogPostSoftwareEngineer = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/softwareDeveloper.jpg",
+ imgSrc: SoftwareDev,
  imgDesc: "",
  
 }]
 
 const BlogPostNomad = [{
- title: "",
+ title: "A Nomad Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -133,13 +149,14 @@ const BlogPostNomad = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/nomadPlane.jpg",
+ imgSrc: Nomad,
  imgDesc: "",
  
 }]
 
 const BlogPostWriter = [{
- title: "",
+ title: "A Writer Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -160,13 +177,14 @@ const BlogPostWriter = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/typeWriter.jpg",
+ imgSrc: Writer,
  imgDesc: "",
  
 }]
 
 const BlogPostAthlete = [{
- title: "",
+ title: "An Athlete Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -187,13 +205,14 @@ const BlogPostAthlete = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg",
+ imgSrc: Athlete,
  imgDesc: "",
  
 }]
 
 const BlogPostFeminist = [{
- title: "",
+ title: "A Feminist Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -214,13 +233,14 @@ const BlogPostFeminist = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/flowersWoman.jpg",
+ imgSrc: Feminist,
  imgDesc: "",
  
 }]
 
-const BlogPostDreamer = [{
- title: "",
+const BlogPostWomanInTech = [{
+ title: "A Woman In Tech Like Me",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -241,7 +261,8 @@ const BlogPostDreamer = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
- imgSrc: "",
+//  imgSrc: "../Room/UploadPhotosToWeb/blog/office.jpg",
+ imgSrc: WomanInTech,
  imgDesc: "",
  
 }]
@@ -259,7 +280,7 @@ const BlogList = () => {
     // const [open, setOpen] = useState
     // const [isOn, toggleIsOn] = useToggle(false);
 
-    const blogPostArray = [{BlogPostWhyBlog}, {BlogPostArtist}, {BlogPostMusician}, {BlogPostSoftwareEngineer}, {BlogPostWriter}, {BlogPostNomad}, {BlogPostFeminist}, {BlogPostDreamer}, {BlogPostAthlete}, ]
+    const blogPostArray = [{BlogPostWhyBlog}, {BlogPostArtist}, {BlogPostMusician}, {BlogPostSoftwareEngineer}, {BlogPostWriter}, {BlogPostNomad}, {BlogPostFeminist}, {BlogPostWomanInTech}, {BlogPostAthlete}, ]
     
     const BlogPostWhyBlogArray = BlogPostWhyBlog.map(post => {return <BlogPost 
         key={post.title} title={post.title} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}    />})
@@ -282,7 +303,7 @@ const BlogList = () => {
     const BlogPostFeministArray = BlogPostFeminist.map(post => {return <BlogPost 
         key={post.title} title={post.title} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    const BlogPostDreamerArray = BlogPostDreamer.map(post => {return <BlogPost 
+    const BlogPostWomanInTechArray = BlogPostWomanInTech.map(post => {return <BlogPost 
         key={post.title} title={post.title} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
     const BlogPostAthleteArray = BlogPostAthlete.map(post => {return <BlogPost 
@@ -300,15 +321,33 @@ const BlogList = () => {
         <div id="blogContainer">
             <div id="blogListContainer">
                 <ul id="blogListUL">
-                    {BlogPostWhyBlogArray }
-                    {BlogPostArtistArray }
-                    {BlogPostMusicianArray }
-                    {BlogPostSoftwareEngineerArray }
-                    {BlogPostWriterArray }
-                    {BlogPostNomadArray }
-                    {BlogPostFeministArray }
-                    {BlogPostDreamerArray }
-                    {BlogPostAthleteArray }
+                    <div className="blogBox" id="blogBox1">
+                        {BlogPostWhyBlogArray}
+                    </div>
+                    <div className="blogBox" id="blogBox2">
+                        {BlogPostArtistArray}
+                    </div>
+                    <div className="blogBox" id="blogBox3">
+                        {BlogPostMusicianArray}
+                    </div>
+                    <div className="blogBox" id="blogBox4">
+                        {BlogPostSoftwareEngineerArray}
+                    </div>
+                    <div className="blogBox" id="blogBox5">
+                        {BlogPostWriterArray}
+                    </div>
+                    <div className="blogBox" id="blogBox6">
+                        {BlogPostNomadArray}
+                    </div>
+                    <div className="blogBox" id="blogBox7">
+                        {BlogPostFeministArray}
+                    </div>
+                    <div className="blogBox" id="blogBox8">
+                        {BlogPostWomanInTechArray}
+                    </div>
+                    <div className="blogBox" id="blogBox9">
+                        {BlogPostAthleteArray}
+                    </div>
                 </ul>
             </div>
         </div>

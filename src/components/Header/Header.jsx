@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-scroll';
 // import OnScreenScrolling from './OnScreenScrolling';
 import OnScreenScrolling from './OnScreenScrolling';
 import Wrapper from './Wrapper';
 import styled from 'styled-components';
+import { useToggle} from "react-use";
+import "./toggle.css";
 
 // import 'materialize-css';
 // import 'materialize-css/dist/css/materialize.min.css'
@@ -74,6 +76,42 @@ const NavbarStyled = styled.div`
 
 
 const Header = () => {
+    const [mode, setMode] = useToggle(true);
+
+    // let removeLight = document.body.classList.remove('lightMode')
+    // let setDark = (document.body.classList.add('darkMode')
+    // let setLight = 
+
+    // let toggleModes = () => {
+    //     !mode ? document.body.classList.add('darkMode') : ""
+    // }
+    // const bodyWhole = document.getElementsByTagName('body')
+    
+    // let body = document.querySelector("body");
+    // let toggleModes=() => {
+        // !mode ? setMode(document.body.classList.add('lightMode'))
+    //      : ""
+        //  ((document.body.classList.remove('lightMode')),
+        //  (setMode(document.body.classList.remove('lightMode')(document.body.classList.add('darkMode')))
+        // )
+        
+        // let currentMode = body.className 
+
+        // body.className == !mode ? 
+        // useToggle(body.className == !mode ? "darkMode" : "lightMode")
+        // : 
+        // setMode(body.className = "lightMode"))
+        // setMode(body.className = mode ? "darkMode" : "lightMode")
+        // let currentClass = body.className;
+        // body.className = setMode(!currentClass) == !lightDark ? "darkMode" : "lightMode";
+        // setMode((currentClass) => {mode ? "darkMode" : "lightMode"})
+
+    // }
+
+    
+    // onClick={useToggle(body.className == !mode ? "darkMode" : "lightMode")}
+
+
         return (
         <NavbarStyled>
             {/* <header className="header"> */}
@@ -150,11 +188,19 @@ const Header = () => {
                         {/* <div className="dropbtn"><h5 className="About">MORE+</h5></div> */}
                     {/* </div> */}
 
-                    
-                    
-                    
-                    
-                    
+                    <div id="toggleContainer">
+                        <div className="toggle toggle--daynight" >
+                        {/* <div className="toggle toggle--daynight" onClick={() => {!mode ? setMode(false) =>{ (document.body.classList.add('darkMode'))} : ""}}> */}
+                            <input type="checkbox" id="toggle--daynight" className="toggle--checkbox"/>
+                            <label className="toggle--btn" for="toggle--daynight"><span className="toggle--feature"></span></label>
+                        </div>
+                    </div>
+
+                {/* <div>{on ? 'ON' : 'OFF'}</div>
+                <button onClick={toggle}>Toggle</button>
+                <button onClick={() => toggle(true)}>set ON</button>
+                <button onClick={() => toggle(false)}>set OFF</button> */}
+
                 </nav>
                 {/* <div className="scrolling-buttons">
                     <Wrapper>

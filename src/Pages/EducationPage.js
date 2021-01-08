@@ -14,8 +14,8 @@ const EducationPage=() => {
         <section id="educationPage">
             <Wrapper>
                 <div className="viewBoxContainer">
-                {/* svg line is the filled space */}
-                    <svg viewbox="0 0 50 50" width="50" height="50">
+                    {/* svg line is the filled space */}
+                    <svg id="educationSVG" viewbox="0 0 50 50" width="50" height="50">
                         <defs>
                             <mask id="mask" x="0" y="0" width="97%" height="91%">
                             <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
@@ -36,14 +36,7 @@ const EducationPage=() => {
                     <h4>{<MastersDoc/>}</h4>
                     <h4>{<BachelorsDoc/>}</h4>
                     <h4>{<GACertDoc/>}</h4>
-            </div>
-
-                {/* <div className="redbox">
-                    <img src={GrandCanyon} alt="" id="grandCanyonImg" className="thematicImg responsive-img"/>
                 </div>
-                {<MastersDoc/>}
-                {<BachelorsDoc/>}
-                {<GACertDoc/>} */}
             </Wrapper>
         </section>
     )
