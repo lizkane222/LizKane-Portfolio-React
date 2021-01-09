@@ -29,8 +29,8 @@ const ContactPage=() => {
                 </div>
 
             <div id="socialMedia">
-                <div id="linkedIn" onClick={() => selectiveCounter}>
-                <a href="linkedin.com/in/lizkane" target="_blank" >
+                <div id="linkedIn" onClick={() => setCount(count+1)}>
+                <a href="https://linkedin.com/in/lizkane" target="_blank" >
                 <i><FiLinkedin/></i>
                 <p className="iconText">linkedin.com/in/lizkane</p></a>
                 </div>
@@ -48,13 +48,13 @@ const ContactPage=() => {
                 </div>
 
                 <div id="phone" onClick={() => setCount(count+1)}>
-                <a href="#" target="_blank" >
+                <a href="tel:+16692418922" target="_blank" >
                 <i><FiSmartphone/></i>
                 <p className="iconText">669-241-8922</p></a>
                 </div>
 
                 <div id="email" onClick={() => setCount(count+1)}>
-                <a href="#" target="_blank" >
+                <a href="mailto:lizkane222@gmail.com?subject=Inquire Further- Contact Liz" target="_blank" >
                 <i><SiMinutemailer/></i>
                 <p className="iconText">lizkane222@gmail.com</p></a>
                 </div>

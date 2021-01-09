@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Link} from 'react-scroll';
 
 import "./styles/style.css";
+// import "./styles/style.scss";
 
 
 import Header from "./components/Header/Header"
