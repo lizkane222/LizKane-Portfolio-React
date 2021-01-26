@@ -5,7 +5,8 @@ import OnScreenScrolling from './OnScreenScrolling';
 import Wrapper from './Wrapper';
 import styled from 'styled-components';
 import { useToggle} from "react-use";
-import "./toggle.css";
+import Splash from "../DarkLightTheme/SplashScreen";
+// import "./toggle.css";
 
 // import 'materialize-css';
 // import 'materialize-css/dist/css/materialize.min.css'
@@ -31,14 +32,10 @@ import InterestsPage from "../../Pages/InterestsPage";
 import ContactPage from "../../Pages/ContactPage";
 
 
-// {ResumeDoc}
-//             {MastersDoc}
-//             {BachelorsDoc}
-//             {GACertDoc}
-
 
 const NavbarStyled = styled.div`
   font-size: 24px;
+  font-family: 'Bodoni Moda', serif;
   position: fixed;
   width: 100%;
   .header {
@@ -75,59 +72,13 @@ const NavbarStyled = styled.div`
 `;
 
 
-const Header = () => {
-    const [mode, setMode] = useToggle(true);
-
-    // let removeLight = document.body.classList.remove('lightMode')
-    // let setDark = (document.body.classList.add('darkMode')
-    // let setLight = 
-
-    // let toggleModes = () => {
-    //     !mode ? document.body.classList.add('darkMode') : ""
-    // }
-    // const bodyWhole = document.getElementsByTagName('body')
-    
-    // let body = document.querySelector("body");
-    // let toggleModes=() => {
-        // !mode ? setMode(document.body.classList.add('lightMode'))
-    //      : ""
-        //  ((document.body.classList.remove('lightMode')),
-        //  (setMode(document.body.classList.remove('lightMode')(document.body.classList.add('darkMode')))
-        // )
-        
-        // let currentMode = body.className 
-
-        // body.className == !mode ? 
-        // useToggle(body.className == !mode ? "darkMode" : "lightMode")
-        // : 
-        // setMode(body.className = "lightMode"))
-        // setMode(body.className = mode ? "darkMode" : "lightMode")
-        // let currentClass = body.className;
-        // body.className = setMode(!currentClass) == !lightDark ? "darkMode" : "lightMode";
-        // setMode((currentClass) => {mode ? "darkMode" : "lightMode"})
-
-    // }
-
-    
-    // onClick={useToggle(body.className == !mode ? "darkMode" : "lightMode")}
-
-
+const Header = (props) => {
+  
         return (
         <NavbarStyled>
             {/* <header className="header"> */}
+                    {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
                 <nav className="navbar">
-
-                        {/* <h5 id="nameButton">L I Z   K A N E </h5> */}
-                        
-{/* <ResumePage/>
-<EducationPage/>
-<WorkPage/>
-<ProjectsPage/>
-<InterestsPage/>
-<ContactPage/> */}
-
-                        {/* <div className="dropbtn" onClick={<ResumeDoc/>}><h5 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h5></div> */}
-
                     <Link activeClass="active" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
                         LK
                     </Link>
@@ -136,12 +87,12 @@ const Header = () => {
                         Resume
                     </Link>
 
-                    <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
-                        Projects
-                    </Link>
-
                     <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1000}>
                         Education
+                    </Link>
+
+                    <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
+                        Projects
                     </Link>
 
                     <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
@@ -157,56 +108,7 @@ const Header = () => {
                     </Link>
         
 
-
-                        {/* <div className="dropbtn"><h5 className="Projects">Projects</h5></div> */}
-                            {/* <h6>Ekseed</h6>
-                            <h6>Wayfarer</h6>
-                            <h6>Deviant</h6>
-                            <h6>MBCrunch</h6>
-                            <h6>Minifi</h6>
-                            <h6>Femanon</h6>
-                    </div> */}
-
-                        {/* <div className="dropbtn"><h5 className="Education">Education</h5></div> */}
-                            {/* <h6>Software Engineering</h6>
-                            <h6>Masters</h6>
-                            <h6>Bachelors</h6>
-                    </div> */}
-
-                    {/* <div className="dropdown"> */}
-                        {/* <div className="dropbtn"><h5 className="WorkExperience">WorkExperience</h5></div> */}
-                            {/* <h6>English Professor - Univeristy - France</h6>
-                            <h6>Special Education Teacher - Elementary - New Mexico</h6>
-                            <h6>ESL Teacher - PreK-9thGrade - Online</h6>
-                    </div> */}
-
-                    {/* <div className="dropdown"> */}
-                        {/* <div className="dropbtn"><h5 className="Interests">Interests</h5></div> */}
-                    {/* </div> */}
-
-                    {/* <div className="dropdown"> */}
-                        {/* <div className="dropbtn"><h5 className="About">MORE+</h5></div> */}
-                    {/* </div> */}
-
-                    <div id="toggleContainer">
-                        <div className="toggle toggle--daynight" >
-                        {/* <div className="toggle toggle--daynight" onClick={() => {!mode ? setMode(false) =>{ (document.body.classList.add('darkMode'))} : ""}}> */}
-                            <input type="checkbox" id="toggle--daynight" className="toggle--checkbox"/>
-                            <label className="toggle--btn" for="toggle--daynight"><span className="toggle--feature"></span></label>
-                        </div>
-                    </div>
-
-                {/* <div>{on ? 'ON' : 'OFF'}</div>
-                <button onClick={toggle}>Toggle</button>
-                <button onClick={() => toggle(true)}>set ON</button>
-                <button onClick={() => toggle(false)}>set OFF</button> */}
-
                 </nav>
-                {/* <div className="scrolling-buttons">
-                    <Wrapper>
-                        <OnScreenScrolling />
-                    </Wrapper>
-                </div> */}
             {/* </header> */}
         </NavbarStyled>
     );
@@ -214,238 +116,3 @@ const Header = () => {
 
 export default Header;
 
-
-{/* <header>
-    <nav className="navbar">
-        <div className="dropdown">
-            <button className="dropbtn"><h4 className="nameButton">LIZ KANE</h4>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn" onClick={<ResumeDoc/>}><h5 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6><ResumeDoc/></h6>
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn"><h5 className="Projects">Projects</h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6>Ekseed</h6>
-                <h6>Wayfarer</h6>
-                <h6>Deviant</h6>
-                <h6>MBCrunch</h6>
-                <h6>Minifi</h6>
-                <h6>Femanon</h6>
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn"><h5 className="Education">Education</h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6>Software Engineering</h6>
-                <h6>Masters</h6>
-                <h6>Bachelors</h6>
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn"><h5 className="WorkExperience">WorkExperience</h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6>English Professor - Univeristy - France</h6>
-                <h6>Special Education Teacher - Elementary - New Mexico</h6>
-                <h6>ESL Teacher - PreK-9thGrade - Online</h6>
-
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn"><h5 className="Interests">Interests</h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6></h6>
-                <h6></h6>
-                <h6></h6>
-            </div>
-        </div>
-
-        <div className="dropdown">
-            <button className="dropbtn"><h5 className="About">MORE+</h5>
-                <i className=""></i>
-            </button>
-            <div className="dropdown-content">
-                <h6></h6>
-                <h6></h6>
-                <h6></h6>
-            </div>
-        </div>
-    </nav>
-</header> 
-);
-}
-export default Header;
-*/}
-
-
-
-
-
-
-                {/*<header>
-
-                <div className="nameButton">LIZ KANE</div>
-
-                <nav>
-                <List
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
-                    subheader={
-                        <ListSubheader component="div" id="nested-list-subheader">
-                        Nested List Items
-                        </ListSubheader>
-                    }
-                    className={classes.root}
-                    >
-                    <ListItem button>
-                    <ListItemText primary={<ResumeDoc/>} className="redText"/>
-                    </ListItem>
-                     <ListItem button className="redText" onClick={(e)=> handleClick(e)}>
-                        <ListItemText primary="Projects" />
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-
-                        <Collapse in={open} timeout="auto" unmountOnExit>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Ekseed" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Wayfarer" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Femanon" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Minifi" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="MBCrunch" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Deviant" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Nosh" />
-                                </ListItem>
-                            </List>
-                            
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="MORE++" />
-                                </ListItem>
-                            </List>
-                        </Collapse>
-
-                    <ListItem button  onClick={handleClick}>
-                        <ListItemText primary="Education" className="redText"/>
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                        <Collapse in={open} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItem button className={classes.nested}>
-                                    <ListItemText primary="Ekseed" />
-                                </ListItem>
-                            </List>
-                        </Collapse>
-
-                    <ListItem button  onClick={handleClick}>
-                        <ListItemText primary="Work Experience" className="redText"/>
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Ekseed" />
-                        </ListItem>
-                        </List>
-                    </Collapse>
-
-                    <ListItem button  onClick={handleClick}>
-                        <ListItemText primary="Interests" className="redText"/>
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Ekseed" />
-                        </ListItem>
-                        </List>
-                    </Collapse>
-
-                    <ListItem button  onClick={handleClick}>
-                        <ListItemText primary="MORE++" className="redText"/>
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-                            <ListItemText primary="Ekseed" />
-                        </ListItem>
-                        </List>
-                    </Collapse> */}
-
-                    {/* <ListItem button onClick={handleClick}>
-
-                        <ListItemText primary="Projects" />
-                        {open ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                        <ListItem button className={classes.nested}>
-
-                            <ListItemText primary="Ekseed" />
-                        </ListItem>
-                        </List>
-                    </Collapse> */}
-                    {/* </List>     */}
-                    {/* <h3 onClick={<ResumeDoc/>} className="Resume"><ResumeDoc/></h3> */}
-                    {/* <h3 onClick={openResource} className="Projects">Projects</h3>
-                    <h3 onClick={openResource} className="Education">Education</h3>
-                    <h3 onClick={openResource} className="WorkExperience">WorkExperience</h3>
-                    <h3 onClick={openResource} className="Interests">Interests</h3>
-                    <h3 onClick={openResource} className="About">About</h3> */}
-                {/* </nav> */}
-            {/* </div> */}
-        {/* </header> */}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 // import './Carousel.scss'
 // import url("https://www.w3schools.com/w3css/4/w3.css");
-import "../../styles/style.css"
+// import "../../styles/style.css"
 
 const Carousel = (props) => {
     const [currentImage, setCurrentImage] = useState(0)

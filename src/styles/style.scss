@@ -96,6 +96,8 @@
 }
 
 
+
+
 body {
   margin: 0;
   padding: 0;
@@ -103,7 +105,7 @@ body {
   /* background: var(--yellow); */
   /* background: var(--blue); */
   /* background: var(--red); */
-  background: var(--white-pretty);
+  // background: var(--white-pretty);
   /* background: var(--grey-dark); */
   font-size: 1em;
   font-family: var(--AcierBatTextNoirFF);
@@ -286,12 +288,6 @@ align-content: center;
 /* box-shadow: indigo; */
 }
 
-.activeProject {
-}
-
-.droppable {
-  /* border: 1.5px ridge green; */
-}
 
 .projectNameLogo {
   grid-area: nameLogo;
@@ -582,8 +578,8 @@ align-content: center;
   font-family: var(--AcierBatTextStrokesFF);
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
-
-  max-height: 100vh;
+  margin-top: 10vh;
+  max-height: 90vh;
   min-width: 100vw;
   display: grid;
   /* grid-template-columns: repeat(5,1fr) 6fr;
@@ -693,25 +689,6 @@ align-content: center;
   font-style: var(--AcierBatTextStrokesFS);
 }
 
-/* #portraitDiv {
-  grid-area: "intro";
-  width: 100%;
-  border-radius: 50%;
-  contain: fit;
-  overflow: hidden;
-  display: flex;
-  align-content: center;
-  align-items: center;
-} */
-
-/* #selfPortrait {
-  grid-area: "intro";
-  display: relative;
-  background-color: white;
-  max-width: 100%;
-} */
-
-
 #seekLogoContainer {
   grid-area: "seek";
   position: relative;
@@ -735,33 +712,9 @@ align-content: center;
 
 }
 
-#inner1 {
-  /* width: 20em; */
-  /* height: 18em; */
-  /* background-color: white; */
-  /* box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -o-transition: transform 0.5s; */
-}
-
-.seekLogo {
-  
-}
-
 #seekPhoto13 {
   top: 10;
   z-index: 13;
-
-  /* height: 148%;
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -o-transition: transform 0.5s; */
-  /* transition: 1200ms ease;
-  transition-delay: 900ms; */
 }
 
 
@@ -776,7 +729,7 @@ align-content: center;
 #seekPhoto17 {
   top: 5;
   z-index: 17;
-  /* background-blend-mode: hard-light; */
+  background-blend-mode: hard-light;
 }
 
 #seekPhoto19 {
@@ -1664,7 +1617,7 @@ svg:hover .edFloatText{
 #contactPage {
   margin-top: 5vh;
   min-width: 100vw;
-  max-height: 80vh;
+  min-height: 100vh;
   bottom: 0;
   display: grid;
   grid-template-rows: 3fr 1fr;
@@ -1751,10 +1704,11 @@ i>svg:hover {
 
 #footer{
   background-color: var(--yellow);
-  /* margin-top: -30vh; */
+  margin-top: 7vh;
   width: 100vw;
   /* position: absolute; */
-  position: relative;
+  position: absolute;
+
   bottom: 0;
   height:7vh;
   display: flex;

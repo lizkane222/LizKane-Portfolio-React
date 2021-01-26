@@ -7,6 +7,8 @@ const WrapperStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
+  background-color: none;
   h1 {
     font-size: 45px;
   }

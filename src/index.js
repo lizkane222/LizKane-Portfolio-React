@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import './styles/style.css'
 import './styles/itemStyle.css'
-import App from './App.jsx';
+// import App from '../public/App.js';
+// import App from '../public/App.js';
+import App from "./App"
 import reportWebVitals from './reportWebVitals';
+
 import { BrowserRouter as Router } from "react-router-dom";
 
 

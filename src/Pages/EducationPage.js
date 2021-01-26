@@ -11,7 +11,7 @@ import TextCarousel from "../components/Carousel/TextCarousel";
 
 // const EducationPageStyled = styled.div;
 
-const EducationPage=() => {
+const EducationPage=(props) => {
     const itemsArray = ['“Curiosity is the fuel for discovery, inquiry, and learning.” Anonymous',
      '“Curiosity is the engine of achievement.” Ken Robinson',
      '“I have no special talents. I am only passionately curious.” Albert Einstein',
@@ -26,7 +26,7 @@ const EducationPage=() => {
      '“Curiosity about life in all aspects, I think, is still the secret of great creative people.” Leo Burnett',
  ]
 
-
+ 
     return(
         <section id="educationPage">
             <Wrapper>
@@ -48,7 +48,11 @@ const EducationPage=() => {
                             </mask>
                         </defs>
                         {/* Frame */}
+                        {props.theme ==="light"? 
                         <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/>
+                        :
+                        <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="rgba(13,13,13,1)"/>
+                    }
                     </svg>
                     <h4>{<MastersDoc/>}</h4>
                     <h4>{<BachelorsDoc/>}</h4>

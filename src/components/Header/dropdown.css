@@ -128,7 +128,7 @@ text-shadow: -1px 1px 3px #242526;
 /* <nav> */
 .navbar {
   height: var(--nav-size);
-  background-color: var(--white-pretty);
+  background-color: none;
   padding: 0 1rem;
   border-bottom: var(--border);
   width: 100vw;

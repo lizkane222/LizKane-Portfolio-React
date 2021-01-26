@@ -4,6 +4,8 @@ import Wrapper from '../components/Header/Wrapper';
 import styled from 'styled-components';
 import TodoList from "../components/Todos/TodoList";
 import Footer from "../components/Footer/Footer";
+import EmailForm from "../components/Forms/EmailForm";
+import{ init } from 'emailjs-com';
 
 import {FiTwitter, FiGithub, FiLinkedin, FiSmartphone} from 'react-icons/fi';
 import {SiMinutemailer} from 'react-icons/si';
@@ -12,6 +14,7 @@ import {VscLocation} from 'react-icons/vsc';
 // const ContactPageStyled = styled.div;
 
 const ContactPage=() => {
+    init("user_1zjWdxZg6yFodwsuNkOVU");
     const [count, setCount] = useState(0)
 
     const selectiveCounter=(e) => {
@@ -22,11 +25,12 @@ const ContactPage=() => {
     return(
         <section id="contactPage">
             <Wrapper>
-                <TodoList className="todoListGrid"/>
+            
+            <div onClick={() => setCount(count+1)} id="emailFormContainer">
+                <EmailForm />
+            </div>
 
-                <div>
-            <p>You viewed {count} components on my site. Thanks & Come Back Soon!</p>
-                </div>
+                {/* <TodoList className="todoListGrid"/> */}
 
             <div id="socialMedia">
                 <div id="linkedIn" onClick={() => setCount(count+1)}>
@@ -70,10 +74,13 @@ const ContactPage=() => {
                 <p></p>
                 </div> */}
 
-
+                <div>
+                    <p>You viewed {count} contact items</p>
+                </div>
             </div>
             </Wrapper>
-            <Footer/>
+            {/* <div> </div> */}
+            {/* <Footer/> */}
         </section>
     )
 }

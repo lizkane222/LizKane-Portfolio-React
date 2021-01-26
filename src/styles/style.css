@@ -235,7 +235,7 @@
   --white-semi-grey: rgba(248,248,248,.8);
   --white-pretty: #fff;
   --greyish: #e8e8e8;
-  --grey-dark: rgba(10,10,10,1);
+  --grey-dark: rgba(13,13,13,1);
   --mintGreen: #89FAD0;
   --speed: 500ms;
   --nav-size: 7vh;
@@ -291,26 +291,20 @@ body {
   /* background: var(--yellow); */
   /* background: var(--blue); */
   /* background: var(--red); */
-  background: var(--white-pretty);
+  /* background: var(--white-pretty); */
   /* background: var(--grey-dark); */
   font-size: 1em;
   font-family: var(--AcierBatTextNoirFF);
   font-weight: var(--AcierBatTextNoirFW);
   font-style: var(--AcierBatTextNoirFS);
+  /* font-family: 'Bodoni Moda', serif; */
+
   font-size: 1em;
   color: var(--red);
   top: 0;
   left: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body.lightMode {
-  background: var(--white-pretty);
-}
-
-body.darkMode {
-  background: var(--grey-dark);
 }
 
 .redText {
@@ -406,6 +400,17 @@ header nav h5 {
   padding: 0 2%;
   text-decoration: none;
 } */
+
+
+/* #toggleContainer {
+  align-self: ;
+} */
+
+
+
+
+
+
 /* ------------------------ */
 /* ----- FLOAT BOX ------ */
 /* ------------------------ */
@@ -748,6 +753,7 @@ header nav h5 {
 /* ----- LANDING PAGE ------ */
 /* ------------------------ */
 #landingPage {
+  z-index: 16;
   font-family: var(--AcierBatTextStrokesFF);
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
@@ -778,14 +784,13 @@ header nav h5 {
 
 .lizKaneIntro {
   grid-area: "intro";
-  /* padding-top: 5vh; */
   margin-left: 5vw;
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ()[1fr];
+  -ms-grid-columns: ()1fr;
       grid-template-columns: repeat(1fr);
-  -ms-grid-rows: (0.5fr)[10];
+  -ms-grid-rows: (0.5fr)10;
       grid-template-rows: repeat(10, 0.5fr);
       grid-template-areas: "Liz" "p1" "p2" "p3" "p4" "p5";
   -webkit-transition: color 0s ease-in-out;
@@ -897,7 +902,7 @@ header nav h5 {
   position: absolute;
   grid-area: "seek";
   top: -40vh;
-  left: -5.5vw;
+  left: -6.5vw;
   /* start animation */
 }
 
@@ -915,32 +920,27 @@ header nav h5 {
 #seekPhoto13 {
   top: 10;
   z-index: 13;
-  /* height: 148%;
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -o-transition: transform 0.5s; */
-  /* transition: 1200ms ease;
-  transition-delay: 900ms; */
+
 }
 
 #seekPhoto15 {
   top: 5;
-  z-index: 15;
+  z-index: 0;
 }
 
 /* import Seek2 from "../components/Room/UploadPhotosToWeb/seek/Seek-1-2.png" */
 /* import Seek1 from "../components/Room/UploadPhotosToWeb/seek/Seek-1-1.png" */
 #seekPhoto17 {
   top: 5;
-  z-index: 17;
+  z-index: 0;
+  opacity: .8;
   /* background-blend-mode: hard-light; */
 }
 
 #seekPhoto19 {
   top: 5;
-  z-index: 19;
+  z-index: 0;
+  opacity: .8;
   background-blend-mode: hard-light;
 }
 
@@ -972,6 +972,7 @@ h2 {
 } */
 #resumePage {
   /* margin-top: 5vh; */
+  z-index: 16;
 }
 
 /* thematic img container */
@@ -1129,6 +1130,7 @@ h2 {
   /* margin-top: 5vh; */
   /* display: grid; */
   /* gr */
+  z-index: 16;
 }
 
 .viewBoxContainer {
@@ -1384,6 +1386,7 @@ svg:hover .edFloatText {
 /* --------- ref ProjectList --------------- */
 #projectsPage {
   /* margin-top: 5vh; */
+  z-index: 16;
 }
 
 /* ------------------------ */
@@ -1391,6 +1394,7 @@ svg:hover .edFloatText {
 /* ------- ref classes = .thematicImg .responsive-img --------- */
 /* ------------------------ */
 #workPage {
+  z-index: 116;
   /* margin-top: 5vh; */
 }
 
@@ -1400,6 +1404,7 @@ svg:hover .edFloatText {
 /* ------------------------ */
 #interestsPage {
   /* margin-top: 5vh; */
+  z-index: 16;
 }
 
 #callBlog {
@@ -1777,16 +1782,24 @@ svg:hover .edFloatText {
 /* ----------- & REF todo.css ------------ */
 /* --------------------------------------- */
 #contactPage {
-  margin-top: 5vh;
+  z-index: 17;
+  font-family: 'Bodoni Moda', serif;
+  margin: 5vh 0 -5vh 0;
   min-width: 100vw;
-  max-height: 80vh;
-  bottom: 0;
+  min-height: 82vh;
+  /* bottom: 0; */
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 3fr 1fr;
       grid-template-rows: 3fr 1fr;
       grid-template-areas: "todo" "socialMedia";
 }
+
+/* #emailFormContainer {
+  display: flex;
+  margin-bottom: 5vh;
+} */
+
 
 .todoListGrid {
   grid-area: "todo";
@@ -1798,11 +1811,11 @@ svg:hover .edFloatText {
   max-height: 20vh;
   grid-area: "socialMedia";
   margin: 5%;
-  margin-bottom: -20vh;
+  /* margin-bottom: -20vh; */
   padding: 5%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
+  -ms-grid-columns: (1fr)6;
       grid-template-columns: repeat(6, 1fr);
       grid-template-areas: "LinkedIn Github Twitter Phone Email Location";
   -ms-flex-line-pack: center;
@@ -1877,12 +1890,13 @@ i > svg:hover {
   /* margin-top: -30vh; */
   width: 100vw;
   /* position: absolute; */
-  position: relative;
-  bottom: 0;
+  display: flex;
+  /* margin-top: 3vh; */
+  /* bottom: -10; */
   height: 7vh;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
