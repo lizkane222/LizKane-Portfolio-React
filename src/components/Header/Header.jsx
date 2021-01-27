@@ -38,9 +38,8 @@ const NavbarStyled = styled.div`
   font-family: 'Bodoni Moda', serif;
   position: fixed;
   width: 100%;
-  .header {
-    background: #fff;
-    padding: 40px;
+  .navbar {
+    background: rgba(23,23,23,1);
     display: flex;
     justify-content: space-around;
     margin: 0;
@@ -77,43 +76,40 @@ const Header = (props) => {
   
         return (
             <WrapperNav style={{"max-height": "7vh"}}>
+                <NavbarStyled className="header">
+                    {/* <header className="header"> */}
+                            {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
+                        <nav className="navbar">
+                            <Link activeClass="active" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
+                                LK
+                            </Link>
 
-        <NavbarStyled className="header">
-            {/* <header className="header"> */}
-                    {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
-                <nav className="navbar">
-                    <Link activeClass="active" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
-                        LK
-                    </Link>
+                            <Link activeClass="active" className="navLinks" to="resumePage" spy={true} smooth={true} duration={1000}>
+                                Resume
+                            </Link>
 
-                    <Link activeClass="active" className="navLinks" to="resumePage" spy={true} smooth={true} duration={1000}>
-                        Resume
-                    </Link>
+                            <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1000}>
+                                Education
+                            </Link>
 
-                    <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1000}>
-                        Education
-                    </Link>
+                            <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
+                                Projects
+                            </Link>
 
-                    <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
-                        Projects
-                    </Link>
+                            <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
+                                Work
+                            </Link>
 
-                    <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
-                        Work
-                    </Link>
+                            <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1000}>
+                                Interests
+                            </Link>
 
-                    <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1000}>
-                        Interests
-                    </Link>
-
-                    <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
-                        Contact
-                    </Link>
-        
-
-                </nav>
-            {/* </header> */}
-        </NavbarStyled>
+                            <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
+                                Contact
+                            </Link>
+                        </nav>
+                    {/* </header> */}
+                </NavbarStyled>
             </WrapperNav>
     );
 }

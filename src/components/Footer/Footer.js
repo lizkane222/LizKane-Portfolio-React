@@ -16,9 +16,6 @@ const Footer = () => {
                     <img src={NAU} id="NAUFooter"/>
                     <img src={Artois} id="ArtoisFooter"/>
                     <img src={APS} id="APSFooter"/>
-                    
-                    
-
             </footer>
         
     )

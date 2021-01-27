@@ -29,3 +29,8 @@ yarn-error.log*
 #     "test": "react-scripts test",
 #     "eject": "react-scripts eject"
 #   },
+
+# styles
+./src/styles/style.scss
+./src/styles/style.css.map
+./src/index.css

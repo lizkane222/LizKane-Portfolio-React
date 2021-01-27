@@ -23,8 +23,8 @@ const EmailForm=() => {
       {/* <div className="row"> */}
   return(
         <div className="col-lg-5 mx-auto">
-          <div className="card mt-2 mx-auto p-4 bg-light">
-              <div className="card-body bg-light">
+          <div className="card mt-2 mx-auto p-4 lightGrey">
+              <div className="card-body lightGrey">
                 
                 <div className="container">
                 <div className="text-center mt-5">
@@ -35,13 +35,13 @@ const EmailForm=() => {
 
                       <div className="row">
                         <div className="col-md-6">
-                          <div className="form-group">
-                              <label for="name">Your Name</label>
+                          <div className="form-group formGroup">
+                              <label className="formLabel" for="name">Your Name</label>
                               <input id="name" type="text" className="form-control" placeholder="Name" name="name" data-error="Name is required."/>
                           </div>
                           <div className="col-md-6">
-                              <div className="form-group">
-                                <label for="company_name">Company Name</label>
+                              <div className="form-group formGroup">
+                                <label className="formLabel" for="company_name">Company Name</label>
                                 <input id="company_name" type="text" name="company_name" className="form-control" placeholder="Company Name" />
                               </div>
                           </div>
@@ -50,14 +50,14 @@ const EmailForm=() => {
 
                       <div className="row">
                         <div className="col-md-6">
-                          <div className="form-group">
-                            <label for="email" className="">Your Email Address</label>
+                          <div className="form-group formGroup">
+                            <label className="formLabel" for="email">Your Email Address</label>
                             <input type="email" className="form-control" placeholder="Email Address" name="email" data-error="Valid email is required."/>
                           </div>
 
                           <div className="col-md-6">
-                            <div className="form-group">
-                              <label for="subject">Please specify the subject of your inquiry</label>
+                            <div className="form-group formGroup">
+                              <label className="formLabel" for="subject">Please specify the subject of your inquiry</label>
                               <select id="subject" name="subject" className="form-control" required="required" data-error="Please specify your inquiry.">
                                 <option value="" selected disabled>--Select Your Inquiry--</option>
                                 <option>Request quote for project</option>
@@ -74,8 +74,8 @@ const EmailForm=() => {
 
                       <div className="row">
                         <div className="col-md-12">
-                          <div className="form-group">
-                            <label for="message">Message</label>
+                          <div className="form-group formGroup">
+                            <label className="formLabel" for="message">Message</label>
                             <textarea id="message" className="form-control" cols="30" rows="8" placeholder="Write your message here." rows="7" required="required"  name="message" data-error="Please, include a message."></textarea>
                           </div>
                         </div>

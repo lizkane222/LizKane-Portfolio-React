@@ -133,7 +133,7 @@ function App(props) {
             <WorkPage/>
             <InterestsPage/>
             <ContactPage/>
-            <Footer/>
+            {/* <Footer/> */}
           
           {/* </Page>
       </ThemeProvider> */}

@@ -60,7 +60,7 @@ class TextCarousel extends Component {
 					<div className="arrow arrow-left" onClick={this.leftClick}><i className="fi-arrow-left">{<FaArrowLeft/>}</i></div>
 					<TransitionGroup 
 						transitionName={this.state.direction}>
-							<div className="motherItem">
+							<div className="textCarouselItem">
 								{this.generateItems()}
 							</div>
 					</TransitionGroup>

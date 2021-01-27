@@ -28,35 +28,65 @@ const EducationPage=() => {
 
 
     return(
+        // <section id="educationPage">
+        //     <Wrapper>
+        //         <div id="educationLanding">
+
+        //             <div id="viewBoxContainer" className="viewBoxContainer" style={{background: {GrandCanyon}}}>
+        //                 {/* svg line is the filled space */}
+        //                 <svg id="educationSVG" viewbox="0 0 1150 600" width="1150" height="600" >
+        //                     <defs >
+        //                         <mask id="mask" x="0" y="0" width="1149" height="599">
+        //                             <rect x="0" y="0" width="1149" height="599" fill="#aaa"/>
+        //                             <text className="edFloatText" x="200" text-anchor="middle" y="600" dy="0">E</text>
+        //                             <text className="edFloatText" x="295"  text-anchor="middle" y="600" dy="0">D</text>
+        //                             <text className="edFloatText" x="400" text-anchor="middle" y="600" dy="0">U</text>
+        //                             <text className="edFloatText" x="500" text-anchor="middle" y="600" dy="0">C</text>
+        //                             <text className="edFloatText" x="600" text-anchor="middle" y="600" dy="0">A</text>
+        //                             <text className="edFloatText" x="680" text-anchor="middle" y="600" dy="0">T</text>
+        //                             <text className="edFloatText" x="750" text-anchor="middle" y="600" dy="0">I</text>
+        //                             <text className="edFloatText" x="830" text-anchor="middle" y="600" dy="0">O</text>
+        //                             <text className="edFloatText" x="950" text-anchor="middle" y="600" dy="0">N</text>
+        //                         </mask>
+        //                     </defs>
+        //                     <rect x="5" y="5" width="1149" height="599" mask="url(#mask)" fill-opacity="1" fill="#bbb"/>
+        //                 </svg>
+        //             </div>
+        //                 <div id="edDocContainer">
+        //                     <div className="edDocs">{<MastersDoc/>}</div>
+        //                     <div className="edDocs">{<BachelorsDoc/>}</div>
+        //                     <div className="edDocs">{<GACertDoc/>}</div>
+        //                 </div>
+        //         </div>
         <section id="educationPage">
             <Wrapper>
-                <div id="educationLanding">
-
-                    <div id="viewBoxContainer" style={{background: {GrandCanyon}}}>
-                        {/* svg line is the filled space */}
-                        <svg id="educationSVG" viewbox="0 0 1150 600" width="1150" height="600" >
-                            <defs >
-                                <mask id="mask" x="0" y="0" width="1149" height="599">
-                                    <rect x="0" y="0" width="1149" height="599" fill="#fff"/>
-                                    <text className="edFloatText" x="200" text-anchor="middle" y="600" dy="0">E</text>
-                                    <text className="edFloatText" x="295"  text-anchor="middle" y="600" dy="0">D</text>
-                                    <text className="edFloatText" x="400" text-anchor="middle" y="600" dy="0">U</text>
-                                    <text className="edFloatText" x="500" text-anchor="middle" y="600" dy="0">C</text>
-                                    <text className="edFloatText" x="600" text-anchor="middle" y="600" dy="0">A</text>
-                                    <text className="edFloatText" x="680" text-anchor="middle" y="600" dy="0">T</text>
-                                    <text className="edFloatText" x="750" text-anchor="middle" y="600" dy="0">I</text>
-                                    <text className="edFloatText" x="830" text-anchor="middle" y="600" dy="0">O</text>
-                                    <text className="edFloatText" x="950" text-anchor="middle" y="600" dy="0">N</text>
-                                </mask>
-                            </defs>
-                            <rect x="5" y="5" width="1149" height="599" mask="url(#mask)" fill-opacity="1" fill="#fff"/>
-                        </svg>
-                    </div>
-                        <div id="edDocContainer">
-                            <div className="edDocs">{<MastersDoc/>}</div>
-                            <div className="edDocs">{<BachelorsDoc/>}</div>
-                            <div className="edDocs">{<GACertDoc/>}</div>
-                        </div>
+            <div id="educationLanding">
+                <div id="viewBoxContainer">
+                    {/* svg line is the filled space */}
+                    <svg id="educationSVG" viewbox="0 0 500 500" width="1135" height="600">
+                        <defs>
+                            <mask id="mask" x="0" y="0" width="100%" height="100%">
+                            <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+                            <text className="edFloatText" x="200" text-anchor="middle" y="600" dy="0">E</text>
+                            <text className="edFloatText" x="295"  text-anchor="middle" y="600" dy="0">D</text>
+                            <text className="edFloatText" x="400" text-anchor="middle" y="600" dy="0">U</text>
+                            <text className="edFloatText" x="500" text-anchor="middle" y="600" dy="0">C</text>
+                            <text className="edFloatText" x="600" text-anchor="middle" y="600" dy="0">A</text>
+                            <text className="edFloatText" x="680" text-anchor="middle" y="600" dy="0">T</text>
+                            <text className="edFloatText" x="750" text-anchor="middle" y="600" dy="0">I</text>
+                            <text className="edFloatText" x="830" text-anchor="middle" y="600" dy="0">O</text>
+                            <text className="edFloatText" x="950" text-anchor="middle" y="600" dy="0">N</text>
+                            </mask>
+                        </defs>
+                        {/* Frame */}
+                        <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/>
+                    </svg>
+                </div>
+                <div id="edDocContainer">
+                    <h4>{<MastersDoc/>}</h4>
+                    <h4>{<BachelorsDoc/>}</h4>
+                    <h4>{<GACertDoc/>}</h4>
+                </div>
                 </div>
             </Wrapper>
                 {<TextCarousel items={itemsArray} active={0}/>}

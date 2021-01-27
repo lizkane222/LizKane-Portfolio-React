@@ -9,17 +9,18 @@
   --white-semi-grey: rgba(248,248,248,.8);
   --white-pretty: #fff;
   --greyish: #e8e8e8;
-  --grey-dark: rgba(10,10,10,1);
-  --mintGreen: #89FAD0;
+  --grey-dark: rgba(13,13,13,1);
+  --grey-dark-light: rgba(23,23,23,1);
+  --grey-dark-light2: rgb(32, 30, 32);
+  --grey-dark-light3: rgb(46, 46, 46);
 }
 
 #textCarouselContainer {
   position: relative;
   width: 100vw;
   height: 50vh;
-  /* background-image: ; */
-  background-color: var(--white-pretty);
-  /* background-color: var(--mintGreen); */
+  background-image: url("../Room/UploadPhotosToWeb/blog/waves2.jpg");
+  background-size: cover;
   font-family: 'Lobster';
   margin-top: 5vh;
   display: flex;
@@ -27,6 +28,7 @@
   align-content: center;
   align-content: center;
 }
+
 #carousel {
   background-color: none;
   display: flex;
@@ -35,63 +37,76 @@
   position: absolute;
   height: 100%;
   min-width: 95vw;
-  margin: 12.5vh auto 0 auto;
+  margin: 0 auto 0 auto;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
 
-.motherItem {
+.textCarouselItem {
   display:flex;
   justify-content: center;
   align-content: center;
+  transition: all 150ms ease-in-out;
 }
 
-.motherItem > div {
-  /* margin-top: -25vh; */
+
+.textCarouselItem > div {
   min-height: 40vh;
   min-width: 15vw;
   max-width: 15vw;
   font-size: 2em;
-  text-shadow: .02em .02em .04em rgba(48,48,48,.9);
+  text-shadow: .02em .02em .04em var(--grey-dark);
   align-items: center;
   text-align: bottom;
   display:flex;
   justify-content: center;
   align-content: center;
-  /* margin-right: 5vw; */
 }
-
 
 .arrow {
     position: absolute;
     width: 3.25em;
     height: 3.25em;
     background-color: none;
-    background-color: rgba(248,248,248,.0);
+    background-color: rgba(248,248,248,.1);
     text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    align-content: center;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5em;
-    /* padding: 1em; */
-    color: #228291;
     line-height: 1em;
-    margin-top: -9em;
+    margin-top: 1em;
     z-index: 100;
     transition: all 300ms ease;
 }
 
 .arrow-right {
-  margin-right: 1em;
+  right: 0;
 }
 
 .arrow-left {
-  margin-left: 1em;
+  left: 0;
+}
+.arrow-left>i, .arrow-right>i  {
+  color: var(--white-pretty);
+  font-size: 2em;
+  text-shadow: .02em .02em .04em var(--grey-dark);
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+  -webkit-transition: all 180ms ease-in-out;
+  transition: all 180ms ease-in-out;
+  box-shadow: .05em .05em .08em var(--grey-dark);
 }
 
 .item {
+  border-radius: .8em;
   position: relative;
   text-align: center;
   align-content: center;
@@ -105,18 +120,21 @@
   transition: height 1.2s, width 1.5s, left 1s, margin-top 1s, line-height 1s, color 1.7s;
 }
 
+.item:hover {
+  transform: scale(1.01);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 0 .2em var(--grey-dark);
+}
+
 .level-2 {
   height: 40vh;
   min-width: 15vw;
   max-width: 15vw;
   line-height: 1.5em;
-  color: var(--yellow);
+  color: var(--white-pretty);
   background: rgba(210,210,210,.3);
-  /* background-color: var(--yellow); */
-  
-  /* background-color: #228291; */
   left: 46.5em;
-  /* left: 650px; */
   margin-top: 1em;
 }
 
@@ -125,13 +143,9 @@
   min-width: 16vw;
   max-width: 16vw;
   line-height: 1.5em;
-  color: var(--blue);
+  color: var(--white-pretty);
   background: rgba(210,210,210,.3);
-  /* background-color: var(--blue); */
-  /* background-color: #6796E5; */
   left: 35.25em;
-  /* left: 500px; */
-  /* margin-top: 2em; */
 }
 
 .level0 {
@@ -139,10 +153,8 @@
   min-width: 18vw;
   max-width: 18vw;
   line-height: 1.5em;
-  color: var(--red);
+  color: var(--white-pretty);
   background: rgba(210,210,210,.3);
-  /* background-color: var(--red); */
-  /* background-color: #4EC9E1; */
   left: 24em;
 }
 
@@ -151,11 +163,9 @@
   max-width: 16vw;
   min-width: 16vw;
   line-height: 1.5em;
-  color: var(--blue);
+  color: var(--white-pretty);
   background: rgba(210,210,210,.3);
-  /* background-color: var(--blue); */
   left: 12.75em;
-  /* margin-top: 2em; */
 }
 
 .level2 {
@@ -163,10 +173,8 @@
   min-width: 15vw;
   max-width: 15vw;
   line-height: 1.5em;
-  color: var(--yellow);
+  color: var(--white-pretty);
   background: rgba(210,210,210,.3);
-  /* background-color: var(--yellow); */
-  /* margin-top: 7.5em; */
   left: 1.5em;
 }
 
@@ -256,4 +264,3 @@
   -ms-user-select: none;
   user-select: none;
 }
-/*# sourceMappingURL=textCarousel.css.map */
