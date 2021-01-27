@@ -111,31 +111,32 @@ function App(props) {
 
   return (
     <div className="App">
-      <ThemeProvider theme={themes[theme]}>
-        <Page>
+      {/* <ThemeProvider theme={themes[theme]}>
+        <Page> */}
 
 
-        {/* <Splash theme={theme} setTheme={setTheme}/> */}
+        <Splash theme={theme} setTheme={setTheme}/>
         {/* <NavHeader /> */}
             <Header/>
 
-              <Container id="toggleContainer">
+              {/* <Container id="toggleContainer">
                   <Toggle onClick={changeTheme}>
                       {icon}
                   </Toggle>
-              </Container>
+              </Container> */}
             
             <LandingPage/>
             <ResumePage/>
-            <EducationPage theme={props.theme} />
-            <WorkPage/>
+            {/* <EducationPage theme={props.theme} /> */}
+            <EducationPage />
             <ProjectsPage/>
+            <WorkPage/>
             <InterestsPage/>
             <ContactPage/>
             <Footer/>
           
-          </Page>
-      </ThemeProvider>
+          {/* </Page>
+      </ThemeProvider> */}
     </div>
   );
 }

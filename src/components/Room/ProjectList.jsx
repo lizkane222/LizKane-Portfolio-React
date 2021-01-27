@@ -37,7 +37,7 @@ import WayfarerLogo from "./UploadPhotosToWeb/wayfarer/wayfarer1line.png";
 // import  from "./UploadPhotosToWeb"
 
 // FEMANON IMGS
-import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png"
+import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png";
 // import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png"
 // import  from "./UploadPhotosToWeb"
 

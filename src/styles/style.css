@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://use.typekit.net/cye7zmh.css");
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -236,6 +237,8 @@
   --white-pretty: #fff;
   --greyish: #e8e8e8;
   --grey-dark: rgba(13,13,13,1);
+  --grey-dark-light: rgba(23,23,23,1);
+  --grey-dark-light2: rgb(32, 30, 32);
   --mintGreen: #89FAD0;
   --speed: 500ms;
   --nav-size: 7vh;
@@ -292,7 +295,7 @@ body {
   /* background: var(--blue); */
   /* background: var(--red); */
   /* background: var(--white-pretty); */
-  /* background: var(--grey-dark); */
+  background: var(--grey-dark);
   font-size: 1em;
   font-family: var(--AcierBatTextNoirFF);
   font-weight: var(--AcierBatTextNoirFW);
@@ -757,8 +760,9 @@ header nav h5 {
   font-family: var(--AcierBatTextStrokesFF);
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
-  max-height: 100vh;
-  min-width: 100vw;
+  max-height: 90vh;
+  min-width: 90vw;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   /* grid-template-columns: repeat(5,1fr) 6fr;
@@ -1130,26 +1134,50 @@ h2 {
   /* margin-top: 5vh; */
   /* display: grid; */
   /* gr */
-  z-index: 16;
+  /* z-index: 16; */
+  min-height: 100vh;
 }
 
-.viewBoxContainer {
+#educationLanding {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "viewbox docs";
+}
+
+
+#viewBoxContainer {
+  grid-area: viewbox;
   background-image: url("../components/Room/UploadPhotosToWeb/docs/grandCanyon.png");
   background-size: cover;
-  height: 65vh;
+  height: 64vh;
   width: 60vw;
-  margin-right: 30vw;
-  border: 2px 2px solid red;
+  margin: 0 auto;
+  /* margin-right: 30vw; */
+  border: 2px 2px solid none;
 }
 
-.viewBoxContainer > h4 {
+#edDocContainer>.edDocs {
   opacity: 0;
-  z-index: 10;
+  /* z-index: 15; */
 }
 
-.viewBoxContainer:hover > h4 {
-  opacity: 1;
+#edDocContainer {
+  grid-area: docs;
+  margin: 0 auto;
 }
+
+#edDocContainer >* {
+  opacity: 0;
+} */
+/* #edDocContainer:hover >* {
+  opacity: 1;
+} */
+
+/* #viewBoxContainer:hover > #edDocContainer>* {
+  opacity: 1;
+  z-index: 15;
+} */
 
 svg #educationSVG {
   /* height:100%;margin:0;padding:0;background:#E3DFD2; */
@@ -1158,36 +1186,41 @@ svg #educationSVG {
   /* width: auto; */
   /* margin-right: 30vw; */
   /* margin:30vmin auto; */
-  height: 64vh;
-  width: 59vw;
+  /* height: 64vh;
+  width: 59vw; */
+  display: block;
+  margin:3vmin auto;
+  width:40vmin; height:auto;
 }
 
+
 .edFloatText {
-  font-size: 10em;
-  -webkit-transition: font-size .6s ease-out;
-  transition: font-size .6s ease-out;
-  font-weight: 800;
+  font-size: 13em;
+  -webkit-transition:font-size .6s ease-out;
+  transition:font-size .6s ease-out;
+  font-weight: 600;
   font-family: arial;
 }
 
-/* defs > text{
-  font-size:50em;
-  transition:font-size .4s ease-out;
-  font-weight:900;
-  font-family:arial;
-} */
-svg:hover .edFloatText {
+/* #educationSVG:hover .edFloatText{
+  transition:font-size .6s ease-in;
+  -webkit-transition:font-size .6s ease-in;
   font-size: 300em;
-  -webkit-transition: font-size .5s ease-in-out;
-  transition: font-size .5s ease-in-out;
-  /* 18em? */
-}
 
-/* svg:hover text{
+} */
+
+svg:hover text{
   transition:font-size .4s ease-in;
   font-size: 40em;
 
-}  */
+} 
+
+#viewBoxContainer:hover .edDocs{
+  opacity: 1;
+}
+
+
+
 /* ------------------------ */
 /* ----- FLOAT DOC BOX ------ */
 /* ------------------------ */
@@ -1767,15 +1800,24 @@ svg:hover .edFloatText {
 
 .blueRoll {
   color: var(--blue);
+  background-color: var(--grey-dark);
 }
 
 .redRoll {
   color: var(--red);
+  background-color: var(--grey-dark);
 }
 
 .yellowRoll {
   color: var(--yellow);
+  background-color: var(--grey-dark);
 }
+
+.lightGrey {
+  background-color: var(--grey-dark-light);
+  border: none;
+}
+
 
 /* --------------------------------------- */
 /* ------------ CONTACT PAGE ------------- */
@@ -1784,109 +1826,169 @@ svg:hover .edFloatText {
 #contactPage {
   z-index: 17;
   font-family: 'Bodoni Moda', serif;
-  margin: 5vh 0 -5vh 0;
+  margin: 5vh 0 5vh 0;
   min-width: 100vw;
   min-height: 82vh;
   /* bottom: 0; */
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 3fr 1fr;
-      grid-template-rows: 3fr 1fr;
-      grid-template-areas: "todo" "socialMedia";
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "email" "socialMedia";
 }
 
-/* #emailFormContainer {
-  display: flex;
-  margin-bottom: 5vh;
-} */
+#emailForm {
+  grid-area: "email"
+}
 
+#message {
+  resize:none;
+  overflow: scroll;
+}
+
+.cardTitle {
+  font-family: var(--Lobster);
+  margin: -7vh 0 1vh 0;
+}
 
 .todoListGrid {
   grid-area: "todo";
 }
 
 #socialMedia {
-  min-width: 100vw;
-  max-width: 100vw;
-  max-height: 20vh;
+  /* min-width: 100vw; */
+  /* max-width: 100vw; */
+  /* max-height: 20vh; */
   grid-area: "socialMedia";
-  margin: 5%;
+  /* margin: 5%; */
   /* margin-bottom: -20vh; */
-  padding: 5%;
-  display: -ms-grid;
+  /* padding: 5%; */
+  /* display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)6;
       grid-template-columns: repeat(6, 1fr);
       grid-template-areas: "LinkedIn Github Twitter Phone Email Location";
   -ms-flex-line-pack: center;
-      align-content: center;
+      align-content: center; */
+  display: flex;
+  flex-flow: column wrap;
   text-align: center;
   text-decoration: none;
 }
 
-#socialMedia > div {
-  padding: 1vw;
+.socItem>a{
+  text-decoration: none;
 }
+
+.social {
+  /* padding: 1vw; */
+  font-size: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+}
+
+.social>i {
+  flex: 1;
+  align-self: flex-start;
+  font-size: 3em;
+  margin: 0 2% 0 5%;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
+  color: var(--red);
+}
+
+.social>p {
+  flex: 2;
+  align-self: flex-end;
+  font-size: .6em;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
+  text-decoration: none;
+  color: var(--red);
+  /* margin: 5% 0 0 10%; */
+}
+
 
 #socialMedia > div:hover {
-  background-color: var(--white-semi-grey);
+  background-color: var(--grey-dark-light2);
   -webkit-filter: background brightness(2);
           filter: background brightness(2);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  -webkit-transition-delay: 900ms;
-          transition-delay: 900ms;
-  border-radius: 15%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  /* -webkit-transition-delay: 900ms;
+          transition-delay: 900ms; */
+  border-radius: 15px;
+  text-shadow: 2px 2px 2px var(--yellow);
 }
 
-i > svg {
-  font-size: 3em;
+.social > svg {
+  /* font-size: 7em;
   margin: 5% 10%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-  color: var(--blue);
-}
-
-i > svg:hover {
-  color: var(--yellow);
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
+  color: var(--red); */
 }
 
 .iconText {
-  font-size: .6em;
-  text-align: center;
+  /* font-size: .6em;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
   text-decoration: none;
+  color: var(--red);
+  margin-left: 10%; */
 }
 
+.social > svg:hover .iconText:hover {
+  /* text-shadow: 2px 2px 2px var(--yellow);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease; */
+}
+
+
 #linkedIn {
-  grid-area: "LinkedIn";
+  /* grid-area: "LinkedIn"; */
+  flex: 1;
 }
 
 #github {
-  grid-area: "Github";
+  /* grid-area: "Github"; */
+  flex: 2;
 }
 
 #twitter {
-  grid-area: "Twitter";
+  /* grid-area: "Twitter"; */
+  flex: 3;
 }
 
 #phone {
-  grid-area: "Phone";
+  /* grid-area: "Phone"; */
+  flex: 4;
 }
 
 #email {
-  grid-area: "Email";
+  /* grid-area: "Email"; */
+  flex: 5;
 }
 
 #location {
-  grid-area: "Location";
+  /* grid-area: "Location"; */
+  flex: 6;
 }
 
 #footer {
   background-color: var(--yellow);
+  /* background-color: var(--grey-dark); */
+  opacity: .8;
   /* margin-top: -30vh; */
   width: 100vw;
   /* position: absolute; */
@@ -1894,7 +1996,8 @@ i > svg:hover {
   /* margin-top: 3vh; */
   /* bottom: -10; */
   height: 7vh;
-  position: sticky;
+  /* bottom: 0; */
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-pack: center;

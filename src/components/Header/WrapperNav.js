@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const WrapperStyled = styled.div`
-  min-height: 90vh;
+const WrapperNavStyled = styled.div`
+  min-height: 7vh;
+  max-height: 8vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +18,6 @@ const WrapperStyled = styled.div`
   }
 `;
 
-export default function Wrapper({ children }) {
-  return <WrapperStyled>{children}</WrapperStyled>;
+export default function WrapperNav({ children }) {
+  return <WrapperNavStyled>{children}</WrapperNavStyled>;
 }

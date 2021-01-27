@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-scroll';
 // import OnScreenScrolling from './OnScreenScrolling';
 import OnScreenScrolling from './OnScreenScrolling';
-import Wrapper from './Wrapper';
+import WrapperNav from './WrapperNav';
 import styled from 'styled-components';
 import { useToggle} from "react-use";
 import Splash from "../DarkLightTheme/SplashScreen";
@@ -45,7 +45,7 @@ const NavbarStyled = styled.div`
     justify-content: space-around;
     margin: 0;
     color: white;
-    z-index: 299;
+    z-index: 2990;
     * {
       cursor: pointer;
     }
@@ -57,25 +57,28 @@ const NavbarStyled = styled.div`
   .scrolling-buttons {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
   .navLinks {
     font-size: 1.7em;
-    margin: 2.3%;
-    // color:#8B0124;
     color:#327E8A;
+    z-index: 2990;
+    padding: 0 2.3%
   }
-  
   .navLinks:hover {
     filter: brightness(1.5);
-    text-shadow: -1px 1px 3px #242526;
-  }
+    background-color: rgba(10,10,10,.5);
+}
 `;
-
+// text-shadow: -1px 1px 3px #242526;
+// color:#8B0124;
 
 const Header = (props) => {
   
         return (
-        <NavbarStyled>
+            <WrapperNav style={{"max-height": "7vh"}}>
+
+        <NavbarStyled className="header">
             {/* <header className="header"> */}
                     {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
                 <nav className="navbar">
@@ -111,6 +114,7 @@ const Header = (props) => {
                 </nav>
             {/* </header> */}
         </NavbarStyled>
+            </WrapperNav>
     );
 }
 
