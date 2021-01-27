@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import Item from "./Item"
-import "../../styles/itemStyle.css"
+// import "../../styles/itemStyle.css"
 
 
 // FROM TUTORIAL

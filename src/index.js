@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
-import './styles/itemStyle.css'
+// import './styles/itemStyle.css'CI= npm run build
 // import App from '../public/App.js';
 // import App from '../public/App.js';
 import App from "./App"
