@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import {Link} from 'react-scroll';
+// import {Link} from 'react-scroll';
 
 import "./styles/style.css";
 // import "./styles/style.scss";
 import Splash from "./components/DarkLightTheme/SplashScreen";
-import {ThemeProvider} from "styled-components";
+// import {ThemeProvider} from "styled-components";
 
 import Header from "./components/Header/Header"
 // import ItemList from "./components/Room/ItemList"
@@ -13,7 +13,7 @@ import Header from "./components/Header/Header"
 
 // import MainPage from "./components/Room/MainPage";
 // import NavHeader from "../Header/NavHeader";
-import NavHeader from "./components/Header/NavHeader";
+// import NavHeader from "./components/Header/NavHeader";
 
 import LandingPage from "./Pages/LandingPage";
 import ResumePage from "./Pages/ResumePage";
@@ -42,7 +42,7 @@ const DarkTheme = {
   toggleBackground: "#EDC168",
 }
 
-const themes= {
+const theme= {
   light: LightTheme,
   dark: DarkTheme
 }
