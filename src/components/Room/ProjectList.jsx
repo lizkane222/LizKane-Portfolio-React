@@ -37,7 +37,8 @@ import WayfarerLogo from "./UploadPhotosToWeb/wayfarer/wayfarer1line.png";
 // import  from "./UploadPhotosToWeb"
 
 // FEMANON IMGS
-import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png";
+import FemanonLogo1 from "";
+// import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png";
 // import FemanonLogo1 from "./UploadPhotosToWeb/femanon/IMG_0172_2.png"
 // import  from "./UploadPhotosToWeb"
 
@@ -53,7 +54,7 @@ const ProjectList = () => {
     const MBCrunchGalleryArray = [{img: MBCrunchLogo, descImg: "logo"}] 
     const NoshGalleryArray = [{img: NoshLogo, descImg: "logo"}] 
     const WayfarerGalleryArray = [{img: WayfarerLogo, descImg: "logo"}] 
-    const FemanonGalleryArray = [{img: FemanonLogo1, descImg: "logo"}] 
+    // const FemanonGalleryArray = [{img: FemanonLogo1, descImg: "logo"}] 
     // const PozersGalleryArray = [] 
     // const EkseedGalleryArray = [] 
     // const DeviantGalleryArray = [{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},{img: , descImg:},]
@@ -71,7 +72,7 @@ const ProjectList = () => {
     const MBCrunchDescription = "A social awareness app that calls each individual, business, and community to action. MBCrunch focuses on providing and identifying recycling bins near you. Businesses and individuals can sponsor recycling bins. Upon recycling items points are accumulated and exchanged to gain access to Virtual Reality Games to be played at those local businesses. MBCrunch goes the next step to help organize community markets where the recycled material is cleaned and given back to those in the community by education new ways to use the material; through art, gardening, or even by buying products from local businesses with the material being the products container."
     const NoshDescription = "An app that fills in the gap for those moments you brain fart and completely forget what food is available at home and you're out grocery shopping. Keep inventory of your pantry and fridge through Nosh allowing you to even choose recipes to make meal planning easier. Check off each item while at the store and once that recipe has been cooked the ingredients will be subtracted from the stock. Always be informed with Nosh right at your fingertips."
     const WayfarerDescription = "A social platform to share travel photos, experiences, best-places to stay/eat/shop all over the world. Share your next trip on Wayfarer!"
-    const FemanonDescription = "An educational platform built by experts, related programs, and individuals of all ages on the basis to have an open conversation on taboo topics. When society says 'sshhh' it's each of our choices to speak up on such topics and the realities behind topics such as sexuality, gender, relationships etc... WRITTEN BY WOMEN FOR EVERYONE"
+    // const FemanonDescription = "An educational platform built by experts, related programs, and individuals of all ages on the basis to have an open conversation on taboo topics. When society says 'sshhh' it's each of our choices to speak up on such topics and the realities behind topics such as sexuality, gender, relationships etc... WRITTEN BY WOMEN FOR EVERYONE"
     // const PozersDescription = "An organizational app to help you exseed expectations when networking"
     // const Description = "An organizational app to help you exseed expectations when networking"
     // const EkseedGallery = EkseedGalleryArray.map(image => <Photo imageItem={image.img} imageDesc={image.descImg}/>)
@@ -83,7 +84,7 @@ const ProjectList = () => {
     const MBCrunchGitHub = "https://github.com/lizkane222/MBCrunch";
     const NoshGitHub = "https://github.com/lizkane222/nosh";
     const WayfarerGitHub = "https://github.com/lizkane222/WAYFARER";
-    const FemanonGitHub = "https://github.com/lizkane222/Fem-Anon";
+    // const FemanonGitHub = "https://github.com/lizkane222/Fem-Anon";
     // const PozersGitHub = "";
     // const Ekseed GitHub = "";
 
