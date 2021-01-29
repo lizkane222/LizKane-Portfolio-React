@@ -5,6 +5,8 @@ import "./project.css"
 
 import {RiGroup2Fill} from 'react-icons/ri';
 import {BsPerson} from 'react-icons/bs';
+import {FaBookmark, FaUserCircle} from 'react-icons/fa';
+import {AiOutlineFundProjectionScreen} from 'react-icons/ai';
 
 
 class Project extends Component {
@@ -37,49 +39,85 @@ class Project extends Component {
 
     getImage = () => {
         let stockImage = this.props.stockImg
+        // return style={{"background-image": "url("+this.stockImage+")"}}
+        backgroundImage: URL("{{stockImage}}")
     }
-    
+    // style={{"background-image": "url("+this.getImage()+")"}}
 
     render() {
         return(
             
-            <div>
-                <div className="wrapper" onClick={this.setActive} style={{"background-image": "url("+this.getImage()+")"}}>
+            <>
+                {/* <div className="wrapper" onClick={this.setActive} >
                     <div className="projectCard card" >
+                        <div className="image-wrapper" getImage>
                         <div className="header">
                             <div className="date">
                                 <span className="yearInit">2020 - </span>
                                 <span className="yearEnd">2021</span>
                                 <span className="stack"></span>
                             </div>
-                            <div className="image-wrapper">
-                                <img src={this.props.stockImg} alt="inspirational work quote"/>
-                            </div>
+                                <img src={this.props.stockImg} />
+                            
                             <ul className="menuContent">
-                                <li>
-                                    {this.props.stack == "solo" ?
-                                    <a href="#" className="fa "><BsPerson/>{this.props.stack}</a>
+                                <li className="group">
+                                    {this.props.stack === "solo" ?
+                                    <a href="#" className="fa "><{BsPerson}/>{this.props.stack}</a>
                                     :
-                                    <a href="#" className="fa "><RiGroup2Fill/>{this.props.stack}</a>
-                                }
+                                    <a href="#" className="fa "><{RiGroup2Fill}/>{this.props.stack}</a>
+                                    }
                                 </li>
-                                {/* <li><a href="#" className="fa fa-heart-o"><span>18</span></a></li> */}
-                                {/* <li><a href="#" className="fa fa-comment-o"><span>3</span></a></li> */}
                             </ul>
 
                             <img className="projectLogoInactive" id={this.props.name} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
+                            </div>
                         </div>
                         <div className="data">
                             <div className="projectCardContent">
                                 <span className="author">Liz Kane</span>
                                 <h4 className="projectCardTitle"><a href="#">{this.props.name}</a></h4>
                                 <p className="projectCardText" >{this.props.github}</p>
-                                <a href="#" className="button">Read more</a>
+                                <a href="#" className="projectButton">Check it out</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                
+                <div className="projectCard card" onClick={this.setActive}>
+                    <div className="wrapper">
+                    <div className="projectHeader">
+                        <div className="leftTop">
+                            <span className="yearInit">2020 -</span>
+                            <span className="yearEnd">2021</span>
 
+                        </div>
+                        <ul className="menuContent">
+                            <li className="group">
+                                {/* <a href="#" className="fa "><FaBookmark/></a> */}
+                                <a href="#" className="fa groupIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></a>
+
+                                {this.props.group === "solo" ?
+                                <a href="#" className="fa groupIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></a>
+                                :
+                                <a href="#" className="ri groupIcons" ><span>{this.props.stack}</span><RiGroup2Fill/></a>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logoContainer">
+                        <img id={this.props.name+`InactiveImg`} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
+                    </div>
+
+                    <div className="data">
+                        <div className="hiddenContent">
+                            {/* <span className="devName">Liz Kane</span> */}
+                            <p className="projectCardTitle"><a href="#">{this.props.name}</a></p>
+                            <p className="text">{this.props.descReduced}</p>
+                            <a href="#" className="projectButton">check it out</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                 
                 
                 
@@ -98,7 +136,7 @@ class Project extends Component {
                 <FloatBox logo={this.props.logo} name={this.props.name} description={this.props.description} github={this.props.github} github2={this.props.github2} gist={this.props.gist} gallery={this.props.gallery} style={this.props.style} setActive={this.setActive}/>
                 </>
                 }
-            </div>
+            </>
         )}
 }
 

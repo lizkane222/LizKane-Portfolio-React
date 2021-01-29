@@ -22,10 +22,8 @@ const ProjectsPage=() => {
         <section id="projectsPage">
             <Wrapper>
                 <div className="row">
-                    <div className="col-lg-5 mx-auto">
-                        <div className="redbox" id="teamWorkGrid">
-                        {/* <img src={TeamWork} alt="" id="teamWorkImg" className="thematicImg responsive-img"/> */}
-                        
+                    <div className="col-lg-4 mx-auto">
+                        <div id="teamWorkGrid">
                             <ul className="social-icons icon-circle icon-rotate list-unstyled list-inline"> 
                             {/* LANGUAGES */}
                                 <li><a href="#"><i id="FaReact" className="fa "><FaReact/></i></a> </li> 
@@ -66,9 +64,8 @@ const ProjectsPage=() => {
                                 <li> <a href="#"><i id="DiHeroku" className="fa"><DiHeroku/></i></a></li>
                             </ul>
                         </div>
-                        <hr />    
                     </div>
-                    <div className="col-lg-6 mx-auto" id="projectBoardParent">
+                    <div className="col-lg-5 mx-auto" id="projectBoard">
                         <ProjectList/>
                     </div>
                 </div>
