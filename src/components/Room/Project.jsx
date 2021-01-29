@@ -83,23 +83,23 @@ class Project extends Component {
                     </div>
                 </div> */}
                 
-                <div className="projectCard card" onClick={this.setActive}>
+                <div className="card" id="projectCard" onClick={this.setActive}>
                     <div className="wrapper">
                     <div className="projectHeader">
                         <div className="leftTop">
-                            <span className="yearInit">2020 -</span>
+                            <span className="yearInit">2020 - </span>
                             <span className="yearEnd">2021</span>
 
                         </div>
                         <ul className="menuContent">
-                            <li className="group">
+                            <li className="rightTop">
                                 {/* <a href="#" className="fa "><FaBookmark/></a> */}
-                                <a href="#" className="fa groupIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></a>
+                                <p className="fa rightTopIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></p>
 
                                 {this.props.group === "solo" ?
-                                <a href="#" className="fa groupIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></a>
+                                <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></p>
                                 :
-                                <a href="#" className="ri groupIcons" ><span>{this.props.stack}</span><RiGroup2Fill/></a>
+                                <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill/></p>
                                 }
                             </li>
                         </ul>
@@ -111,7 +111,7 @@ class Project extends Component {
                     <div className="data">
                         <div className="hiddenContent">
                             {/* <span className="devName">Liz Kane</span> */}
-                            <p className="projectCardTitle"><a href="#">{this.props.name}</a></p>
+                            <p className="projectCardTitle"><p>{this.props.name}</p></p>
                             <p className="text">{this.props.descReduced}</p>
                             <a href="#" className="projectButton">check it out</a>
                         </div>

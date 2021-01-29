@@ -10,7 +10,8 @@ import {DiDjango, DiHeroku, DiJqueryLogo, DiSass, DiMaterializecss, } from 'reac
 import ProjectList from "../components/Room/ProjectList";
 
 
-import TeamWork from "../components/Room/UploadPhotosToWeb/docs/teamWork.png";
+// import TeamWork from "../components/Room/UploadPhotosToWeb/docs/teamWork.png";
+import BeeGrid from "../components/Room/UploadPhotosToWeb/docs/projectsBeeGrid.png";
 
 
 
@@ -19,11 +20,11 @@ import TeamWork from "../components/Room/UploadPhotosToWeb/docs/teamWork.png";
 const ProjectsPage=() => {
     
     return(
-        <section id="projectsPage">
+        <section id="projectsPage" className="flex-container">
             <Wrapper>
                 <div className="row">
-                    <div className="col-lg-4 mx-auto">
-                        <div id="teamWorkGrid">
+                    <div className="col-lg-4 mx-auto flex-container" id="teamWorkGridParent">
+                        <div className="redBox" id="teamWorkGrid">
                             <ul className="social-icons icon-circle icon-rotate list-unstyled list-inline"> 
                             {/* LANGUAGES */}
                                 <li><a href="#"><i id="FaReact" className="fa "><FaReact/></i></a> </li> 
@@ -65,7 +66,7 @@ const ProjectsPage=() => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-5 mx-auto" id="projectBoard">
+                    <div className="col-lg-5 mx-auto flex-container" id="projectBoard">
                         <ProjectList/>
                     </div>
                 </div>

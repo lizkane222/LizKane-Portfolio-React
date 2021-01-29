@@ -33,6 +33,7 @@ $Lobster: 'Lobster';
     box-sizing: border-box;
   }
 
+
 /* ------------------------ */
 /* ----- PROJECT PAGE ------ */
 /* ------- ref classes = .thematicImg .responsive-img --------- */
@@ -44,9 +45,11 @@ $Lobster: 'Lobster';
     display: flex;
     
     place-content: center;
-    max-height: 95vh;
+    min-height: 100vh;
+    max-height: 100vh;
     /* overflow: hidden; */
     overflow: show;
+    
 }
 
 #projectsPage>* {
@@ -55,9 +58,9 @@ $Lobster: 'Lobster';
 
 .row {
     width: 100%;
-    height: 100%;
-    // display: flex;
-    // flex-direction: row;
+    min-height: 80vh;
+    max-height: 80vh;
+    margin-top: 10vh;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "work projects", ". projects";
@@ -68,16 +71,16 @@ $Lobster: 'Lobster';
 }
 
 #teamWorkGrid {
-background-image: url("../Room/UploadPhotosToWeb/docs/teamWork.png");
-margin: 0 0 0 0;
-background-position: baseline;
-background-repeat: repeat;
-background-size: cover;
-display: grid;
+    background-image: url("./UploadPhotosToWeb/docs/projectsBeeGrid.png");
+    margin: 0 0 0 0;
+    background-position: baseline;
+    background-repeat: repeat;
+    background-size: cover;
+    display: grid;
 
-min-height: 60vh;
-max-height: 80vh;
-min-width: 70vw;
+    min-height: 60vh;
+    max-height: 80vh;
+    min-width: 70vw;
 /* min-height: 60vh; */
 /* max-height: 80vh; */
 /* min-width: 70vw; */
@@ -191,14 +194,15 @@ display: none;
     flex-flow: row wrap;
     // font-size: 30px;
     text-align: center;
+    width: 100%;
+    max-height: 80vh;
 }
 
-@media (max-width: 800px) {
-.flex-container {
-    flex-direction: column;
-}
-}
 
+
+#projectboard > .projectCard {
+    // height: 80%;
+}
 #projectboard > .projectNameLogo {
 display: -webkit-box;
 display: -ms-flexbox;
@@ -210,13 +214,23 @@ margin: 0 5%;
 z-index: 0;
 }
 
-.logoContainer>img{
-    width: 100%;
+.logoContainer{
+    width:100%;
+    height: 100%;
+    margin: 0 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgba($grey-dark-light,.2);
 }
-// #PraestoInactiveImg, #EkseedInactiveImg, #MinifiInactiveImg, #TrycycleInactiveImg, #DeviantInactiveImg, #WayfarerInactiveImg {
-/* margin: 5% 3%; */
-// background-color: var(--grey-dark);
+
+// .logoContainer>img{
 // }
+#PraestoInactiveImg, #EkseedInactiveImg, #MinifiInactiveImg, #TrycycleInactiveImg, #DeviantInactiveImg, #WayfarerInactiveImg {
+    /* margin: 5% 3%; */
+    width: 100%;
+    height: auto;
+    padding: 10%;
+}
 
 .visitedProject {
 /* box-shadow: indigo; */
@@ -249,8 +263,8 @@ margin: 0 5%;
     }
   }
   
-li.group{
-    a {
+li.rightTop{
+    p {
         text-decoration: none;
     }
 }
@@ -276,6 +290,7 @@ li.group{
   padding: 0 0rem;
   width: 100%;
   flex-direction: row wrap;
+  background-color: rgba(0,0,0,0);
   .menuContent {
     @include cf;
     margin: 0;
@@ -288,8 +303,8 @@ li.group{
       background-color: rgba(0,0,0,0);
 
     }
-    li.group{
-        .groupIcons{
+    li.rightTop{
+        .rightTopIcons{
             color: $white;
             margin: 0 5%;
         }
@@ -305,8 +320,8 @@ li.group{
     }
   }
   .wrapper {
-    background-color: $white;
-    min-height: 540px;
+    // background-color: $grey-dark;
+    min-height: 100%;
     position: relative;
     overflow: hidden;
     box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
@@ -357,12 +372,14 @@ li.group{
 // +++++++++++++++++++++++++++++++++++++++++++++++
 // PROJECT INACTIVE CARDS PSEUDO-CLASS STYLES
 // +++++++++++++++++++++++++++++++++++++++++++++++
-.projectCard {
+#projectCard {
     .wrapper {
     //   background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;
     //   background: url("../Room/UploadPhotosToWeb/blog/blueproject.jpg") center / cover no-repeat;
-      background: url("../Room/UploadPhotosToWeb/blog/redProject.jpg") center / cover no-repeat;
+    //   background: url("../Room/UploadPhotosToWeb/blog/redProject.jpg") center / cover no-repeat;
     //   background: url("../Room/UploadPhotosToWeb/blog/yellowProject.jpg") center / cover no-repeat;
+      background-color: rgba(0,0,0,0);
+      background: center / cover no-repeat;
       &:hover {
         .menuContent {
           span {
@@ -379,8 +396,13 @@ li.group{
       padding: 1em;
       .leftTop {
         float: left;
-        font-size: 12px;
+        font-size: 1em;
       }
+      .rightTop {
+        float: right;
+        font-size: 1em;
+      }
+
     }
     .menuContent {
       float: right;
@@ -398,7 +420,7 @@ li.group{
       transform: translateY(calc(70px + 4em));
     }
     .projectCardTitle {
-      a {
+      p {
         color: $white;
       }
     }
@@ -466,8 +488,9 @@ li.group{
     min-height: 85vh;
     margin: none;
     // background-color: var(--white-semi-trans);
-    background-color: $grey-dark-light4;
-    box-shadow: 0px 0px 15px $black;
+    background-color: rgba($grey-dark-light,1);
+    // box-shadow: 0px 0px 15px $black;
+    box-shadow: 0px 0px 15px $grey-dark-light4;
     -moz-box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
     -webkit-box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
     -o-box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
@@ -531,6 +554,7 @@ li.group{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -552,7 +576,7 @@ li.group{
     margin: 0 5%;
 }
     
-    .projectLogoActive {
+.projectLogoActive {
     margin: 0 15px;
     /* width: 100%; */
     max-height: 100%;
@@ -561,6 +585,7 @@ li.group{
 .projectPhotos {
     max-height: 50%;
     min-height: 50%;
+    // background-color: rgba($grey-dark,.5);
 }
     
 .projectDescription {
@@ -571,11 +596,15 @@ li.group{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     /* border: 2px groove gainsboro; */
-    margin: 5px;
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em;
     overflow: scroll;
+    background-color: rgba($grey-dark,.5);
 }
     
 .carousel-container {
+    // grid-area: gallery;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -589,6 +618,10 @@ li.group{
     overflow: hidden;
     position: relative;
     max-height: 100%;
+    // background-color: rgba($grey-dark,.5);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em;
 }
     
 .carousel-return {
@@ -639,6 +672,10 @@ li.group{
 .projectGalleryImage {
     max-width: 95%;
     max-height: 50%;
+    background-color: rgba($grey-dark,.5);
+    margin: 1em;
+    border-radius: 30px;
+    padding: 1em;
 }
     
 #left-button {
@@ -663,8 +700,10 @@ li.group{
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-area: more;
-    margin: 5px;
+    margin: 1em;
+    border-radius: 30px;
     overflow: scroll;
+    background-color: rgba($grey-dark,.5);
 }
     
 .projectGallery {
@@ -672,7 +711,8 @@ li.group{
     -ms-grid-column: 5;
     -ms-grid-column-span: 3;
     grid-area: gallery;
-    margin: 5px;
+    margin: 1em;
+    border-radius: 30px;
     display: fixed;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -682,6 +722,7 @@ li.group{
     -ms-flex-line-pack: center;
         align-content: center;
     overflow: hidden;
+    background-color: rgba($grey-dark,.5);
 }
     
 .projectPhotos {
@@ -692,7 +733,7 @@ li.group{
 .githubProject {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: GHlink;
+    grid-area: GHlink;    
 }
 
     
@@ -728,9 +769,12 @@ li.group{
     position: relative;
     display: -ms-grid;
     display: grid;
-    margin: 5px 0;
     contain: content;
     overflow: scroll;
+    background-color: rgba($grey-dark,.5);
+    margin: 1em;
+    padding: 1em;
+
 }
     
 .responsiveIframeProject {
@@ -743,6 +787,7 @@ li.group{
     height: 0;
     padding-bottom: 56.25%;
     position: relative;
+    background-color: rgba($grey-dark,.5);
 }
     
 .projectContainer {
@@ -756,5 +801,23 @@ li.group{
         grid-template-columns: repeat(7, 1fr);
     -ms-grid-rows: 1fr 4fr 4fr;
         grid-template-rows: 1fr 4fr 4fr;
-        grid-template-areas: "nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo" "description description description description gallery gallery gallery" "more more more more github github github ";
+        grid-template-areas: "nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo" "description description description description gallery gallery gallery" "more more more more gallery gallery gallery ";
+    // background-color: rgba($grey-dark,.5);
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+// .flex-container>* {
+    // flex: 50%;
+// }
+
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
 }

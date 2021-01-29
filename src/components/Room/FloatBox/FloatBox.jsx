@@ -22,19 +22,19 @@ const FloatBox =(props) => {
                             <Carousel gallery={props.gallery}/>
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         <div className="projectCode">
                             <div className="responsiveIframeProject">
                                 <a href={props.github} className="githubProject"><p>{props.github}</p></a>
                                 <iframe src={props.github} className="githubIFrame"></iframe>
-                                {/* <ReactEmbedGist gist={"lizkane222/"+(props.gist)}></ReactEmbedGist> */}
-                                {/* <ReactEmbedGist gist={props.gist}></ReactEmbedGist> */}
-                                {/* <iframe 
+                                <ReactEmbedGist gist={"lizkane222/"+(props.gist)}></ReactEmbedGist>
+                                <ReactEmbedGist gist={props.gist}></ReactEmbedGist>
+                                <iframe 
                                     width="100%"
                                     height="350"    
-                                    src={props.gist} className="githubIFrame"></iframe> */}
+                                    src={props.gist} className="githubIFrame"></iframe>
 
-                                {/* <Gist url={props.gist}/> */}
+                                <Gist url={props.gist}/>
 
                                 {props.github2 ?
                                     <>
@@ -44,7 +44,7 @@ const FloatBox =(props) => {
                                 :[]}
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
