@@ -3,7 +3,7 @@ import "./textCarousel.css"
 import Item from "./TextItem"
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-import {FaArrowLeft, FaArrowRight} from "react-icons/fa"
+import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 import {ImQuotesLeft, ImQuotesRight} from 'react-icons/im';
 
 

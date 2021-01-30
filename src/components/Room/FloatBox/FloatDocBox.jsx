@@ -1,5 +1,5 @@
 import React, {Component, setState} from "react";
-import Carousel from "../Carousel"
+import Carousel from "../../Carousel/Carousel"
 
 const FloatDocBox =(props) => {
 

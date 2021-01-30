@@ -627,6 +627,10 @@ li.rightTop p {
   /* min-height: 90px; */
 }
 
+#left-button, #right-button {
+  font-size: 1.5em;
+}
+
 .carouselBtn {
   position: relative;
   /* margin-top: 10%; */

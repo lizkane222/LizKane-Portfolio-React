@@ -117,7 +117,7 @@ body {
   position: relative;
   width: 100vw;
   height: 50vh;
-  background-image: url("../components/Room/UploadPhotosToWeb/blog/waves2.jpg");
+  /* background-image: url("../components/Room/UploadPhotosToWeb/blog/waves2.jpg"); */
   background-size: cover;
   font-family: 'Lobster';
   margin-top: 5vh;

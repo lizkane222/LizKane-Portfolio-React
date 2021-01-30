@@ -19,7 +19,7 @@
   position: relative;
   width: 100vw;
   height: 50vh;
-  background-image: url("../Room/UploadPhotosToWeb/blog/waves2.jpg");
+  /* background-image: url("../components/Room/UploadPhotosToWeb/blog/waves2.jpg"); */
   background-size: cover;
   font-family: 'Lobster';
   margin-top: 5vh;
@@ -27,6 +27,11 @@
   justify-content: center;
   align-content: center;
   align-content: center;
+}
+
+#textCarouselContainer:before {
+  /* background-image: url("../components/Room/UploadPhotosToWeb/blog/waves2.jpg"); */
+  opacity: .2;
 }
 
 #carousel {

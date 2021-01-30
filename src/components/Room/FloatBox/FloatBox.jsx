@@ -2,7 +2,7 @@ import React, {Component, setState} from "react";
 // import ReactEmbedGist from 'react-embed-gist';
 import Gist from 'super-react-gist';
 
-import Carousel from "../Carousel"
+import Carousel from "../../Carousel/Carousel"
 
 const FloatBox =(props) => {
 
