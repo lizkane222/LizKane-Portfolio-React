@@ -9,10 +9,26 @@
   --white-semi-grey: rgba(248,248,248,.8);
   --white-pretty: #fff;
   --greyish: #e8e8e8;
-  --grey-dark: rgba(13,13,13,1);
+  --greyish-semi-trans: rgba(201,200,201,.5);
+  --greyish-solid: #737373;
+  /* --grey-dark: rgba(13,13,13,1); */
+  --grey-dark: rgba(41,41,41,1);
   --grey-dark-light: rgba(23,23,23,1);
   --grey-dark-light2: rgb(32, 30, 32);
   --grey-dark-light3: rgb(46, 46, 46);
+  --grey-dark-light4: rgb(80, 80, 80);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 #textCarouselContainer {

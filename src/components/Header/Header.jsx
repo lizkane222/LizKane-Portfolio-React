@@ -38,17 +38,18 @@ const NavbarStyled = styled.div`
   width: 100%;
   z-index: 2990;
   .navbar {
-    background: rgba(23,23,23,1);
+    background: rgba(56,56,56,1);
     display: flex;
     justify-content: space-around;
     margin: 0;
-    color: white;
+    color: #fff;
     z-index: 2990;
+    border: none;
     * {
       cursor: pointer;
     }
     .active {
-        border-bottom: 1px solid white;
+        border-bottom: 3px solid #327E8A;
 
     }
   }
@@ -60,15 +61,16 @@ const NavbarStyled = styled.div`
   }
   .navLinks {
     font-size: 1.7em;
-    color:#327E8A;
+    color:#fff;
     z-index: 2990;
     padding: 0 2.3%;
     z-index: 2990;
   }
   .navLinks:hover {
     filter: brightness(1.5);
-    background-color: rgba(10,10,10,.5);
+    background: rgba(56,56,56,.5);
     z-index: 2990;
+    text-decoration: none;
 }
 `;
 // text-shadow: -1px 1px 3px #242526;
