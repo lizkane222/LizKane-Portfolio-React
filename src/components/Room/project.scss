@@ -27,7 +27,7 @@ sans-serif;
 
 $base-font: 'Courier New', Courier, monospace;
 $Lobster: 'Lobster';
-
+$Chic: 'Bodoni Moda', serif;
 
 * {
     box-sizing: border-box;
@@ -240,11 +240,11 @@ z-index: 0;
 /* border: 1.5px ridge green; */
 }
 
-.projectName {
-text-shadow: -2px 2px 0px indianred;
-font-size: 2.5em;
-margin: 0 5%;
-}
+// .projectName {
+//     text-shadow: -2px 2px 0px ;
+//     font-size: 4em;
+//     margin: 0 5%;
+// }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++
 // +++++++++++++++++++++++++++++++++++++++++++++++
@@ -495,8 +495,12 @@ li.rightTop{
     -webkit-box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
     -o-box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
     border-radius: 25px;
-    color: var(--blue);
+    color: $white-pretty;
 }
+
+// .floatBox>* {
+//     font-family: $Chic;
+// }
     
     /* #projectBoard {
     background-size: cover;
@@ -533,28 +537,19 @@ li.rightTop{
     flex: 50%;
     position: relative;
     } */
-    
-#projectBoard>div * {
-    
-}
-    /* .visitedProject {
-    box-shadow: indigo;
-    }
-    
-    .droppable {
-    border: 1.5px ridge green;
-    } */
-    
+
+    // position & grid-area & display flex
 .projectNameLogo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 7;
     grid-area: nameLogo;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: .1fr .5fr 1fr 1fr .1fr;
+    grid-template-rows: .5fr .5fr;
+    grid-template-areas: ". logo projectName github1 ." ". logo projectName github2 .";
+    font-family: $Chic;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -565,27 +560,53 @@ li.rightTop{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0px 5px;
     overflow: hidden;
+    background-color: rgba($grey-dark,.5);
+    place-items: center;
 }
-    
-.projectName {
-    text-shadow: -2px 2px 0px $grey-dark-light;
-    color: $white-pretty;
-    font-size: 2.5em;
-    margin: 0 5%;
-}
-    
+
+   
 .projectLogoActive {
-    margin: 0 15px;
-    /* width: 100%; */
+    grid-area: logo;
+    min-height: 100%;
     max-height: 100%;
+    font-family: $Chic;
+}
+
+.projectName {
+    grid-area: projectName;
+    text-shadow: -2px 2px 0px $grey-dark-light;
+    font-size: 4.5em;
+    text-align: center;
+    font-family: $Chic;
+    padding: 0 0;
+}
+
+.githubProject {
+    grid-area: github1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    font-family: $Chic; 
+    font-size: .5em;
+    text-align: right;
+    align-self: flex-end;
+
 }
     
+.githubProject2 {
+    grid-area: github2;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    font-size: .5em;
+    text-align: right;
+    font-family: $Chic;
+    overflow: visible;
+}
+
 .projectPhotos {
     max-height: 50%;
     min-height: 50%;
-    // background-color: rgba($grey-dark,.5);
+    font-family: $Chic;
 }
     
 .projectDescription {
@@ -593,18 +614,18 @@ li.rightTop{
     -ms-grid-column: 1;
     grid-area: description;
     position: relative;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-family: $base-font;
     /* border: 2px groove gainsboro; */
     margin: 1em;
     border-radius: 30px;
-    padding: 1em;
+    padding: 1.5em;
     overflow: scroll;
     background-color: rgba($grey-dark,.5);
+    font-family: $Chic;
 }
     
 .carousel-container {
-    // grid-area: gallery;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -614,14 +635,13 @@ li.rightTop{
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    /* contain: content; */
     overflow: hidden;
     position: relative;
     max-height: 100%;
-    // background-color: rgba($grey-dark,.5);
-    margin: 1em;
+    margin: .5em;
     border-radius: 30px;
     padding: 1em;
+    place-content: center;
 }
     
 .carousel-return {
@@ -638,8 +658,9 @@ li.rightTop{
 .alt-wrap {
     display: block;
     position: relative;
-    margin: 20px;
-    color: var(--red);
+    margin: 1em;
+    color: $white-pretty;
+    font-family: $Chic;
 }
     
     /* The alt text itself */
@@ -652,9 +673,10 @@ li.rightTop{
     right: 0;
     bottom: 0;
     margin: 0;
-    padding: 15px;
-    font-size: .8em;
+    padding: 1em;
+    font-size: 1em;
     line-height: 1em;
+    font-family: $Chic;
     /* background-color: rgba(0,0,0,0.8); */
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -672,18 +694,32 @@ li.rightTop{
 .projectGalleryImage {
     max-width: 95%;
     max-height: 50%;
-    background-color: rgba($grey-dark,.5);
+    // background-color: rgba($grey-dark,.5);
     margin: 1em;
     border-radius: 30px;
     padding: 1em;
+    font-family: $Chic;
 }
     
 #left-button {
-    /* margin-top: 50%;/ */
-    /* min-height: 90px; */
+    position: absolute;
+    margin: 25% 0;
+    width: 2em;
+    height: 2em;
+    // margin: auto 0;
 }
-#left-button, #right-button  {
-    font-size: 1.5em;
+#left-button>i {
+    font-size: 1em;
+}
+#right-button>i {
+    font-size: 1em;
+}
+
+#right-button {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    margin: 25% 0;
 }
 .carouselBtn {
     position: relative;
@@ -706,6 +742,7 @@ li.rightTop{
     border-radius: 30px;
     overflow: scroll;
     background-color: rgba($grey-dark,.5);
+    font-family: $Chic;
 }
     
 .projectGallery {
@@ -725,20 +762,15 @@ li.rightTop{
         align-content: center;
     overflow: hidden;
     background-color: rgba($grey-dark,.5);
+    font-family: $Chic;
 }
     
 .projectPhotos {
     margin: 5px;
     max-height: 100%;
-}
-    
-.githubProject {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: GHlink;    
+    font-family: $Chic;
 }
 
-    
 .githubIFrame {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -746,12 +778,7 @@ li.rightTop{
     position: absolute;
     width: 100%;
     height: 100%;
-}
-    
-.githubProject2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: GHlink2;
+    font-family: $Chic;
 }
     
 .githubIFrame2 {
@@ -761,6 +788,7 @@ li.rightTop{
     position: absolute;
     width: 100%;
     height: 100%;
+    font-family: $Chic;
 }
     
 .projectCode {
@@ -776,7 +804,7 @@ li.rightTop{
     background-color: rgba($grey-dark,.5);
     margin: 1em;
     padding: 1em;
-
+    font-family: $Chic;
 }
     
 .responsiveIframeProject {
@@ -790,6 +818,7 @@ li.rightTop{
     padding-bottom: 56.25%;
     position: relative;
     background-color: rgba($grey-dark,.5);
+    font-family: $Chic;
 }
     
 .projectContainer {
@@ -797,14 +826,14 @@ li.rightTop{
     display: grid;
     max-width: 80vw;
     max-height: 80vh;
-    margin: 5px auto;
+    margin: 0 auto;
     contain: content;
+    font-family: $Chic;
     -ms-grid-columns: (1fr)7;
         grid-template-columns: repeat(7, 1fr);
     -ms-grid-rows: 1fr 4fr 4fr;
         grid-template-rows: 1fr 4fr 4fr;
         grid-template-areas: "nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo nameLogo" "description description description description gallery gallery gallery" "more more more more gallery gallery gallery ";
-    // background-color: rgba($grey-dark,.5);
 }
 
 

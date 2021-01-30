@@ -12,16 +12,14 @@ import Splash from "../DarkLightTheme/SplashScreen";
 // import 'materialize-css/dist/css/materialize.min.css'
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
 // import {ExpandLess, ExpandMore} from "@material-ui/icons";
-import Resource from '../Room/Resource';
 // import "../Header/dropdown.css"
+
+import Resource from '../Room/Resource';
 import ResourceList from "../Room/ResourceList";
 import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
 import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
 import MastersDoc from "../Room/Docs/MastersDoc.jsx";
 import GACertDoc from "../Room/Docs/GACertDoc.jsx";
-
-
-
 
 import LandingPage from "../../Pages/LandingPage";
 import ResumePage from "../../Pages/ResumePage";
@@ -38,6 +36,7 @@ const NavbarStyled = styled.div`
   font-family: 'Bodoni Moda', serif;
   position: fixed;
   width: 100%;
+  z-index: 2990;
   .navbar {
     background: rgba(23,23,23,1);
     display: flex;
@@ -57,16 +56,19 @@ const NavbarStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 2990;
   }
   .navLinks {
     font-size: 1.7em;
     color:#327E8A;
     z-index: 2990;
-    padding: 0 2.3%
+    padding: 0 2.3%;
+    z-index: 2990;
   }
   .navLinks:hover {
     filter: brightness(1.5);
     background-color: rgba(10,10,10,.5);
+    z-index: 2990;
 }
 `;
 // text-shadow: -1px 1px 3px #242526;

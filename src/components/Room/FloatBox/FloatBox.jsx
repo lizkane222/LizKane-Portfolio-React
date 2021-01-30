@@ -10,10 +10,16 @@ const FloatBox =(props) => {
         <div className="wrapperFloatBox" onClick={props.setActive}>
             <div className="floatBox" onClick={(e) => e.stopPropagation()}>
                 <div className="projectContainer animate">
-                    <div className="projectNameLogo activeProject">
+                    <div className="projectNameLogo">
                         {/* <img className="projectLogoActive" src={props.logo} alt={props.name + "logo"} style={props.style}/> */}
                         <img className="projectLogoActive" src={props.logo} alt={props.name + "logo"}/>
                         <h3 className="projectName">{props.name}</h3>
+                        {props.github2 ?
+                                    <>
+                                        <a href={props.github} className="githubProject"><p>{props.github}</p></a>
+                                        <a href={props.github2} className="githubProject2"><p>{props.github2}</p></a>
+                                    </>
+                                :<a href={props.github} className="githubProject" style={{textAlign: "right"}}><p>{props.github}</p></a>}
                     </div>
                     <div className="projectDescription"><p >{props.description}</p></div>
                     <div className="projectMore">MORE</div>

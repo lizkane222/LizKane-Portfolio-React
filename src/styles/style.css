@@ -43,6 +43,7 @@
   /* FONTS */
   --base-font: 'Courier New', Courier, monospace;
   --Lobster: 'Lobster';
+  --Chic: 'Bodoni Moda', serif;
 
   /* Acier BAT Text Gris *//* font-family *//* font-weight *//* font-style */
   --AcierBatTextGrisFF: acier-bat-gris, sans-serif;
@@ -195,6 +196,7 @@ body {
   font-size: 2em;
   text-shadow: .02em .02em .04em var(--grey-dark);
 }
+
 
 .arrow:hover {
   transform: scale(1.2);
