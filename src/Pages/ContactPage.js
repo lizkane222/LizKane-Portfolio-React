@@ -16,77 +16,88 @@ import {VscLocation} from 'react-icons/vsc';
 const ContactPage=() => {
     init("user_1zjWdxZg6yFodwsuNkOVU");
     const [count, setCount] = useState(0)
+    const [iconsClicked, setIconsClicked] = useState(<p></p>)
+    let selectiveCounter
 
-    const selectiveCounter=(e) => {
-        e.target.className !='alreadyCounted' ? setCount(count+1) : e.target.className = 'alreadyCounted'
+    selectiveCounter=(e) => {
+        e.target.className !='alreadyCounted' ? setCount(count+1) &&  (e.target.className +='alreadyCounted'): e.target.className = 'alreadyCounted'
+        for(let i = 0; i<e.target.childNodes.length; i++){
+            if(e.target.childNodes[i].className == "socIcon"){
+                setIconsClicked(
+                    iconsClicked.append(e.target.childNodes.innerText)
+                )
+            }
+        };
     }
+
 
 
     return(
         <section id="contactPage">
-            <Wrapper>
+            <Wrapper id="contactPageWrapper">
             
             <div className="row">
                 <EmailForm onClick={() => setCount(count+1)} id="emailForm"/>
 
                 {/* <TodoList className="todoListGrid"/> */}
                 {/* <div className="container" id="socialContainer">     */}
-                    <div className="col-lg-5 mx-auto">
-                        <div className="card mt-2 mx-auto p-4 lightGrey">
-                            <div className="card-body lightGrey">
+                    <div className="col-lg-5 mx-auto" id="socialContainer">
+                        <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow">
+                            <div className="card-body ">
                                 <div className="container ">
-                                    <div className="text-center mt-5">
+                                    <div className="text-center mt-5" id="cardTitleDiv">
                                         <h2 className="cardTitle">Contact & Follow Liz</h2>
+                                        <hr/>
                                     </div>
                     
                                     <div id="socialMedia">
                                         
-                                            <div id="linkedIn" className="socItem" onClick={() => setCount(count+1)}>
+                                            <div id="linkedIn" className="socItem" onClick={(e) => selectiveCounter(e)}>
                                                 <a href="https://linkedin.com/in/lizkane" target="_blank" className="social">
                                                 <i className="socIcon"><FiLinkedin/></i>
                                                 <p className="iconText">linkedin.com/in/lizkane</p></a>
                                             </div>
 
-                                            <div id="github" className="socItem" onClick={() => setCount(count+1)}>
+                                            <div id="github" className="socItem" onClick={(e) => selectiveCounter(e)}>
                                                 <a href="https://github.com/lizkane222" target="_blank" className="social">
                                                 <i className="socIcon"><FiGithub/></i>
                                                 <p className="iconText">github.com/lizkane222</p></a>
                                             </div>
                                         
-                                            <div id="twitter" className="socItem" onClick={() => setCount(count+1)}>
+                                            <div id="twitter" className="socItem" onClick={(e) => selectiveCounter(e)}>
                                                 <a href="https://twitter.com/lizaykay" target="_blank" className="social">
                                                 <i className="socIcon"><FiTwitter/></i>
                                                 <p className="iconText">twitter.com/lizaykay</p></a>
                                             </div>
 
-                                            <div id="phone" className="socItem" onClick={() => setCount(count+1)}>
+                                            <div id="phone" className="socItem" onClick={(e) => selectiveCounter(e)}>
                                                 <a href="tel:+16692418922" target="_blank" className="social">
                                                 <i className="socIcon"><FiSmartphone/></i>
                                                 <p className="iconText">669-241-8922</p></a>
                                             </div>
                                         
-                                            <div id="email" className="socItem" onClick={() => setCount(count+1)}>
+                                            <div id="email" className="socItem" onClick={(e) => selectiveCounter(e)}>
                                                 <a href="mailto:lizkane222@gmail.com?subject=Inquire Further- Contact Liz" target="_blank" className="social">
                                                 <i className="socIcon"><SiMinutemailer/></i>
                                                 <p className="iconText">lizkane222@gmail.com</p></a>
                                             </div>
 
-                                            <div id="location" className="socItem" onClick={() => setCount(count+1)}>
-                                                <a href="#" target="_blank" className="social">
+                                            <div id="location" className="socItem" onClick={(e) => selectiveCounter(e)}>
+                                                <a href="https://www.google.com/maps/place/San+Francisco,+CA/@37.7576948,-122.4727051,13z/data=!3m1!4b1!4m5!3m4!1s0x80859a6d00690021:0x4a501367f076adff!8m2!3d37.7749295!4d-122.4194155" target="_blank" className="social">
                                                 <i className="socIcon"><VscLocation/></i>
                                                 <p className="iconText">San Francisco, California</p></a>
                                             </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <p> {count} / 7</p>
+                                <div className="float-right">
+                                    <p className="blueText">{count} / 7</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Wrapper>
             <Footer/>
+            </Wrapper>
         </section>
     )
 }

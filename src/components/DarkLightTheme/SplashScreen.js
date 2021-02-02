@@ -24,7 +24,7 @@ const Page = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 850vh;
+    height: 800vh;
     width: 100%;
     margin: 0 auto;
     background-color: ${props => props.theme.pageBackground};

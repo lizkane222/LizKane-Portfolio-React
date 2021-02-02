@@ -1,10 +1,14 @@
 
 
 @charset "UTF-8";
+@import url("./_variables.css");
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://use.typekit.net/cye7zmh.css");
-@import url("../components/Room/project.css");
 @import url("../components/Header/dropdown.css");
+/* @import url("../Pages/PageStyles/ProjectStyle/project.css"); */
+@import "./ProjectStyle/project.css";
+@import "./ContactStyle/contactPage.css";
+
 /* ============================= */
 /* START ROOT VARIABLES SET UP */
 /* ============================= */
@@ -14,64 +18,7 @@
           box-sizing: border-box;
 }
 
-:root {
-  --red:#8B0124;
-  --blue:#327E8A;
-  --yellow: #EDC168;
-  --yellowDark: rgba(124,85,32,1);
-  --white: rgba(248,248,248,1);
-  --white-semi-trans: rgba(248,248,248,1);
-  --white-semi-grey: rgba(248,248,248,.8);
-  --white-pretty: #fff;
-  --greyish: #e8e8e8;
-  /* --grey-dark: rgba(13,13,13,1); */
-  --grey-very-dark: rgba(25,25,25,1);
-  --grey-dark: rgba(41,41,41,1);
-  --grey-dark-light: rgba(23,23,23,1);
-  --grey-dark-light2: rgb(32, 30, 32);
-  --grey-dark-light3: rgb(46, 46, 46);
-  --mintGreen: #89FAD0;
-  
-  --speed: 500ms;
-  --nav-size: 7vh;
-  --border-radius-circle: 50%;
-  --border-radius-curved: 10%;
-  --size: 60vmin;
-  --space: 8vmin;
-  --duration: 300ms;
-  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
-  --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* FONTS */
-  --base-font: 'Courier New', Courier, monospace;
-  --Lobster: 'Lobster';
-  --Chic: 'Bodoni Moda', serif;
-
-  /* Acier BAT Text Gris *//* font-family *//* font-weight *//* font-style */
-  --AcierBatTextGrisFF: acier-bat-gris, sans-serif;
-  --AcierBatTextGrisFS: normal;
-  --AcierBatTextGrisFW: 400;
-
-  /* Acier BAT Text Noir *//* font-family *//* font-weight *//* font-style */
-  --AcierBatTextNoirFF: acier-bat-noir, sans-serif;
-  --AcierBatTextNoirFW: 400;
-  --AcierBatTextNoirFS: normal;
-  
-  /* Acier BAT Text Outline *//* font-family *//* font-weight *//* font-style */
-  --AcierBatTextOutlineFF: acier-bat-outline, sans-serif;
-  --AcierBatTextOutlineFW: 400;
-  --AcierBatTextOutlineFS: normal;
-  
-  /* Acier BAT Text Solid *//* font-family *//* font-weight *//* font-style */
-  --AcierBatTextSolidFF: acier-bat-solid, sans-serif;
-  --AcierBatTextSolidFW: 400;
-  --AcierBatTextSolidFS: normal;
-  
-  /* Acier BAT Text Strokes *//* font-family *//* font-weight *//* font-style */
-  --AcierBatTextStrokesFF: acier-bat-strokes, sans-serif;
-  --AcierBatTextStrokesFW: 400;
-  --AcierBatTextStrokesFS: normal;
-}
 
 body {
   margin: 0;
@@ -96,17 +43,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.redText {
-  color: var(--red);
-}
-
-.blueText {
-  color: var(--blue);
-}
-
-.yellowText {
-  color: var(--yellow);
-}
 
 /* ============================= */
 /* END ROOT VARIABLES SET UP */
@@ -870,7 +806,7 @@ svg #educationSVG {
   z-index: 99;
   margin: none;
   background-color: var(--white-semi-trans);
-  box-shadow: 0px 0px 5px var(--grey-very-dark);
+  box-shadow: 0px 0px .5em var(--grey-very-dark);
   -moz-box-shadow: 0px 0px 5px var(--grey-very-dark);
   -webkit-box-shadow: 0px 0px 5px var(--grey-very-dark);
   -o-box-shadow: 0px 0px 5px var(--grey-very-dark);
@@ -1426,14 +1362,13 @@ svg #educationSVG {
 /* ------------ CONTACT PAGE ------------- */
 /* ----------- & REF todo.css ------------ */
 /* --------------------------------------- */
-#contactPage {
+/* #contactPage {
   z-index: 17;
   font-family: 'Bodoni Moda', serif;
   margin: 5vh 0 5vh 0;
   min-width: 100vw;
   min-height: 82vh;
   z-index: 10;
-  /* bottom: 0; */
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr;
@@ -1530,19 +1465,8 @@ input:focus, textarea:focus, select:focus{
   filter: background brightness(2);
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  /* -webkit-transition-delay: 900ms;
-  transition-delay: 900ms; */
   border-radius: 15px;
 }
-
-
-
-/* .social > svg:hover .iconText:hover {
-  text-shadow: 1px 1px 4px var(--yellow);
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-} */
-
 
 #linkedIn {
   flex: 1;
@@ -1575,7 +1499,6 @@ input:focus, textarea:focus, select:focus{
   display: flex;
   margin-top: 10vh;
   height: 7vh;
-  /* bottom: 0; */
   position: relative;
   bottom: 0;
   display: -webkit-box;
@@ -1588,7 +1511,6 @@ input:focus, textarea:focus, select:focus{
 }
 
 footer > img {
-  /* width: ; */
   width: auto;
   height: 70%;
   margin: .4% 1vw;
@@ -1596,13 +1518,12 @@ footer > img {
 
 #LizKaneFooter {
   margin: .3% 2vw;
-  /* color: var(--red); */
   color: var(--white-pretty);
   font-family: var(--AcierBatTextOutlineFF);
   font-weight: var(--AcierBatTextOutlineFW);
   font-style: var(--AcierBatTextOutlineFS);
   font-size: 2.5em;
-}
+} */
 
 /* ———————————————————————————————————————————————————— */
 /* IDS */

@@ -1,7 +1,8 @@
 import React, {Component, setState} from "react";
 import FloatBox from "./FloatBox/FloatBox"
 
-import "./project.css"
+// import "./project.css"
+import "../../styles/ProjectStyle/project.css"
 
 import {RiGroup2Fill} from 'react-icons/ri';
 import {BsPerson} from 'react-icons/bs';

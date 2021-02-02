@@ -1,35 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
-:root {
-  --red:#8B0124;
-  --blue:#327E8A;
-  --yellow: #EDC168;
-  --yellowDark: rgba(124,85,32,1);
-  --white: rgba(248,248,248,1);
-  --white-semi-trans: rgba(248,248,248,1);
-  --white-semi-grey: rgba(248,248,248,.8);
-  --white-pretty: #fff;
-  --greyish: #e8e8e8;
-  --greyish-semi-trans: rgba(201,200,201,.5);
-  --greyish-solid: #737373;
-  /* --grey-dark: rgba(13,13,13,1); */
-  --grey-dark: rgba(41,41,41,1);
-  --grey-dark-light: rgba(23,23,23,1);
-  --grey-dark-light2: rgb(32, 30, 32);
-  --grey-dark-light3: rgb(46, 46, 46);
-  --grey-dark-light4: rgb(80, 80, 80);
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-}
+@import "../_variables.css";
 
 #textCarouselContainer {
   position: relative;
@@ -145,7 +115,7 @@
   transform: scale(1.01);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  box-shadow: 0 0 .2em var(--grey-dark);
+  box-shadow: 0 0 .5em var(--grey-very-dark);
 }
 
 .level-2 {

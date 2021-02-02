@@ -1,0 +1,222 @@
+@import "../_variables.scss";
+
+/* --------------------------------------- */
+/* ------------ CONTACT PAGE ------------- */
+/* ----------- & REF todo.css ------------ */
+/* --------------------------------------- */
+#contactPage {
+    z-index: 17;
+    font-family: 'Bodoni Moda', serif;
+    margin: 5vh 0 5vh 0;
+    min-width: 100vw;
+    min-height: 75vh;
+    max-height: 90vh;
+    z-index: 10;
+  }
+
+#contactPageWrapper {
+  min-height: 80vh;
+  max-height: 90vh;
+  overflow: hidden;
+}
+.contactRow {
+  width: 100%;
+  min-height: 80vh;
+  max-height: 80vh;
+  margin-top: 3vh;
+  display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "email socialMedia";
+}
+
+.formRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  #formName{
+    flex: 1;
+  } #formEmail{
+    flex: 1;
+    align-self: baseline;
+  }
+  #formCompany #formSubject {
+    flex: 2
+  }
+}
+
+#emailForm {
+  grid-area: email;
+}
+
+#message {
+  resize:none;
+  overflow: scroll;
+}
+#cardTitleDiv {
+  border-bottom: 5px solid $white-pretty; 
+}
+
+.cardTitle {
+  font-family: var(--Lobster);
+  font-size: 3em;
+  color: var(--blue);
+  margin: -7vh 0 1vh 0;
+}
+
+hr {
+  color: $white-pretty;
+  border: 5px solid $white-pretty; 
+}
+
+.formGroup>input, .formGroup>select, .formGroup>textarea{
+  background-color: var(--white-pretty);
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: var(--grey-dark);
+  border: 2px solid var(--grey-dark);
+}
+
+.todoListGrid {
+  grid-area: todo;
+}
+
+#subjectPlaceholder {
+  text-align: center;
+}
+
+#socialMedia {
+  grid-area: socialMedia;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  text-decoration: none;
+}
+
+.formLabel{
+  color: var(--white-pretty);
+  font-size: 1.5em;
+}
+
+#submitShow {
+  margin-top: 1em;
+  // color: $yellow;
+  font-size: 1.3em;
+}
+
+
+.socItem>a{
+  text-decoration: none;
+}
+
+.social {
+  font-size: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+}
+
+.social>i {
+  flex: 1;
+  align-self: flex-start;
+  font-size: 3em;
+  margin: 0 2% 0 5%;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  text-align: left;
+  color: var(--yellow);
+}
+
+.social>p {
+  flex: 2;
+  align-self: flex-end;
+  font-size: .6em;
+  -ms-flex-item-align: left;
+  -ms-grid-row-align: left;
+  align-self: left;
+  text-align: left;
+  text-decoration: none;
+  color: var(--yellow);
+}
+.social:hover>p{
+  color: var(--blue);
+}
+.social:hover>i{
+  color: var(--blue);
+}
+
+#socialMedia > div:hover {
+  background-color: var(--grey-dark2);
+  -webkit-filter: background brightness(2);
+  filter: background brightness(2);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  /* -webkit-transition-delay: 900ms;
+  transition-delay: 900ms; */
+  border-radius: 15px;
+}
+  
+  #linkedIn {
+    flex: 1;
+  }
+  
+  #github {
+    flex: 2;
+  }
+  
+  #twitter {
+    flex: 3;
+  }
+  
+  #phone {
+    flex: 4;
+  }
+  
+  #email {
+    flex: 5;
+  }
+  
+  #location {
+    flex: 6;
+  }
+  
+  #footer {
+    background-color: var(--grey-dark-light3);
+    opacity: .8;
+    width: 100vw;
+    display: flex;
+    // margin-top: 3.5vh;
+    height: 7vh;
+    /* bottom: 0; */
+    position: relative;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  
+  footer > img {
+    /* width: ; */
+    width: auto;
+    height: 70%;
+    margin: .4% 1vw;
+  }
+  
+  #LizKaneFooter {
+    margin: .3% 2vw;
+    /* color: var(--red); */
+    color: var(--white-pretty);
+    font-family: var(--AcierBatTextOutlineFF);
+    font-weight: var(--AcierBatTextOutlineFW);
+    font-style: var(--AcierBatTextOutlineFS);
+    font-size: 2.5em;
+  }
