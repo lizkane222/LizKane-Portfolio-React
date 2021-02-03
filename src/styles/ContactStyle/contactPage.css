@@ -25,7 +25,7 @@
   --border-radius-curved: 10%;
   --size: 60vmin;
   --space: 8vmin;
-  --duration: 300ms;
+  --duration: 450ms;
   --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
   --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
   /* FONTS */
@@ -185,10 +185,6 @@
   overflow: scroll;
 }
 
-#cardTitleDiv {
-  border-bottom: 5px solid #fff;
-}
-
 .cardTitle {
   font-family: var(--Lobster);
   font-size: 3em;
@@ -198,7 +194,7 @@
 
 hr {
   color: #fff;
-  border: 5px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .formGroup > input, .formGroup > select, .formGroup > textarea {
@@ -208,10 +204,6 @@ hr {
 input:focus, textarea:focus, select:focus {
   outline: var(--grey-dark);
   border: 2px solid var(--grey-dark);
-}
-
-.todoListGrid {
-  grid-area: todo;
 }
 
 #subjectPlaceholder {

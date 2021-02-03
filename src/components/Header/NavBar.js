@@ -3,14 +3,14 @@ import React from 'react';
 // import 'materialize-css/dist/css/materialize.min.css'
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
 // import {ExpandLess, ExpandMore} from "@material-ui/icons";
-import Resource from '../Room/Resource';
+import Resource from '../ResourcesProjects/Resource';
 import NavItem from "./NavItem"
 // import "../Header/header.scss"
-import ResourceList from "../Room/ResourceList";
-import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
-import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
-import MastersDoc from "../Room/Docs/MastersDoc.jsx";
-import GACertDoc from "../Room/Docs/GACertDoc.jsx";
+import ResourceList from "../ResourcesProjects/ResourceList";
+import ResumeDoc from "../ResourcesProjects/Docs/ResumeDoc.jsx";
+import BachelorsDoc from "../ResourcesProjects/Docs/BachelorsDoc.jsx";
+import MastersDoc from "../ResourcesProjects/Docs/MastersDoc.jsx";
+import GACertDoc from "../ResourcesProjects/Docs/GACertDoc.jsx";
 // import { Dropdown } from 'materialize-css';
 
 import Dropdown from "./Dropdown"

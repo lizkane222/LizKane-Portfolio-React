@@ -1,10 +1,10 @@
 import React from "react";
 
-import APS from "../Room/UploadPhotosToWeb/docs/apsLogo.png"
-import Artois from "../Room/UploadPhotosToWeb/docs/univeristeDArtois.png"
-import NAU from "../Room/UploadPhotosToWeb/docs/nauLogo.png"
-import GA from "../Room/UploadPhotosToWeb/docs/gaLogoCopy.png"
-// import APS from "../Room/UploadPhotosToWeb/docs/"
+import APS from "../ResourcesProjects/UploadPhotosToWeb/docs/apsLogo.png"
+import Artois from "../ResourcesProjects/UploadPhotosToWeb/docs/univeristeDArtois.png"
+import NAU from "../ResourcesProjects/UploadPhotosToWeb/docs/nauLogo.png"
+import GA from "../ResourcesProjects/UploadPhotosToWeb/docs/gaLogoCopy.png"
+// import APS from "../ResourcesProjects/UploadPhotosToWeb/docs/"
 
 
 

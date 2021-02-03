@@ -7,13 +7,8 @@ import Splash from "./components/DarkLightTheme/SplashScreen";
 // import {ThemeProvider} from "styled-components";
 
 import Header from "./components/Header/Header"
-// import ItemList from "./components/Room/ItemList"
-// import ProjectList from "./components/Room/ProjectList"
-// import KaneLogo from "./components/KaneLogo/KaneLogo"
 
-// import MainPage from "./components/Room/MainPage";
-// import NavHeader from "../Header/NavHeader";
-// import NavHeader from "./components/Header/NavHeader";
+// import KaneLogo from "./components/KaneLogo/KaneLogo"
 
 import LandingPage from "./Pages/LandingPage";
 import ResumePage from "./Pages/ResumePage";

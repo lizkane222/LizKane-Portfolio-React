@@ -34,3 +34,5 @@ yarn-error.log*
 ./src/styles/style.scss
 ./src/styles/style.css.map
 ./src/index.css
+./src/styles/CarouselStyle/textCarousel.scss
+./src/styles/CarouselStyle/textCarousel.css.map

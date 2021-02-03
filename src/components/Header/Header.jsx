@@ -14,12 +14,12 @@ import Splash from "../DarkLightTheme/SplashScreen";
 // import {ExpandLess, ExpandMore} from "@material-ui/icons";
 // import "../Header/dropdown.css"
 
-import Resource from '../Room/Resource';
-import ResourceList from "../Room/ResourceList";
-import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
-import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
-import MastersDoc from "../Room/Docs/MastersDoc.jsx";
-import GACertDoc from "../Room/Docs/GACertDoc.jsx";
+import Resource from '../ResourcesProjects/Resource';
+import ResourceList from "../ResourcesProjects/ResourceList";
+import ResumeDoc from "../ResourcesProjects/Docs/ResumeDoc.jsx";
+import BachelorsDoc from "../ResourcesProjects/Docs/BachelorsDoc.jsx";
+import MastersDoc from "../ResourcesProjects/Docs/MastersDoc.jsx";
+import GACertDoc from "../ResourcesProjects/Docs/GACertDoc.jsx";
 
 import LandingPage from "../../Pages/LandingPage";
 import ResumePage from "../../Pages/ResumePage";

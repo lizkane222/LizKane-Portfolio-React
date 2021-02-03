@@ -15,12 +15,12 @@ import DropdownMenuContact from "./DropdownMenuContact"
 import {AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai";
 
 // import ResumeDoc from "../";
-import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
-import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
-import MastersDoc from "../Room/Docs/MastersDoc.jsx";
-import GACertDoc from "../Room/Docs/GACertDoc.jsx";
+import ResumeDoc from "../ResourcesProjects/Docs/ResumeDoc.jsx";
+import BachelorsDoc from "../ResourcesProjects/Docs/BachelorsDoc.jsx";
+import MastersDoc from "../ResourcesProjects/Docs/MastersDoc.jsx";
+import GACertDoc from "../ResourcesProjects/Docs/GACertDoc.jsx";
 
-// import {ReactComponent as Liz} from "../Room/UploadPhotosToWeb/badPNGs/SVG/liz.svg"
+// import {ReactComponent as Liz} from "../ResourcesProjects/UploadPhotosToWeb/badPNGs/SVG/liz.svg"
 
 
 

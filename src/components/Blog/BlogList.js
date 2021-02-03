@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import BlogPost from "./BlogPost";
 import BlogPostContainer from "./BlogPostContainer";
 
-import Athlete from "../Room/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg";
-import Feminist from "../Room/UploadPhotosToWeb/blog/flowersWoman.jpg";
-import WomanInTech from "../Room/UploadPhotosToWeb/blog/office.jpg";
-import Music from "../Room/UploadPhotosToWeb/blog/musicCasetteTape.jpg";
-import Nomad from "../Room/UploadPhotosToWeb/blog/nomadPlane.jpg";
-import Artist from "../Room/UploadPhotosToWeb/blog/whitePaint.jpg";
-import SoftwareDev from "../Room/UploadPhotosToWeb/blog/softwareDeveloper.jpg";
-import Writer from "../Room/UploadPhotosToWeb/blog/typeWriter.jpg";
-import WhyBlog from "../Room/UploadPhotosToWeb/blog/whyBlog.jpg";
-// import Athlete from "../Room/UploadPhotosToWeb/blog/"
-// import Athlete from "../Room/UploadPhotosToWeb/blog/"
-// import Athlete from "../Room/UploadPhotosToWeb/blog/"
+import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg";
+import Feminist from "../ResourcesProjects/UploadPhotosToWeb/blog/flowersWoman.jpg";
+import WomanInTech from "../ResourcesProjects/UploadPhotosToWeb/blog/office.jpg";
+import Music from "../ResourcesProjects/UploadPhotosToWeb/blog/musicCasetteTape.jpg";
+import Nomad from "../ResourcesProjects/UploadPhotosToWeb/blog/nomadPlane.jpg";
+import Artist from "../ResourcesProjects/UploadPhotosToWeb/blog/whitePaint.jpg";
+import SoftwareDev from "../ResourcesProjects/UploadPhotosToWeb/blog/softwareDeveloper.jpg";
+import Writer from "../ResourcesProjects/UploadPhotosToWeb/blog/typeWriter.jpg";
+import WhyBlog from "../ResourcesProjects/UploadPhotosToWeb/blog/whyBlog.jpg";
+// import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/"
+// import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/"
+// import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/"
 
 
 const BlogPostWhyBlog = [{
@@ -38,7 +38,7 @@ const BlogPostWhyBlog = [{
  blogP18: "Liz Kane",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/whyBlog.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/whyBlog.jpg",
  imgSrc: WhyBlog,
  imgDesc: "",
 }]
@@ -65,7 +65,7 @@ const BlogPostArtist = [{
  blogP18: "",
  blogP19: "",
  blogP20: "", 
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/whitePaint.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/whitePaint.jpg",
  imgSrc: Artist,
  imgDesc: "",
  
@@ -73,9 +73,9 @@ const BlogPostArtist = [{
 
 const BlogPostMusician = [{
  title: "A Musician Like Me ",
- blogP1: "	I had just seen Titanic and fell in love with its theme song, who didn’t right? There was this one night I was sitting in my older sister’s bedroom on her office chair and we had the song on repeat, ‘my heart will go on an on.’ We belted out each line dramatically both seriously and humorously. I sat in that chair spinning and spinning around to no end, it was euphoric, it was timeless. I recount that night as being the night I discovered my love of singing. If you had asked my parents they’d tell you I had spent every moment before that singing instead of speaking, constantly making up songs, but this was the moment where I realized it for myself. ",
- blogP2: "	The room with the spinning chair was in a house, and that house was complicated, my family lived there for many years yet this is my only true memory of me singing in that house. Singing had become a gauge of my happiness, there were times when it would just flow out and times I wouldn’t utter a sound. This was the same with certain places and people. I became aware of this inconsistency during a relationship in my teens. I was in a place where I thought I needed to break up with him and during a conversation with a friend I said, ‘I just don’t sing anymore, at least not when I’m with him.’ I was young and new to relationships but that realization forged a standard for all relationships that followed. ‘How do I know I’m with the right person? The answer, do I sing when I’m with them?’ It’s the simplest of measurements but is there a truer one in life than what naturally overflows in moments of joy and comfort? In my opinion no.  ",
- blogP3: "	That next year was when I began writing songs, I took my older sister’s guitar and learned three chords. I was terrible, my fingers weren’t strong, my rhythm was more than lacking, but it was a collection of notes that gave me avenues to express my thoughts and ideas. My first song was a story from a few different perspectives of teenagers. For some reason I wasn’t embarrassed to sing it to my family and friends and did just that. With each new song I’d sit in my room learning two or three new chords just different enough to inspire avenues I had never expected to discover. In general I’m not a very emotional person, or at least I’d say so about myself. What I really mean is that my face may be overly-expressive but you’ll never hear the thoughts behind those expressions; that was until I began writing. I allowed myself to feel and process things I wouldn’t have otherwise, all for the sake of the music. To get it out on paper I was purging myself of all of my complicated emotions and thoughts, for the first time would untangle the mess and weave it into my own subjective truth. ",
+ blogP1: "	I had just seen Titanic and fell in love with its theme song, who didn’t right? There was this one night I was sitting in my older sister’s bedResourcesProjects on her office chair and we had the song on repeat, ‘my heart will go on an on.’ We belted out each line dramatically both seriously and humorously. I sat in that chair spinning and spinning around to no end, it was euphoric, it was timeless. I recount that night as being the night I discovered my love of singing. If you had asked my parents they’d tell you I had spent every moment before that singing instead of speaking, constantly making up songs, but this was the moment where I realized it for myself. ",
+ blogP2: "	The ResourcesProjects with the spinning chair was in a house, and that house was complicated, my family lived there for many years yet this is my only true memory of me singing in that house. Singing had become a gauge of my happiness, there were times when it would just flow out and times I wouldn’t utter a sound. This was the same with certain places and people. I became aware of this inconsistency during a relationship in my teens. I was in a place where I thought I needed to break up with him and during a conversation with a friend I said, ‘I just don’t sing anymore, at least not when I’m with him.’ I was young and new to relationships but that realization forged a standard for all relationships that followed. ‘How do I know I’m with the right person? The answer, do I sing when I’m with them?’ It’s the simplest of measurements but is there a truer one in life than what naturally overflows in moments of joy and comfort? In my opinion no.  ",
+ blogP3: "	That next year was when I began writing songs, I took my older sister’s guitar and learned three chords. I was terrible, my fingers weren’t strong, my rhythm was more than lacking, but it was a collection of notes that gave me avenues to express my thoughts and ideas. My first song was a story from a few different perspectives of teenagers. For some reason I wasn’t embarrassed to sing it to my family and friends and did just that. With each new song I’d sit in my ResourcesProjects learning two or three new chords just different enough to inspire avenues I had never expected to discover. In general I’m not a very emotional person, or at least I’d say so about myself. What I really mean is that my face may be overly-expressive but you’ll never hear the thoughts behind those expressions; that was until I began writing. I allowed myself to feel and process things I wouldn’t have otherwise, all for the sake of the music. To get it out on paper I was purging myself of all of my complicated emotions and thoughts, for the first time would untangle the mess and weave it into my own subjective truth. ",
  blogP4: "	The whole process of song writing is something I think everyone should experience. In the beginning I came up with different techniques of writing, draw up chords first then write, writes lines then modify them with chords, journal and pull out common threads, but the most truthful one: find chords and don’t plan, just sing. I had done this so many times that most of the songs I have sung weren’t ever written down, and they didn’t need to be because the pure experience flushed out the words I needed at that moment. I’d play and sing, dust off my hands and come out revived. ",
  blogP5: "	I have a collection of dozens and dozens of songs, showing my different levels of maturity and whatever obsession rented out the space of my mind at that time. I have written songs of love, heartbreak, confusion, grief, hope, but if you looked throughout them they’d all have a common thread, me questioning why and the quest of finding the assurance I needed to go on. Why write songs? I don’t know any song writers who sit down to write and know exactly from start to finish what the song will be. The direction maybe, but the whole picture only comes about in its compilation. Each line, stanza, verse, and chorus holds different levels of truth. To find the truth you’ve got to set up camp until the fire goes out. Music metaphorically became the technique that cleansed me of life’s toxins. My songs pulse with the beat of my heart, forever gauging my happiness, dissatisfaction, and the landscape of experiences throughout my life.  ",
  blogP6: "",
@@ -93,7 +93,7 @@ const BlogPostMusician = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/musicCasetteTape.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/musicCasetteTape.jpg",
  imgSrc: Music,
  imgDesc: "",
  
@@ -121,7 +121,7 @@ const BlogPostSoftwareEngineer = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/softwareDeveloper.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/softwareDeveloper.jpg",
  imgSrc: SoftwareDev,
  imgDesc: "",
  
@@ -149,7 +149,7 @@ const BlogPostNomad = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/nomadPlane.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/nomadPlane.jpg",
  imgSrc: Nomad,
  imgDesc: "",
  
@@ -177,7 +177,7 @@ const BlogPostWriter = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/typeWriter.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/typeWriter.jpg",
  imgSrc: Writer,
  imgDesc: "",
  
@@ -205,7 +205,7 @@ const BlogPostAthlete = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg",
  imgSrc: Athlete,
  imgDesc: "",
  
@@ -233,7 +233,7 @@ const BlogPostFeminist = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/flowersWoman.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/flowersWoman.jpg",
  imgSrc: Feminist,
  imgDesc: "",
  
@@ -261,7 +261,7 @@ const BlogPostWomanInTech = [{
  blogP18: "",
  blogP19: "",
  blogP20: "",
-//  imgSrc: "../Room/UploadPhotosToWeb/blog/office.jpg",
+//  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/office.jpg",
  imgSrc: WomanInTech,
  imgDesc: "",
  

@@ -55,9 +55,7 @@
   resize:none;
   overflow: scroll;
 }
-#cardTitleDiv {
-  border-bottom: 5px solid $white-pretty; 
-}
+
 
 .cardTitle {
   font-family: var(--Lobster);
@@ -68,7 +66,7 @@
 
 hr {
   color: $white-pretty;
-  border: 5px solid $white-pretty; 
+  border: 1px solid rgba($white-pretty,.3); 
 }
 
 .formGroup>input, .formGroup>select, .formGroup>textarea{
@@ -80,9 +78,9 @@ input:focus, textarea:focus, select:focus{
   border: 2px solid var(--grey-dark);
 }
 
-.todoListGrid {
-  grid-area: todo;
-}
+// .todoListGrid {
+//   grid-area: todo;
+// }
 
 #subjectPlaceholder {
   text-align: center;

@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import "./dropdown.css"
 import {ReactComponent as AiFillCaretRight, AiFillCaretLeft} from "react-icons/ai"
 
-import ResumeDoc from "../Room/Docs/ResumeDoc.jsx";
-import BachelorsDoc from "../Room/Docs/BachelorsDoc.jsx";
-import MastersDoc from "../Room/Docs/MastersDoc.jsx";
-import GACertDoc from "../Room/Docs/GACertDoc.jsx";
+import ResumeDoc from "../ResourcesProjects/Docs/ResumeDoc.jsx";
+import BachelorsDoc from "../ResourcesProjects/Docs/BachelorsDoc.jsx";
+import MastersDoc from "../ResourcesProjects/Docs/MastersDoc.jsx";
+import GACertDoc from "../ResourcesProjects/Docs/GACertDoc.jsx";
 import { Dropdown } from "materialize-css";
 import { FaDivide } from "react-icons/fa";
 
