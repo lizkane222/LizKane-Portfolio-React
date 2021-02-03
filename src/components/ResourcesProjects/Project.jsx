@@ -82,37 +82,39 @@ class Project extends Component {
                     </div>
                 </div> */}
                 
-                <div className="card" id="projectCard" onClick={this.setActive}>
+                <div className="card projectCard" id="'projectCard'+{{this.props.name}}" onClick={this.setActive}>
                     <div className="wrapper">
-                    <div className="projectHeader">
-                        <div className="leftTop">
-                            <span className="yearInit">2020 - </span>
-                            <span className="yearEnd">2021</span>
+                        <div className="projectHeader">
+                            <div className="leftTop">
+                                <span className="yearInit">2020 - </span>
+                                <span className="yearEnd">2021</span>
+                            </div>
 
+                            <ul className="menuContent">
+                                <li className="rightTop">
+                                    <p className="fa rightTopIcons"><AiOutlineFundProjectionScreen/></p>
+                                    {/* <p className="fa rightTopIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></p> */}
+
+                                    {this.props.group === "solo" ?
+                                        <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></p>
+                                    :
+                                        <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill size={33}/></p>
+                                    }
+                                </li>
+                            </ul>
+
+                        <div class="logoContainer">
+                            <img id={this.props.name+`InactiveImg`} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
                         </div>
-                        <ul className="menuContent">
-                            <li className="rightTop">
-                                <p className="fa rightTopIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></p>
-
-                                {this.props.group === "solo" ?
-                                <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></p>
-                                :
-                                <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill/></p>
-                                }
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="logoContainer">
-                        <img id={this.props.name+`InactiveImg`} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
-                    </div>
-
-                    <div className="data">
-                        <div className="hiddenContent">
-                            <p className="projectCardTitle"><p>{this.props.name}</p></p>
-                            <p className="text">{this.props.descReduced}</p>
-                            <a href="#" className="projectButton">check it out</a>
                         </div>
-                    </div>
+
+                        <div className="data">
+                            <div className="hiddenContent">
+                                <p className="projectCardTitle"><p>{this.props.name}</p></p>
+                                <p className="text">{this.props.descReduced}</p>
+                                <a className="projectButton">check it out</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
