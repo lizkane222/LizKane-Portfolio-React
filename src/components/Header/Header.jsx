@@ -111,6 +111,8 @@ const Header = (props) => {
                             <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
                                 Contact
                             </Link>
+
+                            
                         </nav>
                     {/* </header> */}
                 </NavbarStyled>

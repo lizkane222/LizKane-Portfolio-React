@@ -22,6 +22,16 @@ const FloatBox =(props) => {
                         <div className="projectPhotos">
                             <Carousel gallery={props.gallery}/>
                         </div>
+                        {props.github2 ?
+                                    <>
+                                        <a href={props.github} className="githubProject float-right"><p>{props.github}</p></a>
+                                        <a href={props.github2} className="githubProject githubProject2 float-right"><p>{props.github2}</p></a>
+                                    </>
+                                :
+                                    <>
+                                        <a href={props.github} className="githubProject"><p>{props.github}</p></a>
+                                    </>
+                                }
                     </div>
                     {/* <div>
                         <div className="projectCode">
