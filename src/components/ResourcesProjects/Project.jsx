@@ -111,7 +111,9 @@ class Project extends Component {
                         <div className="data">
                             <div className="hiddenContent">
                                 <p className="projectCardTitle"><p>{this.props.name}</p></p>
-                                <p className="text">{this.props.descReduced}</p>
+                                <div className="containerText">
+                                    <p className="text">{this.props.descReduced}</p>
+                                </div>
                                 <a className="projectButton">check it out</a>
                             </div>
                         </div>

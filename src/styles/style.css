@@ -1053,76 +1053,65 @@ svg #educationSVG {
 }
 
 #projectsPage {
-  margin-top: 5vh;
+  margin-top: 10vh;
+  padding: 5vh 0 0vh 0;
   position: relative;
   display: flex;
 
   place-content: center;
-  max-height: 85vh;
+  min-height: 100vh;
+  max-height: 100vh;
   overflow: show;
-
+  /* background-image: url("../components/ResourcesProjects/UploadPhotosToWeb/docs/projectsBeeGridXWide.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .row {
   width: 100vw;
   min-height: 80vh;
-  max-height: 80vh;
+  max-height: 95vh;
+  padding: 11vh 0 0 0;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "work projects", "work projects";
   grid-gap: 1vw;
-}
 
+  background-image: url("../components/ResourcesProjects/UploadPhotosToWeb/docs/projectsBeeGridXWide.png");
+  background-position: baseline;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url("../components/ResourcesProjects/UploadPhotosToWeb/docs/projectsBeeGrid.png"); */
+}
 
 #teamWorkGridParent {
   grid-area: work;
   padding: 0 8vw 0 0;
-  
-}
-
-#beeGrid {
-
-}
-
-#teamWorkGrid {
-  /* flex: 1; */
-  
-  background-image: url("../components/ResourcesProjects/UploadPhotosToWeb/docs/projectsBeeGrid.png");
-  background-position: baseline;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  /* display: grid; */
-
-  min-height: 60vh;
-  max-height: 80vh;
-  min-width: 50vw;
-  max-width: 50vw;
-  overflow: show;
-  /* grid-template-columns: ;
-  grid-template-rows: ;
-  grid-template-areas: ; */
+  margin: 0vh 0 0 0;
+  /* margin-top: -5vh; */
+  /* display: relative; */
 }
 
 li.skillLi{
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  height: 2vh;
   border-radius: none;
-  padding: 0 2%;
-  position: relative;
+  padding: 0 0;
+  margin: 0 0;
+  /* position: absolute; */
 }
 
 /*Change icons circle size and color here*/
 .social-icons .fa {
   font-size: 2.5em;
-  padding: .25em;
+  /* padding: .25em; */
   margin: 0 0;
-	width: 3em;
-	height: 3em;
-	line-height: 50px;
+	/* width: 2em; */
+	/* height: 2em; */
+	/* line-height: 50px; */
 	text-align: center;
-	color: #FFF;
+  position: absolute;
 	color: rgba(255, 255, 255, 0.8);
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1141,22 +1130,14 @@ li.skillLi{
   list-style: none;
 }
 
-.list-inline li {
-  display: inline-block;
-  /* padding-right: 5px; */
-  /* padding-left: 5px; */
-  /* margin-bottom: 11em; */
-}
-
 /*Change icons size here*/
 .social-icons .fa {
   font-size: 2.8em;
-  width: 4em;
-  height: 4em;
-  line-height: 4em;
+  line-height: 1em;
+  padding: .3em;
   text-align: center;
-  color: #FFF;
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 1); */
+  color: var(--yellow);
   outline: var(--red);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -1164,26 +1145,220 @@ li.skillLi{
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius:5px;
+  box-shadow: 0 0 .1em var(--grey-very-dark);
 }
 
-.social-icons.icon-rounded .fa{
-}
 
 .social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
 	-webkit-transform: scale(1.2) rotate(120deg);
 	-moz-transform: scale(1.2) rotate(120deg);
 	-ms-transform: scale(1.2) rotate(120deg);
 	-o-transform: scale(1.2) rotate(120deg);
-	transform: scale(1.2) rotate(120deg);
+  transform: scale(1.2) rotate(120deg);
+  color: var(--blue);
+}
+
+/* SOCIAL SKILLS ICONS GRID AREAS */
+#FaReact {
+  grid-area: A1;
+}
+#SiJavascript {
+  grid-area: A2;
+}
+#DiDjango {
+  grid-area: A3;
+}
+#SiCss3 {
+  grid-area: A4;
+}
+#SiAtom {
+  grid-area: B1;
+}
+#DiSass {
+  grid-area: B2;
+}
+#FaHtml5 {
+  grid-area: B3;
+}
+#FaPython {
+  grid-area: B4;
+}
+#SiMongodb {
+  grid-area: C1;
+}
+#SiMysql {
+  grid-area: C2;
+}
+#SiPostgresql {
+  grid-area: C3;
+}
+#DiJqueryLogo {
+  grid-area: C4;
+}
+#SiTypescript {
+  grid-area: D1;
+}
+#Github {
+  grid-area: D2;
+}
+#Bootstrap {
+  grid-area: D3;
+}
+#FaGitAlt {
+  grid-area: D4;
+}
+#DiMaterializecss {
+  grid-area: E1;
+}
+#FaNodeJs {
+  grid-area: E2;
+}
+#FaNpm {
+  grid-area: E3;
+}
+#SiBabel {
+  grid-area: E4;
+}
+#SiFirebase {
+  grid-area: F1;
+}
+#SiVisualstudio {
+  grid-area: F2;
+}
+#FaCodepen {
+  grid-area: F3;
+}
+#FaSlack {
+  grid-area: F4;
+}
+#FaTrello {
+  grid-area: G1;
+}
+#SiAdobeaftereffects {
+  grid-area: G2;
+}
+#SiAdobecreativecloud {
+  grid-area: G3;
+}
+#SiAdobelightroomclassic {
+  grid-area: G4;
+}
+#SiAdobephotoshop {
+  grid-area: H1;
+}
+#SiAdobexd {
+  grid-area: H2;
+}
+#SiAdobe {
+  grid-area: H3;
+}
+#SiNotion {
+  grid-area: H4;
+}
+#SiAirtable {
+  grid-area: I1;
+}
+#DiHeroku {
+  grid-area: I2;
 }
 
 
+
+
+
+
+#teamWorkGrid {
+  height: 100%;
+  width: 100%;
+  padding: 0 0;
+  min-height: 60vh;
+  max-height: 90vh;
+  min-width: 50vw;
+  max-width: 50vw;
+  overflow: show;
+  transform: rotate(4deg);
+  /* margin-left */
+  display: grid;
+  grid-template-columns: .1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .7fr;
+  column-gap: 2.4em;
+
+  /* grid-template-areas: 
+  " . . . A1 . . . A2 . . . A3 . . .  A4"
+  " B1 . . . B2 . . . B3 . . . B4 . . ."
+  " . . C1 . . . C2 . . . . C3 . . . C4"
+  " D1 . . . D2 . . . . . . . . . . ."
+  " . . . . . . . . E1 . . . . E2 . ."
+  " . . F1 . . . F2 . . . F3 . . . . F4"
+  " G1 . . . G2 . . . G3 . . . . G4 . ."
+  " . . H1 . . . H2 . . . . . . . . ."
+  " I1 . . . I2 . . . . . I3 . . . . I4"
+  " . . J1 . . . . . J2 . . . . . . ."
+  " . . . . . . K1 . . . K2 . . . . K3"
+  ; */
+  
+  grid-template-areas:
+    /* ".  .  .  .  .  .  .  . " */
+    ".  A1 .  A2 .  A3 .  A4"
+    /* ".  .  .  .  .  .  .  . " */
+    "B1 .  B2 .  B3 .  B4 . "
+    ".  C1 .  C2 .  C3 .  C4"
+    /* ".  .  .  .  .  .  .  . " */
+    "D1 .  D2 .  D3 .  D4 . "
+    ".  E1 .  E2 .  E3 .  E4"
+    /* ".  .  .  .  .  .  .  . " */
+    "F1 .  F2 .  F3 .  F4 . "
+    ".  G1 .  G2 .  G3 .  G4"
+    /* ".  .  .  .  .  .  .  . " */
+    "H1 .  H2 .  H3 .  H4 . "
+    ".  I1 .  I2 .  . .  ."
+    ;
+}
+
+
+/*grid-template-areas:
+ ".  A1 .  A2 .  A3 .  A4"
+"B1 A1 B2 A2 B3 A3 B4 A4"
+"B1 C1 B2 C2 B3 C3 B4 C4"
+"D1 C1 D2 C2 D3 C3 D4 C4"
+"D1 E1 D2 E2 D3 E3 D4 E4"
+"F1 E1 F2 E2 F3 E3 F4 E4"
+"F1 G1 F2 G2 F3 G3 F4 G4"
+"H1 G1 H2 G2 H3 G3 H4 G4"
+"H1 I1 H2 I2 H3 I3 H4 I4"
+".  I1 .  I2 .  I3 .  I4"; */
+/* "F1 I1 J2 I2 H3 I3 H4 I4"
+"H1 G1 J2 G2 H3 G3 H4 G4"
+"H1 G1 I2 G2 H3 G3 H4 G4"
+"H1 I1 I2 I2 H3 I3 H4 I4"
+".  I1 .  I2 .  I3 .  I4"
+".  I1 .  I2 .  I3 .  I4" */
+
+
+
+  /* grid-gap: .3em; */
+
+/* "J1 I1 J2 I2 J3 I3 J4 I4"
+  "J1 I1 J2 I2 J3 I3 J4 I4"
+  "J1 K1 J2 K2 J3 K3 J4 K4"
+  "L1 K1 L2 K2 L3 K3 L4 K4"
+  "L1 K1 L2 K2 L3 K3 L4 K4"
+  "L1 M1 L2 M2 L3 M3 L4 M4"
+  "N1 M1 N2 M2 N3 M3 N4 M4"
+  "N1 M1 N2 M2 N3 M3 N4 M4"
+  "N1 O1 N2 O2 N3 O3 N4 O4"
+  ".  O1 .  O2 .  O3 .  O4"
+  ".  O1 .  O2 .  O3 .  O4" */
+
+
+/* ========= Project Card SECTION ========= */
 #projectBoardParent{
   grid-area: projects;
   display: flex;
   flex-flow: row wrap;
   /* max-width: 20vw; */
-  max-height: 65vh;
+  max-height: 80vh;
+  margin-top: -10vh;
   /* background-color: var(--yellow); */
 }
 
@@ -1194,7 +1369,7 @@ li.skillLi{
   /* position: relative; */
   /* z-index: 9; */
   /* margin: 0 0; */
-  min-height: 60vh;
+  min-height: 70vh;
   /* min-width: 100%; */
   max-height: 80vh;
 
@@ -1203,6 +1378,7 @@ li.skillLi{
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  grid-gap: .5vw;
 }
 
 .projectboard > .projectNameLogo {
@@ -1272,7 +1448,7 @@ li.rightTop>p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row wrap;
           flex-direction: row wrap;
-  background-color: var(--grey-very-dark);
+  background-color: rgba(25,25,25,.95);
 }
 
 .card .menuContent {
@@ -1321,6 +1497,18 @@ li.rightTop>p {
           box-shadow: 0 19px 38px rgba(var(--grey-very-dark), 0.3), 0 15px 12px rgba(var(--grey-very-dark), 0.2);
 }
 
+.card .logoContainer {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.card .wrapper:hover .logoContainer {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
 .card .wrapper:hover .data {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -1353,7 +1541,8 @@ li.rightTop>p {
 }
 
 .card .projectCardTitle {
-  margin-top: 1em;
+  /* margin-top: 2em; */
+  /* margin-bottom: 1em; */
 }
 
 .card .projectCardTitle a {
@@ -1362,10 +1551,15 @@ li.rightTop>p {
   font-weight: 300;
 }
 
+.card .containerText {
+  margin: 1em 0 .5em 0;
+  max-height: 5em;
+  /* margin: 1em 0; */
+  overflow: scroll;
+}
+
 .card .text {
-  height: 4em;
-  margin: 1em 0;
-  font-size: .5em;
+  font-size: .7em;
 }
 
 .card input[type='checkbox'] {
@@ -1393,7 +1587,7 @@ li.rightTop>p {
 }
 
 .projectCard .projectHeader {
-  color: #fff;
+  color: var(--yellow);
   padding: 1em;
 }
 
@@ -1408,7 +1602,8 @@ li.rightTop>p {
 
 .projectCard .projectHeader .leftTop {
   float: left;
-  font-size: 1em;
+  font-size: 1.3em;
+  font-family: var(--Chic);
 }
 
 .projectCard .projectHeader .rightTop {
@@ -1441,22 +1636,22 @@ li.rightTop>p {
 }
 
 .projectCard .projectCardTitle p {
-  color: #fff;
   font-size: 1.6em;
-  margin-bottom: 1em;
+  /* margin: 1em 0; */
   color: var(--blue);
 }
 
 .projectCard .projectButton {
   display: block;
-  width: 100%;
-  margin: 2em auto 1em;
+  width: 50%;
+  margin: .2em auto 0;
   text-align: center;
-  font-size: 12px;
+  font-size: .6em;
   color: #fff;
   line-height: 1;
   position: relative;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .projectCard .projectButton::after {
@@ -1852,8 +2047,8 @@ position: absolute;
       
 }
 
-
-/* ---- SOCIAL ICONS FOR SKILLS DISPLAY ---- */
+/* 
+//---- SOCIAL ICONS FOR SKILLS DISPLAY ----
 .list-unstyled {
 	padding-left: 0;
 	list-style: none;
@@ -1864,13 +2059,13 @@ position: absolute;
 	padding-left: 5px;
 	margin-bottom: 10px;
 }
-/*---- General classes end -------*/
+//---- General classes end -------
 
-/*Change icons size here*/
+//Change icons size here
 .social-icons .fa {
 	font-size: 2.8em;
 }
-/*Change icons circle size and color here*/
+//Change icons circle size and color here
 .social-icons .fa {
 	width: 4em;
 	height: 4em;
@@ -1915,8 +2110,7 @@ position: absolute;
 	-o-transform: scale(1.2) rotate(120deg);
 	transform: scale(1.2) rotate(120deg);
 }
-
-
+ */
 
 
 
