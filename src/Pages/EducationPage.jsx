@@ -78,7 +78,8 @@ const EducationPage=() => {
                             <text className="edFloatText" x="720" textAnchor="middle" y="475" dy="0">N</text>
                             </mask>
                         </defs>
-                        <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/>
+                        {/* <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/> */}
+                        <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#292929"/>
                     </svg>
                 </div>
                 <div id="edDocContainer">
