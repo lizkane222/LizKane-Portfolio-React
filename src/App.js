@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import "./styles/style.css";
 // import "./styles/style.scss";
 import Splash from "./components/DarkLightTheme/SplashScreen";
-// import {ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
 
 import Header from "./components/Header/Header"
 
@@ -22,7 +22,7 @@ import Footer from "./components/Footer/Footer";
 import styled from "styled-components"
 import {CgSun} from "react-icons/cg";
 import {HiMoon} from "react-icons/hi"
-
+// background: var(--grey-dark);
 const LightTheme = {
   pageBackground: "#fff",
   textColor: "rgba(13,13,13,1)",
@@ -106,19 +106,15 @@ function App(props) {
 
   return (
     <div className="App">
-      {/* <ThemeProvider theme={themes[theme]}>
+      {/* <ThemeProvider theme={{theme}}>
         <Page> */}
 
 
-        <Splash theme={theme} setTheme={setTheme}/>
+        {/* <Splash theme={theme} setTheme={setTheme} changeTheme={changeTheme}/> */}
         {/* <NavHeader /> */}
             <Header/>
 
-              {/* <Container id="toggleContainer">
-                  <Toggle onClick={changeTheme}>
-                      {icon}
-                  </Toggle>
-              </Container> */}
+            
             
             <LandingPage/>
             <ResumePage/>

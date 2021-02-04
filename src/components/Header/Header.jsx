@@ -7,7 +7,8 @@ import styled from 'styled-components';
 import { useToggle} from "react-use";
 import Splash from "../DarkLightTheme/SplashScreen";
 // import "./toggle.css";
-
+import {CgSun} from "react-icons/cg";
+import {HiMoon} from "react-icons/hi"
 // import 'materialize-css';
 // import 'materialize-css/dist/css/materialize.min.css'
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
@@ -50,7 +51,6 @@ const NavbarStyled = styled.div`
     }
     .active {
         border-bottom: 3px solid #327E8A;
-
     }
   }
   .scrolling-buttons {
@@ -60,11 +60,12 @@ const NavbarStyled = styled.div`
     z-index: 2990;
   }
   .navLinks {
-    font-size: 1.7em;
+    font-size: 1.3em;
     color:#fff;
     z-index: 2990;
-    padding: 0 2.3%;
+    padding: .3% 2.3%;
     z-index: 2990;
+    height: 100%;
   }
   .navLinks:hover {
     filter: brightness(1.5);
@@ -73,18 +74,70 @@ const NavbarStyled = styled.div`
     text-decoration: none;
 }
 `;
+
 // text-shadow: -1px 1px 3px #242526;
 // color:#8B0124;
+// const LightTheme = {
+//     pageBackground: "#fff",
+//     textColor: "rgba(13,13,13,1)",
+//     textColor2: "#fff",
+//     toggleBackground: "#327E8A",
+//   }
+  
+//   const DarkTheme = {
+//     pageBackground: "rgb(41,41,41)",
+//     textColor: "#fff",
+//     textColor2: "rgba(13,13,13,1)",
+//     toggleBackground: "#EDC168",
+//   }
+  
+//   const theme= {
+//     light: LightTheme,
+//     dark: DarkTheme
+//   }
+
+
+// const Toggle = styled.button`
+//     cursor: pointer;
+//     height: 50px;
+//     width: 50px;
+//     border-radius: 50%;
+//     border: none;
+//     background-color: ${props => props.theme.titleColor};
+//     color: 4{props => props.theme.pageBackground};
+//     &:focus {
+//         outline: none;
+//     }
+//     transition: all .5s ease;
+// `;
+
+// const Container = styled.div`
+
+//     margin: 1vh 1vw 0 auto;
+//     display: flex;
+//     position: right;
+//     flex-direction: column;
+//     align-items: center;
+// `;
 
 const Header = (props) => {
-  
+    // function changeTheme() {
+    //     if (props.theme === "light") {
+    //         props.setTheme("dark");
+    //     } else {
+    //         props.setTheme("light");
+    //     }
+    // };
+
+    // const icon = props.theme === "light" ? <HiMoon size={40} /> : <CgSun size={40} />;
+
         return (
             <WrapperNav style={{"max-height": "7vh"}}>
                 <NavbarStyled className="header">
                     {/* <header className="header"> */}
                             {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
                         <nav className="navbar">
-                            <Link activeClass="active" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" id="LKnav" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
                                 LK
                             </Link>
 
@@ -112,7 +165,12 @@ const Header = (props) => {
                                 Contact
                             </Link>
 
-                            
+                            {/* <Container>
+                                <Toggle onClick={changeTheme}>
+                                    {icon}
+                                </Toggle>
+                            </Container> */}
+
                         </nav>
                     {/* </header> */}
                 </NavbarStyled>

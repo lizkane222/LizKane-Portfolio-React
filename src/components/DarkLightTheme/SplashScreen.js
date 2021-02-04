@@ -24,7 +24,7 @@ const Page = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    height: 800vh;
+    height: 80vh;
     width: 100%;
     margin: 0 auto;
     background-color: ${props => props.theme.pageBackground};
@@ -38,6 +38,7 @@ const Container = styled.div`
     position: fixed;
     flex-direction: column;
     align-items: center;
+    z-index: 3000;
 `;
 
 // const Title = styled.h1`
@@ -66,15 +67,15 @@ function Splash(props){
     const icon = props.theme === "light" ? <HiMoon size={40} /> : <CgSun size={40} />;
 
     return (
-        <Page>
+        // <Page>
             <Container>
-                <Toggle onClick={changeTheme}>
+                <Toggle onClick={props.changeTheme}>
                     {icon}
                 </Toggle>
                 {/* <Title>this is a title</Title> */}
                 {/* <TagLine>Level up</TagLine> */}
             </Container>
-        </Page>
+        // </Page>
     );
 }
 

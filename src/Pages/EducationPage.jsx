@@ -63,19 +63,19 @@ const EducationPage=() => {
             <div id="educationLanding">
                 <div id="viewBoxContainer">
                     {/* svg line is the filled space */}
-                    <svg id="educationSVG" viewbox="0 0 500 500" width="1135" height="600">
+                    <svg id="educationSVG" viewbox="0 0 500 500" width="850" height="475">
                         <defs>
                             <mask id="mask" x="0" y="0" width="100%" height="100%">
                             <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
-                            <text className="edFloatText" x="200" textAnchor="middle" y="600" dy="0">E</text>
-                            <text className="edFloatText" x="295"  textAnchor="middle" y="600" dy="0">D</text>
-                            <text className="edFloatText" x="400" textAnchor="middle" y="600" dy="0">U</text>
-                            <text className="edFloatText" x="500" textAnchor="middle" y="600" dy="0">C</text>
-                            <text className="edFloatText" x="600" textAnchor="middle" y="600" dy="0">A</text>
-                            <text className="edFloatText" x="680" textAnchor="middle" y="600" dy="0">T</text>
-                            <text className="edFloatText" x="750" textAnchor="middle" y="600" dy="0">I</text>
-                            <text className="edFloatText" x="830" textAnchor="middle" y="600" dy="0">O</text>
-                            <text className="edFloatText" x="950" textAnchor="middle" y="600" dy="0">N</text>
+                            <text className="edFloatText" x="140" textAnchor="middle" y="475" dy="0">E</text>
+                            <text className="edFloatText" x="225"  textAnchor="middle" y="475" dy="0">D</text>
+                            <text className="edFloatText" x="300" textAnchor="middle" y="475" dy="0">U</text>
+                            <text className="edFloatText" x="385" textAnchor="middle" y="475" dy="0">C</text>
+                            <text className="edFloatText" x="470" textAnchor="middle" y="475" dy="0">A</text>
+                            <text className="edFloatText" x="530" textAnchor="middle" y="475" dy="0">T</text>
+                            <text className="edFloatText" x="580" textAnchor="middle" y="475" dy="0">I</text>
+                            <text className="edFloatText" x="635" textAnchor="middle" y="475" dy="0">O</text>
+                            <text className="edFloatText" x="720" textAnchor="middle" y="475" dy="0">N</text>
                             </mask>
                         </defs>
                         <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/>
