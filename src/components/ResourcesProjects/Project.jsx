@@ -96,9 +96,9 @@ class Project extends Component {
                                     {/* <p className="fa rightTopIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></p> */}
 
                                     {this.props.group === "solo" ?
-                                        <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={28}/></p>
+                                        <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={25}/></p>
                                     :
-                                        <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill size={33}/></p>
+                                        <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill size={30}/></p>
                                     }
                                 </li>
                             </ul>
