@@ -2193,12 +2193,13 @@ li.rightTop>p {
   /* margin-top: 5vh; */
   /* z-index: 16; */
   position: relative;
-  /* margin-top: -5vh; */
+  
 }
 
 #interestsLanding {
   /* position: relative; */
-  
+  margin-top: 10vh;
+  margin-top: 5vh;
   min-height: 90vh;
   /* display: flex;
   flex-direction: column;
@@ -2209,15 +2210,17 @@ li.rightTop>p {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "headings image text";
+  grid-template-areas: "interestsHeadings interestsImage interestsText";
 }
 
 #interestsHeadings {
-  grid-area: headings;
-  margin: 10vh 1vw 0 4vw;
+  grid-area: interestsHeadings;
+  margin: 0vh 5vw 0 4vw;
+  max-height: 90vh;
   /* z-index:2; */
+  /*
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 1fr;
   row-gap: 2px;
   grid-template-areas: 
@@ -2231,27 +2234,33 @@ li.rightTop>p {
   ". col2b . . ."
   "col1b . . . ."
   ". . . . ."
-  ;
-  /* 
+  ; */
+  
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  */
+  justify-content: flex-start;
+  align-items: center; 
 }
 
-#obessionsImg {
-
-  max-height: 80vh;
-  grid-area: image;
+#obsessionsImgContainer{
+  grid-area: interestsImage;
+  max-height: 45vh;
+  max-width: 45vw;
   margin: auto auto;
+  display: flex;
+}
+
+#obsessionsImg {
+  max-height: 90%;
+  max-width: 90%;
+  /* position: absolute; */
 }
 
 
 
 /* p{ animation: rotating 4s linear infinite;} */
 
-#callBlog {
+/* #callBlog {
   grid-area: col1a;
 }
 #callArtist {
@@ -2277,30 +2286,33 @@ li.rightTop>p {
 }
 #callTech {
   grid-area: col1b;
-}
+} */
 
-#callBlog, #callArtist, #callMusician, #callEngineer, #callNomad, #callWriter, #callAthlete, #callFeminist, #callTech {
+#callBlog, #callArtist, #callMusician, #callEngineer, #callNomad, #callTech, #callWriter, #callAthlete, #callTeacher, #callFeminist {
   cursor: pointer;
-  border-radius: 50%;
-  background-color: var(--red);
+  /* border-radius: 50%; */
+  /* background-color: var(--red); */
   color: var(--blue);
   /* padding: 1em .65em; */
   /* padding: 2em .5em; */
   width: 5vw;
   height: 5vw;
-  animation: rotating 8s linear infinite;
-  box-shadow: 0px 0px 15px var(--grey-very-dark);
+  /* animation: rotating 8s linear infinite; */
+  /* box-shadow: 0px 0px 15px var(--grey-very-dark); */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: .25em; */
+  margin: -.5em;
 }
-#callBlog:hover, #callArtist:hover, #callMusician:hover, #callEngineer:hover, #callNomad:hover, #callWriter:hover, #callAthlete:hover, #callFeminist:hover, #callTech:hover {
-    animation-play-state: paused;
+#callBlog:hover, #callArtist:hover, #callMusician:hover, #callEngineer:hover, #callNomad:hover, #callTech:hover, #callWriter:hover, #callAthlete:hover, #callTeacher:hover, #callFeminist:hover {
+
 }
-#callBlog>h4, #callArtist>h4, #callMusician>h4, #callEngineer>h4, #callNomad>h4, #callWriter>h4, #callAthlete>h4, #callFeminist>h4, #callTech>h4 {
+#callBlog>h4 {
+  color: var(--white-semi-grey);
+}
+#callBlog>h4, #callArtist>h4, #callMusician>h4, #callEngineer>h4, #callNomad>h4, #callTech>h4, #callWriter>h4, #callAthlete>h4, #callTeacher>h4, #callFeminist>h4 {
   font-family: var(--Lobster);
-  font-size: 1.8em;
+  font-size: 3.8em;
   text-shadow: 0 0 5px var(--grey-very-dark);
   /* position: absolute; */
 }
@@ -2363,8 +2375,9 @@ li.rightTop>p {
   -o-object-fit: cover;
   object-fit: cover;
   position: relative;
-  -webkit-transition: 450ms ease-in-out;
-  transition: 450ms ease-in-out;
+  -webkit-transition: width 300ms ease-in-out;
+  /* transition: 450ms ease-in-out; */
+  transition: width 300ms ease-in-out;
 }
 
 .blogBox > .blogTitle {
@@ -2394,56 +2407,19 @@ li.rightTop>p {
   /* opacity: 0; */
 }
 
-#blogBox1:hover > .blogImg {
+#blogBox1:hover > .blogImg, #blogBox2:hover > .blogImg, #blogBox3:hover > .blogImg, #blogBox4:hover > .blogImg, #blogBox5:hover > .blogImg, #blogBox6:hover > .blogImg, #blogBox7:hover > .blogImg, #blogBox8:hover > .blogImg, #blogBox9:hover > .blogImg  {
   width: 100%;
-  height: 30%;
+  transition: width 300ms ease-in-out;
+  cursor: pointer;
+  /* height: 30%; */
 }
 
-#blogBox2:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
 
-#blogBox3:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox4:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox5:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox6:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox7:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox8:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-#blogBox9:hover > .blogImg {
-  width: 100%;
-  height: 30%;
-}
-
-.blogBox:hover {
+/* .blogBox:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
-}
+} */
 
 /* ------------------------ */
 /* --- Rolling Container -- */
@@ -2455,9 +2431,9 @@ li.rightTop>p {
   position: relative;
   width: 40%;
   height: 25%;
-  margin: 5vh 0;
+  /* margin: 5vh 0; */
   padding: 2vh 0;
-  margin-top: -5vh;
+  margin: -13vh 0 5vh -7vw;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;

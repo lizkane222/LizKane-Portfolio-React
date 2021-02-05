@@ -15,9 +15,10 @@ const InterestsPage=() => {
     const [isEngineerOn, toggleEngineerIsOn] = useToggle(false);
     const [isNomadOn, toggleNomadIsOn] = useToggle(false);
     const [isWriterOn, toggleWriterIsOn] = useToggle(false);
-    const [isAthleteOn, toggleAthleteIsOn] = useToggle(false);
-    const [isFeministOn, toggleFeministIsOn] = useToggle(false);
     const [isTechOn, toggleTechIsOn] = useToggle(false);
+    const [isAthleteOn, toggleAthleteIsOn] = useToggle(false);
+    const [isTeacherOn, toggleTeacherIsOn] = useToggle(false);
+    const [isFeministOn, toggleFeministIsOn] = useToggle(false);
     // const [is2On, toggle2IsOn] = useToggle(false);
     // const [on, toggle] = useToggle(true);
 
@@ -37,12 +38,6 @@ const InterestsPage=() => {
                         <div id="callBlog" onClick={toggleBlogIsOn}>
                             <h4>Blog</h4>
                         </div>
-                        <div id="callTech" onClick={toggleTechIsOn}>
-                            <h4>Tech</h4>
-                        </div>
-                        <div id="callArtist" onClick={toggleArtistIsOn}>
-                            <h4>Artist</h4>
-                        </div>
                         <div id="callMusician" onClick={toggleMusicianIsOn}>
                             <h4>Musician</h4>
                         </div>
@@ -52,20 +47,30 @@ const InterestsPage=() => {
                         <div id="callNomad" onClick={toggleNomadIsOn}>
                             <h4>Nomad</h4>
                         </div>
+                        <div id="callArtist" onClick={toggleArtistIsOn}>
+                            <h4>Artist</h4>
+                        </div>
+                        <div id="callTech" onClick={toggleTechIsOn}>
+                            <h4>Techie</h4>
+                        </div>
                         <div id="callWriter" onClick={toggleWriterIsOn}>
                             <h4>Writer</h4>
                         </div>
                         <div id="callAthlete" onClick={toggleAthleteIsOn}>
                             <h4>Athlete</h4>
                         </div>
+                        <div id="callTeacher" onClick={toggleTeacherIsOn}>
+                            <h4>Teacher</h4>
+                        </div>
                         <div id="callFeminist" onClick={toggleFeministIsOn}>
                             <h4>Feminist</h4>
                         </div>
                     </div>
 
-                    {/* <div className="redbox "> */}
-                        <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img box-shadow"/>
-                    {/* </div> */}
+                    <div id="obsessionsImgContainer box-shadow">
+                        <img src={Obsessions} alt="" id="obsessionsImg" className="thematicImg responsive-img "/>
+                        
+                    </div>
                 
                 </section>
                 
