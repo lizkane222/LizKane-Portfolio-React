@@ -44,7 +44,7 @@ const BlogPostWhyBlog = [{
 }]
 
 const BlogPostArtist = [{
- title: "An Artist Like Me ",
+ title: "An Artist ",
  blogP1: "	I remember being in fourth grade, so around 9 years old, making my first life-like sketch of one of my friends. When I had finished, I was amazed by what I had done. I was most amazed by the line-work around the face and the hands, even though my proportions between the two were off, I felt immense joy. There was some burst of self-recognition in that moment of both pride and an idea that ‘this thing I had made is now a part of me. It hadn’t existed prior but now it’s like I found a lost scrap of myself.’ That one idea, or even feeling has ever since shaped much of the way I view the world. ",
  blogP2: "	I dabbled in painting with watercolors, charcoal, chalk and pastels, tried my hand at acrylic painting, but mostly I stuck with sketching. Years I spent chasing that feeling of creating something so that I could get part of myself back. Not that I had lost anything, but there was more of me out there that I’ve yet to discover. There was always this place deep inside me that unified through the action of creating. ",
  blogP3: "	The next period that defined my artistic life was upon taking a trip to Wyoming. It was an emotionally complex time of my life, as it is for many 16 year olds. I took my sketchbook, pencils, and a lawn chair out to the middle of grassy hills and posted up along a trail. I’m writing this 13 years later and I can still see and feel the lines of those drawings. As always instructed by my art teachers, you spend nearly 80% of the time looking at the object and only 20% actually compiling the piece. I spent hours in different spots facing in different directions memorizing the landscapes of a place that meant very little to me at the time, but through  sketching out the rolling hills, power lines, clouds, and grasslands there was an imprinting that took place that went far beyond the weighted lines of my pencils. There was something therapeutic about looking so deep at a thing and then pulling back out to look at its most simple shapes and curves. Then the real therapy comes when forcing those shapes and curves onto a pad that not only represents what your eye can catch, but the tumultuous feelings that would be hashed out with each stroke, blend, and erased mark. ",
@@ -72,7 +72,7 @@ const BlogPostArtist = [{
 }]
 
 const BlogPostMusician = [{
- title: "A Musician Like Me ",
+ title: "A Musician ",
  blogP1: "	I had just seen Titanic and fell in love with its theme song, who didn’t right? There was this one night I was sitting in my older sister’s bedResourcesProjects on her office chair and we had the song on repeat, ‘my heart will go on an on.’ We belted out each line dramatically both seriously and humorously. I sat in that chair spinning and spinning around to no end, it was euphoric, it was timeless. I recount that night as being the night I discovered my love of singing. If you had asked my parents they’d tell you I had spent every moment before that singing instead of speaking, constantly making up songs, but this was the moment where I realized it for myself. ",
  blogP2: "	The ResourcesProjects with the spinning chair was in a house, and that house was complicated, my family lived there for many years yet this is my only true memory of me singing in that house. Singing had become a gauge of my happiness, there were times when it would just flow out and times I wouldn’t utter a sound. This was the same with certain places and people. I became aware of this inconsistency during a relationship in my teens. I was in a place where I thought I needed to break up with him and during a conversation with a friend I said, ‘I just don’t sing anymore, at least not when I’m with him.’ I was young and new to relationships but that realization forged a standard for all relationships that followed. ‘How do I know I’m with the right person? The answer, do I sing when I’m with them?’ It’s the simplest of measurements but is there a truer one in life than what naturally overflows in moments of joy and comfort? In my opinion no.  ",
  blogP3: "	That next year was when I began writing songs, I took my older sister’s guitar and learned three chords. I was terrible, my fingers weren’t strong, my rhythm was more than lacking, but it was a collection of notes that gave me avenues to express my thoughts and ideas. My first song was a story from a few different perspectives of teenagers. For some reason I wasn’t embarrassed to sing it to my family and friends and did just that. With each new song I’d sit in my ResourcesProjects learning two or three new chords just different enough to inspire avenues I had never expected to discover. In general I’m not a very emotional person, or at least I’d say so about myself. What I really mean is that my face may be overly-expressive but you’ll never hear the thoughts behind those expressions; that was until I began writing. I allowed myself to feel and process things I wouldn’t have otherwise, all for the sake of the music. To get it out on paper I was purging myself of all of my complicated emotions and thoughts, for the first time would untangle the mess and weave it into my own subjective truth. ",
@@ -100,7 +100,7 @@ const BlogPostMusician = [{
 }]
 
 const BlogPostSoftwareEngineer = [{
- title: "A Software Engineer Like Me",
+ title: "A Software Engineer",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -128,7 +128,7 @@ const BlogPostSoftwareEngineer = [{
 }]
 
 const BlogPostNomad = [{
- title: "A Nomad Like Me",
+ title: "A Nomad",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -156,7 +156,7 @@ const BlogPostNomad = [{
 }]
 
 const BlogPostWriter = [{
- title: "A Writer Like Me",
+ title: "A Writer",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -184,7 +184,7 @@ const BlogPostWriter = [{
 }]
 
 const BlogPostAthlete = [{
- title: "An Athlete Like Me",
+ title: "An Athlete",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -212,7 +212,7 @@ const BlogPostAthlete = [{
 }]
 
 const BlogPostFeminist = [{
- title: "A Feminist Like Me",
+ title: "A Feminist",
  blogP1: "",
  blogP2: "",
  blogP3: "",
@@ -240,7 +240,7 @@ const BlogPostFeminist = [{
 }]
 
 const BlogPostWomanInTech = [{
- title: "A Woman In Tech Like Me",
+ title: "A Woman In Tech",
  blogP1: "",
  blogP2: "",
  blogP3: "",

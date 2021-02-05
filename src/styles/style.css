@@ -1051,6 +1051,10 @@ svg #educationSVG {
 /* ------- ref classes = .thematicImg .responsive-img ------- */
 /* --------- ref ProjectList -------------------------------- */
 /* --------- STYLE ref project.scss  ------------------------ */
+@keyframes rotating {
+  0%  { transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+}
 
 /* @import "./ProjectStyle/project.css"; */
 .flex-container {
@@ -1155,22 +1159,24 @@ li.skillLi{
   /* color: rgba(255, 255, 255, 1); */
   color: var(--yellow);
   outline: var(--red);
-  -webkit-transition: all 0.3s ease-in-out;
+  animation: rotating 8s linear infinite;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
   border-radius:5px;
   box-shadow: 0 0 .1em var(--grey-very-dark);
 }
 
 
 .social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
-	-webkit-transform: scale(1.2) rotate(120deg);
+	/* -webkit-transform: scale(1.2) rotate(120deg);
 	-moz-transform: scale(1.2) rotate(120deg);
 	-ms-transform: scale(1.2) rotate(120deg);
 	-o-transform: scale(1.2) rotate(120deg);
-  transform: scale(1.2) rotate(120deg);
+  transform: scale(1.2) rotate(120deg); */
+  animation-play-state: paused;
   color: var(--blue);
 }
 
@@ -1277,11 +1283,6 @@ li.skillLi{
 #DiHeroku {
   grid-area: I2;
 }
-
-
-
-
-
 
 #teamWorkGrid {
   height: 100%;
@@ -2189,20 +2190,119 @@ li.rightTop>p {
 /* ------- ref classes = .thematicImg .responsive-img --------- */
 /* ------------------------ */
 #interestsPage {
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
   /* z-index: 16; */
   position: relative;
+  /* margin-top: -5vh; */
+}
+
+#interestsLanding {
+  /* position: relative; */
+  
+  min-height: 90vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  background-color: none; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "headings image text";
+}
+
+#interestsHeadings {
+  grid-area: headings;
+  margin: 10vh 1vw 0 4vw;
+  /* z-index:2; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 1fr;
+  row-gap: 2px;
+  grid-template-areas: 
+  "col1a . . . ."
+  ". col2a . . ."
+  ". . col3a . ."
+  ". . . col4a ."
+  ". . . . col5"
+  ". . . col4b ."
+  ". . col3b . ."
+  ". col2b . . ."
+  "col1b . . . ."
+  ". . . . ."
+  ;
+  /* 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  */
 }
 
 #obessionsImg {
-  max-height: 90vh;
+
+  max-height: 80vh;
+  grid-area: image;
+  margin: auto auto;
 }
 
 
 
+/* p{ animation: rotating 4s linear infinite;} */
+
 #callBlog {
+  grid-area: col1a;
+}
+#callArtist {
+  grid-area: col2a;
+}
+#callMusician {
+  grid-area: col3a;
+}
+#callEngineer {
+  grid-area: col4a;
+}
+#callNomad {
+  grid-area: col5;
+}
+#callWriter {
+  grid-area: col4b;
+}
+#callAthlete {
+  grid-area: col3b;
+}
+#callFeminist {
+  grid-area: col2b;
+}
+#callTech {
+  grid-area: col1b;
+}
+
+#callBlog, #callArtist, #callMusician, #callEngineer, #callNomad, #callWriter, #callAthlete, #callFeminist, #callTech {
   cursor: pointer;
-  font-family: var(--Chic);
+  border-radius: 50%;
+  background-color: var(--red);
+  color: var(--blue);
+  /* padding: 1em .65em; */
+  /* padding: 2em .5em; */
+  width: 5vw;
+  height: 5vw;
+  animation: rotating 8s linear infinite;
+  box-shadow: 0px 0px 15px var(--grey-very-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: .25em; */
+}
+#callBlog:hover, #callArtist:hover, #callMusician:hover, #callEngineer:hover, #callNomad:hover, #callWriter:hover, #callAthlete:hover, #callFeminist:hover, #callTech:hover {
+    animation-play-state: paused;
+}
+#callBlog>h4, #callArtist>h4, #callMusician>h4, #callEngineer>h4, #callNomad>h4, #callWriter>h4, #callAthlete>h4, #callFeminist>h4, #callTech>h4 {
+  font-family: var(--Lobster);
+  font-size: 1.8em;
+  text-shadow: 0 0 5px var(--grey-very-dark);
+  /* position: absolute; */
 }
 
 #blogListContainer {
@@ -2247,10 +2347,12 @@ li.rightTop>p {
   min-width: 23%;
   width: 25%;
   max-width: 30%;
+  background-color: var(--grey-very-dark);
   /* max-width: 25%; */
   /* min-height: 50%; */
   /* max-height: 80%; */
   height: 40vh;
+  border-radius: 10px;
   /* background-color: blue; */
 }
 
@@ -2265,18 +2367,23 @@ li.rightTop>p {
   transition: 450ms ease-in-out;
 }
 
-.blogTitle {
-  max-height: 10%;
+.blogBox > .blogTitle {
+  min-height: 30%;
+  /* background-color: var(--white-semi-grey); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .blogTitle > span {
-  font-size: 1.2em;
-  background-color: var(--yellowDark);
+  font-size: 2.2em;
   display: block;
   text-align: center;
-  max-height: 100%;
+  min-height: 100%;
   line-height: 1em;
   position: relative;
+  color: var(--white-semi-grey);
 }
 
 /* .blogBox:hover >.blogImg {
@@ -2350,6 +2457,7 @@ li.rightTop>p {
   height: 25%;
   margin: 5vh 0;
   padding: 2vh 0;
+  margin-top: -5vh;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;

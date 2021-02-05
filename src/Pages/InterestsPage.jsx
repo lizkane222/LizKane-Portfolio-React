@@ -9,34 +9,19 @@ import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/o
 
 
 const InterestsPage=() => {
-    const [isOn, toggleIsOn] = useToggle(false);
-    const [on, toggle] = useToggle(true);
+    const [isBlogOn, toggleBlogIsOn] = useToggle(false);
+    const [isArtistOn, toggleArtistIsOn] = useToggle(false);
+    const [isMusicianOn, toggleMusicianIsOn] = useToggle(false);
+    const [isEngineerOn, toggleEngineerIsOn] = useToggle(false);
+    const [isNomadOn, toggleNomadIsOn] = useToggle(false);
+    const [isWriterOn, toggleWriterIsOn] = useToggle(false);
+    const [isAthleteOn, toggleAthleteIsOn] = useToggle(false);
+    const [isFeministOn, toggleFeministIsOn] = useToggle(false);
+    const [isTechOn, toggleTechIsOn] = useToggle(false);
+    // const [is2On, toggle2IsOn] = useToggle(false);
+    // const [on, toggle] = useToggle(true);
 
     
-    // const toggleIsActive = () => {
-
-        
-        
-    //     {!isActive ?
-    //             setIsActive(isActive => (
-    //             {isActive: !isActive}
-    //         ))
-    //     :
-    //         setIsActive(
-    //             {isActive: {BlogList}}
-    //         )
-    //     }
-    // };
-
-    let list = document.getElementsByClassName('content__container__list');
-    let items = null;
-    const anApple =()=> {
-    for (let i=0; i<list.childNodes.length; i++){
-        if(list.childNodes[i].className =='vowel') {
-            return 'n'
-        }
-    }}
-
     let redColor = "#8B0124";
     let blueColor = "#327E8A";
     let yellowColor = "#EDC168";
@@ -45,23 +30,45 @@ const InterestsPage=() => {
         <section id="interestsPage">
             <Wrapper>
                 {/* <p>My Interests & Hobbies</p> */}
-                <div className="redbox">
-                    <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img"/>
-                </div>
+                <section id="interestsLanding">
 
-                <div id="callBlog" onClick={toggleIsOn}>
-                    <h4>Blog</h4>
-                </div>
-                <div>
-                    {isOn ? <BlogList/> : []}
-                </div>
-                {/* <div>
-                    <div>{on ? 'ON' : 'OFF'}</div>
-                    <button onClick={toggle}>Toggle</button>
-                    <button onClick={() => toggle(true)}>set ON</button>
-                    <button onClick={() => toggle(false)}>set OFF</button>
-                </div> */}
+                    {/* make this a nav link to bloglist for autoscroll on click */}
+                    <div id="interestsHeadings">
+                        <div id="callBlog" onClick={toggleBlogIsOn}>
+                            <h4>Blog</h4>
+                        </div>
+                        <div id="callTech" onClick={toggleTechIsOn}>
+                            <h4>Tech</h4>
+                        </div>
+                        <div id="callArtist" onClick={toggleArtistIsOn}>
+                            <h4>Artist</h4>
+                        </div>
+                        <div id="callMusician" onClick={toggleMusicianIsOn}>
+                            <h4>Musician</h4>
+                        </div>
+                        <div id="callEngineer" onClick={toggleEngineerIsOn}>
+                            <h4>Engineer</h4>
+                        </div>
+                        <div id="callNomad" onClick={toggleNomadIsOn}>
+                            <h4>Nomad</h4>
+                        </div>
+                        <div id="callWriter" onClick={toggleWriterIsOn}>
+                            <h4>Writer</h4>
+                        </div>
+                        <div id="callAthlete" onClick={toggleAthleteIsOn}>
+                            <h4>Athlete</h4>
+                        </div>
+                        <div id="callFeminist" onClick={toggleFeministIsOn}>
+                            <h4>Feminist</h4>
+                        </div>
+                    </div>
 
+                    {/* <div className="redbox "> */}
+                        <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img box-shadow"/>
+                    {/* </div> */}
+                
+                </section>
+                
                 <div className="rollerContainer">
                     <div class="content">
                         <div class="content__container">
@@ -86,8 +93,21 @@ const InterestsPage=() => {
                         </div>
                     </div>
                 </div>
-
             </Wrapper>
+                {/*  */}
+                <div>
+                    {isBlogOn ? <BlogList/> : []}
+                </div>
+
+                {/* <div>
+                    <div>{on ? 'ON' : 'OFF'}</div>
+                    <button onClick={toggle}>Toggle</button>
+                    <button onClick={() => toggle(true)}>set ON</button>
+                    <button onClick={() => toggle(false)}>set OFF</button>
+                </div> */}
+
+                
+
         </section>
     )
 }
