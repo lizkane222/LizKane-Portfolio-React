@@ -44,23 +44,23 @@ const InterestsPage=() => {
     return(
         <section id="interestsPage">
             <Wrapper>
-                <p>My Interests & Hobbies</p>
+                {/* <p>My Interests & Hobbies</p> */}
                 <div className="redbox">
                     <img src={Obsessions} alt="" id="obessionsImg" className="thematicImg responsive-img"/>
                 </div>
 
-                    <div id="callBlog" onClick={toggleIsOn}>
-                        <h4>Blog</h4>
-                    </div>
-                    <div>
-                        {isOn ? <BlogList/> : []}
-                    </div>
-                    <div>
-                <div>{on ? 'ON' : 'OFF'}</div>
-                <button onClick={toggle}>Toggle</button>
-                <button onClick={() => toggle(true)}>set ON</button>
-                <button onClick={() => toggle(false)}>set OFF</button>
+                <div id="callBlog" onClick={toggleIsOn}>
+                    <h4>Blog</h4>
                 </div>
+                <div>
+                    {isOn ? <BlogList/> : []}
+                </div>
+                {/* <div>
+                    <div>{on ? 'ON' : 'OFF'}</div>
+                    <button onClick={toggle}>Toggle</button>
+                    <button onClick={() => toggle(true)}>set ON</button>
+                    <button onClick={() => toggle(false)}>set OFF</button>
+                </div> */}
 
                 <div className="rollerContainer">
                     <div class="content">

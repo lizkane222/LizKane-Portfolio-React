@@ -47,41 +47,7 @@ class Project extends Component {
     render() {
         return(
             
-            <>
-                {/* <div className="wrapper" onClick={this.setActive} >
-                    <div className="projectCard card" >
-                        <div className="image-wrapper" getImage>
-                        <div className="header">
-                            <div className="date">
-                                <span className="yearInit">2020 - </span>
-                                <span className="yearEnd">2021</span>
-                                <span className="stack"></span>
-                            </div>
-                                <img src={this.props.stockImg} />
-                            
-                            <ul className="menuContent">
-                                <li className="group">
-                                    {this.props.stack === "solo" ?
-                                    <a href="#" className="fa "><{BsPerson}/>{this.props.stack}</a>
-                                    :
-                                    <a href="#" className="fa "><{RiGroup2Fill}/>{this.props.stack}</a>
-                                    }
-                                </li>
-                            </ul>
-                            <img className="projectLogoInactive" id={this.props.name} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
-                            </div>
-                        </div>
-                        <div className="data">
-                            <div className="projectCardContent">
-                                <span className="author">Liz Kane</span>
-                                <h4 className="projectCardTitle"><a href="#">{this.props.name}</a></h4>
-                                <p className="projectCardText" >{this.props.github}</p>
-                                <a href="#" className="projectButton">Check it out</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                
+            <>               
                 <div className="card projectCard" id="'projectCard'+{{this.props.name}}" onClick={this.setActive}>
                     <div className="wrapper">
                         <div className="projectHeader">
@@ -96,9 +62,9 @@ class Project extends Component {
                                     {/* <p className="fa rightTopIcons"><span>{this.props.group}</span><AiOutlineFundProjectionScreen/></p> */}
 
                                     {this.props.group === "solo" ?
-                                        <p className="fa rightTopIcons" ><span>{this.props.stack}</span><FaUserCircle size={25}/></p>
+                                        <p className="fa rightTopIcons" ><span>{this.props.stack}{this.props.group}</span><FaUserCircle size={25}/></p>
                                     :
-                                        <p className="ri rightTopIcons" ><span>{this.props.stack}</span><RiGroup2Fill size={30}/></p>
+                                        <p className="ri rightTopIcons" ><span>{this.props.stack}{this.props.group}</span><RiGroup2Fill size={30}/></p>
                                     }
                                 </li>
                             </ul>
@@ -133,9 +99,9 @@ class Project extends Component {
 
 
                 {this.state.active &&
-                <>
+                <div className="floatboxAbsolute">
                 <FloatBox logo={this.props.logo} name={this.props.name} description={this.props.description} github={this.props.github} github2={this.props.github2} gist={this.props.gist} gallery={this.props.gallery} style={this.props.style} setActive={this.setActive}/>
-                </>
+                </div>
                 }
             </>
         )}

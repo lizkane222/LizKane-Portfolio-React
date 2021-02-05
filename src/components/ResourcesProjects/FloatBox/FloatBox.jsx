@@ -17,21 +17,25 @@ const FloatBox =(props) => {
                         <h3 className="projectName">{props.name}</h3>
                     </div>
                     <div className="projectDescription"><p >{props.description}</p></div>
-                    <div className="projectMore">MORE</div>
+                    <div className="projectMore">
+                        <h3>MORE</h3>
+                    </div>
                     <div className="projectGallery">
                         <div className="projectPhotos">
                             <Carousel gallery={props.gallery}/>
                         </div>
+                    </div>
+                    <div className="projectGithub">   
                         {props.github2 ?
                                     <>
-                                        <a href={props.github} className="githubProject float-right"><p>{props.github}</p></a>
-                                        <a href={props.github2} className="githubProject githubProject2 float-right"><p>{props.github2}</p></a>
+                                        <a href={props.github} className="githubProject float-right"><p id="githubProject1">{props.github}</p></a>
+                                        <a href={props.github2} className="githubProject githubProject2 float-right"><p id="githubProject2">{props.github2}</p></a>
                                     </>
                                 :
                                     <>
                                         <a href={props.github} className="githubProject"><p>{props.github}</p></a>
                                     </>
-                                }
+                        }
                     </div>
                     {/* <div>
                         <div className="projectCode">

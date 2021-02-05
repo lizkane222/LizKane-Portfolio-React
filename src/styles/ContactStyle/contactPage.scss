@@ -44,12 +44,15 @@
   width: 100%;
   #formName{
     flex: 1;
+    
   } #formEmail{
     flex: 1;
     align-self: baseline;
+    
   }
   #formCompany #formSubject {
-    flex: 2
+    flex: 2;
+    
   }
 }
 
