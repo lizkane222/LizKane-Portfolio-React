@@ -26,8 +26,8 @@ const EmailForm=() => {
     
     
   return(
-        <div className="col-lg-5 mx-auto">
-          <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow">
+        <div className="col-lg-5 mx-auto" id="cardFormEmail">
+          <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow emailCard">
               <div className="card-body">
                 
                 <div className="container">

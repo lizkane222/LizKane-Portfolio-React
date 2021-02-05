@@ -60,33 +60,33 @@ const EducationPage=() => {
         //         </div>
         <section id="educationPage">
             <Wrapper>
-            <div id="educationLanding">
-                <div id="viewBoxContainer">
-                    {/* svg line is the filled space */}
-                    <svg id="educationSVG" viewbox="0 0 500 500" width="850" height="475">
-                        <defs>
-                            <mask id="mask" x="0" y="0" width="100%" height="100%">
-                            <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
-                            <text className="edFloatText" x="140" textAnchor="middle" y="475" dy="0">E</text>
-                            <text className="edFloatText" x="225"  textAnchor="middle" y="475" dy="0">D</text>
-                            <text className="edFloatText" x="300" textAnchor="middle" y="475" dy="0">U</text>
-                            <text className="edFloatText" x="385" textAnchor="middle" y="475" dy="0">C</text>
-                            <text className="edFloatText" x="470" textAnchor="middle" y="475" dy="0">A</text>
-                            <text className="edFloatText" x="530" textAnchor="middle" y="475" dy="0">T</text>
-                            <text className="edFloatText" x="580" textAnchor="middle" y="475" dy="0">I</text>
-                            <text className="edFloatText" x="635" textAnchor="middle" y="475" dy="0">O</text>
-                            <text className="edFloatText" x="720" textAnchor="middle" y="475" dy="0">N</text>
-                            </mask>
-                        </defs>
-                        {/* <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/> */}
-                        <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#292929"/>
-                    </svg>
-                </div>
-                <div id="edDocContainer">
-                    <h4>{<MastersDoc/>}</h4>
-                    <h4>{<BachelorsDoc/>}</h4>
-                    <h4>{<GACertDoc/>}</h4>
-                </div>
+                <div id="educationLanding">
+                    <div id="viewBoxContainer">
+                        {/* svg line is the filled space */}
+                        <svg id="educationSVG" viewbox="0 0 500 500" width="850" height="475">
+                            <defs>
+                                <mask id="mask" x="0" y="0" width="100%" height="100%">
+                                <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+                                <text className="edFloatText" x="140" textAnchor="middle" y="475" dy="0">E</text>
+                                <text className="edFloatText" x="225"  textAnchor="middle" y="475" dy="0">D</text>
+                                <text className="edFloatText" x="300" textAnchor="middle" y="475" dy="0">U</text>
+                                <text className="edFloatText" x="385" textAnchor="middle" y="475" dy="0">C</text>
+                                <text className="edFloatText" x="470" textAnchor="middle" y="475" dy="0">A</text>
+                                <text className="edFloatText" x="530" textAnchor="middle" y="475" dy="0">T</text>
+                                <text className="edFloatText" x="580" textAnchor="middle" y="475" dy="0">I</text>
+                                <text className="edFloatText" x="635" textAnchor="middle" y="475" dy="0">O</text>
+                                <text className="edFloatText" x="720" textAnchor="middle" y="475" dy="0">N</text>
+                                </mask>
+                            </defs>
+                            {/* <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/> */}
+                            <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#292929"/>
+                        </svg>
+                    </div>
+                    <div id="edDocContainer">
+                        <h2 class="edDocName">{<MastersDoc/>}</h2>
+                        <h2 class="edDocName">{<BachelorsDoc/>}</h2>
+                        <h2 class="edDocName">{<GACertDoc/>}</h2>
+                    </div>
                 </div>
             </Wrapper>
                 {<TextCarousel items={itemsArray} active={0}/>}

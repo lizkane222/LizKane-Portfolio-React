@@ -121,8 +121,8 @@ function App(props) {
             {/* <EducationPage theme={props.theme} /> */}
             <EducationPage />
             <ProjectsPage/>
-            <WorkPage/>
             <InterestsPage/>
+            <WorkPage/>
             <ContactPage/>
             {/* <Footer/> */}
           

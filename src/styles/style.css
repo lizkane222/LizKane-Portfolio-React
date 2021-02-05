@@ -5,8 +5,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://use.typekit.net/cye7zmh.css");
 @import url("../components/Header/dropdown.css");
-/* @import url("./ProjectStyle/project.css");
-@import url("./ContactStyle/contactPage.css"); */
+
+/* @import url("./ProjectStyle/project.css");*/
+@import url("./ContactStyle/contactPage.css"); 
 
 /* ============================= */
 /* START ROOT VARIABLES SET UP */
@@ -777,7 +778,7 @@ h2 {
   background-size: cover;
   height: 64vh;
   width: 60vw;
-  margin: 0 auto;
+  margin: 0 2vw;
   border: 2px 2px solid none;
 }
 
@@ -785,9 +786,9 @@ h2 {
   padding: 5vh 5vw;
 } */
 
-#edDocContainer>.edDocs {
-  opacity: 0;
-}
+/* #edDocContainer>.edDocs {
+  opacity: 1;
+} */
 
 /* #viewBoxContainer:hover .edDocs{
   opacity: 1;
@@ -797,11 +798,19 @@ h2 {
 #edDocContainer {
   grid-area: docs;
   margin: 0 auto;
+  opacity: 0;
+  width: 35vw;
+  transition:opacity .6s ease-out;
+  background-color: var(--red);
 }
 
-#edDocContainer >* {
-  opacity: 0;
+#edDocContainer>h2.edDocName {
+  padding: 5%;
+  width: 90%;
+  font-family: var(--Chic);
+
 }
+
 
 svg #educationSVG {
   display: block;
@@ -821,8 +830,12 @@ svg #educationSVG {
 #educationSVG:hover text{
   transition:font-size .4s ease-in;
   font-size: 100em;
-
 } 
+
+#educationLanding:hover #edDocContainer {
+  opacity: 1;
+  transition:opacity .6s ease-out;
+}
 
 /* #viewBoxContainer:hover .edDocs{
   opacity: 1;
@@ -835,14 +848,15 @@ svg #educationSVG {
 /* ----- FLOAT DOC BOX ------ */
 /* ------------------------ */
 .ResourceListComponent {
-  -webkit-transition: 0s color ease-in-out;
-  transition: 0s color ease-in-out;
+  /* -webkit-transition: 0s color ease-in-out;
+  transition: 0s color ease-in-out; */
 }
 
 .docName {
   cursor: pointer;
   color: var(--yellow);
   text-align: left;
+  font-family: var(--Chic);
 }
 
 .docName:hover {
@@ -1444,12 +1458,15 @@ li.rightTop>p {
   width: 100%;
   height: 48%;
   margin: 1%;
-
+  cursor: pointer;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row wrap;
           flex-direction: row wrap;
-  background-color: rgba(25,25,25,.75);
+  background-color: rgba(25,25,25,.2);
+  
+  /* background-color: rgba(25,25,25,.75); */
+  /* background-color: none; */
 }
 
 .card .menuContent {
@@ -1583,6 +1600,11 @@ li.rightTop>p {
           transform: translateY(-60px);
 }
 
+.projectCard {
+  border: .7px solid var(--yellow);
+}
+
+
 .projectCard .wrapper {
   /* background-color: var(--greyish); */
   /* background: center / cover no-repeat; */
@@ -1686,6 +1708,8 @@ li.rightTop>p {
           transform: translate(5px, -50%);
   opacity: 1;
 }
+
+
 
 /* //////////////////// */
 /* //////////////////// */
@@ -2062,6 +2086,10 @@ position: absolute;
       
 }
 
+.card {
+  background-color: none;
+}
+
 /* 
 //---- SOCIAL ICONS FOR SKILLS DISPLAY ----
 .list-unstyled {
@@ -2375,7 +2403,6 @@ position: absolute;
 
 .content__container__list {
   margin-top: 0;
-  /* padding-left: 2em; */
   text-align: center;
   list-style: none;
   -webkit-animation-name: change;
@@ -2389,10 +2416,8 @@ position: absolute;
 
 .content__container__list__item {
   background-color: var(--white-pretty);
-  /* background-color: red; */
   font-size: 1.55em;
   line-height: 1.3em;
-  /* padding: .2em 0; */
   margin: 0;
   text-align: center;
 }
@@ -2536,168 +2561,6 @@ position: absolute;
 /* --------------------------------------- */
 /* @import "./ContactStyle/contactPage.css"; */
 
-/* #contactPage {
-  z-index: 17;
-  font-family: 'Bodoni Moda', serif;
-  margin: 5vh 0 5vh 0;
-  min-width: 100vw;
-  min-height: 82vh;
-  z-index: 10;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "email" "socialMedia";
-}
-
-#emailForm {
-  grid-area: email;
-}
-
-#message {
-  resize:none;
-  overflow: scroll;
-}
-
-.cardTitle {
-  font-family: var(--Lobster);
-  margin: -7vh 0 1vh 0;
-}
-
-.formGroup>input, .formGroup>select, .formGroup>textarea{
-  background-color: var(--white-pretty);
-}
-
-input:focus, textarea:focus, select:focus{
-  outline: var(--grey-dark);
-  border: 2px solid var(--grey-dark);
-
-}
-.todoListGrid {
-  grid-area: todo;
-}
-
-#socialMedia {
-  grid-area: socialMedia;
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  text-decoration: none;
-}
-
-.formLabel{
-  color: var(--white-pretty);
-  font-size: 1.5em;
-}
-
-.socItem>a{
-  text-decoration: none;
-}
-
-.social {
-  font-size: 1em;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: space-around;
-}
-
-.social>i {
-  flex: 1;
-  align-self: flex-start;
-  font-size: 3em;
-  margin: 0 2% 0 5%;
-  -ms-flex-item-align: left;
-      -ms-grid-row-align: left;
-      align-self: left;
-  text-align: left;
-  color: var(--yellow);
-}
-
-.social>p {
-  flex: 2;
-  align-self: flex-end;
-  font-size: .6em;
-  -ms-flex-item-align: left;
-  -ms-grid-row-align: left;
-  align-self: left;
-  text-align: left;
-  text-decoration: none;
-  color: var(--yellow);
-}
-.social:hover>p{
-  color: var(--red);
-}
-.social:hover>i{
-  color: var(--red);
-}
-
-
-#socialMedia > div:hover {
-  background-color: var(--grey-dark-light2);
-  -webkit-filter: background brightness(2);
-  filter: background brightness(2);
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-  border-radius: 15px;
-}
-
-#linkedIn {
-  flex: 1;
-}
-
-#github {
-  flex: 2;
-}
-
-#twitter {
-  flex: 3;
-}
-
-#phone {
-  flex: 4;
-}
-
-#email {
-  flex: 5;
-}
-
-#location {
-  flex: 6;
-}
-
-#footer {
-  background-color: var(--grey-dark-light3);
-  opacity: .8;
-  width: 100vw;
-  display: flex;
-  margin-top: 10vh;
-  height: 7vh;
-  position: relative;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-footer > img {
-  width: auto;
-  height: 70%;
-  margin: .4% 1vw;
-}
-
-#LizKaneFooter {
-  margin: .3% 2vw;
-  color: var(--white-pretty);
-  font-family: var(--AcierBatTextOutlineFF);
-  font-weight: var(--AcierBatTextOutlineFW);
-  font-style: var(--AcierBatTextOutlineFS);
-  font-size: 2.5em;
-} */
 
 /* ———————————————————————————————————————————————————— */
 /* IDS */

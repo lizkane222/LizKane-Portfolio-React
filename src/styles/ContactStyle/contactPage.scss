@@ -7,24 +7,24 @@
 #contactPage {
     z-index: 17;
     font-family: 'Bodoni Moda', serif;
-    margin: 5vh 0 5vh 0;
+    margin: 2vh 0 0vh 0;
     min-width: 100vw;
     min-height: 75vh;
-    max-height: 90vh;
+    max-height: 100vh;
     z-index: 10;
   }
 
   
 #contactPageWrapper {
   min-height: 80vh;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow: hidden;
 }
 .contactRow {
   width: 100%;
   min-height: 80vh;
   max-height: 80vh;
-  margin-top: 3vh;
+  margin: 3vh 0 5vh 0;
   display: -ms-grid;
     display: grid;
     -ms-grid-rows: 1fr 1fr;
@@ -32,11 +32,16 @@
         grid-template-areas: "email socialMedia";
 }
 
+#cardFormEmail {
+  max-height: 80vh;
+}
+
 .formRow {
   display: flex;
   justify-content: flex-start;
   flex-flow: row nowrap;
   align-items: baseline;
+  width: 100%;
   #formName{
     flex: 1;
   } #formEmail{
@@ -48,8 +53,23 @@
   }
 }
 
+.contactRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.card-body>form {
+  width: 100%;
+}
+
+
+
 #emailForm {
   grid-area: email;
+  
 }
 
 #message {
@@ -62,7 +82,7 @@
   font-family: var(--Lobster);
   font-size: 3em;
   color: var(--blue);
-  margin: -7vh 0 1vh 0;
+  margin: -10vh 0 -.5vh 0;
 }
 
 hr {
@@ -97,9 +117,8 @@ input:focus, textarea:focus, select:focus{
 
 .formLabel{
   color: var(--white-pretty);
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
-
 #submitShow {
   margin-top: 1em;
   // color: $yellow;
@@ -193,6 +212,7 @@ input:focus, textarea:focus, select:focus{
     height: 7vh;
     /* bottom: 0; */
     position: relative;
+    // float: bottom;
     bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;

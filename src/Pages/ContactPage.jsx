@@ -36,7 +36,7 @@ const ContactPage=() => {
         <section id="contactPage">
             <Wrapper id="contactPageWrapper">
             
-            <div className="row">
+            <div className="contactRow">
                 <EmailForm onClick={() => setCount(count+1)} id="emailForm"/>
 
                 {/* <TodoList className="todoListGrid"/> */}

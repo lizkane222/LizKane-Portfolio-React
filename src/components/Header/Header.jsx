@@ -153,12 +153,12 @@ const Header = (props) => {
                                 Projects
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
-                                Work
-                            </Link>
-
                             <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1000}>
                                 Interests
+                            </Link>
+
+                            <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
+                                Work
                             </Link>
 
                             <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
