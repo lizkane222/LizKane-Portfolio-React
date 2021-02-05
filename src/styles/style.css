@@ -2211,16 +2211,38 @@ li.rightTop>p {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "interestsHeadings interestsImage interestsText";
-}
+  }
 
-#interestsHeadings {
+.interestsBody {
   grid-area: interestsHeadings;
   margin: 0vh 5vw 0 4vw;
   max-height: 90vh;
+
+  /* background: linear-gradient(45deg, #02001F, #1F1B4E);
+  transform-style: preserve-3d;
+  transform: perspective(60rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.Interests-container {
+  /* background: linear-gradient(45deg, #02001F, #1F1B4E); */
+  transform-style: preserve-3d;
+  transform: perspective(60rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#interestsHeadings {
+  
   /* z-index:2; */
   /*
   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr 1fr;
   row-gap: 2px;
   grid-template-areas: 
@@ -2236,11 +2258,94 @@ li.rightTop>p {
   ". . . . ."
   ; */
   
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; 
+  align-items: center;  */
 }
+
+
+.Interests-list {
+  font-size: 4.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateX(-10deg) rotateY(20deg);
+  font-family: var(--Lobster);
+  font-size: 3.2em;
+  /* text-shadow: 0 0 5px var(--grey-very-dark); */
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+.Interests-list-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+.Interests-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #327E8A;
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+
+.InterestMask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: #327E8A;
+  top: 0;
+  height: 49%;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+.InterestMask span {
+  display: block;
+}
+
+.InterestMask + .InterestMask {
+  top: 48.9%;
+  height: 51.1%;
+}
+.InterestMask + .InterestMask span {
+  transform: translateY(-49%);
+}
+
+.Interests-list-item:hover .InterestMask,
+.Interests-list-item:active .InterestMask {
+  color: #FFF;
+  transform: skewX(12deg) translateX(5px);
+}
+.Interests-list-item:hover .InterestMask + .InterestMask,
+.Interests-list-item:active .InterestMask + .InterestMask {
+  transform: skewX(12deg) translateX(-5px);
+}
+.Interests-list-item:hover::before,
+.Interests-list-item:active::before {
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
 
 #obsessionsImgContainer{
   grid-area: interestsImage;
@@ -2288,17 +2393,19 @@ li.rightTop>p {
   grid-area: col1b;
 } */
 
-#callBlog, #callArtist, #callMusician, #callEngineer, #callNomad, #callTech, #callWriter, #callAthlete, #callTeacher, #callFeminist {
+/* #callBlog, #callArtist, #callMusician, #callEngineer, #callNomad, #callTech, #callWriter, #callAthlete, #callTeacher, #callFeminist {
+  border-radius: 50%;
+  background-color: var(--red);
+  padding: 1em .65em;
+  padding: 2em .5em;
+  animation: rotating 8s linear infinite;
+  box-shadow: 0px 0px 15px var(--grey-very-dark);
+  all above were commented out
+  -------
   cursor: pointer;
-  /* border-radius: 50%; */
-  /* background-color: var(--red); */
   color: var(--blue);
-  /* padding: 1em .65em; */
-  /* padding: 2em .5em; */
   width: 5vw;
   height: 5vw;
-  /* animation: rotating 8s linear infinite; */
-  /* box-shadow: 0px 0px 15px var(--grey-very-dark); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2307,15 +2414,33 @@ li.rightTop>p {
 #callBlog:hover, #callArtist:hover, #callMusician:hover, #callEngineer:hover, #callNomad:hover, #callTech:hover, #callWriter:hover, #callAthlete:hover, #callTeacher:hover, #callFeminist:hover {
 
 }
-#callBlog>h4 {
+
+#callBlog>li {
   color: var(--white-semi-grey);
-}
-#callBlog>h4, #callArtist>h4, #callMusician>h4, #callEngineer>h4, #callNomad>h4, #callTech>h4, #callWriter>h4, #callAthlete>h4, #callTeacher>h4, #callFeminist>h4 {
+
+} */
+/* #callBlog>li, #callArtist>li, #callMusician>li, #callEngineer>li, #callNomad>li, #callTech>li, #callWriter>li, #callAthlete>li, #callTeacher>li, #callFeminist>li {
   font-family: var(--Lobster);
   font-size: 3.8em;
   text-shadow: 0 0 5px var(--grey-very-dark);
-  /* position: absolute; */
-}
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+  position: absolute;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 
 #blogListContainer {
   width: 100vw;

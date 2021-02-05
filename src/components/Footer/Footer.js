@@ -12,10 +12,11 @@ const Footer = () => {
     return (
             <footer id="footer">
                     <p id="LizKaneFooter">© Liz Kane</p>
-                    <img src={GA} id="GAFooter"/>
-                    <img src={NAU} id="NAUFooter"/>
-                    <img src={Artois} id="ArtoisFooter"/>
-                    <img src={APS} id="APSFooter"/>
+                    <a href="https://generalassemb.ly/" ><img src={GA} class="footerImg" id="GAFooter"/></a>
+                    <a href="https://nau.edu/campuses/flagstaff-mountain-campus/" ><img src={NAU} class="footerImg" id="NAUFooter"/></a>
+                    <a href="http://www.univ-artois.fr/" ><img src={Artois} class="footerImg" id="ArtoisFooter"/></a>
+                        {/* <img src={APS} href="https://www.aps.edu/" class="footerImg" id="APSFooter"/> */}
+                    <a href="https://www.aps.edu/" ><img src={APS} class="footerImg" id="APSFooter"/></a>
             </footer>
         
     )
