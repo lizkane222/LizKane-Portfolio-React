@@ -7,7 +7,7 @@ import Window from "../components/window"
 import BlogList from "../components/Blog/BlogList";
 // const InterestsPageStyled = styled.div;
 import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/obsessions.png";
-
+import FloatBlogBox from "../components/Blog/FloatBlogBox";
 
 const InterestsPage=() => {
     const [isBlogOn, toggleBlogIsOn] = useToggle(false);
@@ -16,7 +16,7 @@ const InterestsPage=() => {
     const [isEngineerOn, toggleEngineerIsOn] = useToggle(false);
     const [isNomadOn, toggleNomadIsOn] = useToggle(false);
     const [isWriterOn, toggleWriterIsOn] = useToggle(false);
-    const [isTechOn, toggleTechIsOn] = useToggle(false);
+    // const [isTechOn, toggleTechIsOn] = useToggle(false);
     const [isAthleteOn, toggleAthleteIsOn] = useToggle(false);
     const [isTeacherOn, toggleTeacherIsOn] = useToggle(false);
     const [isFeministOn, toggleFeministIsOn] = useToggle(false);
@@ -107,12 +107,11 @@ const InterestsPage=() => {
                                         <span className="InterestMask"><span>Artist</span></span>
                                         <span className="InterestMask"><span>Artist</span></span>
                                 </li>
-                                <li id="callTech" className="Interests-list-item" onClick={toggleTechIsOn} data-offset="8">
-                                    {/* <h4>Techie</h4> */}
+                                {/* <li id="callTech" className="Interests-list-item" onClick={toggleTechIsOn} data-offset="8">
                                     Techie
                                         <span className="InterestMask"><span>Techie</span></span>
                                         <span className="InterestMask"><span>Techie</span></span>
-                                </li>
+                                </li> */}
                                 <li id="callWriter" className="Interests-list-item" onClick={toggleWriterIsOn} data-offset="8">
                                     {/* <h4>Writer</h4> */}
                                     Writer
@@ -174,9 +173,15 @@ const InterestsPage=() => {
                 </div>
             </Wrapper>
                 {/*  */}
+
                 <div>
-                    {isBlogOn ? <BlogList/> : []}
+                    {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
                 </div>
+
+
+                {/* <div>
+                    {isBlogOn ? <BlogList/> : []}
+                </div> */}
 
                 {/* <div>
                     <div>{on ? 'ON' : 'OFF'}</div>

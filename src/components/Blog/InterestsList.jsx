@@ -1,4 +1,10 @@
-import React, { Component } from "react";
+import React, {Component, setState} from "react";
+
+
+
+
+
+
 import BlogPost from "./BlogPost";
 import BlogPostContainer from "./BlogPostContainer";
 
@@ -27,8 +33,8 @@ const BlogPostWhyBlog = [{
  blogP7: " 100% a nomad ",
  blogP8: " 100% an athlete ",
  blogP9: " 100% a feminist ",
- blogP10: " 100% a woman in tech ",
- blogP11: " 100% somethings else I’ve yet to discover. ",
+ blogP10: " 100% a dreamer ",
+ blogP11: " 100% something else I’ve yet to discover. ",
  blogP12: "I’ve spent my life learning, discovering, traveling with the aim to know and be known. Those people and experiences I’ve met along the way have polished my personality in ways that can only be expressed and understood by telling the whole story. ",
  blogP13: "I’ve collected my thoughts on this whole picture of who I am at each of these different levels. If this drives you away or draws you to look closer then great. On the one hand maybe we would’ve meshed differently had I not opened up in this format, but on the other hand maybe we’re both better off laying it all out there to see if this thing is worth getting into. This thing of life, of work, of creating amazing applications together, joining forces to bring about a better or more purposeful future. ",
  blogP14: "I have so many ideas for what I want to create, and if you want to join me or find out more then welcome, I can’t wait to see what we can build together. What I do know is that I have a set trajectory that is fueled by my need to make this world better and put purpose in each and every one of my projects. ",
@@ -265,7 +271,7 @@ const BlogPostWomanInTech = [{
  imgSrc: WomanInTech,
  imgDesc: "",
  
-}]
+}];
 
 // const BlogPostArtist = {blogP1: "", blogP2: "", blogP3: "", blogP4: "", blogP5: "", blogP6: "", blogP7: "", blogP8: "", 
 // }
@@ -276,7 +282,7 @@ const BlogPostWomanInTech = [{
 // title = {title}, blogP1 = {blogP1}, blogP2 = {blogP2}, blogP3 = {blogP3}, blogP4 = {blogP4}, blogP5 = {blogP5}, blogP6 = {blogP6}, blogP7 = {blogP7}, blogP8 = {blogP8}, blogP9 = {blogP9}, blogP10 = {blogP10}, blogP11 = {blogP11}, blogP12 = {blogP12}, blogP13 = {blogP13}, blogP14 = {blogP14}, blogP15 = {blogP15}, blogP16 = {blogP16}, blogP17 = {blogP17}, blogP18 = {blogP18}, blogP19 = {blogP19}, blogP20 = {blogP20}, imgSrc = {imgSrc}, imgDesc = {imgDesc}, 
 // title = {title}, blogP1 = {blogP1}, blogP2 = {blogP2}, blogP3 = {blogP3}, blogP4 = {blogP4}, blogP5 = {blogP5}, blogP6 = {blogP6}, blogP7 = {blogP7}, blogP8 = {blogP8}, blogP9 = {blogP9}, blogP10 = {blogP10}, blogP11 = {blogP11}, blogP12 = {blogP12}, blogP13 = {blogP13}, blogP14 = {blogP14}, blogP15 = {blogP15}, blogP16 = {blogP16}, blogP17 = {blogP17}, blogP18 = {blogP18}, blogP19 = {blogP19}, blogP20 = {blogP20}, imgSrc = {imgSrc}, imgDesc = {imgDesc}, 
 
-const BlogList = (props) => {
+const InterestsList = () => {
     // const [open, setOpen] = useState
     // const [isOn, toggleIsOn] = useToggle(false);
 
@@ -312,53 +318,42 @@ const BlogList = (props) => {
     // const blogPostItem = blogPostArray.map(post => {return <BlogPost 
     //     title={post.title} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} 
     // />})
-        const blogItems = blogPostArray.map(post => {return <BlogPost key={post.title} title={post.title} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}/>})
-
-    const activatePost = (e) => {
-        e.className += "activePost"
-    }
-
     
     return (
-        
         <div id="blogContainer">
             <div id="blogListContainer">
                 <ul id="blogListUL">
-                    {/* <div className="blogBox"> */}
-                        {/* <BlogPost props={BlogPostWhyBlogArray}/> */}
+                    <div className="blogBox" id="blogBox1">
                         {BlogPostWhyBlogArray}
-                    {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox2">
                         {BlogPostArtistArray}
-                    {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox3">
                         {BlogPostMusicianArray}
-                    {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox4">
                         {BlogPostSoftwareEngineerArray}
-                     {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox5">
                         {BlogPostWriterArray}
-                     {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox6">
                         {BlogPostNomadArray}
-                     {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox7">
                         {BlogPostFeministArray}
-                     {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox8">
                         {BlogPostWomanInTechArray}
-                     {/* </div> */}
-                    {/* <div className="blogBox"> */}
+                    </div>
+                    <div className="blogBox" id="blogBox9">
                         {BlogPostAthleteArray}
-                     {/* </div> */}
-        
-                    <p style={{color: "rgba(201,200,201,.3)", textAlign: "center", margin: "0 0 0 35%"}}>hidden in plain sight though few may ever perceive</p><br/><br/>
+                    </div>
                 </ul>
             </div>
         </div>
-
     )
 }
 
-export default BlogList;
+export default InterestsList;

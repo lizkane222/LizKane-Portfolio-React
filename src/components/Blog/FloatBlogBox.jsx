@@ -1,47 +1,53 @@
 import React, {Component, setState} from "react";
 // import ReactEmbedGist from 'react-embed-gist';
 // import Gist from 'super-react-gist';
+import InterestsCarousel from "../Carousel/InterestsCarousel";
+import BlogList from "../Blog/BlogList";
 
-// import Carousel from "../../Carousel/Carousel"
 
 
 const FloatBlogBox =(props) => {
 
     return(
-        <div className="wrapperFloatBlogBox" onClick={props.setActive}>
+        // <div className="wrapperFloatBlogBox" onClick={this.props.setActive}>
+        //     <div className="floatBlogBox" onClick={(e) => e.stopPropagation()}>
+        //         <div className="blogContainer animate">                    
+                    
+        <div className="wrapperFloatBlogBox" onClick={props.toggleBlogIsOn}>
             <div className="floatBlogBox" onClick={(e) => e.stopPropagation()}>
-                <div className="blogContainer animate">
-                    <img src={props.imgSrc} className="blogImg" alt={props.imgDesc}/>
-                    <div className="blogTitle"><span>{props.title}</span></div>
+                <div className="blogContainer animate">                    
                     
-                    {/* {isOn ? */}
-                    <>
-                        <section id="blogSection">
-                            <p id="blogP1">{props.blogP1}</p>
-                            <p id="blogP2">{props.blogP2}</p>
-                            <p id="blogP3">{props.blogP3}</p>
-                            <p id="blogP4">{props.blogP4}</p>
-                            <p id="blogP5">{props.blogP5}</p>
-                            <p id="blogP6">{props.blogP6}</p>
-                            <p id="blogP7">{props.blogP7}</p>
-                            <p id="blogP8">{props.blogP8}</p>
-                            <p id="blogP9">{props.blogP9}</p>
-                            <p id="blogP10">{props.blogP10}</p>
-                            <p id="blogP11">{props.blogP11}</p>
-                            <p id="blogP12">{props.blogP12}</p>
-                            <p id="blogP13">{props.blogP13}</p>
-                            <p id="blogP14">{props.blogP14}</p>
-                            <p id="blogP15">{props.blogP15}</p>
-                            <p id="blogP16">{props.blogP16}</p>
-                            <p id="blogP17">{props.blogP17}</p>
-                            <p id="blogP18">{props.blogP18}</p>
-                            <p id="blogP19">{props.blogP19}</p>
-                            <p id="blogP20">{props.blogP20}</p>
-                        </section>
-                    </>
-                    {/* :[] */}
-                    {/* } */}
+                <BlogList />    
                     
+                    
+                    
+                    
+                    
+                    {/* <img src={this.props.imgSrc} className="blogImgActive" alt={this.props.imgDesc}/>
+                    <div className="blogTitleActive"><span>{this.props.title}</span></div>
+                            
+                    <section className="blogSection">
+                        <p className="blogP1">{this.props.blogP1}</p>
+                        <p className="blogP2">{this.props.blogP2}</p>
+                        <p className="blogP3">{this.props.blogP3}</p>
+                        <p className="blogP4">{this.props.blogP4}</p>
+                        <p className="blogP5">{this.props.blogP5}</p>
+                        <p className="blogP6">{this.props.blogP6}</p>
+                        <p className="blogP7">{this.props.blogP7}</p>
+                        <p className="blogP8">{this.props.blogP8}</p>
+                        <p className="blogP9">{this.props.blogP9}</p>
+                        <p className="blogP10">{this.props.blogP10}</p>
+                        <p className="blogP11">{this.props.blogP11}</p>
+                        <p className="blogP12">{this.props.blogP12}</p>
+                        <p className="blogP13">{this.props.blogP13}</p>
+                        <p className="blogP14">{this.props.blogP14}</p>
+                        <p className="blogP15">{this.props.blogP15}</p>
+                        <p className="blogP16">{this.props.blogP16}</p>
+                        <p className="blogP17">{this.props.blogP17}</p>
+                        <p className="blogP18">{this.props.blogP18}</p>
+                        <p className="blogP19">{this.props.blogP19}</p>
+                        <p className="blogP20">{this.props.blogP20}</p>
+                    </section> */}
                 </div>
             </div>
         </div>

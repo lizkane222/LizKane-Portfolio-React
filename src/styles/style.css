@@ -2276,7 +2276,7 @@ li.rightTop>p {
 
 
 .Interests-list {
-  font-size: 4.25rem;
+  /* font-size: 4.4rem; */
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -2285,7 +2285,7 @@ li.rightTop>p {
   align-items: center;
   transform: rotateX(-10deg) rotateY(20deg);
   font-family: var(--Lobster);
-  font-size: 3.2em;
+  font-size: 3.5em;
   /* text-shadow: 0 0 5px var(--grey-very-dark); */
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -2338,6 +2338,7 @@ li.rightTop>p {
 .Interests-list-item:hover .InterestMask,
 .Interests-list-item:active .InterestMask {
   color: #FFF;
+  /* color: var(--yellow); */
   transform: skewX(12deg) translateX(5px);
 }
 .Interests-list-item:hover .InterestMask + .InterestMask,
@@ -2350,8 +2351,68 @@ li.rightTop>p {
 }
 
 
+.wrapperFloatBlogBox  {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
 
+.floatBlogBox {
+  background-color: var(--yellow);
+  position: relative;
+  min-width: 90vw;
+  min-height: 80vh;
+  z-index: 99;
+  margin: none;
+  background-color: var(--white-semi-trans);
+  box-shadow: 0px 0px .5em var(--grey-very-dark);
+  -moz-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  -webkit-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  -o-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  border-radius: 25px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  /* overflow: hidden; */
+}
 
+.blogContainer {
+  /* display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: .05fr .06fr .07fr .1fr .1fr 4.4fr;
+      grid-template-rows: .05fr .06fr .07fr .1fr .1fr 4.4fr;
+      grid-template-areas: "category iframe iframe iframe " "name iframe iframe iframe" "logo iframe iframe iframe" "description iframe iframe iframe" "emblem iframe iframe iframe" ".  iframe iframe iframe"; */
+  display: flex;
+  contain: content;
+  position: absolute;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+/* .blogImg {
+  width: 100%;
+}
+
+.blogTitle {
+  font-size: 2em;
+}*/
+
+ 
 
 
 
@@ -2453,16 +2514,16 @@ li.rightTop>p {
 
 
 #blogListContainer {
-  width: 100vw;
-  height: 70vh;
+  width: 90vw;
+  height: 80vh;
   overflow: scroll;
   margin-bottom: 3vh;
 }
 
 #blogListUL {
   width: 100%;
-  height: 110%;
-  padding-bottom: 5vh;
+  height: 100%;
+  /* padding-bottom: 5vh; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2492,15 +2553,11 @@ li.rightTop>p {
           box-shadow: 0 1em 1.5em var(--grey-very-dark);
   line-height: 0;
   min-width: 23%;
-  width: 25%;
+  width: 23%;
   max-width: 30%;
   background-color: var(--grey-very-dark);
-  /* max-width: 25%; */
-  /* min-height: 50%; */
-  /* max-height: 80%; */
   height: 40vh;
   border-radius: 10px;
-  /* background-color: blue; */
 }
 
 .blogBox > .blogImg {
@@ -2510,14 +2567,14 @@ li.rightTop>p {
   -o-object-fit: cover;
   object-fit: cover;
   position: relative;
-  -webkit-transition: width 300ms ease-in-out;
-  /* transition: 450ms ease-in-out; */
-  transition: width 300ms ease-in-out;
+  -webkit-transition: width 100ms ease-in-out;
+  transition: width 100ms ease-in-out;
 }
 
 .blogBox > .blogTitle {
   min-height: 30%;
   /* background-color: var(--white-semi-grey); */
+  background-color: var(--greyish-semi-trans);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -2542,13 +2599,97 @@ li.rightTop>p {
   /* opacity: 0; */
 }
 
-#blogBox1:hover > .blogImg, #blogBox2:hover > .blogImg, #blogBox3:hover > .blogImg, #blogBox4:hover > .blogImg, #blogBox5:hover > .blogImg, #blogBox6:hover > .blogImg, #blogBox7:hover > .blogImg, #blogBox8:hover > .blogImg, #blogBox9:hover > .blogImg  {
+/* #blogBox1:hover > .blogImg, #blogBox2:hover > .blogImg, #blogBox3:hover > .blogImg, #blogBox4:hover > .blogImg, #blogBox5:hover > .blogImg, #blogBox6:hover > .blogImg, #blogBox7:hover > .blogImg, #blogBox8:hover > .blogImg, #blogBox9:hover > .blogImg  { */
+.blogBox:hover > .blogImg {
   width: 100%;
   transition: width 300ms ease-in-out;
   cursor: pointer;
   /* height: 30%; */
 }
 
+
+#postEnlarged {
+  background-color: var(--white-pretty);
+  border-radius: 25px;
+  margin: 2em;
+  box-shadow: 0 0 1em var(--greyish);
+  overflow: hidden;
+  z-index: 100;
+  position: realtive;
+}
+
+#postHeader {
+  display: inline-flex;
+  justify-content: center;
+  /* padding-left: 1em; */
+  font-family: var(--Chic);
+  z-index: 103;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--greyish);
+  width: 100%;
+  /* background-color: var(--white-semi-trans);
+  background-color: var(--white-pretty); */
+}
+
+#postBackArrow {
+  font-size: 3.5em;
+  width: 3em;
+  /* align-self: flex-start; */
+  margin: -3em 0 0 -2em;
+  line-height: .5em;
+  color: var(--white-pretty);
+  background-color: var(--blue-light);
+  border-bottom-right-radius: 40px;
+  padding: -1em .5em .5em 0;
+  transition: all 150ms ease-in-out;
+}
+
+#postBackArrow:hover {
+  /* transform: scale(1.2); */
+  font-size: 3.7em;
+  line-height: .5em;
+  padding-left: 1em;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+#activeTitle {
+  font-size: 3em;
+  margin: 0 0 0 2em;
+  align-self: center;
+  /* text-decoration: underline; */
+}
+
+#postEnglarged>.image-wrapper {
+  /* position: absolute; */
+  /* z-index: 101;
+  min-width: 100%;
+  min-height: 100%; */
+}
+
+.activeBlogImg {
+  min-width: 100%;
+  /* min-height: 100%; */
+  
+}
+.blogBody {
+  display: flex;
+  justify-content: flex-start;
+
+}
+.blogSection {
+  flex: 1;
+  width: 70%;
+  z-index: 103;
+  font-size: 1em;
+  line-height: 1.1em;
+  padding: 1.5em 2em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.blogSection>p {
+  margin: .6em 0;
+}
 
 /* .blogBox:hover {
   -webkit-box-flex: 1;
