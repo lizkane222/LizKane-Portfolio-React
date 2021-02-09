@@ -1,0 +1,173 @@
+:root {
+  --red:#8B0124;
+  --blue:#327E8A;
+  --yellow: #EDC168;
+  --yellowDark: rgba(124,85,32,1);
+  --white: rgba(248,248,248,1);
+  --white-semi-trans: rgba(248,248,248,1);
+  --white-semi-grey: rgba(248,248,248,.8);
+  --white-pretty: #fff;
+  --greyish: #e8e8e8;
+  --greyish-semi-trans: rgba(201,200,201,.5);
+  --greyish-solid: #737373;
+  --grey-very-dark: rgba(25,25,25,1);
+  --grey-very-dark2: rgba(34,34,34,1);
+  --grey-dark: rgba(41,41,41,1);
+  --grey-dark2: rgba(45,45,45,1);
+  --grey-dark-light: rgba(56,56,56,1);
+  --grey-dark-light2: rgb(32, 30, 32);
+  --grey-dark-light3: rgb(46, 46, 46);
+  --grey-dark-light4: rgb(80, 80, 80);
+  --mintGreen: #89FAD0;
+  --speed: 500ms;
+  --nav-size: 7vh;
+  --border-radius-circle: 50%;
+  --border-radius-curved: 10%;
+  --size: 60vmin;
+  --space: 8vmin;
+  --duration: 450ms;
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* FONTS */
+  --base-font: 'Courier New', Courier, monospace;
+  --Lobster: 'Lobster';
+  --Chic: 'Bodoni Moda', serif;
+  /* Acier BAT Text Gris */
+  /* font-family */
+  /* font-weight */
+  /* font-style */
+  --AcierBatTextGrisFF: acier-bat-gris, sans-serif;
+  --AcierBatTextGrisFS: normal;
+  --AcierBatTextGrisFW: 400;
+  /* Acier BAT Text Noir */
+  /* font-family */
+  /* font-weight */
+  /* font-style */
+  --AcierBatTextNoirFF: acier-bat-noir, sans-serif;
+  --AcierBatTextNoirFW: 400;
+  --AcierBatTextNoirFS: normal;
+  /* Acier BAT Text Outline */
+  /* font-family */
+  /* font-weight */
+  /* font-style */
+  --AcierBatTextOutlineFF: acier-bat-outline, sans-serif;
+  --AcierBatTextOutlineFW: 400;
+  --AcierBatTextOutlineFS: normal;
+  /* Acier BAT Text Solid */
+  /* font-family */
+  /* font-weight */
+  /* font-style */
+  --AcierBatTextSolidFF: acier-bat-solid, sans-serif;
+  --AcierBatTextSolidFW: 400;
+  --AcierBatTextSolidFS: normal;
+  /* Acier BAT Text Strokes */
+  /* font-family */
+  /* font-weight */
+  /* font-style */
+  --AcierBatTextStrokesFF: acier-bat-strokes, sans-serif;
+  --AcierBatTextStrokesFW: 400;
+  --AcierBatTextStrokesFS: normal;
+}
+
+.redText {
+  color: var(--red);
+}
+
+.blueText {
+  color: var(--blue);
+}
+
+.yellowText {
+  color: var(--yellow);
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 0 0.8em #191919;
+          box-shadow: 0 0 0.8em #191919;
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 0.1em #191919;
+}
+
+.grey-dark {
+  background-color: #292929;
+}
+
+.grey-dark-light {
+  background-color: #383838;
+}
+
+.grey-very-dark2 {
+  background-color: #222222;
+}
+
+.grey-dark2 {
+  background-color: #2d2d2d;
+}
+
+.grey-very-dark {
+  background-color: #191919;
+}
+
+section #titleSection {
+  padding: 5vh 5vw;
+  min-width: 90vw;
+  max-width: 10vw;
+  min-height: 80vh;
+  margin: 20vh auto 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* #region Mask Text */
+.titleContainer {
+  position: relative;
+  --maskX: 0;
+  --maskY: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.titleContainer h1, .titleContainer #intro {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10em;
+  line-height: 1.1em;
+  text-align: center;
+  width: 100%;
+}
+
+.titleContainer h3, .titleContainer #introSE {
+  font-family: "Bodoni Moda", serif;
+  font-size: 7em;
+  margin: 0 auto;
+  line-height: 1.1em;
+  text-align: center;
+  width: 100%;
+}
+
+.titleWrapper {
+  color: #327E8A;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.cloneWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #65cddd;
+  -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-clip-path: polygon(0 0, calc(var(--maskX) * 1% + (var(--maskY) - 50) * .4%) 0, calc(var(--maskX) * 1% + (var(--maskY) - 50) * -.4%) 100%, 0 100%);
+          clip-path: polygon(0 0, calc(var(--maskX) * 1% + (var(--maskY) - 50) * .4%) 0, calc(var(--maskX) * 1% + (var(--maskY) - 50) * -.4%) 100%, 0 100%);
+}
+
+/* #endregion */
+/*# sourceMappingURL=window.css.map */

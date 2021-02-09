@@ -69,7 +69,7 @@ class Project extends Component {
                                 </li>
                             </ul>
 
-                        <div class="logoContainer">
+                        <div className="logoContainer">
                             <img id={this.props.name+`InactiveImg`} src={this.props.logo} alt={this.props.name + "logo"} style={this.props.style}/>
                         </div>
                         </div>

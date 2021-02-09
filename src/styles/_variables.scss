@@ -3,6 +3,7 @@
 // Variables
 $red:#8B0124;
 $blue:#327E8A;
+$blue-light:#65cddd;
 $yellow: #EDC168;
 $yellowDark: rgba(124,85,32,1);
 $white: rgba(248,248,248,1);
@@ -117,7 +118,10 @@ color: var(--yellow);
 // GREY SCALE
 
 .box-shadow {
-    box-shadow: 0 0 .8em var(--grey-very-dark);
+    box-shadow: 0 0 .8em $grey-very-dark;
+}
+.text-shadow {
+    text-shadow: 0px 0px .1em $grey-very-dark;
 }
 
 .grey-dark {

@@ -20,6 +20,7 @@
 :root {
   --red:#8B0124;
   --blue:#327E8A;
+  --blue-light:#65cddd;
   --yellow: #EDC168;
   --yellowDark: rgba(124,85,32,1);
   --white: rgba(248,248,248,1);
@@ -425,19 +426,23 @@ body {
 /* ----- LANDING PAGE ------ */
 /* ------------------------ */
 #landingPage {
-  z-index: 16;
+  /* z-index: 16; */
   font-family: var(--AcierBatTextStrokesFF);
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
-  max-height: 90vh;
-  min-width: 90vw;
+  max-height: 100vh;
+  max-height: 200vh;
+  min-width: 100vw;
   margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
+  /* display: -ms-grid; */
+  /* display: grid; */
   /* grid-template-columns: repeat(5,1fr) 6fr;
   grid-template-rows: repeat(6,1fr);
   grid-template-areas: ; */
 }
+
+@import "../components/KaneLogo/window.css";
+
 
 .citeArrival {
   position: relative;
@@ -446,25 +451,28 @@ body {
   -ms-grid-columns: 4fr 5fr;
       grid-template-columns: 4fr 5fr;
   -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows: .25fr .25fr;
       grid-template-areas: "intro seek";
   z-index: 190;
-  top: 7vh;
+  top: -12vh;
   /* left: 10vw; */
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  place-items: center;
 }
+
 
 .lizKaneIntro {
   grid-area: intro;
-  margin-left: 5vw;
+  margin: 10vh 0 0 5vw;
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ()1fr;
-      grid-template-columns: repeat(1fr);
-  -ms-grid-rows: (0.5fr)10;
-      grid-template-rows: repeat(10, 0.5fr);
+  max-height: 60vh;
+  /* -ms-grid-columns: (2)1fr; */
+      grid-template-columns: repeat(1fr,1);
+  -ms-grid-rows: (1fr)5;
+      grid-template-rows: repeat(5, 1fr);
       grid-template-areas: "Liz" "p1" "p2" "p3" "p4" "p5";
   -webkit-transition: color 0s ease-in-out;
   transition: color 0s ease-in-out;
@@ -496,7 +504,8 @@ body {
   -webkit-transition: 0s font-family;
   transition: 0s font-family;
   color: var(--blue);
-  margin-bottom: 0;
+  margin: 0 auto;
+  font-size: 1.6em;
   /* transition: 1s; */
   /* transition-timing-function: ease-in-out; */
   /* transition-timing-function: cubic-bezier(.6,0,.17,1.01) */
@@ -514,16 +523,6 @@ body {
   transition-delay: 900ms; */
 }
 
-/* .lizKaneIntro > p:hover { */
-  /* transition: 1200ms ease; */
-  /* transition-timing-function: cubic-bezier(.6,0,.17,1.01); */
-  /* font-family: var(--AcierBatTextSolidFF);
-  font-weight: var(--AcierBatTextSolidFW);
-  font-style: var(--AcierBatTextSolidFS); */
-  /* transition-delay: 200ms; */
-  /* transition-delay: 900ms; */
-/* } */
-
 .solid {
   font-family: var(--AcierBatTextSolidFF);
   font-weight: var(--AcierBatTextSolidFW);
@@ -537,9 +536,9 @@ body {
 }
 
 #seekLogoContainer {
-  grid-area: "seek";
+  grid-area: seek;
   position: relative;
-  top: 3vh;
+  top: -5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,15 +548,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: show;
   -webkit-perspective: 40px;
           perspective: 40px;
 }
 
 #seekLogoContainer > img {
   position: absolute;
-  grid-area: "seek";
-  top: -40vh;
+  /* grid-area: seek; */
+  top: -20vh;
   left: -6.5vw;
 }
 
@@ -573,13 +573,13 @@ body {
 }
 
 #seekPhoto17 {
-  top: 5;
+  top: 0;
   z-index: 0;
   opacity: .8;
 }
 
 #seekPhoto19 {
-  top: 5;
+  top: 0;
   z-index: 0;
   opacity: .8;
   background-blend-mode: hard-light;

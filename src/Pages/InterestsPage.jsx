@@ -67,14 +67,6 @@ const InterestsPage=() => {
 // });
 
 
-
-
-
-
-
-
-
-
     return(
         <section id="interestsPage">
             <Wrapper>
@@ -88,62 +80,62 @@ const InterestsPage=() => {
                                 <li id="callBlog" className="Interests-list-item" onClick={toggleBlogIsOn} data-offset="20">
                                     {/* <h4>Blog</h4> */}
                                     Blog
-                                        <span class="InterestMask"><span>Blog</span></span>
-                                        <span class="InterestMask"><span>Blog</span></span>
+                                        <span className="InterestMask"><span>Blog</span></span>
+                                        <span className="InterestMask"><span>Blog</span></span>
                                 </li>
                                 <li id="callMusician" className="Interests-list-item" onClick={toggleMusicianIsOn} data-offset="16">
                                     {/* <h4>Musician</h4> */}
                                     Musician
-                                        <span class="InterestMask"><span>Musician</span></span>
-                                        <span class="InterestMask"><span>Musician</span></span>
+                                        <span className="InterestMask"><span>Musician</span></span>
+                                        <span className="InterestMask"><span>Musician</span></span>
                                 </li>
                                 <li id="callEngineer" className="Interests-list-item" onClick={toggleEngineerIsOn} data-offset="12">
                                     {/* <h4>Engineer</h4> */}
                                     Engineer
-                                        <span class="InterestMask"><span>Engineer</span></span>
-                                        <span class="InterestMask"><span>Engineer</span></span>
+                                        <span className="InterestMask"><span>Engineer</span></span>
+                                        <span className="InterestMask"><span>Engineer</span></span>
                                 </li>
                                 <li id="callNomad" className="Interests-list-item" onClick={toggleNomadIsOn} data-offset="8">
                                     {/* <h4>Nomad</h4> */}
                                     Nomad
-                                        <span class="InterestMask"><span>Nomad</span></span>
-                                        <span class="InterestMask"><span>Nomad</span></span>
+                                        <span className="InterestMask"><span>Nomad</span></span>
+                                        <span className="InterestMask"><span>Nomad</span></span>
                                 </li>
                                 <li id="callArtist" className="Interests-list-item" onClick={toggleArtistIsOn} data-offset="8">
                                     {/* <h4>Artist</h4> */}
                                     Artist
-                                        <span class="InterestMask"><span>Artist</span></span>
-                                        <span class="InterestMask"><span>Artist</span></span>
+                                        <span className="InterestMask"><span>Artist</span></span>
+                                        <span className="InterestMask"><span>Artist</span></span>
                                 </li>
                                 <li id="callTech" className="Interests-list-item" onClick={toggleTechIsOn} data-offset="8">
                                     {/* <h4>Techie</h4> */}
                                     Techie
-                                        <span class="InterestMask"><span>Techie</span></span>
-                                        <span class="InterestMask"><span>Techie</span></span>
+                                        <span className="InterestMask"><span>Techie</span></span>
+                                        <span className="InterestMask"><span>Techie</span></span>
                                 </li>
                                 <li id="callWriter" className="Interests-list-item" onClick={toggleWriterIsOn} data-offset="8">
                                     {/* <h4>Writer</h4> */}
                                     Writer
-                                        <span class="InterestMask"><span>Writer</span></span>
-                                        <span class="InterestMask"><span>Writer</span></span>
+                                        <span className="InterestMask"><span>Writer</span></span>
+                                        <span className="InterestMask"><span>Writer</span></span>
                                 </li>
                                 <li id="callAthlete" className="Interests-list-item" onClick={toggleAthleteIsOn} data-offset="8">
                                     {/* <h4>Athlete</h4> */}
                                     Athlete
-                                        <span class="InterestMask"><span>Athlete</span></span>
-                                        <span class="InterestMask"><span>Athlete</span></span>
+                                        <span className="InterestMask"><span>Athlete</span></span>
+                                        <span className="InterestMask"><span>Athlete</span></span>
                                 </li>
                                 <li id="callTeacher" className="Interests-list-item" onClick={toggleTeacherIsOn} data-offset="8">
                                     {/* <h4>Teacher</h4> */}
                                     Teacher
-                                        <span class="InterestMask"><span>Teacher</span></span>
-                                        <span class="InterestMask"><span>Teacher</span></span>
+                                        <span className="InterestMask"><span>Teacher</span></span>
+                                        <span className="InterestMask"><span>Teacher</span></span>
                                 </li>
                                 <li id="callFeminist" className="Interests-list-item" onClick={toggleFeministIsOn} data-offset="8">
                                     {/* <h4>Feminist</h4> */}
                                     Feminist
-                                        <span class="InterestMask"><span>Feminist</span></span>
-                                        <span class="InterestMask"><span>Feminist</span></span>
+                                        <span className="InterestMask"><span>Feminist</span></span>
+                                        <span className="InterestMask"><span>Feminist</span></span>
                                 </li>
                             </ul>
                         </div>
@@ -157,24 +149,24 @@ const InterestsPage=() => {
                 </section>
                 
                 <div className="rollerContainer">
-                    <div class="content">
-                        <div class="content__container">
-                            <h5 class="content__container__text">
+                    <div className="content">
+                        <div className="content__container">
+                            <h5 className="content__container__text">
                                 more than just a
                                 
                             </h5>
 
-                            <ul class="content__container__list">
-                                <li class="content__container__list__item blueRoll">Software Engineer</li>
-                                <li class="content__container__list__item yellowRoll">Teacher</li>
-                                <li class="content__container__list__item redRoll vowel" id="vowelArtist">Artist</li>
-                                <li class="content__container__list__item blueRoll">Musician</li>
-                                <li class="content__container__list__item yellowRoll">Writer</li>
-                                <li class="content__container__list__item redRoll">Feminist</li>
-                                <li class="content__container__list__item yellowRoll vowel">Athlete</li>
-                                <li class="content__container__list__item redRoll">Nomad</li>
-                                <li class="content__container__list__item yellowRoll">Woman in Tech</li>
-                                <li class="content__container__list__item blueRoll">Software Engineer</li>
+                            <ul className="content__container__list">
+                                <li className="content__container__list__item blueRoll">Software Engineer</li>
+                                <li className="content__container__list__item yellowRoll">Teacher</li>
+                                <li className="content__container__list__item redRoll vowel" id="vowelArtist">Artist</li>
+                                <li className="content__container__list__item blueRoll">Musician</li>
+                                <li className="content__container__list__item yellowRoll">Writer</li>
+                                <li className="content__container__list__item redRoll">Feminist</li>
+                                <li className="content__container__list__item yellowRoll vowel">Athlete</li>
+                                <li className="content__container__list__item redRoll">Nomad</li>
+                                <li className="content__container__list__item yellowRoll">Woman in Tech</li>
+                                <li className="content__container__list__item blueRoll">Software Engineer</li>
 
                             </ul>
                         </div>

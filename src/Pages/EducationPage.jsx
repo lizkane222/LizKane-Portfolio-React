@@ -83,9 +83,9 @@ const EducationPage=() => {
                         </svg>
                     </div>
                     <div id="edDocContainer">
-                        <h2 class="edDocName">{<MastersDoc/>}</h2>
-                        <h2 class="edDocName">{<BachelorsDoc/>}</h2>
-                        <h2 class="edDocName">{<GACertDoc/>}</h2>
+                        <h2 className="edDocName">{<MastersDoc/>}</h2>
+                        <h2 className="edDocName">{<BachelorsDoc/>}</h2>
+                        <h2 className="edDocName">{<GACertDoc/>}</h2>
                     </div>
                 </div>
             </Wrapper>

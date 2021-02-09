@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Wrapper from '../components/Header/Wrapper';
 
+import Title from "../components/KaneLogo/window3d";
 import KaneLogo from "../components/KaneLogo/KaneLogo";
 
 import Seek7 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-7.png"
@@ -15,36 +16,68 @@ import Seek6 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1
 
 
 // const LandingPageStyled = styled.div;
+// const SeekImages = () => {
+//     return(
+//         <>
+//             <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo"/>
+//             <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo"/>
+//         </>
+//     )
+// }
+
+const NameIntro = () => {
+    return(
+        <section id="titleSection">
+            <h1 id="intro">
+            Liz Kane
+            </h1>
+             <hr/>
+            <h3 id="introSE">
+            Software Engineer
+            </h3>
+        </section>
+    )
+}
+
 
 const LandingPage=() => {
-    const [text, setText] = useState("strokes")
+    const [intro, setIntro] = useState("strokes")
 
     const handleHover = (e) => {
-        e.target.className = "solid"
+        {e.target.className === "strokes" ?
+        e.target.className = "solid" 
+        :
+        e.target.className = "strokes"
+        }
     }
 
 
     return(
         <section id="landingPage">
             <Wrapper>
+                
+                        <Title text={<NameIntro/>} />
+
+            </Wrapper>
                 <div className="citeArrival">
                     <div className="lizKaneIntro">
-                        <p id="Liz" className="myName" onMouseOver={() => setText(!handleHover)}>
-                            Liz Kane
-                        </p>
-                        <p id="p1" onMouseOver={handleHover}>Moralistically Driven that Everything Should Have a Purpose.</p>
-                        <p id="p2" onMouseOver={handleHover}>Realistically Optimistic</p>
-                        <p id="p3" onMouseOver={handleHover}>Direct & Patient in Leading Conflict Resolution.</p>
-                        <p id="p4" onMouseOver={handleHover}>Gifted in Creating Communities.</p>
+                        <p id="p1" className="strokes" onMouseOver={handleHover}>Driven by purposeful engineering.</p>
+                        <p id="p2" className="strokes" onMouseOver={handleHover}>Realistic & Optimistic</p>
+                        <p id="p3" className="strokes" onMouseOver={handleHover}>Direct & Patient in leading conflict resolution.</p>
+                        <p id="p4" className="strokes" onMouseOver={handleHover}>High aptitude in creating communities.</p>
                     </div>  
 
                     <div id="seekLogoContainer">
                         <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo"></img>
                         <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo"></img>
                     </div>
-
                 </div>
-            </Wrapper>
+
+                {/* <Window3d text1="Liz Kane" text2=" - " text3="Software Engineer"/> */}
+                {/* <Window3d text="Liz Kane - Software Engineer"/> */}
+                
+                
+
         </section>
     )
 }
