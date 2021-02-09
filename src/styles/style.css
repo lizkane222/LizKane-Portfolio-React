@@ -431,7 +431,7 @@ body {
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
   max-height: 100vh;
-  max-height: 200vh;
+  max-height: 150vh;
   min-width: 100vw;
   margin: 0 auto;
   /* display: -ms-grid; */
@@ -441,7 +441,7 @@ body {
   grid-template-areas: ; */
 }
 
-@import "../components/KaneLogo/window.css";
+
 
 
 .citeArrival {
@@ -473,7 +473,7 @@ body {
       grid-template-columns: repeat(1fr,1);
   -ms-grid-rows: (1fr)5;
       grid-template-rows: repeat(5, 1fr);
-      grid-template-areas: "Liz" "p1" "p2" "p3" "p4" "p5";
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5";
   -webkit-transition: color 0s ease-in-out;
   transition: color 0s ease-in-out;
 }
@@ -505,10 +505,11 @@ body {
   transition: 0s font-family;
   color: var(--blue);
   margin: 0 auto;
-  font-size: 1.6em;
-  /* transition: 1s; */
-  /* transition-timing-function: ease-in-out; */
-  /* transition-timing-function: cubic-bezier(.6,0,.17,1.01) */
+  font-size: 1.8em;
+  line-height: 1em;
+  text-align: center;
+  transition: all 1.5s ease-in-out;
+  transition-timing-function: cubic-bezier(.6,0,.17,1.01)
 }
 
 .lizKaneIntro > #Liz:hover {
@@ -527,18 +528,28 @@ body {
   font-family: var(--AcierBatTextSolidFF);
   font-weight: var(--AcierBatTextSolidFW);
   font-style: var(--AcierBatTextSolidFS);
+  font-size: 1.8em;
+  transition: all 1.5s ease-in-out;
+  transition-timing-function: cubic-bezier(.6,0,.17,1.01)
+  /* font-family: var(--Chic);
+  font-weight: var(--AcierBatTextStrokesFW);
+  font-style: var(--AcierBatTextStrokesFS); */
 }
 
 .strokes {
+  font-size: 1.6em;
   font-family: var(--AcierBatTextStrokesFF);
   font-weight: var(--AcierBatTextStrokesFW);
   font-style: var(--AcierBatTextStrokesFS);
+  transition: all 1.5s ease-in-out;
+  transition-timing-function: cubic-bezier(.6,0,.17,1.01)
 }
 
+@import "../components/KaneLogo/window.css";
+/* 
 #seekLogoContainer {
   grid-area: seek;
   position: relative;
-  top: -5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +559,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* overflow: hidden; */
   overflow: show;
   -webkit-perspective: 40px;
           perspective: 40px;
@@ -556,7 +566,7 @@ body {
 
 #seekLogoContainer > img {
   position: absolute;
-  /* grid-area: seek; */
+  grid-area: seek;
   top: -20vh;
   left: -6.5vw;
 }
@@ -593,7 +603,7 @@ body {
 #seekPhoto23 {
   top: 10;
   z-index: 23;
-}
+} */
 
 /* ------------------------------------------------------------ */
 /* ----------------- RESUME PAGE ------------------------------ */

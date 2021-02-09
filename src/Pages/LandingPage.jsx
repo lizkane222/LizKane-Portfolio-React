@@ -4,6 +4,8 @@ import Wrapper from '../components/Header/Wrapper';
 import Title from "../components/KaneLogo/window3d";
 import KaneLogo from "../components/KaneLogo/KaneLogo";
 
+import SeekLogo from "../components/KaneLogo/SeekLogo";
+
 import Seek7 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-7.png"
 import Seek3 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-3.png"
 import Seek5 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-5.png"
@@ -12,18 +14,6 @@ import Seek1 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1
 import Seek4 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-4.png"
 import Seek6 from "../components/ResourcesProjects/UploadPhotosToWeb/seek/Seek-1-6.png"
 
-
-
-
-// const LandingPageStyled = styled.div;
-// const SeekImages = () => {
-//     return(
-//         <>
-//             <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo"/>
-//             <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo"/>
-//         </>
-//     )
-// }
 
 const NameIntro = () => {
     return(
@@ -67,15 +57,9 @@ const LandingPage=() => {
                         <p id="p4" className="strokes" onMouseOver={handleHover}>High aptitude in creating communities.</p>
                     </div>  
 
-                    <div id="seekLogoContainer">
-                        <img src={Seek2} alt="seek logo layer" id="seekPhoto17" className="seekLogo"></img>
-                        <img src={Seek1} alt="seek logo layer" id="seekPhoto19" className="seekLogo"></img>
-                    </div>
-                </div>
+                    <SeekLogo/>
 
-                {/* <Window3d text1="Liz Kane" text2=" - " text3="Software Engineer"/> */}
-                {/* <Window3d text="Liz Kane - Software Engineer"/> */}
-                
+                </div>             
                 
 
         </section>

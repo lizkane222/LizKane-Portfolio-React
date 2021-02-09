@@ -59,3 +59,87 @@ section #titleSection {
 }
   
   /* #endregion */
+
+
+
+/* SEEK LOGO region */
+
+
+div#seekLogoContainer {
+    background-color: aliceblue;
+    grid-area: seek;
+    position: relative;
+    // top: -5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    // left: -6.5vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* overflow: hidden; */
+    overflow: show;
+    -webkit-perspective: 40px;
+            perspective: 40px;
+  }
+  
+  #seekLogoContainer > img.seekLogo {
+    // background-color: aliceblue;
+    position: absolute;
+    // grid-area: seek;
+    
+    // left: -6.5vw;
+    // vertical-align: top;
+    // margin-top: 0;
+    // padding-top: 0;
+    max-width: 70vw;
+    opacity: .8;
+    background-blend-mode: hard-light;
+  }
+  
+  #seekPhoto13 {
+    top: 10;
+    z-index: 13;
+  }
+  
+  #seekPhoto15 {
+    top: 5;
+    z-index: 0;
+  }
+  
+  #seekPhoto17 {
+    top: -8.5vh;
+    z-index: -2;
+    // opacity: .8;
+    // background-blend-mode: hard-light;
+  }
+  
+  #seekPhoto19 {
+    top: -18.5vh;
+    z-index: -1;
+    // opacity: .8;
+    // background-blend-mode: hard-light;
+  }
+  
+  #seekPhoto21 {
+    top: 10;
+    z-index: 21;
+  }
+  
+  #seekPhoto23 {
+    top: 10;
+    z-index: 23;
+  }
+
+
+
+
+
+
+/* end SEEK LOGO region */

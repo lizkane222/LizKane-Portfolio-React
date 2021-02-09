@@ -51,7 +51,7 @@
   /* font-weight */
   /* font-style */
   --AcierBatTextOutlineFF: acier-bat-outline, sans-serif;
-  --AcierBatTextOutlineFW: 400;
+  --AcierBatTextOutlineFW: 600;
   --AcierBatTextOutlineFS: normal;
   /* Acier BAT Text Solid */
   /* font-family */
@@ -65,7 +65,7 @@
   /* font-weight */
   /* font-style */
   --AcierBatTextStrokesFF: acier-bat-strokes, sans-serif;
-  --AcierBatTextStrokesFW: 400;
+  --AcierBatTextStrokesFW: 600;
   --AcierBatTextStrokesFS: normal;
 }
 
@@ -170,4 +170,68 @@ section #titleSection {
 }
 
 /* #endregion */
+/* SEEK LOGO region */
+div#seekLogoContainer {
+  background-color: aliceblue;
+  grid-area: seek;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  overflow: show;
+  -webkit-perspective: 40px;
+  perspective: 40px;
+}
+
+#seekLogoContainer > img.seekLogo {
+  position: absolute;
+  max-width: 70vw;
+  opacity: .8;
+  background-blend-mode: hard-light;
+}
+
+#seekPhoto13 {
+  top: 10;
+  z-index: 13;
+}
+
+#seekPhoto15 {
+  top: 5;
+  z-index: 0;
+}
+
+#seekPhoto17 {
+  top: -8.5vh;
+  z-index: -2;
+}
+
+#seekPhoto19 {
+  top: -18.5vh;
+  z-index: -1;
+}
+
+#seekPhoto21 {
+  top: 10;
+  z-index: 21;
+}
+
+#seekPhoto23 {
+  top: 10;
+  z-index: 23;
+}
+
+/* end SEEK LOGO region */
 /*# sourceMappingURL=window.css.map */
