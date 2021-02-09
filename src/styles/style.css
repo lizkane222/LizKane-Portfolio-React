@@ -2675,7 +2675,7 @@ li.rightTop>p {
 .blogBody {
   display: flex;
   justify-content: flex-start;
-
+  flex-flow:
 }
 .blogSection {
   flex: 1;
