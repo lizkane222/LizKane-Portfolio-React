@@ -28,49 +28,9 @@ const InterestsPage=() => {
     let blueColor = "#327E8A";
     let yellowColor = "#EDC168";
 
-//     var jQmenu = document.getElementsByClassName('Interests-list'),
-//     jQitem = document.getElementsByClassName('Interests-list-item'),
-//     // w = window.width(), //window width
-//     // h = window.height(); //window height
-//     interestsBody = document.getElementsByClassName('interestsBody'),
-//     // w = interestsBody.width(),
-//     // h = interestsBody.height();
-//     w = Window.width(),
-//     h = Window.height();
-
-//   interestsBody.on('mousemove', function(e) {
-//   var offsetX = 0.5 - e.pageX / w, //cursor position X
-//       offsetY = 0.5 - e.pageY / h, //cursor position Y
-//       dy = e.pageY - h / 2, //@h/2 = center of poster
-//       dx = e.pageX - w / 2, //@w/2 = center of poster
-//       theta = Math.atan2(dy, dx), //angle between cursor and center of poster in RAD
-//       angle = theta * 180 / Math.PI - 90, //convert rad in degrees
-//       offsetPoster = jQmenu.data('offset'),
-//       transformPoster = 'translate3d(0, ' + -offsetX * offsetPoster + 'px, 0) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)'; //poster transform
-
-//   //get angle between 0-360
-//   if (angle < 0) {
-//     angle = angle + 360;
-//   }
-
-//   //poster transform
-//   jQmenu.css('transform', transformPoster);
-
-//   //parallax for each layer
-//   jQitem.each(function() {
-//     var jQthis = (this),
-//         offsetLayer = jQthis.data('offset') || 0,
-//         transformLayer = 'translate3d(' + offsetX * offsetLayer + 'px, ' + offsetY * offsetLayer + 'px, 20px)';
-
-//     jQthis.css('transform', transformLayer);
-//   });
-// });
-
-
     return(
         <section id="interestsPage">
             <Wrapper>
-                {/* <p>My Interests & Hobbies</p> */}
                 <section id="interestsLanding">
 
                     {/* make this a nav link to bloglist for autoscroll on click */}
@@ -107,11 +67,6 @@ const InterestsPage=() => {
                                         <span className="InterestMask"><span>Artist</span></span>
                                         <span className="InterestMask"><span>Artist</span></span>
                                 </li>
-                                {/* <li id="callTech" className="Interests-list-item" onClick={toggleTechIsOn} data-offset="8">
-                                    Techie
-                                        <span className="InterestMask"><span>Techie</span></span>
-                                        <span className="InterestMask"><span>Techie</span></span>
-                                </li> */}
                                 <li id="callWriter" className="Interests-list-item" onClick={toggleWriterIsOn} data-offset="8">
                                     {/* <h4>Writer</h4> */}
                                     Writer
@@ -140,19 +95,37 @@ const InterestsPage=() => {
                         </div>
                     </div>
 
-                    <div id="obsessionsImgContainer box-shadow">
+                    <div id="obsessionsImgContainer" className="box-shadow">
+                        <ul className="Interests-list"  data-offset="10">
+                            <li id="obsessionsHeading" className="Interests-list-item" data-offset="30">
+                                Obsessions
+                                    <span className="InterestMask"><span>Obsessions</span></span>
+                                    <span className="InterestMask"><span>Obsessions</span></span>
+                            </li>
+                        </ul>
+                        
+                        {/* <h2 >Obsessions</h2> */}
                         <img src={Obsessions} alt="" id="obsessionsImg" className="thematicImg responsive-img "/>
-
                     </div>
-                
+
+                    <div id="linkedInPosts">
+                        <ul className="Interests-list"  data-offset="10">
+                            <li className="Interests-list-item" data-offset="20">
+                                {/* <h4>Blog</h4> */}
+                                Recent Posts
+                                    <span className="InterestMask"><span>Recent Posts</span></span>
+                                    <span className="InterestMask"><span>Recent Posts</span></span>
+                            </li>
+                        </ul>
+                        
+                    </div>
                 </section>
                 
                 <div className="rollerContainer">
                     <div className="content">
                         <div className="content__container">
                             <h5 className="content__container__text">
-                                more than just a
-                                
+                                more than a
                             </h5>
 
                             <ul className="content__container__list">
@@ -172,7 +145,6 @@ const InterestsPage=() => {
                     </div>
                 </div>
             </Wrapper>
-                {/*  */}
 
                 <div>
                     {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
