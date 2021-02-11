@@ -94,7 +94,9 @@ color: var(--blue);
 .yellowText {
 color: var(--yellow);
 }
-
+.greyedOutText {
+  color: var(--grey-dark);
+}
 /* // GREY SCALE */
 .box-shadow {
     box-shadow: 0 0 .8em var(--grey-very-dark);
@@ -2292,15 +2294,6 @@ li.rightTop>p {
   text-shadow: 3px 4px 0px rgba(255, 255, 255, 0.8);
 }
 
-/* ---------------- */
-/* - RIGHT COLUMN - */
-/* ---------------- */
-#linkedInPosts {
-  grid-area: interestsText;
-  width: 100%;
-  
-}
-
 
 /* ---------------- */
 /* - LEFT COLUMN - */
@@ -2893,6 +2886,397 @@ li.rightTop>p {
   background-color: var(--grey-dark-light);
   border: none;
 }
+
+
+/* ---------------- */
+/* - RIGHT COLUMN - */
+/* ---------------- */
+
+#recentPostsPage{
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid  rgba(255, 255, 255, 0.3);
+  width: 80vw;
+  margin: 2vh 10vw;
+}
+
+#linkedInPosts {
+  grid-area: interestsText;
+  width: 100%;
+  color: white;
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotateY(0); }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+@keyframes spin {
+  from  { transform: rotateY(0);}
+  to    { transform: rotateY(-360deg);}
+}
+
+#recentPostsContainer {
+  /* background-color: black; */
+  color: white;
+  border-top: rgba(255, 255, 255, 0.8);
+  border-bottom: rgba(255, 255, 255, 0.8);
+  font-family: 'Lucida Grande', Verdana, Arial;
+  font-size: 12px;
+  min-height: 70vh;
+  max-height: 70vh;
+  /* background-image: -webkit-gradient(radial,
+                        50% 500, 1,
+                        50% 500, 400,
+                        from(rgba(255, 255, 255, 0.3)),
+                        to(rgba(255, 255, 255, 0)));
+ background-repeat: no-repeat; */
+}
+
+#container {
+  width: 100%;
+  height: 700px;
+  /* position: absolute;
+  z-index: -1; */
+  -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+          /* perspective: 800; */
+  -webkit-perspective-origin: 50% 225px;
+          perspective-origin: 50% 225px;
+}
+#stage {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 2s;
+          transition: transform 2s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#shape {
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.plane {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  font-family: Times, serif;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: -webkit-transform 2s, opacity 2s;
+          transition: transform 2s, opacity 2s, scale 300ms ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.plane>img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  margin: 0 10%;
+  padding: 0 0;
+  opacity: 1;
+}
+
+#backfaces {
+  opacity: 0;
+}
+
+.controlsIcon {
+  font-size: 3em;
+  margin: 0 .5em;
+  padding: .2em .3em;
+  transition: all 150ms ease-in-out;
+}
+
+.controlsIcon:hover {
+  text-shadow: 0 0 1em rgba(0, 0, 0, 1);
+  border-radius: 100px;
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 150ms ease-in-out;
+}
+
+.visibleIcon>i {
+  color: var(--white-pretty);
+}
+.invisibleIcon>i {
+  color: var(--blue);
+}
+
+#shape.backfaces .plane {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+/* VARYING CUBE SPIN SPEEDS */
+#shape.cube {
+  -webkit-animation: spin 12s infinite linear;
+          animation: spin 12s infinite linear;
+}
+#shape.cube.quickSpin {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+#shape.cube.verySlow {
+  -webkit-animation: spin 18s infinite linear;
+          animation: spin 18s infinite linear;
+}
+/* VARYING RING SPIN SPEEDS */
+#shape.ring {
+  -webkit-animation: spin 25s infinite linear;
+          animation: spin 25s infinite linear;
+}
+#shape.quickSpin {
+  -webkit-animation: spin 5s infinite linear;
+          animation: spin 5s infinite linear;
+}
+#shape.verySlow {
+  -webkit-animation: spin 45s infinite linear;
+          animation: spin 45s infinite linear;
+}
+
+
+/* i #cubeIcon {
+  -webkit-animation: spinIcon 2s infinite linear;
+          animation: spinIcon 2s infinite linear;
+} */
+
+#shape:hover, #shape:hover .plane {
+  animation-play-state: paused;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+.plane:hover {
+  transform: scale(1.5);
+  transition: scale 300ms ease-in-out;
+}
+
+.wrapperFloatRecPostBox {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vh;
+  z-index: 99;
+}
+
+.floatRecPostBox {
+  background-color: var(--yellow);
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 99;
+  margin: none;
+  background-color: var(--white-semi-trans);
+  box-shadow: 0px 0px .5em var(--grey-very-dark);
+  -moz-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  -webkit-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  -o-box-shadow: 0px 0px 5px var(--grey-very-dark);
+  border-radius: 25px;
+  overflow: scroll;
+  /* overflow: hidden; */
+}
+
+.recPost {
+  display: flex;
+  contain: content;
+  position: absolute;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+
+
+/* ---------- cube styles ------------- */
+.cube > .one {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+          transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+}
+
+.cube > .two {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+          transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+}
+
+.cube > .three {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+          transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+}
+
+.cube > .four {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+          transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+}
+
+.cube > .five {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+          transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+}
+
+.cube > .six {
+  opacity: 0.5;
+  -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+          transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+
+
+.cube > .seven {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+          transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+}
+
+.cube > .eight {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+          transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+}
+
+.cube > .nine {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+          transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+}
+
+.cube > .ten {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+          transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+}
+
+.cube > .eleven {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+          transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+}
+
+.cube > .twelve {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+          transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+}
+
+/* ---------- ring styles ------------- */
+.ring > .one {
+  -webkit-transform: translateZ(380px);
+          transform: translateZ(380px);
+}
+
+.ring > .two {
+  -webkit-transform: rotateY(30deg) translateZ(380px);
+          transform: rotateY(30deg) translateZ(380px);
+}
+
+.ring > .three {
+  -webkit-transform: rotateY(60deg) translateZ(380px);
+          transform: rotateY(60deg) translateZ(380px);
+}
+
+.ring > .four {
+  -webkit-transform: rotateY(90deg) translateZ(380px);
+          transform: rotateY(90deg) translateZ(380px);
+}
+
+.ring > .five {
+  -webkit-transform: rotateY(120deg) translateZ(380px);
+          transform: rotateY(120deg) translateZ(380px);
+}
+
+.ring > .six {
+  -webkit-transform: rotateY(150deg) translateZ(380px);
+          transform: rotateY(150deg) translateZ(380px);
+}
+
+.ring > .seven {
+  -webkit-transform: rotateY(180deg) translateZ(380px);
+          transform: rotateY(180deg) translateZ(380px);
+}
+
+.ring > .eight {
+  -webkit-transform: rotateY(210deg) translateZ(380px);
+          transform: rotateY(210deg) translateZ(380px);
+}
+
+.ring > .nine {
+  -webkit-transform: rotateY(-120deg) translateZ(380px);
+          transform: rotateY(-120deg) translateZ(380px);
+}
+
+.ring > .ten {
+  -webkit-transform: rotateY(-90deg) translateZ(380px);
+          transform: rotateY(-90deg) translateZ(380px);
+}
+
+.ring > .eleven {
+  -webkit-transform: rotateY(300deg) translateZ(380px);
+          transform: rotateY(300deg) translateZ(380px);
+}
+
+.ring > .twelve {
+  -webkit-transform: rotateY(330deg) translateZ(380px);
+          transform: rotateY(330deg) translateZ(380px);
+}
+
+.controls {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  background-color: rgba(60, 60, 60, .5);
+}
+.controls > div {
+  /* margin: 10px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* --------------------------------------- */

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import BlogPostContainer from "./BlogPostContainer";
 import { useToggle} from "react-use";
 import FloatBlogBox from "./FloatBlogBox";

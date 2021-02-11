@@ -8,6 +8,7 @@ import BlogList from "../components/Blog/BlogList";
 // const InterestsPageStyled = styled.div;
 import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/obsessions.png";
 import FloatBlogBox from "../components/Blog/FloatBlogBox";
+import RecentPostsCarousel from "../components/Blog/RecentPostsCarousel";
 
 const InterestsPage=() => {
     const [isBlogOn, toggleBlogIsOn] = useToggle(false);
@@ -108,17 +109,7 @@ const InterestsPage=() => {
                         <img src={Obsessions} alt="" id="obsessionsImg" className="thematicImg responsive-img "/>
                     </div>
 
-                    <div id="linkedInPosts">
-                        <ul className="Interests-list"  data-offset="10">
-                            <li className="Interests-list-item" data-offset="20">
-                                {/* <h4>Blog</h4> */}
-                                Recent Posts
-                                    <span className="InterestMask"><span>Recent Posts</span></span>
-                                    <span className="InterestMask"><span>Recent Posts</span></span>
-                            </li>
-                        </ul>
-                        
-                    </div>
+                    
                 </section>
                 
                 <div className="rollerContainer">
@@ -145,11 +136,26 @@ const InterestsPage=() => {
                     </div>
                 </div>
             </Wrapper>
+{/* <hr/> */}
+            <div id="recentPostsPage">
+                <div id="linkedInPosts">
+                    <ul className="Interests-list"  data-offset="10">
+                        <li className="Interests-list-item" data-offset="20">
+                            {/* <h4>Blog</h4> */}
+                            Recent Posts
+                                <span className="InterestMask"><span>Recent Posts</span></span>
+                                <span className="InterestMask"><span>Recent Posts</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <RecentPostsCarousel/>
+            </div>
 
                 <div>
                     {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
                 </div>
-
+                {/* <hr/> */}
 
                 {/* <div>
                     {isBlogOn ? <BlogList/> : []}

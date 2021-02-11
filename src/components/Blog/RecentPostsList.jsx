@@ -1,7 +1,7 @@
-import React, {Component, setState} from "react";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import BlogPost from "./BlogPost";
 import BlogPostContainer from "./BlogPostContainer";
+import RecentPost from "./RecentPost";
 
 import Ennemi from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/ennemi.jpg";
 import Enough from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/enough.jpg";
@@ -9,14 +9,14 @@ import FilterFailure from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/
 import Goal from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/goal.jpg";
 import Growth from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/growth.jpg";
 import Networking from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/networking.jpg";
-import RGB from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/rbg.jpg";
-import Thirdlaw from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/thirdlaw.jpg";
+import RBG from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/rbg.jpg";
+import ThirdLaw from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/thirdlaw.jpg";
 import TimeGrief from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/timegrief.jpg";
 import WorldLine from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/worldline.jpg";
 // import WhyBlog from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/.jpg";
 
 
-const GoalArray = [{
+const GoalPost = [{
  title: "Goals: life's hopefilled breadcrumbs ",
  index: 0,
  blogP1: "One of my goals in 2021 is to read 21 books. To accomplish this I’m using the app GoodReads, and if you haven’t used it I definitely recommend it.",
@@ -44,7 +44,7 @@ const GoalArray = [{
  imgDesc: "",
 }]
 
-const GrowthArray = [{
+const GrowthPost = [{
  title: "Growth",
  index: 1,
  blogP1: "Officially made the list of my 5-Year Goals with the benchmarks to achieve them.",
@@ -73,7 +73,7 @@ const GrowthArray = [{
  
 }]
 
-const RBGArray = [{
+const RBGPost = [{
  title: "Female Role Models",
  index: 2,
  blogP1: "Growing up I didn’t understand how valuable it is having successful women to look up to who hold positions previously only held by men, doing things previously done only by men, accomplishing and creating things only previously done by men.",
@@ -102,7 +102,7 @@ const RBGArray = [{
  
 }]
 
-const WorldLineArray = [{
+const WorldLinePost = [{
  title: "Our World Line",
  index: 3,
  blogP1: "“As we move about in space, we are also moving forward in time. This means we effectively navigate a path through spacetime called a world line.”",
@@ -131,7 +131,7 @@ const WorldLineArray = [{
  
 }]
 
-const EnnemiArray = [{
+const EnnemiPost = [{
  title: "Qui est l'ennemi ?",
  index: 4,
  blogP1: "Cette citation est arrivée dans un moment idéal. C’est un question pour tous les américains mais aussi le monde. Les voisins qui croient une chose contraire de vous ne sont pas les ennemis, je sais que c’est contre intuitif, mais la fierté, la peur, l’ignorance, le manque de curiosité, tout représente l’ennemi. Quand nous rencontrons des personnes différentes, cet ennemi se manifeste immédiatement, si ces instincts viennent trop vite, et il faut du courage faire pas dans ces actions. J’ai hâte de 2021, c’est une année quand tout peut pivoter vers le progrès d’égalité, d’équité, et humanité.",
@@ -160,7 +160,7 @@ const EnnemiArray = [{
  
 }]
 
-const TimeArray = [{
+const TimePost = [{
  title: "Dimensions of Time: Grief",
  index: 5,
  blogP1: "This has been only one of the very beautiful but difficult quotes from today’s reading. Albert Einstein possessed a reason that comforted him in time of grief that was optimistically hopeful and eternal.",
@@ -189,7 +189,7 @@ const TimeArray = [{
  
 }]
 
-const NetworkingArray = [{
+const NetworkingPost = [{
  title: "Networking, More About You & Less About Me ",
  index: 6,
  blogP1: "What makes you unique?",
@@ -218,7 +218,7 @@ const NetworkingArray = [{
  
 }]
 
-const ThirdLawArray = [{
+const ThirdLawPost = [{
  title: "Newton's Third Law",
  index: 7,
  blogP1: "Call me a poet or romantic, but I find the idea that “every observable object makes it’s observer also an object of observation”, quite beautiful.",
@@ -247,7 +247,7 @@ const ThirdLawArray = [{
  
 }]
 
-const FilterFailureArray = [{
+const FilterFailurePost = [{
  title: "Filter Failure",
  index: 8,
  blogP1: "Remaining focused on goals is directly related to limiting what can grab your attention.",
@@ -275,7 +275,7 @@ const FilterFailureArray = [{
  imgDesc: "",
 }]
 
-const EnoughArray = [{
+const EnoughPost = [{
  title: "Enough",
  index: 9,
  blogP1: "Yoga is a great practice, one I delved into while living in northern France and have maintained regular yoga meetings with my long-distance friends over zoom. Our teacher often ends classes with reminding us to focus on a phrase. Saying it aloud a few times. “I am enough.” Then again “I am enough.”",
@@ -306,59 +306,106 @@ const EnoughArray = [{
 // const BlogPostArtist = {blogP1: "", blogP2: "", blogP3: "", blogP4: "", blogP5: "", blogP6: "", blogP7: "", blogP8: "", 
 // }
 // title = {title}, blogP1 = {blogP1}, blogP2 = {blogP2}, blogP3 = {blogP3}, blogP4 = {blogP4}, blogP5 = {blogP5}, blogP6 = {blogP6}, blogP7 = {blogP7}, blogP8 = {blogP8}, blogP9 = {blogP9}, blogP10 = {blogP10}, blogP11 = {blogP11}, blogP12 = {blogP12}, blogP13 = {blogP13}, blogP14 = {blogP14}, blogP15 = {blogP15}, blogP16 = {blogP16}, blogP17 = {blogP17}, blogP18 = {blogP18}, blogP19 = {blogP19}, blogP20 = {blogP20}, imgSrc = {imgSrc}, imgDesc = {imgDesc}, 
-const InterestsList = (props) => {
+const RecentPostsList = (props) => {
+    const [active, setActive] = useState("false")
+    
     // const blogPostArrayArray = [{BlogPostWhyBlog}, {BlogPostArtist}, {BlogPostMusician}, {BlogPostSoftwareEngineer}, {BlogPostWriter}, {BlogPostNomad}, {BlogPostFeminist}, {BlogPostWomanInTech}, {BlogPostAthlete}, ]
     
-    // const BlogPostWhyBlogArray = BlogPostWhyBlog.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}    />})
+    const GoalPostArray = GoalPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostArtistArray = BlogPostArtist.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const GrowthPostArray = GrowthPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostMusicianArray = BlogPostMusician.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const RBGPostArray = RBGPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostSoftwareEngineerArray = BlogPostSoftwareEngineer.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const WorldLinePostArray = WorldLinePost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostWriterArray = BlogPostWriter.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const EnnemiPostArray = EnnemiPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostNomadArray = BlogPostNomad.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const TimePostArray = TimePost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostFeministArray = BlogPostFeminist.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const NetworkingPostArray = NetworkingPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostWomanInTechArray = BlogPostWomanInTech.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const ThirdLawPostArray = ThirdLawPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
     
-    // const BlogPostAthleteArray = BlogPostAthlete.map(post => {return <BlogPost 
-    //     key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    const FilterFailurePostArray = FilterFailurePost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
+    
+    const EnoughPostArray = EnoughPost.map(post => {return <RecentPost
+    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} />})
 
-    // const blogPostItem = blogPostArray.map(post => {return <BlogPost 
-    //     title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} 
-    // />})
         // const blogItems = blogPostArray.map(post => {return <BlogPost key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}/>})
-   
+        
+        // onClick={this.setActive}
+
+        const setRecentPostActive = (e) => {
+            setActive(!active)
+        }
+
     return (
-        <div id="RecentPostsContainer">
-            <div id="RecentPostsListContainer">
-                <ul id="RecentPostsListUL">
-                        {/* {RecentPostWhyRecentArray}
-                        {RecentPostArtistArray}
-                        {RecentPostMusicianArray}
-                        {RecentoftwareEngineerArray}
-                        {RecentPostWriterArray}
-                        {RecentPostNomadArray}
-                        {RecentPostFeministArray}
-                        {RecentPostWomanInTechArray}
-                        {RecentPostAthleteArray} */}
-                    <p style={{color: "rgba(201,200,201,.3)", textAlign: "center", margin: "0 0 0 35%"}}>hidden in plain sight though few may ever perceive</p><br/><br/>
-                </ul>
-            </div>
-        </div>
+        <>
+            <div className="plane one image-wrapper" onClick={setRecentPostActive}>{GoalPostArray }</div>
+            <div className="plane two image-wrapper" onClick={setRecentPostActive}>{GrowthPostArray}</div>
+            <div className="plane three image-wrapper" onClick={setRecentPostActive}>{RBGPostArray}</div>
+            <div className="plane four image-wrapper" onClick={setRecentPostActive}>{WorldLinePostArray}</div>
+            <div className="plane five image-wrapper" onClick={setRecentPostActive}>{EnnemiPostArray}</div>
+            <div className="plane six image-wrapper" onClick={setRecentPostActive}>{TimePostArray}</div>
+            <div className="plane seven image-wrapper" onClick={setRecentPostActive}>{NetworkingPostArray}</div>
+            <div className="plane eight image-wrapper" onClick={setRecentPostActive}>{ThirdLawPostArray}</div>
+            <div className="plane nine image-wrapper" onClick={setRecentPostActive}>{FilterFailurePostArray}</div>
+            <div className="plane ten image-wrapper" onClick={setRecentPostActive}>{EnoughPostArray}</div>
+            <div className="plane eleven">11</div>
+            <div className="plane twelve">12</div>
+        </>
     )
 }
 
-export default InterestsList;
+export default RecentPostsList;
+
+
+// <Carousel.Item>
+//             <img
+//             className="d-block w-100"
+//             src="holder.js/800x400?text=Second slide&bg=282c34"
+//             alt="Second slide"
+//             />
+
+//             <Carousel.Caption>
+//             <h3>Second slide label</h3>
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//             </Carousel.Caption>
+//         </Carousel.Item>
+
+//         <Carousel.Item>
+//             <img
+//             className="d-block w-100"
+//             src="holder.js/800x400?text=Second slide&bg=282c34"
+//             alt="Second slide"
+//             />
+
+//             <Carousel.Caption>
+//             <h3>Second slide label</h3>
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//             </Carousel.Caption>
+//         </Carousel.Item>
+//         <Carousel.Item>
+//             <img
+//             className="d-block w-100"
+//             src="holder.js/800x400?text=Third slide&bg=20232a"
+//             alt="Third slide"
+//             />
+
+//             <Carousel.Caption>
+//             <h3>Third slide label</h3>
+//             <p>
+//                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+//             </p>
+//             </Carousel.Caption>
+//         </Carousel.Item>
