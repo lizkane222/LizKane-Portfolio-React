@@ -137,10 +137,11 @@ const InterestsPage=() => {
                 </div>
             </Wrapper>
 {/* <hr/> */}
-            <div id="recentPostsPage">
+            {/* <div id="recentPostsPage" className="box-shadow"> */}
+            <div id="recentPostsPage" >
                 <div id="linkedInPosts">
                     <ul className="Interests-list"  data-offset="10">
-                        <li className="Interests-list-item" data-offset="20">
+                        <li className="Interests-list-item" id="linkedInPostLi" data-offset="20">
                             {/* <h4>Blog</h4> */}
                             Recent Posts
                                 <span className="InterestMask"><span>Recent Posts</span></span>

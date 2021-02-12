@@ -2290,8 +2290,17 @@ li.rightTop>p {
 }
 
 #obsessionsImgContainer>.Interests-list>li#obsessionsHeading>* {
-  color: var(--grey-very-dark2);
-  text-shadow: 3px 4px 0px rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 3px 4px 0px var(--grey-very-dark2);
+  /* color: var(--grey-very-dark2);
+  text-shadow: 3px 4px 0px rgba(255, 255, 255, 0.8); */
+}
+
+#linkedInPosts>.Interests-list>li#linkedInPostLi>* {
+  color: rgba(255, 255, 255, 0.8);
+  /* color: var(); */
+  text-shadow: 3px 4px 0px var(--grey-very-dark2);
+  
 }
 
 
@@ -2324,6 +2333,11 @@ li.rightTop>p {
   cursor: pointer;
   text-shadow: 3px 4px 0px var(--grey-very-dark2);
   /* text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.6); */
+}
+
+.Interests-list-item #linkedInPostLi {
+  cursor: cell;
+  color: red;
 }
 
 .Interests-list-item::before {
@@ -2400,7 +2414,6 @@ li.rightTop>p {
 }
 
 .floatBlogBox {
-  background-color: var(--yellow);
   position: relative;
   min-width: 90vw;
   min-height: 80vh;
@@ -2426,10 +2439,6 @@ li.rightTop>p {
   border-radius: 25px;
 }
 
-
-
-
-
 /* REF BlogList.js */
 #blogListContainer {
   width: 90vw;
@@ -2440,10 +2449,11 @@ li.rightTop>p {
 
 #blogListUL {
   width: 100%;
-  height: 100%;
+  height: 105%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* margin-bottom: 5%; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-orient: horizontal;
@@ -2456,7 +2466,7 @@ li.rightTop>p {
   width: 25%;
 }
 
-.blogBox {
+.blogBox, .recPostBox {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2465,8 +2475,8 @@ li.rightTop>p {
   transition: 450ms;
   margin: 2.5%;
   box-shadow: 0 0 .8em var(--grey-very-dark);
-  -webkit-box-shadow: 0 1em 1.5em var(--grey-very-dark);
-          box-shadow: 0 1em 1.5em var(--grey-very-dark);
+  -webkit-box-shadow: 0 .75em 1.5em var(--grey-very-dark2);
+          box-shadow: 0 .75em 1.5em var(--grey-very-dark2);
   line-height: 0;
   min-width: 23%;
   width: 23%;
@@ -2474,9 +2484,22 @@ li.rightTop>p {
   background-color: var(--grey-very-dark);
   height: 40vh;
   border-radius: 10px;
+  transition: all 200ms ease-in-out;
 }
 
-.blogBox > .blogImg {
+.recPostBox {
+  background-color: rgba(0,0,0,0);
+  height: 42vh;
+  margin: 1.5% 2.5%;
+}
+
+.blogBox:hover, .recPostBox:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 200ms ease-in-out;
+}
+
+.blogBox>.blogImg, .recPostBox>.recPostImg  {
   width: 150%;
   min-height: 70%;
   max-height: 70%;
@@ -2487,7 +2510,16 @@ li.rightTop>p {
   transition: width 100ms ease-in-out;
 }
 
-.blogBox > .blogTitle {
+.recPostBox > .recPostImg  {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  /* padding: 5%; */
+  /* padding: 1em; */
+
+}
+
+.blogBox > .blogTitle, .recPostBox >.recPostTitle {
   min-height: 30%;
   background-color: var(--greyish-semi-trans);
   display: flex;
@@ -2496,7 +2528,7 @@ li.rightTop>p {
   align-items: center;
 }
 
-.blogTitle > span {
+.blogTitle > span, .recPostTitle>span {
   font-size: 2.2em;
   display: block;
   text-align: center;
@@ -2506,14 +2538,15 @@ li.rightTop>p {
   color: var(--white-semi-grey);
 }
 
-.blogBox:hover > .blogImg {
+.blogBox:hover > .blogImg  {
   width: 100%;
   transition: width 300ms ease-in-out;
   cursor: pointer;
 }
 
+/* .recPostBox:hover > .recPostImg */
 
-#postEnlarged {
+#postEnlarged, #recPostEnlarged {
   background-color: var(--white-pretty);
   border-radius: 25px;
   margin: 2em;
@@ -2525,7 +2558,11 @@ li.rightTop>p {
   font-family: var(--Chic);
 }
 
-#postHeader {
+#recPostEnlarged {
+  min-width: 85vw;
+}
+
+#postHeader, #recPostHeader {
   justify-content: center;
   display: grid;
   grid-template-columns: .25fr 5fr;
@@ -2537,7 +2574,7 @@ li.rightTop>p {
   width: 100%;
 }
 
-#postBackArrow {
+#postBackArrow, #recPostBackArrow {
   grid-area: back;
   font-size: 3.7em;
   line-height: 1.27em;
@@ -2548,7 +2585,7 @@ li.rightTop>p {
   transition: all 150ms ease-in-out;
 }
 
-#postBackArrow:hover {
+#postBackArrow:hover, #recPostBackArrow:hover {
   line-height: 1.27em;
   padding-left: .5em;
   background-color: var(--greyish-solid);
@@ -2556,7 +2593,7 @@ li.rightTop>p {
   cursor: pointer;
 }
 
-#postClose {
+#postClose, #recPostClose {
   margin: -1.5em 1em .25em 0;
   font-size: 2em;
   padding: 0 .3em .1em .3em;
@@ -2566,9 +2603,11 @@ li.rightTop>p {
   transition: all .5s ease-in-out;
 }
 
-#postClose:hover{
+
+#postClose:hover, #recPostClose:hover{
   transform: scale(1.2);
-  background-color: var(--greyish);
+  background-color: rgba(237, 237, 237, 0.3);
+  box-shadow: 0 0 .7em rgba(148,148,148,.5);
   transition: all .5s ease-in-out;
 }
 
@@ -2581,17 +2620,21 @@ li.rightTop>p {
   text-align: center;
 }
 
-.blogBody {
+.blogBody, .recPostBody {
   display: flex;
   justify-content: flex-start;
   flex-flow: row nowrap;
   padding: 1.5em 2em;
 }
-.blogSection {
+
+.recPostBody {
+  margin-bottom: 3vh;
+}
+
+.blogSection, .recPostSection {
   flex: 1;
   grid-area: postWriting;
   max-width: 70%;
-  font-size: 1.1em;
   line-height: 1.2em;
   padding: 0 2em 0 0;
   font-family: var(--Chic);
@@ -2599,7 +2642,14 @@ li.rightTop>p {
 
 .blogSection>p {
   margin: .65em 0;
+  font-size: 1.1em;
 }
+.recPostSection>p {
+  margin: .65em 0;
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+
 
 .blogSection>p.blogP2.centerText {
   font-size: 1.2em;
@@ -2624,18 +2674,24 @@ li.rightTop>p {
   margin-left: 2em;
 }
 
-.blogBody>div.image-wrapper {
+.blogBody>div.image-wrapper, .recPostBody>div.image-wrapper {
   flex: 2;
-  min-height: 100%;
-  max-width: 40%;
+  min-height: 98%;
+  max-width: 42%;
   overflow: show;
   border-radius: 25px;
   position: float;
 }
 
+.recPostBody>div.image-wrapper {
+  padding: 0 3%;
+}
+
 .activeBlogImg {
   min-width: 100%;
 }
+
+
 
 
 /* ---------------------------- */
@@ -2893,16 +2949,24 @@ li.rightTop>p {
 /* ---------------- */
 
 #recentPostsPage{
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid  rgba(255, 255, 255, 0.3);
-  width: 80vw;
-  margin: 2vh 10vw;
+  /* border-top: 1px solid rgba(80, 80, 80, 0.3);
+  border-bottom: 1px solid  rgba(80, 80, 80, 0.3); */
+  /* border: solid  rgba(80, 80, 80, 0.3); */
+  /* box-shadow: 0 0 1em rgba(80, 80, 80, 0.1); */
+  width: 100vw;
+  height: 70vh;
+  margin: 10vh 0;
+  border-radius: 25px;
 }
 
 #linkedInPosts {
   grid-area: interestsText;
-  width: 100%;
+  width: 100vw;
   color: white;
+  padding: 1em 0 0 0;
+  background-color: rgba(60, 60, 60, .5);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 @-webkit-keyframes spin {
@@ -2923,6 +2987,11 @@ li.rightTop>p {
   font-size: 12px;
   min-height: 70vh;
   max-height: 70vh;
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: .5fr 5fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "controlBar spinner fullScreen"; */
   /* background-image: -webkit-gradient(radial,
                         50% 500, 1,
                         50% 500, 400,
@@ -2932,8 +3001,10 @@ li.rightTop>p {
 }
 
 #container {
+  /* grid-area: spinner; */
   width: 100%;
-  height: 700px;
+  height: 100%;
+  margin: 0 0;
   /* position: absolute;
   z-index: -1; */
   -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
@@ -2941,6 +3012,7 @@ li.rightTop>p {
   -webkit-perspective-origin: 50% 225px;
           perspective-origin: 50% 225px;
 }
+
 #stage {
   width: 100%;
   height: 100%;
@@ -2952,7 +3024,7 @@ li.rightTop>p {
 
 #shape {
   position: relative;
-  top: 160px;
+  top: 100px;
   margin: 0 auto;
   height: 200px;
   width: 200px;
@@ -2995,18 +3067,26 @@ li.rightTop>p {
 
 .controlsIcon {
   font-size: 3em;
-  margin: 0 .5em;
+  margin: 0 .05em;
   padding: .2em .3em;
   transition: all 150ms ease-in-out;
 }
 
-.controlsIcon:hover {
+.controlsIcon>*:hover {
   text-shadow: 0 0 1em rgba(0, 0, 0, 1);
   border-radius: 100px;
   cursor: pointer;
   transform: scale(1.2);
   transition: all 150ms ease-in-out;
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
+
+i #cubeIcon {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+
 
 .visibleIcon>i {
   color: var(--white-pretty);
@@ -3047,66 +3127,24 @@ li.rightTop>p {
 }
 
 
-/* i #cubeIcon {
-  -webkit-animation: spinIcon 2s infinite linear;
-          animation: spinIcon 2s infinite linear;
-} */
 
-#shape:hover, #shape:hover .plane {
+
+#shape:hover, #shape:hover .plane{
   animation-play-state: paused;
-  cursor: pointer;
+  /* cursor: pointer; */
   opacity: 1;
-
 }
 
-.plane:hover {
+/* .plane:hover {
   transform: scale(1.5);
   transition: scale 300ms ease-in-out;
-}
+} */
 
-.wrapperFloatRecPostBox {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 0;
-  left: 0;
-  width: 50vw;
-  height: 50vh;
-  z-index: 99;
+#shape.pause {
+  animation-play-state: paused;
 }
-
-.floatRecPostBox {
-  background-color: var(--yellow);
-  position: relative;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 99;
-  margin: none;
-  background-color: var(--white-semi-trans);
-  box-shadow: 0px 0px .5em var(--grey-very-dark);
-  -moz-box-shadow: 0px 0px 5px var(--grey-very-dark);
-  -webkit-box-shadow: 0px 0px 5px var(--grey-very-dark);
-  -o-box-shadow: 0px 0px 5px var(--grey-very-dark);
-  border-radius: 25px;
-  overflow: scroll;
-  /* overflow: hidden; */
-}
-
-.recPost {
-  display: flex;
-  contain: content;
-  position: absolute;
-  max-width: 100%;
-  min-height: 100%;
-  margin: 0 auto;
-  border-radius: 25px;
+#tornado.controlsIcon.pause, #snail.controlsIcon.pause {
+  animation-play-state: paused;
 }
 
 
@@ -3241,22 +3279,15 @@ li.rightTop>p {
 }
 
 .controls {
-  width: 50%;
-  margin: 0 auto;
+  /* grid-area: controlBar; */
+  width: 100%;
+  margin: 0 0;
   text-align: center;
-  -webkit-border-radius: 12px;
-          border-radius: 12px;
+  padding: 0 0 1em 0;
+  /* -webkit-border-radius: 12px;
+          border-radius: 12px; */
   background-color: rgba(60, 60, 60, .5);
 }
-.controls > div {
-  /* margin: 10px; */
-}
-
-
-
-
-
-
 
 
 

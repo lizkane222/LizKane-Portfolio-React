@@ -1,16 +1,22 @@
 import React, { useState }from "react";
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel';
 import RecentPostsList from "./RecentPostsList";
+import FloatRecPostsBox from "./FloatRecPostsBox";
+import RecentPostText from "./RecentPostText";
 
-import {ImEyeBlocked, ImEye} from "react-icons/im";
+import {ImEyeBlocked, ImEye, ImStop, ImPlay2} from "react-icons/im";
 import {GiTornado, GiSnail} from "react-icons/gi";
 import {CgShapeSquare, CgShapeHexagon} from "react-icons/cg";
+import {BsArrowsExpand} from "react-icons/bs";
 import { Children } from "react";
 
 const RecentPostsCarousel = () => {
   const [index, setIndex] = useState(0);
   const [iconVisible, setIconVisible] = useState(false);
   const [iconShape, setIconShape] = useState(false);
+  const [textContainerActive, setTextContainerActive] = useState(false);
+  const [animationPaused, setAnimationPaused] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false)
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -130,9 +136,31 @@ const RecentPostsCarousel = () => {
     }
   }
 
+  const pauseAnimation =  () => {
+    setAnimationPaused(!animationPaused)
+    let snail = document.getElementById('snail');
+    let tornado = document.getElementById('tornado');
+    const shape = document.getElementById('shape');
+    if (!hasClassName(shape, 'pause')) {
+      addClassName(shape, 'pause');
+      if (hasClassName(shape, 'verySlow')) {
+          removeClassName(shape, 'verySlow');
+          addClassName(snail, 'greyedOutText');
+      } else if (hasClassName(shape, 'quickSpin')) {
+          removeClassName(shape, 'quickSpin');
+          addClassName(tornado, 'greyedOutText');
+      }}
+    else {
+          removeClassName(shape, 'pause');
+          removeClassName(snail, 'greyedOutText');
+          removeClassName(tornado, 'greyedOutText');
+    }
+  }
 
-
-
+  
+  const activateFullScreen = () => {
+              setFullscreen(!fullscreen)
+          }
 
   
 
@@ -169,18 +197,28 @@ const RecentPostsCarousel = () => {
           </span>
           <i className="controlsIcon" id="tornado" onClick={toggleSpinSpeedQuick}><GiTornado/></i>
           <i className="controlsIcon" id="snail" onClick={toggleSpinSpeedSlow}><GiSnail/></i>
+        {!animationPaused ? 
+          <i className="controlsIcon" id="stop" onClick={pauseAnimation}><ImStop/></i>
+        :
+          <i className="controlsIcon" id="go" onClick={pauseAnimation}><ImPlay2/></i>
+        }
+        <i className="controlsIcon" id="recPostsFullScreen" onClick={activateFullScreen}><BsArrowsExpand/></i>
+        {fullscreen?<div id="recPostsFullScreen" onClick={activateFullScreen}><FloatRecPostsBox /></div>:[]}
           
         </section>
 
         <div id="container" >
           <div id="stage" >
               <div id="shape" className="backfaces cube">
-                <RecentPostsList/>
+                <RecentPostsList textContainerActive={textContainerActive} setTextContainerActive={setTextContainerActive}/>
               </div>
-            </div>
+          </div>
         </div>
-      </div>
 
+        {/* <div id="recPostsFullScreen" onClick={activateFullScreen}>
+          <FloatRecPostsBox />
+        </div> */}
+    </div>
 
     </>
   );

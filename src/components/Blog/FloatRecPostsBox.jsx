@@ -304,44 +304,10 @@ const EnoughPost = [{
  imgDesc: "",
 }]
 
-// const BlogPostArtist = {blogP1: "", blogP2: "", blogP3: "", blogP4: "", blogP5: "", blogP6: "", blogP7: "", blogP8: "", 
-// }
-// title = {title}, blogP1 = {blogP1}, blogP2 = {blogP2}, blogP3 = {blogP3}, blogP4 = {blogP4}, blogP5 = {blogP5}, blogP6 = {blogP6}, blogP7 = {blogP7}, blogP8 = {blogP8}, blogP9 = {blogP9}, blogP10 = {blogP10}, blogP11 = {blogP11}, blogP12 = {blogP12}, blogP13 = {blogP13}, blogP14 = {blogP14}, blogP15 = {blogP15}, blogP16 = {blogP16}, blogP17 = {blogP17}, blogP18 = {blogP18}, blogP19 = {blogP19}, blogP20 = {blogP20}, imgSrc = {imgSrc}, imgDesc = {imgDesc}, 
-const RecentPostsList = (props) => {
+const FloatRecPostsBox = (props) => {
     const [textActive, setTextActive] = useState(false)
+    const [fullscreen, setFullscreen] = useState(false)
     
-    // const blogPostArrayArray = [{BlogPostWhyBlog}, {BlogPostArtist}, {BlogPostMusician}, {BlogPostSoftwareEngineer}, {BlogPostWriter}, {BlogPostNomad}, {BlogPostFeminist}, {BlogPostWomanInTech}, {BlogPostAthlete}, ]
-    
-    const GoalPostArray = GoalPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const GrowthPostArray = GrowthPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const RBGPostArray = RBGPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const WorldLinePostArray = WorldLinePost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const EnnemiPostArray = EnnemiPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const TimePostArray = TimePost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const NetworkingPostArray = NetworkingPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const ThirdLawPostArray = ThirdLawPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const FilterFailurePostArray = FilterFailurePost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-    
-    const EnoughPostArray = EnoughPost.map(post => {return <RecentPost
-    key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
-
     const GoalPostText = GoalPost.map(post => {return <RecentPostText
         key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
     const GrowthPostText = GrowthPost.map(post => {return <RecentPostText
@@ -363,64 +329,47 @@ const RecentPostsList = (props) => {
     const EnoughPostText = EnoughPost.map(post => {return <RecentPostText
         key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
 
-
-        // const blogItems = blogPostArray.map(post => {return <BlogPost key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}/>})
-        
-        // onClick={this.setActive}
-
-        // const setRecentPostActive = () => {
-        //     setTextActive(!textActive);
-        //     // props.setTextContainerActive(!props.textContainerActive)
-        //     const textContainer = document.getElementById('carouselRecPostText').append(<RecentPostText props={props}/>)
-        //     return (
-        //         <>
-        //             {textContainer}
-        //         </>
-
-        //     )
-        // }
+        const activateFullScreen = () => {
+            setFullscreen(!fullscreen)
+        }
 
 
-
+        // <>
+        // {fullscreen ?
     return (
-        <>
-            <div className="plane one image-wrapper">
-                {GoalPostArray}
+            <div className="wrapperFloatBlogBox" onClick={activateFullScreen}>
+                <div className="floatBlogBox" onClick={(e) => e.stopPropagation()}>
+                    <div className="blogContainer animate" > 
+                        <div id="blogContainer">
+                            <div id="blogListContainer">
+                                <ul id="blogListUL">
+                                    {GoalPostText}
+                                    {GrowthPostText}
+                                    {RBGPostText}
+                                    {WorldLinePostText}
+                                    {EnnemiPostText}
+                                    {TimePostText}
+                                    {NetworkingPostText}
+                                    {ThirdLawPostText}
+                                    {FilterFailurePostText}
+                                    {EnoughPostText}
+                                    <p></p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="plane two image-wrapper">
-                {GrowthPostArray}
-            </div>
-            <div className="plane three image-wrapper">
-                {RBGPostArray}
-            </div>
-            <div className="plane four image-wrapper">
-                {WorldLinePostArray}
-            </div>
-            <div className="plane five image-wrapper">
-                {EnnemiPostArray}
-            </div>
-            <div className="plane six image-wrapper">
-                {TimePostArray}
-            </div>
-            <div className="plane seven image-wrapper">
-                {NetworkingPostArray}
-            </div>
-            <div className="plane eight image-wrapper">
-                {ThirdLawPostArray}
-            </div>
-            <div className="plane nine image-wrapper">
-                {FilterFailurePostArray}
-            </div>
-            <div className="plane ten image-wrapper">
-                {EnoughPostArray}
-            </div>
-            <div className="plane eleven">11</div>
-            <div className="plane twelve">12</div>
-        </>
+        //     :
+        //     <div onClick={activateFullScreen}>
+        //         <h3>View Full Posts</h3>
+        //     </div>
+        // }
+        // </>
     )
 }
 
-export default RecentPostsList;
+export default FloatRecPostsBox;
 
 
 
