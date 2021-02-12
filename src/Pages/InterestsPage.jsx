@@ -96,7 +96,8 @@ const InterestsPage=() => {
                         </div>
                     </div>
 
-                    <div id="obsessionsImgContainer" className="box-shadow">
+                    {/* <div id="obsessionsImgContainer" className="box-shadow"> */}
+                    <div id="obsessionsImgContainer" >
                         <ul className="Interests-list"  data-offset="10">
                             <li id="obsessionsHeading" className="Interests-list-item" data-offset="30">
                                 Obsessions
@@ -112,7 +113,7 @@ const InterestsPage=() => {
                     
                 </section>
                 
-                <div className="rollerContainer">
+                {/* <div className="rollerContainer">
                     <div className="content">
                         <div className="content__container">
                             <h5 className="content__container__text">
@@ -134,7 +135,7 @@ const InterestsPage=() => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </Wrapper>
 {/* <hr/> */}
             {/* <div id="recentPostsPage" className="box-shadow"> */}
