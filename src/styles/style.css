@@ -19,10 +19,16 @@
 }
 :root {
   --red:#8B0124;
+  --red-light:#d60237;
+  --red-dark:#460112;
+
   --blue:#327E8A;
   --blue-light:#65cddd;
+  --blue-dark:#163a3f;
+
   --yellow: #EDC168;
   --yellowDark: rgba(124,85,32,1);
+
   --white: rgba(248,248,248,1);
   --white-semi-trans: rgba(248,248,248,1);
   --white-semi-grey: rgba(248,248,248,.8);
@@ -84,23 +90,43 @@
   --AcierBatTextStrokesFS: normal;
 }
 
-
+/* RED TEXT VARIATIONS */
 .redText {
 color: var(--red);
 }
+/* BLUE TEXT VARIATIONS */
 .blueText {
 color: var(--blue);
 }
+.lightBlueText {
+  color: var(--blue-light);
+}
+.darkBlueText {
+  color: var(--blue-dark);
+}
+/* YELLOW TEXT VARIATIONS */
 .yellowText {
 color: var(--yellow);
 }
+
+
+  
+/*  GREY SCALE FOR ALL BACKGROUNDS & SHADOWS*/
+  /* GREY TEXT VARIATIONS */
 .greyedOutText {
   color: var(--grey-dark);
 }
-/* // GREY SCALE */
+
 .box-shadow {
     box-shadow: 0 0 .8em var(--grey-very-dark);
 }
+
+.semi-trans-border {
+  border: 1px solid rgba(34,34,34,.1);
+  border-radius: 25px;
+}
+
+  /* background color */
 .grey-dark {
     background-color: var(--grey-dar)k
 }
@@ -2190,63 +2216,125 @@ li.rightTop>p {
   /* margin-top: 5vh; */
 /* } */
 
+#innerWorkPage {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+}
+
 #desertImg {
   max-height: 80vh;
   border-radius: 25px;
 }
 
-#workPage >.wrapperFloatDocBox >.floatDocBox >.resourceDiv {
-  width: 100%;
-  height: 105%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  /* margin-bottom: 5%; */
-  /* display: grid;
-  grid-template-columns: .5fr 5fr;
-  grid-template-rows: .1fr 1fr;
-  grid-template-areas: "title title" "instructions rfpIframe"; */
-
-
-/* display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: .05fr .06fr .07fr .1fr .1fr 4.4fr;
-      grid-template-rows: .05fr .06fr .07fr .1fr .1fr 4.4fr;
-      grid-template-areas: "category iframe iframe iframe " "name iframe iframe iframe" "logo iframe iframe iframe" "description iframe iframe iframe" "emblem iframe iframe iframe" ".  iframe iframe iframe"; */
-  /* contain: content;
+#rfpBack {
   position: absolute;
-  max-width: 100%;
-  min-height: 100%;
+}
+
+#rfpInactive {
+  font-size: 3em;
+}
+
+#rfpInstructions>div>* {
+  font-family: var(--Chic);
+  color: var(--blue);
+}
+#rfpInstructions {
+  grid-area: rfpInstructions;
+  max-width: 25vw;
+  max-height: 95vh;
+  overflow: scroll;
+  margin: 10vh 0 0 -3.75vw;
+  padding: 0 1vw 10vh 0;
+}
+
+#rfpInstructions>div {
+  display: flex;
+  flex-flow: row wrap;
+  padding: .5em .5em 0 .5em;
+  margin: 1vh 0 0 3vw;
+  position: relative;
+  background-color: var(--white-pretty);
+  box-shadow: 0px 1px .05em var(--grey-dark-light);
+  border-radius: 25px;
+  transition: 150ms ease-in-out;
+  color: var(--blue);
+}
+  
+#rfpInstructions>div:hover {
+  transform: scale(1.03);
+  transition: all 150ms ease-in-out;
+}
+
+#rfpInstructions>h3, #rfpInstructions>div>h3, #rfpInstructions>div>h5, #rfpInstructions>h5 {
+  text-align: center;
   margin: 0 auto;
-  border-radius: 25px; */
+  padding: .8vh 0;
+  font-family: var(--Chic);
+  color: var(--blue);
+}
+#rfpInstructions>h3{
+  font-size: 2em;
+  position: absolute;
+  margin: -10vh 0 0 2.6vw;
+  background-color: var(--greyish);
+  padding: .35vh 1vw .3vh 1vw;
+  color: var(--blue);
+}
+#rfpInstructions>div>h3, #rfpInstructions>div>h5>span {
+  margin: 0 auto;
 }
 
-#rfpTitle {
-  grid-area: title;
+#rfpInstructions>div>h3 {
+  font-size: 1.2em;
 }
 
-#rfpInstructions>* {
-  flex: 1;
-  max-width: 10vw;
-  font-size: 10px;
-  /* grid-row: instructions; */
+#rfpInstructions>div>i {
+  margin: -2.5vh 0 0 -3vw;
+  position: absolute;
+  cursor: pointer;
+  font-size: 2em;
+  transition: all 150ms ease-in-out;
 }
+#rfpInstructions>div>i:hover {
+  transform: scale(1.03);
+  transition: all 150ms ease-in-out;
+}
+
+#rfpInstructions>p, #rfpInstructions>div>p {
+  font-size: 1em;
+}
+#rfpInstructions>h5 {
+  text-decoration: underline;
+  text-align: center;
+}
+#rfpInstructions>div>.browserBox,#rfpInstructions>div>.browserText, #rfpInstructions>div>.downloadBox, #rfpInstructions>div>.downloadText>span {
+  font-weight: bold;
+}
+
+#rfpInstructions>div>.browserBox:hover,#rfpInstructions>div>.browserText>span:hover, #rfpInstructions>div>.downloadBox:hover, #rfpInstructions>div>.downloadText>span:hover {
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+
 #rfpIframeContainer {
-  /* grid-area: rfpIframe; */
+  grid-area: rfpIframe;
+  margin: 1vh 1vh; 
+}
 
+.rFPContainer {
+  min-width: 90vw;
 }
-#reqForProject {
-  flex: 2;
-  /* grid-area: rfpIframe; */
+
+.strikeThrough {
+  text-decoration: line-through;
 }
+
+
+
+
 
 
 /* ------------------------ */
@@ -2481,7 +2569,7 @@ li.rightTop>p {
   overflow-y: scroll;
 }
 
-.blogContainer {
+.blogContainer, .rFPContainer {
   display: flex;
   contain: content;
   position: absolute;
@@ -2490,6 +2578,9 @@ li.rightTop>p {
   margin: 0 auto;
   border-radius: 25px;
 }
+
+
+
 
 /* REF BlogList.js */
 #blogListContainer {
