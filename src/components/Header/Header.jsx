@@ -134,7 +134,6 @@ const Header = (props) => {
         return (
             <WrapperNav style={{"max-height": "7vh"}}>
                 <NavbarStyled className="header">
-                    {/* <header className="header"> */}
                             {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
                         <nav className="navbar">
                             <Link activeClass="active" id="LKnav" className="navLinks" to="landingPage" spy={true} smooth={true} duration={1000}>
@@ -172,7 +171,6 @@ const Header = (props) => {
                             </Container> */}
 
                         </nav>
-                    {/* </header> */}
                 </NavbarStyled>
             </WrapperNav>
     );

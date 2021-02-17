@@ -363,25 +363,6 @@ const RecentPostsList = (props) => {
     const EnoughPostText = EnoughPost.map(post => {return <RecentPostText
         key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc} active={post.active} textContainerActive={post.textContainerActive} setTextContainerActive={post.setTextContainerActive}/>})
 
-
-        // const blogItems = blogPostArray.map(post => {return <BlogPost key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}/>})
-        
-        // onClick={this.setActive}
-
-        // const setRecentPostActive = () => {
-        //     setTextActive(!textActive);
-        //     // props.setTextContainerActive(!props.textContainerActive)
-        //     const textContainer = document.getElementById('carouselRecPostText').append(<RecentPostText props={props}/>)
-        //     return (
-        //         <>
-        //             {textContainer}
-        //         </>
-
-        //     )
-        // }
-
-
-
     return (
         <>
             <div className="plane one image-wrapper">

@@ -2332,11 +2332,6 @@ li.rightTop>p {
   text-decoration: line-through;
 }
 
-
-
-
-
-
 /* ------------------------ */
 /* ----- INTERESTS PAGE ------ */
 /* ------- ref classes = .thematicImg .responsive-img --------- */
@@ -2473,11 +2468,6 @@ li.rightTop>p {
   cursor: pointer;
   text-shadow: 3px 4px 0px var(--grey-very-dark2);
   /* text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.6); */
-}
-
-.Interests-list-item #linkedInPostLi {
-  cursor: cell;
-  color: red;
 }
 
 .Interests-list-item::before {
@@ -3097,7 +3087,7 @@ li.rightTop>p {
   /* border: solid  rgba(80, 80, 80, 0.3); */
   /* box-shadow: 0 0 1em rgba(80, 80, 80, 0.1); */
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   margin: 10vh 0;
   border-radius: 25px;
 }
@@ -3110,6 +3100,9 @@ li.rightTop>p {
   background-color: rgba(60, 60, 60, .2);
   /* border-top-left-radius: 25px; */
   /* border-top-right-radius: 25px; */
+}
+#linkedInPosts {
+  margin-top: 5vh;
 }
 
 @-webkit-keyframes spin {
