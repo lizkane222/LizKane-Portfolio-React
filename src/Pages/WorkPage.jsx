@@ -57,9 +57,21 @@ const WorkPage=() => {
                     <div className="redbox">
                         <img src={Desert} alt="" id="desertImg" className="thematicImg responsive-img"/>
                     </div>
-                    <h2 onClick={toggleActive} id="rfpInactive">Make A <br/>Request <br/>For A<br/>Project</h2>
-                    {active===true ? 
+                    {/* <h2 onClick={toggleActive} id="rfpInactive">Request<br/>&emsp;To Hire <br/>&emsp;&emsp;Liz Kane<br/>&emsp;&emsp;&emsp;For A <br/>&emsp;&emsp;&emsp;&emsp;Project</h2> */}
+                    <h2 onClick={toggleActive} id="rfpInactive">HIRE LIZ FOR A PROJECT</h2>
+                    <hr id="hireLine"/>
 
+                    <div>
+                        <h3>PURPOSE -- IMPACT -- PERSPECTIVE</h3>
+                        {/* <p>PURPOSE</p>
+                        <p>IMPACT</p>
+                        <p>PERSPECTIVE</p> */}
+                        <p>When developing a project I keep these three concepts at the forefront of my mind. From -- features -- to -- design -- to -- development -- I retain these concepts to maintain its integrity.</p>
+                    </div>
+
+
+
+                    {active===true ? 
                         <div onClick={(e) => e.stopPropagation()}>
                             <div className="wrapperFloatBlogBox" >
                                 <div className="floatBlogBox" >

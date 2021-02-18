@@ -124,7 +124,7 @@ const InterestsPage=() => {
                 <div>
                     {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
                 </div>
-                <div>
+                {/* <div>
                     {isArtistOn ? <FloatBlogBox toggleArtistIsOn={toggleArtistIsOn}/> : []}
                 </div>
                 <div>
@@ -150,7 +150,7 @@ const InterestsPage=() => {
                 </div>
                 <div>
                     {isReaderOn ? <FloatBlogBox toggleReaderIsOn={toggleReaderIsOn}/> : []}
-                </div>
+                </div> */}
                 {/* <div>{isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}</div> */}
 
 

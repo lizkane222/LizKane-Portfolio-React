@@ -17,7 +17,7 @@ const ResumePage=() => {
                     <div className="image-wrapper">
                         <img src={Blocks} alt="" id="blocksImg" className="thematicImg responsive-img"/>
                     </div>
-                    <h2 className="docTitle" data-cta="awesome">background</h2>
+                    <h2 className="docTitle" data-cta="awesome">Resume / Curriculum Vitae</h2>
                     <h4 className="activeDocTitle">{<ResumeDoc/>}</h4>
                 </div>
             </Wrapper>

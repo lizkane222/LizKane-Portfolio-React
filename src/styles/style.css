@@ -30,7 +30,7 @@
   --yellowDark: rgba(124,85,32,1);
 
   --white: rgba(248,248,248,1);
-  --white-semi-trans: rgba(248,248,248,1);
+  --white-semi-trans: rgba(248,248,248,.8);
   --white-semi-grey: rgba(248,248,248,.8);
   --white-pretty: #fff;
   --greyish: #e8e8e8;
@@ -151,17 +151,22 @@ body {
   /* background: var(--grey-dark); */
   background: var(--grey-dark);
   font-size: 1em;
-  font-family: var(--AcierBatTextNoirFF);
+  /* font-family: var(--AcierBatTextNoirFF);
   font-weight: var(--AcierBatTextNoirFW);
-  font-style: var(--AcierBatTextNoirFS);
+  font-style: var(--AcierBatTextNoirFS); */
   /* font-family: 'Bodoni Moda', serif; */
-
+  font-family: var(--Chic);
   font-size: 1em;
-  color: var(--red);
+  color: var(--white-pretty);
   top: 0;
   left: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--Chic);
 }
 
 
@@ -213,20 +218,21 @@ body {
   min-height: 40vh;
   min-width: 15vw;
   max-width: 15vw;
-  font-size: 2em;
+  font-size: 1.5em;
   text-shadow: .02em .02em .04em var(--grey-very-dark);
   align-items: center;
   text-align: bottom;
   display:flex;
   justify-content: center;
   align-content: center;
+  background-color: rgba(248,248,248,.1);
 }
 
 .arrow {
   position: absolute;
   width: 3.25em;
   height: 3.25em;
-  background-color: none;
+  /* background-color: none; */
   background-color: rgba(248,248,248,.1);
   text-align: center;
   display: flex;
@@ -639,9 +645,10 @@ body {
 /* ---------------- ref FLOAT DOC BOX  ------------------------ */
 /* ------------------------------------------------------------ */
 h2 {
-  font-family: var(--AcierBatTextNoirFF);
+  /* font-family: var(--AcierBatTextNoirFF);
   font-weight: var(--AcierBatTextNoirFW);
-  font-style: var(--AcierBatTextNoirFS);
+  font-style: var(--AcierBatTextNoirFS); */
+  font-family: var(--Chic);
   font-size: 2em;
   margin-right: 20vw;
 }
@@ -666,6 +673,15 @@ h2 {
   cursor: pointer;
   width: var(--size);
   height: var(--size);
+}
+
+#resumeAnima{
+  font-size: 2em;
+  width: 100%;
+}
+#resumeAnima:hover{
+  -webkit-transform:scale(1.2) translate(15%, 0%);
+  transform:scale(1.2) translate(15%, 0%);
 }
 
 .docTitle {
@@ -695,15 +711,19 @@ h2 {
 }
 
 .redbox > .activeDocTitle {
-  font-size: 2em;
+  font-size: 1.2em;
+  display: block;
+  /* flex-flow: row nowrap; */
   opacity: 0;
   z-index: 10;
   position: absolute;
-  margin-top: 10%;
+  padding: 10% 0 0 10%;
+  
 }
 
 .redbox:hover > .activeDocTitle {
   opacity: 1;
+  display: block;
 }
 
 .docTitle::after {
@@ -779,8 +799,8 @@ h2 {
 }
 
 .promo:hover .title {
-  -webkit-transform: translate(5%, -50%);
-          transform: translate(5%, -50%);
+  -webkit-transform: translate(5%, -25%);
+          transform: translate(5%, -25%);
   -webkit-transition-timing-function: var(--bounce-out);
           transition-timing-function: var(--bounce-out);
 }
@@ -822,26 +842,15 @@ h2 {
   border: 2px 2px solid none;
 }
 
-/* #viewBoxContainer {
-  padding: 5vh 5vw;
-} */
-
-/* #edDocContainer>.edDocs {
-  opacity: 1;
-} */
-
-/* #viewBoxContainer:hover .edDocs{
-  opacity: 1;
-} */
-
-
 #edDocContainer {
   grid-area: docs;
   margin: 0 auto;
   opacity: 0;
   width: 35vw;
-  transition:opacity .6s ease-out;
-  background-color: var(--red);
+  transition: opacity .6s ease-in-out;
+  /* -webkit-transform: translate(-35%, 0%);
+  transform: translate(-35%, 0%); */
+  /* background-color: var(--red); */
 }
 
 #edDocContainer>h2.edDocName {
@@ -855,31 +864,32 @@ h2 {
 svg #educationSVG {
   display: block;
   margin:3vmin auto;
-  width:40vmin; height:auto;
+  width:40vmin;
+  height:auto;
 }
 
 .edFloatText {
   font-size: 10em;
-  -webkit-transition:font-size .6s ease-out;
-  transition:font-size .6s ease-out;
+  -webkit-transition:font-size 600ms ease-out;
+  transition:font-size 600ms ease-out;
   font-weight: 600;
   font-family: arial;
 }
-
 
 #educationSVG:hover text{
   transition:font-size .4s ease-in;
   font-size: 100em;
 } 
 
-#educationLanding:hover #edDocContainer {
+#educationLanding:hover #edDocContainer{
   opacity: 1;
-  transition:opacity .6s ease-out;
+  /* -webkit-transform: translate(15%, 0%);
+  transform: translate(15%, 0%); */
+  transition:all 600ms ease-in-out;
 }
 
-/* #viewBoxContainer:hover .edDocs{
-  opacity: 1;
-} */
+
+
 
 
 
@@ -897,13 +907,23 @@ svg #educationSVG {
   color: var(--yellow);
   text-align: left;
   font-family: var(--Chic);
-}
-
-.docName:hover {
   -webkit-transition-delay: 150ms;
           transition-delay: 150ms;
-  color: var(--red);
 }
+
+
+
+.docName:hover {
+  transform: scale(1.2);
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+  -webkit-transition: scale 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  /* color: var(--red); */
+  
+}
+
+
 
 .wrapperFloatDocBox {
   position: fixed;
@@ -921,7 +941,12 @@ svg #educationSVG {
   width: 100vw;
   height: 100vh;
   z-index: 99;
+  overflow: hidden;
 }
+
+/* .wrapperFloatDocBox:hover {
+  overflow: hidden;
+} */
 
 .floatDocBox {
   background-color: var(--yellow);
@@ -936,8 +961,8 @@ svg #educationSVG {
   -webkit-box-shadow: 0px 0px 5px var(--grey-very-dark);
   -o-box-shadow: 0px 0px 5px var(--grey-very-dark);
   border-radius: 25px;
-  overflow: scroll;
-  overflow: hidden;
+  /* overflow: scroll; */
+  overflow: hidden; 
 }
 
 .resourceDiv {
@@ -951,7 +976,7 @@ svg #educationSVG {
   contain: content;
   position: absolute;
   max-width: 100%;
-  min-height: 100%;
+  min-height: 85vh;
   margin: 0 auto;
   border-radius: 25px;
 }
@@ -1034,6 +1059,9 @@ svg #educationSVG {
 #MastersDegreeEmblem {
   width: 72%;
 }
+#ResumeEmblem {
+  width: 72%;
+}
 
 .iframeDescription {
   -ms-grid-row: 4;
@@ -1053,6 +1081,10 @@ svg #educationSVG {
   font-style: var(--AcierBatTextOutlineFS);
   font-size: 1.2em;
   color: var(--red);
+}
+
+.iframeDescription>h6{
+
 }
 
 .responsiveIframe {
@@ -2036,8 +2068,6 @@ li.rightTop>p {
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-area: gallery;
-  /* border: 2px groove gainsboro; */
-  /* margin: 5px; */
   display: fixed;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -2083,7 +2113,6 @@ li.rightTop>p {
 .githubIFrame {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  /* grid-area: GHiframe; */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2099,7 +2128,6 @@ li.rightTop>p {
   -ms-grid-row: 3;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
-  /* grid-area: github; */
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -2211,12 +2239,13 @@ li.rightTop>p {
 /* ----- WORK PAGE ------ */
 /* ------- ref classes = .thematicImg .responsive-img --------- */
 /* ------------------------ */
-/* #workPage { */
+#workPage {
   /* z-index: 116; */
-  /* margin-top: 5vh; */
-/* } */
+  margin-top: 5vh;
+}
 
 #innerWorkPage {
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   flex-flow: row nowrap;
@@ -2234,7 +2263,27 @@ li.rightTop>p {
 }
 
 #rfpInactive {
-  font-size: 3em;
+  font-size: 4em;
+  cursor: pointer;
+  /* margin: -70vh 0 0 -20VW; */
+  margin: -60vh auto 0;
+  position: absolute;
+  text-shadow: 2px 2px 5px var(--grey-very-dark);
+  font-family: var(--Lobster);
+  color: var(--yellow);
+  /* text-shadow: 1em 1em 0px var(--grey-dark)  */
+  /* text-shadow: 3em 7em 0px var(--blue); */
+}
+
+#hireLine {
+  opacity: 1;
+  margin: 1vh;
+}
+#rfpInactive:hover #hireLine {
+  /* border-bottom: 3px groove var(--yellow); */
+  transform: translate(25%, 0);
+  transition: all 200ms ease-in-out;
+  /* border: 2px groove gainsboro; */
 }
 
 #rfpInstructions>div>* {
@@ -2261,6 +2310,7 @@ li.rightTop>p {
   border-radius: 25px;
   transition: 150ms ease-in-out;
   color: var(--blue);
+  font-size: 1.2em;
 }
   
 #rfpInstructions>div:hover {

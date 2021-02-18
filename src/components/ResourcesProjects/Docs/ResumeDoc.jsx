@@ -6,7 +6,7 @@ import React from "react";
 import Resource from "../Resource";
 
 // CHILD COMPONENT IMPORTS
-import Resume from "../UploadPhotosToWeb/docs/Liz_Kane_Resume.pdf"
+import Resume from "../UploadPhotosToWeb/docs/Resume_Liz_Kane.pdf"
 import LizLogo from "../UploadPhotosToWeb/docs/seekLogo@4x.png"
 import LizPortrait from "../UploadPhotosToWeb/docs/LizKanePortrait.png"
 // import  from ""
@@ -23,7 +23,7 @@ const ResumeDoc = () => {
     
 
     return(
-        <div>
+        <div style={{overflow: "hidden"}}>
             {resourceItem}
         </div>
     )
