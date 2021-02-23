@@ -38,6 +38,7 @@
     "debug":"node --nolazy --debug-brk=58858 myProgram.js"
 
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
