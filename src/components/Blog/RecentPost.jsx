@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import RecentPostText from "./RecentPostText";
+// import RecentPostText from "./RecentPostText";
 
 class RecentPost extends Component {
 

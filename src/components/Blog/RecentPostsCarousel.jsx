@@ -1,14 +1,14 @@
 import React, { useState }from "react";
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
 import RecentPostsList from "./RecentPostsList";
 import FloatRecPostsBox from "./FloatRecPostsBox";
-import RecentPostText from "./RecentPostText";
+// import RecentPostText from "./RecentPostText";
 
 import {ImEyeBlocked, ImEye, ImStop, ImPlay2} from "react-icons/im";
 import {GiTornado, GiSnail} from "react-icons/gi";
 import {CgShapeSquare, CgShapeHexagon} from "react-icons/cg";
 import {BsArrowsExpand} from "react-icons/bs";
-import { Children } from "react";
+// import { Children } from "react";
 
 const RecentPostsCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -16,7 +16,8 @@ const RecentPostsCarousel = () => {
   const [iconShape, setIconShape] = useState(false);
   const [textContainerActive, setTextContainerActive] = useState(false);
   const [animationPaused, setAnimationPaused] = useState(false);
-  const [fullscreen, setFullscreen] = useState(false)
+  const [fullscreen, setFullscreen] = useState(false);
+  const [iconText, setIconText] = useState("");
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -164,6 +165,53 @@ const RecentPostsCarousel = () => {
 
   
 
+  const showIconText = (e) => {
+    if(e.target.id === "ringIcon"){
+      // iconText = 
+
+      setIconText(iconText => iconText="View Posts As Cube")
+    }
+    else if(e.target.id === "cubeIcon" ){
+      // iconText = 
+      setIconText(iconText => iconText="View Posts As Ring")
+    }
+    else if(e.target.id === "invisibleIcon" ){
+      // iconText = 
+      setIconText(iconText => iconText="Make Background Visible")
+    }
+    else if(e.target.id === "visibleIcon" ){
+      // iconText = 
+      setIconText(iconText => iconText="Make Background Invisible")
+    }
+    else if(e.target.id === "tornado" ){
+      // iconText = 
+      setIconText(iconText => iconText="Speed Up Spinning")
+    }
+    else if(e.target.id === "snail" ){
+      // iconText = 
+      setIconText(iconText => iconText="Slow Down Spinning")
+    }
+    else if(e.target.id === "stop" ){
+      // iconText = 
+      setIconText(iconText => iconText="Stop Spinning")
+    }
+    else if(e.target.id === "go" ){
+      // iconText = 
+      setIconText(iconText => iconText="Start Spinning")
+    }
+    else if(e.target.id === "recPostsFullScreen" ){
+      // iconText = 
+      setIconText(iconText => iconText="View Posts In Fullscreen")
+    }
+    else if(e.target.className === "controls" ){
+      // iconText = 
+      setIconText(iconText => iconText="")
+    }
+    // if(e.target.id === ""){
+    //   iconText = <p></p>
+    //   setIconText(iconText)
+    // }
+  }
  
 
   return (
@@ -171,40 +219,47 @@ const RecentPostsCarousel = () => {
     {/* <Carousel activeIndex={index} onSelect={handleSelect}> */}
         {/* <RecentPostsList/> */}
     {/* </Carousel> */}
-      <div id="recentPostsContainer">
-        <section className="controls">
-        {iconShape==true ?
-          <i className="controlsIcon" id="ringIcon" onClick={toggleShape}><CgShapeHexagon/></i>
+      <div id="recentPostsContainer" >
+        <section className="controls" onMouseOver={showIconText}>
+        {iconShape===true ?
+          <i className="controlsIcon" id="ringIcon" onClick={toggleShape} onMouseOver={showIconText} ><CgShapeHexagon/></i>
           :
-          <i className="controlsIcon" id="cubeIcon" onClick={toggleShape}><CgShapeSquare/></i>
+          <i className="controlsIcon" id="cubeIcon" onClick={toggleShape} onMouseOver={showIconText}><CgShapeSquare/></i>
 
         }
           <span onClick={toggleBackfaces} id="backfacesContainer">
-              <input type="checkbox" id="backfaces"  checked="false"/>
-              {iconVisible==true?
+              <input type="checkbox" id="backfaces"  checked="false" />
+              {iconVisible===true?
                 <>
-                  <label for="backfaces" className="invisibleIcon">
-                    <i className="controlsIcon"><ImEyeBlocked/></i>
+                  <label for="backfaces" className="invisibleIcon"  onMouseOver={showIconText}>
+                    <i className="controlsIcon" id="invisibleIcon"><ImEyeBlocked/></i>
                   </label>
                 </>
                 : 
                 <>
-                  <label for="backfaces" className="visibleIcon">
-                    <i className="controlsIcon"><ImEye/></i>
+                  <label for="backfaces" className="visibleIcon"  onMouseOver={showIconText}>
+                    <i className="controlsIcon" id="visibleIcon"><ImEye/></i>
                   </label>
                 </>
               }
           </span>
-          <i className="controlsIcon" id="tornado" onClick={toggleSpinSpeedQuick}><GiTornado/></i>
-          <i className="controlsIcon" id="snail" onClick={toggleSpinSpeedSlow}><GiSnail/></i>
+          <i className="controlsIcon" id="tornado" onClick={toggleSpinSpeedQuick} onMouseOver={showIconText}><GiTornado/></i>
+          <i className="controlsIcon" id="snail" onClick={toggleSpinSpeedSlow} onMouseOver={showIconText}><GiSnail/></i>
         {!animationPaused ? 
-          <i className="controlsIcon" id="stop" onClick={pauseAnimation}><ImStop/></i>
+          <i className="controlsIcon" id="stop" onClick={pauseAnimation} onMouseOver={showIconText}><ImStop/></i>
         :
-          <i className="controlsIcon" id="go" onClick={pauseAnimation}><ImPlay2/></i>
+          <i className="controlsIcon" id="go" onClick={pauseAnimation} onMouseOver={showIconText}><ImPlay2/></i>
         }
-        <i className="controlsIcon" id="recPostsFullScreen" onClick={activateFullScreen}><BsArrowsExpand/></i>
-        {fullscreen?<div id="recPostsFullScreen" onClick={activateFullScreen}><FloatRecPostsBox /></div>:[]}
+        <i className="controlsIcon" id="recPostsFullScreen" onClick={activateFullScreen} onMouseOver={showIconText}><BsArrowsExpand/></i>
+        {fullscreen?<div id="recPostsFullScreen" onClick={activateFullScreen} ><FloatRecPostsBox /></div>:[]}
           
+          <div id="iconTextContainer">
+            {iconText ==="" ?
+            <br/>
+            :
+            <p>{iconText}</p>
+            }
+          </div>
         </section>
 
         <div id="container" >

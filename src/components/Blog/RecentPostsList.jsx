@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BlogPost from "./BlogPost";
-import BlogPostContainer from "./BlogPostContainer";
+// import BlogPost from "./BlogPost";
+// import BlogPostContainer from "./BlogPostContainer";
 import RecentPost from "./RecentPost";
 import RecentPostText from "./RecentPostText";
 

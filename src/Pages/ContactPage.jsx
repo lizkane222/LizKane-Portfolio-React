@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import Wrapper from '../components/Header/Wrapper';
-import styled from 'styled-components';
-import TodoList from "../components/Todos/TodoList";
+// import styled from 'styled-components';
+// import TodoList from "../components/Todos/TodoList";
 import Footer from "../components/Footer/Footer";
 import EmailForm from "../components/Forms/EmailForm";
 import{ init } from 'emailjs-com';
@@ -20,9 +20,9 @@ const ContactPage=() => {
     let selectiveCounter
 
     selectiveCounter=(e) => {
-        e.target.className !='alreadyCounted' ? setCount(count+1) &&  (e.target.className +='alreadyCounted'): e.target.className = 'alreadyCounted'
+        e.target.className !=='alreadyCounted' ? setCount(count+1) &&  (e.target.className +='alreadyCounted'): e.target.className = 'alreadyCounted'
         for(let i = 0; i<e.target.childNodes.length; i++){
-            if(e.target.childNodes[i].className == "socIcon"){
+            if(e.target.childNodes[i].className === "socIcon"){
                 setIconsClicked(
                     iconsClicked.append(e.target.childNodes)
                 )
@@ -37,7 +37,7 @@ const ContactPage=() => {
             <Wrapper id="contactPageWrapper">
             
             <div className="contactRow">
-                <EmailForm onClick={() => setCount(count+1)} id="emailForm"/>
+                <EmailForm onClick={(e) => selectiveCounter(e)}/>
 
                 {/* <TodoList className="todoListGrid"/> */}
                 {/* <div className="container" id="socialContainer">     */}

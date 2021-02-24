@@ -36,7 +36,7 @@ const EmailForm=() => {
                     <hr/>
                   </div>
 
-                  <form onSubmit={sendEmail} id="contact-form" role="form" >
+                  <form onSubmit={sendEmail} id="contact-form"  >
                     <div className="controls">
                 
                       <div className="formRow">
@@ -66,7 +66,8 @@ const EmailForm=() => {
                           
                           <div className="form-group formGroup">
                             <label className="formLabel" for="subject">Please specify the subject of your inquiry</label>
-                            <select id="subject" name="subject" className="form-control" required="required" id="subjectPlaceholder" data-error="Please specify your inquiry.">
+                            <select id="subject" name="subject" className="form-control" required="required"  data-error="Please specify your inquiry.">
+                            {/* <select id="subject" name="subject" className="form-control" required="required" id="subjectPlaceholder" data-error="Please specify your inquiry."> */}
                               <option value=""  selected disabled>--Select Your Inquiry--</option>
                               <option>Request quote for project</option>
                               <option>Request a virtual meeting</option>
@@ -83,17 +84,22 @@ const EmailForm=() => {
                       {/* <div className="formRow"> */}
                         <div className="col-md-12" id="formMessage">
                           <div className="form-group formGroup">
-                            <label className="formLabel" for="message">Message</label>
+                            {/* <label className="formLabel" for="message">Message</label> */}
                             <textarea id="message" className="form-control" cols="30" rows="8" placeholder="Write your message here." rows="7" required="required"  name="message" data-error="Please, include a message."></textarea>
                           </div>
                         </div>
                         <div className="col-md-12"> 
                           <div className="form-group float-right">
+                            <label>Attach File:</label>
+                            <input type="file" name="uploadedfile" className="btn btn-info" id="uploadedfile"></input>
+                          </div><br/>
+                          
+                          <div className="form-group float-right">
                             <input type="submit" className="btn btn-info btn-primary" value="Send Email"></input>
                           </div><br/>
-                            {submitted==true ? 
+                            {submitted===true ? 
                             <>  
-                            <p id="submitShow" className="yellowText">Thank you for your submission. I'll get back to you shortly.</p>
+                            <p id="submitShow" className="yellowText">Thank you for your submission. <br/>I'll get back to you shortly.</p>
                             </>:[]
                           }
                         </div>

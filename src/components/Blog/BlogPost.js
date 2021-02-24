@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import BlogPostContainer from "./BlogPostContainer";
-import { useToggle} from "react-use";
-import FloatBlogBox from "./FloatBlogBox";
+// import BlogPostContainer from "./BlogPostContainer";
+// import { useToggle} from "react-use";
+// import FloatBlogBox from "./FloatBlogBox";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {GrClose} from "react-icons/gr";
 

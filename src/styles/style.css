@@ -2418,6 +2418,8 @@ li.rightTop>p {
   overflow-x: show;
 }
 
+
+
 #interestsHeadings {
   
   /* z-index:2; */
@@ -2488,7 +2490,9 @@ li.rightTop>p {
   
 }
 
-
+#iconTextContainer {
+ min-height: 3em; 
+}
 /* ---------------- */
 /* - LEFT COLUMN - */
 /* ---------------- */
@@ -3501,6 +3505,8 @@ i #cubeIcon {
 /* ----------- & REF todo.css ------------ */
 /* --------------------------------------- */
 /* @import "./ContactStyle/contactPage.css"; */
+
+
 
 
 /* ———————————————————————————————————————————————————— */

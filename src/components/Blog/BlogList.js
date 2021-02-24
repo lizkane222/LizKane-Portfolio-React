@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import BlogPost from "./BlogPost";
-import BlogPostContainer from "./BlogPostContainer";
+// import BlogPostContainer from "./BlogPostContainer";
 
 import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg";
 import Feminist from "../ResourcesProjects/UploadPhotosToWeb/blog/flowersWoman.jpg";

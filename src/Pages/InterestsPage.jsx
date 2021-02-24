@@ -1,10 +1,11 @@
-import React, { useState, setState} from "react";
+import React from "react";
+// import React, { useState, setState} from "react";
 import { useToggle} from "react-use";
 import Wrapper from '../components/Header/Wrapper';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import {Link} from 'react-scroll';
-import Window from "../components/window"
-import BlogList from "../components/Blog/BlogList";
+// import Window from "../components/window"
+// import BlogList from "../components/Blog/BlogList";
 // const InterestsPageStyled = styled.div;
 import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/obsessions.png";
 import FloatBlogBox from "../components/Blog/FloatBlogBox";
@@ -26,9 +27,9 @@ const InterestsPage=() => {
     // const [on, toggle] = useToggle(true);
 
     
-    let redColor = "#8B0124";
-    let blueColor = "#327E8A";
-    let yellowColor = "#EDC168";
+    // let redColor = "#8B0124";
+    // let blueColor = "#327E8A";
+    // let yellowColor = "#EDC168";
 
     return(
         <section id="interestsPage">
@@ -124,7 +125,7 @@ const InterestsPage=() => {
                 <div>
                     {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
                 </div>
-                {/* <div>
+                <div>
                     {isArtistOn ? <FloatBlogBox toggleArtistIsOn={toggleArtistIsOn}/> : []}
                 </div>
                 <div>
@@ -150,12 +151,8 @@ const InterestsPage=() => {
                 </div>
                 <div>
                     {isReaderOn ? <FloatBlogBox toggleReaderIsOn={toggleReaderIsOn}/> : []}
-                </div> */}
+                </div>
                 {/* <div>{isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}</div> */}
-
-
-
-
 
 
                 {/* <hr/> */}
@@ -180,26 +177,3 @@ const InterestsPage=() => {
 export default InterestsPage;
 
 
-{/* <div className="rollerContainer">
-                    <div className="content">
-                        <div className="content__container">
-                            <h5 className="content__container__text">
-                                more than a
-                            </h5>
-
-                            <ul className="content__container__list">
-                                <li className="content__container__list__item blueRoll">Software Engineer</li>
-                                <li className="content__container__list__item yellowRoll">Teacher</li>
-                                <li className="content__container__list__item redRoll vowel" id="vowelArtist">Artist</li>
-                                <li className="content__container__list__item blueRoll">Musician</li>
-                                <li className="content__container__list__item yellowRoll">Writer</li>
-                                <li className="content__container__list__item redRoll">Feminist</li>
-                                <li className="content__container__list__item yellowRoll vowel">Athlete</li>
-                                <li className="content__container__list__item redRoll">Nomad</li>
-                                <li className="content__container__list__item yellowRoll">Woman in Tech</li>
-                                <li className="content__container__list__item blueRoll">Software Engineer</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div> */}

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import {ImQuotesLeft, ImQuotesRight} from 'react-icons/im';
+// import {ImQuotesLeft, ImQuotesRight} from 'react-icons/im';
 
 class TextItem extends Component {
     

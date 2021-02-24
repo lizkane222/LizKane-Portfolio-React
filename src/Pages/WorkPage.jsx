@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from 'react-scroll';
 import Wrapper from '../components/Header/Wrapper';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { useToggle} from "react-use";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {BsCheckCircle, BsCircle} from "react-icons/bs"
@@ -42,7 +42,7 @@ const WorkPage=() => {
 
     // ANCHOR onClick style event
     const strikeThrough = (e) => {
-        if (e.target.className!="strikeThrough"){
+        if (e.target.className!=="strikeThrough"){
             e.target.className="strikeThrough"
         } else {
             e.target.className=""

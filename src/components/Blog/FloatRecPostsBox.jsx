@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BlogPost from "./BlogPost";
-import BlogPostContainer from "./BlogPostContainer";
-import RecentPost from "./RecentPost";
+// import BlogPost from "./BlogPost";
+// import BlogPostContainer from "./BlogPostContainer";
+// import RecentPost from "./RecentPost";
 import RecentPostText from "./RecentPostText";
 
 import Ennemi from "../ResourcesProjects/UploadPhotosToWeb/LinkedInPosts/ennemi.jpg";

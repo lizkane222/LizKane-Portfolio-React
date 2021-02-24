@@ -1,15 +1,11 @@
 import React from "react";
 import Wrapper from '../components/Header/Wrapper';
-import styled from 'styled-components';
 
 import BachelorsDoc from "../components/ResourcesProjects/Docs/BachelorsDoc.jsx";
 import MastersDoc from "../components/ResourcesProjects/Docs/MastersDoc.jsx";
 import GACertDoc from "../components/ResourcesProjects/Docs/GACertDoc.jsx";
-import GrandCanyon from "../components/ResourcesProjects/UploadPhotosToWeb/docs/grandCanyon.png";
+// import GrandCanyon from "../components/ResourcesProjects/UploadPhotosToWeb/docs/grandCanyon.png";
 import TextCarousel from "../components/Carousel/TextCarousel";
-
-
-// const EducationPageStyled = styled.div;
 
 const EducationPage=() => {
     const itemsArray = ['“Curiosity is the fuel for discovery, inquiry, and learning.” Anonymous',
