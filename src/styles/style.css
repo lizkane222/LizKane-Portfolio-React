@@ -2653,6 +2653,10 @@ li.rightTop>p {
   width: 25%;
 }
 
+Link.blogBoxLink{
+  
+}
+
 .blogBox, .recPostBox {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2665,11 +2669,11 @@ li.rightTop>p {
   -webkit-box-shadow: 0 .75em 1.5em var(--grey-very-dark2);
           box-shadow: 0 .75em 1.5em var(--grey-very-dark2);
   line-height: 0;
+  height: 40vh;
   min-width: 23%;
   width: 23%;
   max-width: 30%;
   background-color: var(--grey-very-dark);
-  height: 40vh;
   border-radius: 10px;
   transition: all 200ms ease-in-out;
 }

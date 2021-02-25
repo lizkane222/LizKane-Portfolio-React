@@ -122,8 +122,13 @@ input:focus, textarea:focus, select:focus{
   color: var(--white-pretty);
   font-size: 1.3em;
 }
+
+#uploadedfile {
+  margin: .5em 1em;
+}
+
 #submitShow {
-  margin-top: 1em;
+  margin: 1em 1em 0 0;
   // color: $yellow;
   font-size: 1.3em;
 }

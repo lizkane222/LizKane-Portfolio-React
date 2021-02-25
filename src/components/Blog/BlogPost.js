@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-scroll';
 // import BlogPostContainer from "./BlogPostContainer";
 // import { useToggle} from "react-use";
 // import FloatBlogBox from "./FloatBlogBox";
@@ -89,17 +90,20 @@ class BlogPost extends Component {
                         <a><i id="postClose" className="float-right" onClick={this.setActive}><GrClose/></i></a>
                     </div>
                 </div>
-
-                    <div className="blogBox">
+                
+                    
+                        <div className="blogBox">
+                            <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
+                            <div className="blogTitle" ><span>{this.props.title}</span></div>
+                        </div>
+                </>
+                :
+                <Link to="postHeader" spy={true} smooth={true} duration={1000} className="blogBoxLink">
+                    <div className="blogBox" onClick={this.setActive}>
                         <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
                         <div className="blogTitle" ><span>{this.props.title}</span></div>
                     </div>
-                </>
-                :
-                <div className="blogBox" onClick={this.setActive}>
-                    <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
-                    <div className="blogTitle" ><span>{this.props.title}</span></div>
-                </div>
+                </Link>
                 }
             </> 
         )

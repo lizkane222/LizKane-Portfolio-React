@@ -36,7 +36,7 @@ const EmailForm=() => {
                     <hr/>
                   </div>
 
-                  <form onSubmit={sendEmail} id="contact-form"  >
+                  <form onSubmit={sendEmail} id="contact-form" enctype="multipart/form-data" method="post">
                     <div className="controls">
                 
                       <div className="formRow">
@@ -89,14 +89,14 @@ const EmailForm=() => {
                           </div>
                         </div>
                         <div className="col-md-12"> 
-                          <div className="form-group float-right">
-                            <label>Attach File:</label>
-                            <input type="file" name="uploadedfile" className="btn btn-info" id="uploadedfile"></input>
+                          <div className="form-group float-left">
+                            {/* <input type="file" name="uploaded_file"> */}
+                            <input type="file" name="uploaded_file" id="uploaded_file"></input>
                           </div><br/>
                           
                           <div className="form-group float-right">
                             <input type="submit" className="btn btn-info btn-primary" value="Send Email"></input>
-                          </div><br/>
+                          </div>
                             {submitted===true ? 
                             <>  
                             <p id="submitShow" className="yellowText">Thank you for your submission. <br/>I'll get back to you shortly.</p>
