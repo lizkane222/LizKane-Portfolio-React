@@ -98,12 +98,12 @@ class BlogPost extends Component {
                         </div>
                 </>
                 :
-                <Link to="postHeader" spy={true} smooth={true} duration={1000} className="blogBoxLink">
                     <div className="blogBox" onClick={this.setActive}>
+                        <Link to="postHeader" spy={true} smooth={true} duration={1000} className="blogBoxLink">
                         <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
                         <div className="blogTitle" ><span>{this.props.title}</span></div>
+                        </Link>
                     </div>
-                </Link>
                 }
             </> 
         )
