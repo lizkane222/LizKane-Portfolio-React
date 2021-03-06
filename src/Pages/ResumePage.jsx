@@ -15,7 +15,7 @@ const ResumePage=() => {
             <Wrapper>
                 <div className="redbox promo">
                     <div className="image-wrapper">
-                        <img src={Blocks} alt="" id="blocksImg" className="thematicImg responsive-img"/>
+                        <img src={Blocks} alt="stacked geometric shapes" id="blocksImg" className="thematicImg responsive-img"/>
                     </div>
                     <h2 className="docTitle" data-cta="awesome">Resume / Curriculum Vitae</h2>
                     <h4 className="activeDocTitle">{<ResumeDoc/>}</h4>

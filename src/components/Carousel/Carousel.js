@@ -11,14 +11,14 @@ const Carousel = (props) => {
     console.log("props.gallery.length" + props.gallery.length)
 
     const gallery = props.gallery.map(image => {
-    return (
-        // <div className="carousel-return">
-        <>
-            <img src={image.img} alt={image.descImg} className="projectGalleryImage"/>
+        return (
+            // <div className="carousel-return">
+            <>
+                <img src={image.img} alt={image.descImg} className="projectGalleryImage"/>
                 <p className="carousel-description">{image.descImg}</p>
-        </>
-        //  </div> 
-    )
+            </>
+            //  </div> 
+        )
     })
     
     

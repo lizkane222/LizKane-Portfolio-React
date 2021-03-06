@@ -5,7 +5,7 @@ import Wrapper from '../components/Header/Wrapper';
 // import styled from 'styled-components';
 import {Link} from 'react-scroll';
 // import Window from "../components/window"
-// import BlogList from "../components/Blog/BlogList";
+import BlogList from "../components/Blog/BlogList";
 // const InterestsPageStyled = styled.div;
 import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/obsessions.png";
 import FloatBlogBox from "../components/Blog/FloatBlogBox";
@@ -123,7 +123,8 @@ const InterestsPage=() => {
             </div>
 
                 <div>
-                    {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}
+                    {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn} data={BlogList} /> : []}
+                    {/* {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn} /> : []} */}
                 </div>
                 <div>
                     {isArtistOn ? <FloatBlogBox toggleArtistIsOn={toggleArtistIsOn}/> : []}

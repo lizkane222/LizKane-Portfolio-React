@@ -15,9 +15,14 @@ const FloatDocBox =(props) => {
     //     }
     // };
 
+    const stopAnimation= () => {
+        let resumeAnima = document.getElementsByClassName("promo")
+        resumeAnima.style={animationPlayState: "paused"} 
+    }
+
     return(
         <div className="wrapperFloatDocBox" onClick={props.setActive}>
-            <div className="floatDocBox" onClick={(e) => e.stopPropagation()}>
+            <div className="floatDocBox" onClick={(e) => e.stopPropagation()} onMouseOver={stopAnimation()}>
                 <div className="resourceDiv" id={props.name+'ParentDiv'} >
                     <h3 className="resourceCategory">{props.category}</h3>
                     <h2 className="resourceName">{props.print}</h2>

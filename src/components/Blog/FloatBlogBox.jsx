@@ -9,7 +9,9 @@ const FloatBlogBox =(props) => {
         <div className="wrapperFloatBlogBox" onClick={props.toggleBlogIsOn}>
             <div className="floatBlogBox" onClick={(e) => e.stopPropagation()}>
                 <div className="blogContainer animate">                    
-                    <BlogList />    
+                    {/* <BlogList />     */}
+                    {/* <BlogList />     */}
+                    {<props.data/>}
                 </div>
             </div>
         </div>
