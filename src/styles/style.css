@@ -1189,6 +1189,8 @@ svg #educationSVG {
   /* display: relative; */
 }
 
+
+
 li.skillLi{
   width: 4vw;
   height: 2vh;
@@ -1197,6 +1199,7 @@ li.skillLi{
   margin: 0 0;
   /* position: absolute; */
 }
+
 
 /*Change icons circle size and color here*/
 .social-icons .fa {
@@ -1248,7 +1251,7 @@ li.skillLi{
 
 
 .social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
-	/* -webkit-transform: scale(1.2) rotate(120deg);
+  /* -webkit-transform: scale(1.2) rotate(120deg);
 	-moz-transform: scale(1.2) rotate(120deg);
 	-ms-transform: scale(1.2) rotate(120deg);
 	-o-transform: scale(1.2) rotate(120deg);
@@ -1257,6 +1260,45 @@ li.skillLi{
   color: var(--blue);
 }
 
+
+#floatBoxSkillList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+#floatBoxSkillList>li.skillLi{
+  width: 3vw;
+  height: 1.5vh;
+  margin: 0 .7em .4em .7em;
+}
+#floatBoxSkillList>li.skillLi>.social-icons .fa {
+  font-size: 2em;
+  line-height: 1em;
+  padding: .1em;
+  text-align: center;
+}
+
+.social-icons.icon-spin .fa {
+  font-size: 2em;
+  padding: .1em;
+  animation: none;
+}
+
+.social-icons.icon-spin .fa:hover, .social-icons.icon-spin .fa:active {
+  -webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+  transform: scale(1.1) rotate(360deg);
+  color: var(--blue);
+}
+
+#skillName {
+  height: 1em;
+}
 /* SOCIAL SKILLS ICONS GRID AREAS */
 #FaReact {
   grid-area: A1;

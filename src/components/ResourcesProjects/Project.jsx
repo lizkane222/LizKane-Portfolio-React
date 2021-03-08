@@ -100,7 +100,7 @@ class Project extends Component {
 
                 {this.state.active &&
                 <div className="floatboxAbsolute">
-                <FloatBox logo={this.props.logo} name={this.props.name} description={this.props.description} github={this.props.github} github2={this.props.github2} gist={this.props.gist} gallery={this.props.gallery} style={this.props.style} setActive={this.setActive}/>
+                <FloatBox logo={this.props.logo} name={this.props.name} description={this.props.description} github={this.props.github} github2={this.props.github2} gist={this.props.gist} language={this.props.language} gallery={this.props.gallery} style={this.props.style} setActive={this.setActive}/>
                 </div>
                 }
             </>
