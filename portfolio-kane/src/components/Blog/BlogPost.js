@@ -44,6 +44,11 @@ class BlogPost extends Component {
             // filter: "brightness(120%)",
             // opacity: ".5"
         }
+
+        let noDecor = {
+            textDecoration: "none;"
+        }
+
         return (
             <>
                 {this.state.active ?                   
@@ -112,15 +117,15 @@ class BlogPost extends Component {
                     <div className="blogBox">
                         <div className="blogBoxLink">
                             <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
-                            <div className="blogTitle" ><span>{this.props.title}</span></div>
+                            <div className="blogTitle" style={noDecor} ><span style={noDecor}>{this.props.title}</span></div>
                         </div>
                     </div>
                 </>
                 :
                     <div className="blogBox" >
-                        <Link to={`activeTitle+${this.props.title}`} spy={true} smooth={true} duration={1000} className="blogBoxLink" onClick={this.setActive}>
+                        <Link to={`activeTitle+${this.props.title}`} spy={true} smooth={true} duration={1000} style={noDecor} className="blogBoxLink" onClick={this.setActive}>
                             <img src={this.props.imgSrc} className="blogImg" alt={this.props.imgDesc}/>
-                            <div className="blogTitle" ><span>{this.props.title}</span></div>
+                            <div className="blogTitle" style={noDecor}><span style={noDecor}>{this.props.title}</span></div>
                         </Link>
                     </div>
                 }

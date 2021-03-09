@@ -55,8 +55,8 @@ const LandingPage=() => {
                         <p id="p2" className="strokes" onMouseOver={handleHover}>realistic with an optimistic flare</p>
                         <p id="p3" className="strokes" onMouseOver={handleHover}>direct & patient in problem solving.</p>
                         <p id="p4" className="strokes" onMouseOver={handleHover}>natural aptitude in creating communities.</p>
-                        <p id="p4" className="strokes" onMouseOver={handleHover}>fierce passion to impact change.</p>
-                        <p id="p4" className="strokes" onMouseOver={handleHover}>systematic with organization.</p>
+                        <p id="p5" className="strokes" onMouseOver={handleHover}>fierce passion to impact change.</p>
+                        <p id="p6" className="strokes" onMouseOver={handleHover}>systematic with organization.</p>
                         {/* <p id="p4" className="strokes" onMouseOver={handleHover}>.</p> */}
                     </div>  
 

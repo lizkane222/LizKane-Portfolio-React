@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from '../components/Header/Wrapper';
 // import styled from 'styled-components';
 import {FaBootstrap, FaReact, FaGithub, FaGitAlt, FaNodeJs, FaCodepen, FaHtml5, FaNpm, FaPython, FaSlack, FaTrello, } from 'react-icons/fa';
-import {SiTypescript, SiJavascript, SiAdobeaftereffects, SiAtom, SiBabel, SiCss3, SiMongodb, SiFirebase, SiAdobecreativecloud, SiAdobelightroomclassic, SiAdobephotoshop, SiAdobexd, SiAdobe, SiMysql, SiPostgresql, SiVisualstudio, SiNotion, SiAirtable, } from 'react-icons/si';
+import {SiTypescript, SiJavascript, SiAdobeaftereffects, SiAtom, SiBabel, SiCss3, SiMongodb, SiFirebase, SiAdobecreativecloud, SiAdobelightroomclassic, SiAdobephotoshop, SiAdobexd, SiAdobe, SiMysql, SiPostgresql, SiVisualstudio, SiNotion, SiAirtable } from 'react-icons/si';
 import {DiDjango, DiHeroku, DiJqueryLogo, DiSass, DiMaterializecss, } from 'react-icons/di';
 
 
@@ -27,14 +27,14 @@ const ProjectsPage=() => {
                     <div className="col-lg-5 mx-auto" id="teamWorkGridParent">
                         {/* <div className="redBox" > */}
                             {/* <img href={BeeGrid} id="beeGrid"/> */}
-                            <ul className="social-icons icon-circle icon-rotate list-unstyled list-inline" id="teamWorkGrid"> 
+                            <ul className="social-icons icon-circle icon-rotate list-unstyled" id="teamWorkGrid"> 
                             {/* LANGUAGES */}
-                                <li className="skillLi" id="FaReact"><a><i className="fa "><FaReact/></i></a> </li> 
-                                <li className="skillLi" id="SiJavascript"><a><i className="fa "><SiJavascript/></i></a> </li>   
-                                <li className="skillLi" id="DiDjango"> <a><i className="fa "><DiDjango/></i></a> </li>
-                                <li className="skillLi" id="SiCss3"> <a><i className="fa "><SiCss3/></i></a> </li> 
-                                <li className="skillLi" id="SiAtom"> <a><i className="fa "><SiAtom/></i></a> </li> 
-                                <li className="skillLi" id="DiSass"> <a><i className="fa "><DiSass/></i></a> </li> 
+                                <li className="skillLi" id="FaReact"> <a><i className="fa"><FaReact/></i></a></li> 
+                                <li className="skillLi" id="SiJavascript"> <a><i className="fa"><SiJavascript/></i></a></li>   
+                                <li className="skillLi" id="DiDjango"> <a><i className="fa"><DiDjango/></i></a></li>
+                                <li className="skillLi" id="SiCss3"> <a><i className="fa"><SiCss3/></i></a></li> 
+                                <li className="skillLi" id="SiAtom"> <a><i className="fa"><SiAtom/></i></a></li> 
+                                <li className="skillLi" id="DiSass"> <a><i className="fa"><DiSass/></i></a></li> 
                                 <li className="skillLi" id="FaHtml5"> <a><i className="fa"><FaHtml5/></i></a></li> 
                                 <li className="skillLi" id="FaPython"> <a><i className="fa"><FaPython/></i></a></li> 
                                 <li className="skillLi" id="SiMongodb"> <a><i className="fa"><SiMongodb/></i></a></li> 

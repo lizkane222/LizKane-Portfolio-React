@@ -4,7 +4,16 @@ import Wrapper from '../components/Header/Wrapper';
 // import styled from 'styled-components';
 import { useToggle} from "react-use";
 import {TiArrowBackOutline} from "react-icons/ti";
-import {BsCheckCircle, BsCircle} from "react-icons/bs"
+import {BsCheckCircle, BsCircle} from "react-icons/bs";
+import {HiColorSwatch} from "react-icons/hi";
+import {GrGrow, GrOptimize} from "react-icons/gr";
+import {BiDonateHeart} from "react-icons/bi";
+import {GoLightBulb} from "react-icons/go";
+import {GiDropletSplash} from "react-icons/gi";
+import {CgArrowLongRightE} from "react-icons/cg";
+
+
+
 
 import ReqForProj from "../components/ResourcesProjects/UploadPhotosToWeb/docs/FillableRequestForProjectProposalTemplate.pdf"
 import Desert from "../components/ResourcesProjects/UploadPhotosToWeb/docs/desert.png";
@@ -14,6 +23,7 @@ import Desert from "../components/ResourcesProjects/UploadPhotosToWeb/docs/deser
 
 const WorkPage=() => {
     const [active, toggleActive] = useToggle(false);
+    const [activeIcon, toggleActiveIcon] = useToggle(false);
     const [browser, toggleBrowser] = useToggle(false);
     const [download, toggleDownload] = useToggle(false);
 
@@ -50,6 +60,14 @@ const WorkPage=() => {
     }
 
 
+    const handleHover = (e) => {
+        {e.target.className === "inactiveIcon" ?
+        e.target.className = "activeIcon" 
+        :
+        e.target.className = "inactiveIcon"
+        }
+    }
+
     return(
         <section id="workPage">
             <Wrapper>
@@ -59,14 +77,18 @@ const WorkPage=() => {
                     </div>
                     {/* <h2 onClick={toggleActive} id="rfpInactive">Request<br/>&emsp;To Hire <br/>&emsp;&emsp;Liz Kane<br/>&emsp;&emsp;&emsp;For A <br/>&emsp;&emsp;&emsp;&emsp;Project</h2> */}
                     <h2 onClick={toggleActive} id="rfpInactive">HIRE LIZ FOR A PROJECT</h2>
-                    <hr id="hireLine"/>
+                    {/* <hr id="hireLine"/> */}
 
-                    <div>
-                        <h3>PURPOSE -- IMPACT -- PERSPECTIVE</h3>
+                    <div id="workDescription">
+                        <h2 className="workIcon inactive" onMouseOver={handleHover}><GiDropletSplash/> PURPOSE </h2>
+                        <h2 className="workIcon inactive" onMouseOver={handleHover}><BiDonateHeart/>  IMPACT</h2>
+                        <h2 className="workIcon inactive" onMouseOver={handleHover}><GoLightBulb/>  PERSPECTIVE</h2>
+                        <h2 className="workIcon inactive" onMouseOver={handleHover}><HiColorSwatch/>  CREATIVITY</h2>
+                        
                         {/* <p>PURPOSE</p>
                         <p>IMPACT</p>
                         <p>PERSPECTIVE</p> */}
-                        <p>When developing a project I keep these three concepts at the forefront of my mind. From -- features -- to -- design -- to -- development -- I retain these concepts to maintain its integrity.</p>
+                        <p>When developing a project I keep these concepts at the forefront of my mind.<br/> From features <i><CgArrowLongRightE/></i> to design <i><CgArrowLongRightE/></i> to development <i><CgArrowLongRightE/></i> I retain these concepts to maintain its integrity.</p>
                     </div>
 
 
