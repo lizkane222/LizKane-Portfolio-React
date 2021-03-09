@@ -23,7 +23,7 @@ const ResumeDoc = () => {
     
 
     return(
-        <div style={{overflow: "hidden"}}>
+        <div style={{overflow: "hidden"}} onClick={(e) => e.stopPropagation()} onMouseOver={(e) => e.stopPropagation()}>
             {resourceItem}
         </div>
     )

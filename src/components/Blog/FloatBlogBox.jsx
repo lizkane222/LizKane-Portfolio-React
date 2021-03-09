@@ -11,7 +11,7 @@ const FloatBlogBox =(props) => {
                 <div className="blogContainer animate">                    
                     {/* <BlogList />     */}
                     {/* <BlogList />     */}
-                    {<props.data/>}
+                    {<props.data />}
                 </div>
             </div>
         </div>

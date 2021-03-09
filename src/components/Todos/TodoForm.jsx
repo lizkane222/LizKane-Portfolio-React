@@ -10,6 +10,10 @@ const TodoForm= ({ addTodo }) => {
         setValue('');
     }
 
+    
+
+
+
     return(
         <form onSubmit={handleSubmit} className="comment-form">
             <input 
@@ -17,7 +21,25 @@ const TodoForm= ({ addTodo }) => {
             className="input" 
             value={value} 
             onChange={e => setValue(e.target.value)} 
-            placeholder="Leave a comment for Liz"/>
+            placeholder="Know a book that should be on this list?"/>
+            <input 
+            type="text" 
+            className="input" 
+            value={value} 
+            onChange={e => setValue(e.target.value)} 
+            placeholder="Know a book that should be on this list?"/>
+            <input 
+            type="text" 
+            className="input" 
+            value={value} 
+            onChange={e => setValue(e.target.value)} 
+            placeholder="Know a book that should be on this list?"/>
+            <input 
+            type="text" 
+            className="input" 
+            value={value} 
+            onChange={e => setValue(e.target.value)} 
+            placeholder="Know a book that should be on this list?"/>
         </form>
     )
 }

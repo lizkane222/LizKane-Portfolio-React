@@ -6,6 +6,7 @@ import Wrapper from '../components/Header/Wrapper';
 import {Link} from 'react-scroll';
 // import Window from "../components/window"
 import BlogList from "../components/Blog/BlogList";
+import BlogLists from "../components/Blog/BlogLists";
 // const InterestsPageStyled = styled.div;
 import Obsessions from "../components/ResourcesProjects/UploadPhotosToWeb/docs/obsessions.png";
 import FloatBlogBox from "../components/Blog/FloatBlogBox";
@@ -25,6 +26,27 @@ const InterestsPage=() => {
     const [isReaderOn, toggleReaderIsOn] = useToggle(false);
     // const [is2On, toggle2IsOn] = useToggle(false);
     // const [on, toggle] = useToggle(true);
+
+    // BlogListsartist
+
+    // let musicianList = <BlogLists {floatList.musician}/>
+    // let softwareEngineerList = <BlogLists {floatList.softwareEngineer}/>
+    // let writerList = <BlogLists {floatList.writer}/>
+    // let nomadList = <BlogLists {floatList.nomad}/>
+    // let feministList = <BlogLists {floatList.feminist}/>
+    // let womanInTechList = <BlogLists {floatList.womanInTech}/>
+    // let musicList = <BlogLists {floatList.music}/>
+    // let athleteList = <BlogLists {floatList.athlete}/>
+    // let readerList = <BlogLists {floatList.reader}/>
+    // let writingList = <BlogLists {floatList.writing}/>
+
+
+
+
+
+
+
+
 
     
     // let redColor = "#8B0124";
@@ -126,34 +148,43 @@ const InterestsPage=() => {
                     {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn} data={BlogList} /> : []}
                     {/* {isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn} /> : []} */}
                 </div>
-                <div>
-                    {isArtistOn ? <FloatBlogBox toggleArtistIsOn={toggleArtistIsOn}/> : []}
+                {/* <div>
+                    {isArtistOn ? <FloatBlogBox toggleArtistIsOn={toggleArtistIsOn} data={BlogLists} props="artist"/> : []}
                 </div>
                 <div>
-                    {isMusicianOn ? <FloatBlogBox toggleMusicianIsOn={toggleMusicianIsOn}/> : []}
+                    {isMusicianOn ? <FloatBlogBox toggleMusicianIsOn={toggleMusicianIsOn} data={BlogLists} props="musician"/> : []}
                 </div>
                 <div>
-                    {isEngineerOn ? <FloatBlogBox toggleEngineerIsOn={toggleEngineerIsOn}/> : []}
+                    {isEngineerOn ? <FloatBlogBox toggleEngineerIsOn={toggleEngineerIsOn} data={BlogLists} props="softwareEngineer"/> : []}
                 </div>
                 <div>
-                    {isNomadOn ? <FloatBlogBox toggleNomadIsOn={toggleNomadIsOn}/> : []}
+                    {isNomadOn ? <FloatBlogBox toggleNomadIsOn={toggleNomadIsOn} data={BlogLists} props="nomad"/> : []}
                 </div>
                 <div>
-                    {isWriterOn ? <FloatBlogBox toggleWriterIsOn={toggleWriterIsOn}/> : []}
+                    {isWriterOn ? <FloatBlogBox toggleWriterIsOn={toggleWriterIsOn} data={BlogLists} props="writer"/> : []}
                 </div>
                 <div>
-                    {isAthleteOn ? <FloatBlogBox toggleAthleteIsOn={toggleAthleteIsOn}/> : []}
+                    {isAthleteOn ? <FloatBlogBox toggleAthleteIsOn={toggleAthleteIsOn} data={BlogLists} props="athlete"/> : []}
                 </div>
                 <div>
-                    {isTeacherOn ? <FloatBlogBox toggleTeacherIsOn={toggleTeacherIsOn}/> : []}
+                    {isTeacherOn ? <FloatBlogBox toggleTeacherIsOn={toggleTeacherIsOn} data={BlogLists} props="teacher"/> : []}
                 </div>
                 <div>
-                    {isFeministOn ? <FloatBlogBox toggleFeministIsOn={toggleFeministIsOn}/> : []}
+                    {isFeministOn ? <FloatBlogBox toggleFeministIsOn={toggleFeministIsOn} data={BlogLists} props="feminist"/> : []}
                 </div>
                 <div>
-                    {isReaderOn ? <FloatBlogBox toggleReaderIsOn={toggleReaderIsOn}/> : []}
-                </div>
+                    {isReaderOn ? <FloatBlogBox toggleReaderIsOn={toggleReaderIsOn} data={BlogLists} props="reader"/> : []}
+                </div> */}
                 {/* <div>{isBlogOn ? <FloatBlogBox toggleBlogIsOn={toggleBlogIsOn}/> : []}</div> */}
+
+
+
+
+
+
+
+
+
 
 
                 {/* <hr/> */}

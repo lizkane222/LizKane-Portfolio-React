@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPost from "./BlogPost";
+import AltBlog from "./AltBlog";
 // import BlogPostContainer from "./BlogPostContainer";
 
 import Athlete from "../ResourcesProjects/UploadPhotosToWeb/blog/athleteBasketballhoop.jpg";
@@ -19,7 +20,7 @@ import WhyBlog from "../ResourcesProjects/UploadPhotosToWeb/blog/whyBlog.jpg";
 const BlogPostWhyBlog = [{
  title: " Why Make A Blog As A Software Engineer? ",
  index: 0,
- blogP1: "I created this blog to be a descriptive illustration of the many facets of my personality and skills. Before becoming a software engineer I took time to explore who I am and what I love doing. Upon discovering software engineering, a collision took place between two areas; my need for creativity in work and my need for systematic order and purpose throughout all areas of life. The merging of these two have allowed me to embrace my somewhat unrelated skills and use them as pillars to further and deepen my skills in coding. I openly share these experiences and outlooks because it is not easy to know the experiences that have molded the mind behind the developer.",
+ blogP1: "I created this blog to illustrate my varied interests, skills, personality traits, and passions. Before becoming a software engineer I took time to explore who I am and what I love doing. Upon discovering software engineering, a collision took place between two areas; my need for creativity in work and my need for systematic order and purpose throughout my work. The merging of these two have allowed me to embrace my somewhat unrelated skills and use them as pillars to further and deepen my skills in coding. I openly share these experiences and outlooks because it is not easy to know the experiences which have molded the mind behind the developer. ",
  blogP2: "I am",
  blogP3: " a software engineer ",
  blogP4: " an artist ",
@@ -32,16 +33,18 @@ const BlogPostWhyBlog = [{
  blogP11: " and many things I’ve yet to discover. ",
  blogP12: "I’ve spent my life learning, discovering, and traveling all with the aim to expose myself to experiences I’d otherwise never have. ",
  blogP13: "A blog unrelated to tech as a developer may not seem useful to you, but it’s been a journey to map out how I’ve arrived at this plot in space and time. This collection of my thoughts and array of passions reveal a lot about who I am beyond the screen and keyboard. ",
- blogP14: "I have so many ideas for what I want to create, and if you want to join me or find out more then welcome, I can’t wait to see what we can build together. What I do know is that I have a set trajectory that is fueled by my need to make this world better and put purpose in each and every one of my projects. ",
- blogP15: "If you’d like to share some of your thoughts with me on any of these topics or to ask further questions, please feel free to use one of the many methods of contacting me listed in the Contact section. ",
- blogP16: "I look forward to connecting. ",
- blogP17: "Cheers, ",
- blogP18: "Liz Kane",
- blogP19: "",
+//  blogP14: "I'm an advocate to doing whatever it takes to know oneself. Throughout my graduate program we focused a lot viewing individuals as having a collection of multiple intelligences: Musical / Bodily-Kinesthetic / Interpersonal / Verbal-Linguistic / Logical-Mathematical / Naturalistic / Intrapersonal / Visual-Spatial. These many blog entries will are the mere basis on explaining some of my strengths in each of these areas.",
+ blogP15: "I have so many ideas for what I want to create, and if you want to join me or find out more then welcome, I can’t wait to see what we can build together. What I do know is that I have a set trajectory that is fueled by my need to make this world better and put purpose in each and every one of my projects. ",
+ blogP16: "If you’d like to share some of your thoughts with me on any of these topics or to ask further questions, please feel free to use one of the many methods of contacting me listed in the Contact section. ",
+ blogP17: "I look forward to connecting. ",
+ blogP18: "Cheers, ",
+ blogP17: "Liz Kane",
+ blogP18: "",
  blogP20: "",
 //  imgSrc: "../ResourcesProjects/UploadPhotosToWeb/blog/whyBlog.jpg",
  imgSrc: WhyBlog,
  imgDesc: "",
+ resource: "https://www.institute4learning.com/blog/wp-content/uploads/2018/04/multiple-intelligences-learning-styles-600x597.jpg",
 }]
 
 const BlogPostArtist = [{
@@ -315,10 +318,17 @@ const BlogList = (props) => {
     // />})
         const blogItems = blogPostArray.map(post => {return <BlogPost key={post.title} title={post.title} index={post.index} blogP1={post.blogP1} blogP2={post.blogP2} blogP3={post.blogP3} blogP4={post.blogP4} blogP5={post.blogP5} blogP6={post.blogP6} blogP7={post.blogP7} blogP8={post.blogP8} blogP9={post.blogP9} blogP10={post.blogP10} blogP11={post.blogP11} blogP12={post.blogP12} blogP13={post.blogP13} blogP14={post.blogP14} blogP15={post.blogP15} blogP16={post.blogP16} blogP17={post.blogP17} blogP18={post.blogP18} blogP19={post.blogP19} blogP20={post.blogP20} imgSrc={post.imgSrc} imgDesc={post.imgDesc}/>})
    
+    
+
+    
     return (
         <div id="blogContainer">
             <div id="blogListContainer">
                 <ul id="blogListUL">
+                    {props.otherBlog ? 
+                        <AltBlog/>
+                    :
+                    <>
                         {BlogPostWhyBlogArray}
                         {BlogPostArtistArray}
                         {BlogPostMusicianArray}
@@ -329,6 +339,8 @@ const BlogList = (props) => {
                         {BlogPostWomanInTechArray}
                         {BlogPostAthleteArray}
                     <p style={{color: "rgba(201,200,201,.3)", textAlign: "center", margin: "0 0 0 35%"}}>hidden in plain sight though few may ever perceive</p><br/><br/>
+                    </>
+                    }
                 </ul>
             </div>
         </div>

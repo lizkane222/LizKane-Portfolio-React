@@ -85,7 +85,7 @@ const EmailForm=() => {
                         <div className="col-md-12" id="formMessage">
                           <div className="form-group formGroup">
                             {/* <label className="formLabel" for="message">Message</label> */}
-                            <textarea id="message" className="form-control" cols="30" rows="8" placeholder="Write your message here." rows="7" required="required"  name="message" data-error="Please, include a message."></textarea>
+                            <textarea id="message" className="form-control" cols="30" rows="8" placeholder="Write your message here." required="required"  name="message" data-error="Please, include a message."></textarea>
                           </div>
                         </div>
                         <div className="col-md-12"> 
