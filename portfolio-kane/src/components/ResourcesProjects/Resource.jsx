@@ -58,9 +58,9 @@ class Resource extends Component {
             <>
                 <div className="ResourceListComponent">
                     {this.props.name == 'Curriculum Vitae' ? 
-                        <h2 onClick={this.setActive} className="docName" id="resumeAnima">Check It Out</h2>
+                        <h2 onClick={this.setActive} className="docName text3DHover" id="resumeAnima">Check It Out</h2>
                         :
-                        <h4 onClick={this.setActive} className="docName">{this.props.print}</h4>
+                        <h4 onClick={this.setActive} className="docName text3DHover">{this.props.print2}</h4>
                     }
                 </div>
 

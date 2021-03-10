@@ -9,6 +9,7 @@ const WrapperStyled = styled.div`
   align-items: center;
   z-index: 2000;
   background-color: none;
+  width: 100vw;
   h1 {
     font-size: 45px;
   }

@@ -17,7 +17,7 @@ const FloatDocBox =(props) => {
 
     const stopAnimation= () => {
         let resumeAnima = document.getElementsByClassName("promo")
-        resumeAnima.style={animationPlayState: "paused"} 
+        return resumeAnima.style={animationPlayState: "paused"} 
     }
 
     return(

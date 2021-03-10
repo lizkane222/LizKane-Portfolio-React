@@ -15,10 +15,10 @@ import NAUEmblem from "../UploadPhotosToWeb/docs/nauEmblem.png"
  
 const MastersDoc = () => {
     const resourceArray = [
-        {name: "MastersDegree", print: "Masters Degree", iframe: MastersDegree, document: "./UploadPhotosToWeb/docs/MastersDegree.pdf", src:"https://drive.google.com/file/d/1JwA747dDB8VXBDwAIENon5iVt3EQIErr/view?usp=sharing", description3: "2013-2015", description1:"MA of Education- Bilingual & Multicultural Education", description2:"Edorsement: ESL", emblem: NAUEmblem, logo: NAULogo, category: "Education"},
+        {name: "MastersDegree", print: "Masters Degree", print2: "Masters of Education", iframe: MastersDegree, document: "./UploadPhotosToWeb/docs/MastersDegree.pdf", src:"https://drive.google.com/file/d/1JwA747dDB8VXBDwAIENon5iVt3EQIErr/view?usp=sharing", description3: "2013-2015", description1:"MA of Education- Bilingual & Multicultural Education", description2:"Edorsement: ESL", emblem: NAUEmblem, logo: NAULogo, category: "Education"},
     ]
 
-    const resourceItem = resourceArray.map(resource => {return <Resource key={resource.name} name={resource.name}  print={resource.print} description1={resource.description1} description2={resource.description2} description3={resource.description3} iframe={resource.iframe} emblem={resource.emblem} logo={resource.logo} category={resource.category}/>
+    const resourceItem = resourceArray.map(resource => {return <Resource key={resource.name} name={resource.name}  print={resource.print} print2={resource.print2} description1={resource.description1} description2={resource.description2} description3={resource.description3} iframe={resource.iframe} emblem={resource.emblem} logo={resource.logo} category={resource.category}/>
     })
 
     

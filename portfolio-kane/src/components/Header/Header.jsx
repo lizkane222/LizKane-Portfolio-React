@@ -1,14 +1,13 @@
 import React, {useState} from 'react';
 import {Link} from 'react-scroll';
-// import OnScreenScrolling from './OnScreenScrolling';
 import OnScreenScrolling from './OnScreenScrolling';
 import WrapperNav from './WrapperNav';
 import styled from 'styled-components';
 import { useToggle} from "react-use";
 import Splash from "../DarkLightTheme/SplashScreen";
-// import "./toggle.css";
 import {CgSun} from "react-icons/cg";
 import {HiMoon} from "react-icons/hi"
+import { Squash as Hamburger } from 'hamburger-react'
 // import 'materialize-css';
 // import 'materialize-css/dist/css/materialize.min.css'
 // import {Badge, makeStyles, ListSubheader, List, ListItem, ListItemIcon, ListItemText, Collapse} from "@material-ui/core"
@@ -35,45 +34,57 @@ import ContactPage from "../../Pages/ContactPage";
 const NavbarStyled = styled.div`
   font-size: 24px;
   font-family: 'Bodoni Moda', serif;
+  font-weight: 800;
   position: fixed;
   width: 100%;
   z-index: 2990;
   .navbar {
     background: rgba(56,56,56,1);
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     margin: 0;
-    color: #fff;
+    color: #65cddd;
     z-index: 2990;
     border: none;
+    box-shadow: 0 0 .8em rgb(25,25,25);
     * {
       cursor: pointer;
     }
     .active {
-        border-bottom: 3px solid #327E8A;
+        border-bottom: 4px solid #327E8A;
     }
   }
-  .scrolling-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    z-index: 2990;
-  }
   .navLinks {
-    font-size: 1.3em;
-    color:#fff;
-    z-index: 2990;
-    padding: .3% 2.3%;
+    font-size: 2.3vw;
+    color: #327E8A;
     z-index: 2990;
     height: 100%;
+    margin: 0 auto;
+    line-height: 3.5vw;
+    text-shadow: 0 .01em .2em rgb(25,25,25);
   }
   .navLinks:hover {
     filter: brightness(1.5);
-    background: rgba(56,56,56,.5);
     z-index: 2990;
     text-decoration: none;
+    text-shadow: 0 0 .2em rgb(25,25,25);
+    transition: all 250ms ease-in;
 }
 `;
+
+// background: rgba(56,56,56,.5);
+// font-size: 1.3em;
+// .scrolling-buttons {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     z-index: 2990;
+//   }
+
+
 
 // text-shadow: -1px 1px 3px #242526;
 // color:#8B0124;
@@ -128,10 +139,12 @@ const Header = (props) => {
     //         props.setTheme("light");
     //     }
     // };
-
     // const icon = props.theme === "light" ? <HiMoon size={40} /> : <CgSun size={40} />;
+    const [isOpen, setOpen] = useState(false)
+    const [navbarOpen, setNavbarOpen] = useState(false)
 
         return (
+            <>
             <WrapperNav style={{"max-height": "7vh"}}>
                 <NavbarStyled className="header">
                             {/* <Splash theme={props.theme} setTheme={props.setTheme}/> */}
@@ -173,6 +186,10 @@ const Header = (props) => {
                         </nav>
                 </NavbarStyled>
             </WrapperNav>
+
+            {/* <Hamburger toggled={isOpen} toggle={setOpen} label="Show menu" /> */}
+
+            </>
     );
 }
 

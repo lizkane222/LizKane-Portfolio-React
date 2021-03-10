@@ -15,7 +15,7 @@ const Carousel = (props) => {
             // <div className="carousel-return">
             <>
                 <img src={image.img} alt={image.descImg} className="projectGalleryImage"/>
-                <p className="carousel-description">{image.descImg}</p>
+                <div className="carousel-description"><p>{image.descImg}</p></div>
             </>
             //  </div> 
         )

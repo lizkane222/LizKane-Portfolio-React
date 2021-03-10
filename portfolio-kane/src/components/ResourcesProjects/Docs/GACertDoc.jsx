@@ -15,10 +15,10 @@ import GAEmblem from "../UploadPhotosToWeb/docs/gaEmblem.png";
  
 const GACertDoc = () => {
     const resourceArray = [
-        {name: "GACertificate", print: "Software Engineering Certificate", iframe: GACertificate, document: "./UploadPhotosToWeb/docs/GA-Certificate.pdf", src:"file:///Users/lizkane/Desktop/GA/SEI/Projects/2ReactPortfolio/portfolio-app-2/src/components/ResourcesProjects/UploadPhotosToWeb/docs/GA-Certificate.pdf", description1: "Software Engineering Immersive", description3:"Aug-Nov 2020", description2:"Full-Stack", emblem: GAEmblem, logo: GALogo, category: "Education"},
+        {name: "GACertificate", print: "Software Engineering Certificate", print2: "Software Engineering", iframe: GACertificate, document: "./UploadPhotosToWeb/docs/GA-Certificate.pdf", src:"file:///Users/lizkane/Desktop/GA/SEI/Projects/2ReactPortfolio/portfolio-app-2/src/components/ResourcesProjects/UploadPhotosToWeb/docs/GA-Certificate.pdf", description1: "Software Engineering Immersive", description3:"Aug-Nov 2020", description2:"Full-Stack", emblem: GAEmblem, logo: GALogo, category: "Education"},
     ]
 
-    const resourceItem = resourceArray.map(resource => {return <Resource key={resource.name} name={resource.name} print={resource.print} description1={resource.description1} description2={resource.description2} description3={resource.description3} iframe={resource.iframe} emblem={resource.emblem} logo={resource.logo} category={resource.category}/>
+    const resourceItem = resourceArray.map(resource => {return <Resource key={resource.name} name={resource.name} print={resource.print} print2={resource.print2} description1={resource.description1} description2={resource.description2} description3={resource.description3} iframe={resource.iframe} emblem={resource.emblem} logo={resource.logo} category={resource.category}/>
     })
 
     
