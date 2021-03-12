@@ -984,6 +984,27 @@ svg #educationSVG {
   font-family: arial;
 }
 
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  #viewBoxContainer {
+    height: 54vh;
+     width: 45vw;
+  }
+  
+  svg #educationSVG {
+    display: block;
+    margin: 3vmin auto;
+  }
+  
+  .edFloatText {
+    font-size: 8.6vw;
+    -webkit-transition:font-size 600ms ease-out;
+    transition:font-size 600ms ease-out;
+    font-weight: 600;
+    font-family: arial;
+  }
+}
+
 #educationSVG:hover text{
   transition:font-size .4s ease-in;
   font-size: 98vw;
@@ -2209,10 +2230,17 @@ li.rightTop>p {
   margin: 0 5vw;
   border-radius: 25px;
 }
-
+#workDescription{
+  margin-top: 5vw;
+}
 #workDescription>* {
-  margin: 1vh 5vw 1vh 0;
+  margin: 0vh 5vw 0vh 0;
   font-family: var(--Lobster);
+  
+}
+
+#workDescription>p {
+  text-align: center;
 }
 
 #rfpBack {
@@ -2223,9 +2251,9 @@ li.rightTop>p {
   font-size: 4em;
   cursor: pointer;
   /* margin: -70vh 0 0 -20VW; */
-  margin: -60vh 0 0 35%;
+  margin: -60vh 0 3vw 30%;
   position: absolute;
-  text-shadow: 2px 2px 5px var(--grey-very-dark);
+  /* text-shadow: 2px 2px 5px var(--grey-very-dark); */
   font-family: var(--Lobster);
   color: var(--yellow);
   /* text-shadow: 1em 1em 0px var(--grey-dark)  */
@@ -2238,8 +2266,8 @@ li.rightTop>p {
 }
 #rfpInactive:hover  {
   /* border-bottom: 3px groove var(--yellow); */
-  transform: translate(25%, 0);
-  transition: all 200ms ease-in-out;
+  /* transform: translate(25%, 0);
+  transition: all 200ms ease-in-out; */
   /* border: 2px groove gainsboro; */
 }
 

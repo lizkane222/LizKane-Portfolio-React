@@ -60,13 +60,6 @@ const WorkPage=() => {
     }
 
 
-    const handleHover = (e) => {
-        {e.target.className === "inactiveIcon" ?
-        e.target.className = "activeIcon" 
-        :
-        e.target.className = "inactiveIcon"
-        }
-    }
 
     return(
         <section id="workPage">
@@ -76,19 +69,19 @@ const WorkPage=() => {
                         <img src={Desert} alt="" id="desertImg" className="thematicImg responsive-img"/>
                     </div>
                     {/* <h2 onClick={toggleActive} id="rfpInactive">Request<br/>&emsp;To Hire <br/>&emsp;&emsp;Liz Kane<br/>&emsp;&emsp;&emsp;For A <br/>&emsp;&emsp;&emsp;&emsp;Project</h2> */}
-                    <h2 onClick={toggleActive} id="rfpInactive">HIRE LIZ FOR A PROJECT</h2>
+                    <h2 onClick={toggleActive} className="text3DHover" id="rfpInactive">HIRE LIZ FOR A PROJECT</h2>
                     {/* <hr id="hireLine"/> */}
 
                     <div id="workDescription">
-                        <h2 className="workIcon inactive" onMouseOver={handleHover}><GiDropletSplash/> PURPOSE </h2>
-                        <h2 className="workIcon inactive" onMouseOver={handleHover}><BiDonateHeart/>  IMPACT</h2>
-                        <h2 className="workIcon inactive" onMouseOver={handleHover}><GoLightBulb/>  PERSPECTIVE</h2>
-                        <h2 className="workIcon inactive" onMouseOver={handleHover}><HiColorSwatch/>  CREATIVITY</h2>
-                        
+                        <h3 className="inactive controlsIcon" ><GiDropletSplash/> PURPOSE </h3>
+                        <h3 className="inactive controlsIcon" ><BiDonateHeart/>  IMPACT</h3>
+                        <h3 className="inactive controlsIcon" ><GoLightBulb/>  PERSPECTIVE</h3>
+                        <h3 className="inactive controlsIcon" ><HiColorSwatch/>  CREATIVITY</h3>
+                        <br/><br/>
                         {/* <p>PURPOSE</p>
                         <p>IMPACT</p>
                         <p>PERSPECTIVE</p> */}
-                        <p>When developing a project I keep these concepts at the forefront of my mind.<br/> From features <i><CgArrowLongRightE/></i> to design <i><CgArrowLongRightE/></i> to development <i><CgArrowLongRightE/></i> I retain these concepts to maintain its integrity.</p>
+                        <p>When developing a project I keep these concepts at the forefront of my mind.<br/> From features <i><CgArrowLongRightE/></i> to design <i><CgArrowLongRightE/></i> to development <i><CgArrowLongRightE/></i> I retain these concepts to maintain integrity.</p>
                     </div>
 
 
