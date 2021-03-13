@@ -115,13 +115,16 @@
 /* ----------- & REF todo.css ------------ */
 /* --------------------------------------- */
 #contactPage {
-  z-index: 17;
+  /* z-index: 17; */
   font-family: 'Bodoni Moda', serif;
-  margin: 2vh 0 0vh 0;
+  margin: 0vh 0 0vh 0;
   min-width: 100vw;
   min-height: 75vh;
-  max-height: 100vh;
+  max-height: 105vh;
   z-index: 10;
+  padding: 12vh 0 3vh 0;
+  /* background-image: repeating-linear-gradient(to bottom right, var(--grey-dark), var(--grey-very-dark)); */
+  background-image: repeating-linear-gradient(to left,  var(--grey-very-dark), var(--grey-dark));
 }
 
 #contactPageWrapper {
@@ -144,6 +147,22 @@
 
 #cardFormEmail {
   max-height: 79vh;
+}
+::-webkit-input-placeholder {
+color: var(--grey-very-dark);
+opacity: 1;
+}
+::-moz-placeholder {
+color: var(--grey-very-dark);
+opacity: 1;
+}
+:-ms-input-placeholder {
+color: var(--grey-very-dark);
+opacity: 1;
+}
+:-moz-placeholder { 
+color: var(--grey-very-dark);
+opacity: 1;
 }
 
 .formRow {
@@ -228,7 +247,10 @@ hr {
 }
 
 .formGroup > input, .formGroup > select, .formGroup > textarea {
-  background-color: var(--white-pretty);
+  /* background-color: var(--white-pretty); */
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  color: rgba(25,25,25,1);
+  
 }
 
 input:focus, textarea:focus, select:focus {
@@ -256,8 +278,15 @@ input:focus, textarea:focus, select:focus {
 }
 
 .formLabel {
-  color: var(--white-pretty);
+  /* color: var(--white-pretty); */
+  color: var(--white-semi-trans);
+  /* color: var(--blue); */
   font-size: 1.3em;
+  font-weight: 800;
+}
+
+#upload-file{
+  cursor: pointer;
 }
 
 #submitShow {
@@ -323,6 +352,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 #socialMedia > div:hover {
+  /* background-color: var(--grey-dark2); */
   background-color: var(--grey-dark2);
   -webkit-filter: background brightness(2);
   filter: background brightness(2);
@@ -370,7 +400,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 #footer {
-  background-color: var(--grey-dark-light);
+  /* background-color: var(--grey-dark-light); */
+  background-color: var(--grey-dark2);
   opacity: .8;
   width: 100vw;
   display: flex;
@@ -415,8 +446,10 @@ footer > a img:hover {
 #LizKaneFooter {
   margin: 0 2vw;
   /* color: var(--red); */
-  color: var(--yellow);
-  font-family: var(--AcierBatTextOutlineFF);
+  color: var(--red);
+
+  font-family: var(--AcierBatTextSolidFF);
+  /* font-family: var(--AcierBatTextOutlineFF); */
   font-weight: var(--AcierBatTextOutlineFW);
   font-style: var(--AcierBatTextOutlineFS);
   font-size: 2.5em;

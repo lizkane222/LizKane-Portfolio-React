@@ -7,22 +7,52 @@ import GACertDoc from "../components/ResourcesProjects/Docs/GACertDoc.jsx";
 // import GrandCanyon from "../components/ResourcesProjects/UploadPhotosToWeb/docs/grandCanyon.png";
 import TextCarousel from "../components/Carousel/TextCarousel";
 
+import {ImQuotesLeft, ImQuotesRight, ImQuill} from 'react-icons/im';
+
 const EducationPage=() => {
-    const itemsArray = ['“Curiosity is the fuel for discovery, inquiry, and learning.” Anonymous',
-     '“Curiosity is the engine of achievement.” Ken Robinson',
-     '“I have no special talents. I am only passionately curious.” Albert Einstein',
-     '“Curiosity is one of the most valuable characteristics one can possess. When coupled with fearlessness and determination, that’s freedom.” Anonymous',
-     '“Creativity grows out of two things: curiosity and imagination.” Benny Goodman',
-     '“Curiosity is life.” Mark Parker',
-     '“Curiosity is one of the great secrets of happiness.” Bryant H. McGill',
-     '“The future belongs to the curious.” Anonymous',
-     'The important thing is not to stop questioning. Curiosity has its own reason for existing.” Albert Einstein',
-     '“If you can let go of passion and follow your curiosity, your curiosity just might lead you to your passion.” Elizabeth Gilbert',
-     '“Curiosity is the hunger of the human mind.” Rose Wilder Lane',
-     '“Curiosity about life in all aspects, I think, is still the secret of great creative people.” Leo Burnett',
+    //  <p> <br/> </p>,
+    const itemsArray = [
+     <p className="">Curiosity is the fuel for discovery, inquiry, and learning. <br/><ImQuill className="textShadow"/> Anonymous</p>,
+     <p className="">Chaos is merely order waiting to be deciphered. <br/><ImQuill className="textShadow"/> José Saramago</p>,
+     
+     <p className="">Curiosity is the engine of achievement. <br/><ImQuill className="textShadow"/> Ken Robinson</p>,
+     <p className="">Life shrinks or expands in proportion to one's courage. <br/><ImQuill className="textShadow"/> Anais Nin</p>,
+     
+     <p className="">I have no special talents. I am only passionately curious.<br/><ImQuill className="textShadow"/> Albert Einstein</p>,
+     <p className="">The optimist sees the donut, the pessimist sees the hole. <br/><ImQuill className="textShadow"/> Oscar Wilde</p>,
+     
+     <p className="">Curiosity is one of the most valuable characteristics one can possess. When coupled with fearlessness and determination, that’s freedom. <br/><ImQuill className="textShadow"/> Anonymous</p>,
+     <p className="">Some people see the glass half full. Others see it half empty. I see a glass that's twice as big as it needs to be. <br/><ImQuill className="textShadow"/> George Carlin</p>,
+     
+     <p className="">Creativity grows out of two things: curiosity and imagination. <br/><ImQuill className="textShadow"/> Benny Goodman</p>,
+     <p className="">Worry is the interest you pay on a debt you may not owe. <br/><ImQuill className="textShadow"/> Keith Caserta</p>,
+     
+     <p className="">Curiosity is life. <br/><ImQuill className="textShadow"/> Mark Parker</p>,
+     <p className="">Every story I create, creates me. I write to create myself. <br/><ImQuill className="textShadow"/>Octavia E. Butler </p>,
+     
+     <p className="">Curiosity is one of the great secrets of happiness. <br/><ImQuill className="textShadow"/> Bryant H. McGill</p>,
+     <p className="">The best way out is always through. <br/><ImQuill className="textShadow"/> Robert Frost</p>,
+     
+     <p className="">The future belongs to the curious. <br/><ImQuill className="textShadow"/> Anonymous</p>,
+     <p className="">It's not that I'm so smart, it's just that I stay with problems longer. <br/><ImQuill className="textShadow"/> Albert Einstein </p>,
+     
+     <p className="">The important thing is not to stop questioning. Curiosity has its own reason for existing. <br/><ImQuill className="textShadow"/> Albert Einstein</p>,
+     <p className="">The only true wisdom is in knowing you know nothing. <br/><ImQuill className="textShadow"/> Socrates</p>,
+     
+     <p className="">If you can let go of passion and follow your curiosity, your curiosity just might lead you to your passion. <br/><ImQuill className="textShadow"/> Elizabeth Gilbert</p>,
+     <p className="">Let me tell you the secret that has led to my goal. My strength lies solely in my tenacity. <br/><ImQuill className="textShadow"/> Louis Pasteur</p>,
+     
+     <p className="">Curiosity is the hunger of the human mind. <br/><ImQuill className="textShadow"/> Rose Wilder Lane</p>,
+     <p className="">Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. <br/><ImQuill className="textShadow"/> Roy T. Bennett</p>,
+     
+     <p className="">Curiosity about life in all aspects, I think, is still the secret of great creative people. <br/><ImQuill className="textShadow"/> Leo Burnett</p>,
+     <p className="">Wealth consists not in having great possessions, but in having few wants. <br/><ImQuill className="textShadow"/> Epictetus</p>,
+
  ]
 
-
+    const fillGradient = {
+        "background-image": "repeating-linear-gradient(to bottom right, var(--grey-dark), var(--grey-very-dark))"
+    }
     return(
         // <section id="educationPage">
         //     <Wrapper>
@@ -63,6 +93,11 @@ const EducationPage=() => {
                             <defs>
                                 <mask id="mask" x="0" y="0" width="100%" height="100%">
                                 <rect x="0" y="35" width="100%" height="100%" fill="#fff"/>
+                                <linearGradient id="two_hues" >
+                                    <stop offset="0%" style={{"stop-color": "rgb(41,41,41)"}}/>
+                                    <stop offset="50%" style={{"stop-color": "rgb(36,36,36)"}}/>
+                                    <stop offset="100%" style={{"stop-color": "rgb(31,31,31)"}}/>
+                                </linearGradient>
                                 <text className="edFloatText" x="140" textAnchor="middle" y="490" dy="0">E</text>
                                 <text className="edFloatText" x="225"  textAnchor="middle" y="490" dy="0">D</text>
                                 <text className="edFloatText" x="300" textAnchor="middle" y="490" dy="0">U</text>
@@ -75,7 +110,9 @@ const EducationPage=() => {
                                 </mask>
                             </defs>
                             {/* <rect x="15" y="15" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#fff"/> */}
-                            <rect x="15" y="35" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#292929"/>
+                            <rect x="15" y="33" width="100%" height="100%" mask="url(#mask)" fill-opacity="1" style={{"fill": "url(#two_hues)", "stroke":"black"}}/>
+                            {/* <rect x="15" y="35" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill="#292929,#2d2d2d" id="eduViewBoxFill"/> */}
+                            {/* <rect x="15" y="35" width="99%" height="100%" mask="url(#mask)" fill-opacity="1" fill={fillGradient} id="eduViewBoxFill"/> */}
                         </svg>
                     </div>
                     <div id="edDocContainer">

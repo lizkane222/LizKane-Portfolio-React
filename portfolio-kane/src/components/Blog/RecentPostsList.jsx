@@ -395,8 +395,8 @@ const RecentPostsList = (props) => {
             <div className="plane ten image-wrapper">
                 {EnoughPostArray}
             </div>
-            <div className="plane eleven">11</div>
-            <div className="plane twelve">12</div>
+            <div className="plane eleven">Liz</div>
+            <div className="plane twelve">Kane</div>
         </>
     )
 }

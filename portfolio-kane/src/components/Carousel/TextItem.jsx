@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-// import {ImQuotesLeft, ImQuotesRight} from 'react-icons/im';
+import {ImQuotesLeft, ImQuotesRight} from 'react-icons/im';
 
 class TextItem extends Component {
     
@@ -15,8 +15,11 @@ class TextItem extends Component {
         const className = 'item level' + this.props.level
         return(
             <div className={className}>
-                {/* <h4 id="quotes">{<ImQuotesLeft/>} {<ImQuotesRight/>}</h4> */}
+                <h4 id="quotesLeft" ><ImQuotesLeft className=" float-left"/></h4>
+                
                 {this.props.id}
+
+                <h4 id="quotesRight" ><ImQuotesRight className=" float-right"/></h4>
             </div>
         )
     }

@@ -27,12 +27,13 @@ const EmailForm=() => {
     
   return(
         <div className="col-lg-5 mx-auto" id="cardFormEmail">
-          <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow emailCard">
+          {/* <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow emailCard"> */}
+          <div className="card mt-2 mx-auto p-4 grey-dark2 box-shadow emailCard">
               <div className="card-body">
                 
                 <div className="container">
                   <div className="text-center mt-5">
-                    <h2 className="cardTitle">Get in touch</h2>
+                    <h2 className="cardTitle textShadow">Get in touch</h2>
                     <hr/>
                   </div>
 
@@ -42,13 +43,13 @@ const EmailForm=() => {
                       <div className="formRow">
                         <div className="col-md-5" id="formName">
                           <div className="form-group formGroup">
-                              <label className="formLabel" for="name">Your Name</label>
+                              <label className="formLabel textShadow" for="name">Your Name</label>
                               <input id="name" type="text" className="form-control" placeholder="Name" name="name" data-error="Name is required."/>
                           </div>
                         </div>
                         <div className="col-md-5" id="formCompany">
                           <div className="form-group formGroup">
-                            <label className="formLabel" for="company_name">Company Name</label>
+                            <label className="formLabel textShadow" for="company_name">Company Name</label>
                             <input id="company_name" type="text" name="company_name" className="form-control" placeholder="Company Name" />
                           </div>
                         </div>
@@ -57,7 +58,7 @@ const EmailForm=() => {
                       <div className="formRow">
                         <div className="col-md-5" id="formEmail">
                           <div className="form-group formGroup">
-                            <label className="formLabel" for="email">Your Email Address</label>
+                            <label className="formLabel textShadow" for="email">Email Address</label>
                             <input type="email" className="form-control" placeholder="Email Address" name="email" data-error="Valid email is required."/>
                           </div>
                         </div>
@@ -65,7 +66,7 @@ const EmailForm=() => {
                         <div className="col-md-7" id="formSubject">
                           
                           <div className="form-group formGroup">
-                            <label className="formLabel" for="subject">Please specify the subject of your inquiry</label>
+                            <label className="formLabel textShadow" for="subject">Subject of inquiry</label>
                             <select id="subject" name="subject" className="form-control" required="required"  data-error="Please specify your inquiry.">
                             {/* <select id="subject" name="subject" className="form-control" required="required" id="subjectPlaceholder" data-error="Please specify your inquiry."> */}
                               <option value=""  selected disabled>--Select Your Inquiry--</option>
@@ -89,17 +90,17 @@ const EmailForm=() => {
                           </div>
                         </div>
                         <div className="col-md-12"> 
-                          <div className="form-group float-left">
+                          <div className="form-group float-left" id="upload-file">
                             {/* <input type="file" name="uploaded_file"> */}
                             <input type="file" name="uploaded_file" id="uploaded_file"></input>
                           </div><br/>
                           
                           <div className="form-group float-right">
-                            <input type="submit" className="btn btn-info btn-primary" value="Send Email"></input>
+                            <input type="submit" className="btn btn-info btn-primary" style={{"text-shadow":"0px 0px 5px rgb(25,25,25)"}} value="Send Email"></input>
                           </div>
                             {submitted===true ? 
                             <>  
-                            <p id="submitShow" className="yellowText">Thank you for your submission. <br/>I'll get back to you shortly.</p>
+                            <p id="submitShow" className="blueText textShadow">Thank you for your submission. <br/>I'll get back to you shortly.</p>
                             </>:[]
                           }
                         </div>

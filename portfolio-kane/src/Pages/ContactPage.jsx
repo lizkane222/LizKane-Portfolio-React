@@ -42,11 +42,12 @@ const ContactPage=() => {
                 {/* <TodoList className="todoListGrid"/> */}
                 {/* <div className="container" id="socialContainer">     */}
                     <div className="col-lg-5 mx-auto" id="socialContainer">
-                        <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow">
+                        {/* <div className="card mt-2 mx-auto p-4 grey-very-dark2 box-shadow"> */}
+                        <div className="card mt-2 mx-auto p-4 grey-dark2 box-shadow">
                             <div className="card-body ">
                                 <div className="container ">
                                     <div className="text-center mt-5" id="cardTitleDiv">
-                                        <h2 className="cardTitle">Contact & Follow Liz</h2>
+                                        <h2 className="cardTitle textShadow">Contact & Follow Liz</h2>
                                         <hr/>
                                     </div>
                     
@@ -89,8 +90,8 @@ const ContactPage=() => {
                                             </div>
                                     </div>
                                 </div>
-                                <div className="float-right">
-                                    <p className="blueText">{count} / 7</p>
+                                <div className="float-right" style={{"opacity":".4", "max-height":"2vw", "margin":"2vw 0 -2vw"}}>
+                                    <p className="blueText">You've viewed {count} / 7</p>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@ class TextCarousel extends Component {
 				index = i % this.state.items.length
 			}
 			level = this.state.active - i
-			items.push(<Item key={index} id={this.state.items[index]} level={level} />)
+			items.push(<Item key={index} id={this.state.items[index]} level={level}/>)
 		}
 		return items
 	}

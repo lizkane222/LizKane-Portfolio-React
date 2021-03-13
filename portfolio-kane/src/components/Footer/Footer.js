@@ -10,13 +10,13 @@ import GA from "../ResourcesProjects/UploadPhotosToWeb/docs/gaLogoCopy.png"
 
 const Footer = () => {
     return (
-            <footer id="footer">
-                    <p id="LizKaneFooter">© Liz Kane</p>
-                    <a href="https://generalassemb.ly/" ><img src={GA} className="footerImg" id="GAFooter" alt="General Assembly Logo"/></a>
-                    <a href="https://nau.edu/campuses/flagstaff-mountain-campus/" ><img src={NAU} className="footerImg" id="NAUFooter" alt="Northern Arizona University Logo"/></a>
-                    <a href="http://www.univ-artois.fr/" ><img src={Artois} className="footerImg" id="ArtoisFooter" alt="Artois University Logo"/></a>
-                        {/* <img src={APS} href="https://www.aps.edu/" className="footerImg" id="APSFooter"/> */}
-                    <a href="https://www.aps.edu/" ><img src={APS} className="footerImg" id="APSFooter" alt="Albuquerque Public Schools Logo"/></a>
+            <footer id="footer" className="box-shadow">
+                    <p id="LizKaneFooter" className="textShadow redText">© Liz Kane</p>
+                    <a target="_blank" rel="noreferrer" href="https://generalassemb.ly/" ><img src={GA} className="footerImg" id="GAFooter" alt="General Assembly Logo"/></a>
+                    <a target="_blank" rel="noreferrer" href="https://nau.edu/campuses/flagstaff-mountain-campus/" ><img src={NAU} className="footerImg" id="NAUFooter" alt="Northern Arizona University Logo"/></a>
+                    <a target="_blank" rel="noreferrer" href="http://www.univ-artois.fr/" ><img src={Artois} className="footerImg" id="ArtoisFooter" alt="Artois University Logo"/></a>
+                        {/* <img src={APS} target="_blank" rel="noreferrer" href="https://www.aps.edu/" className="footerImg" id="APSFooter"/> */}
+                    <a target="_blank" rel="noreferrer" href="https://www.aps.edu/" ><img src={APS} className="footerImg" id="APSFooter" alt="Albuquerque Public Schools Logo"/></a>
             </footer>
         
     )

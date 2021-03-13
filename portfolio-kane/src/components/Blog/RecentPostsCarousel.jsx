@@ -167,44 +167,33 @@ const RecentPostsCarousel = () => {
 
   const showIconText = (e) => {
     if(e.target.id === "ringIcon"){
-      // iconText = 
-
       setIconText(iconText => iconText="View Posts As Cube")
     }
     else if(e.target.id === "cubeIcon" ){
-      // iconText = 
       setIconText(iconText => iconText="View Posts As Ring")
     }
     else if(e.target.id === "invisibleIcon" ){
-      // iconText = 
       setIconText(iconText => iconText="Make Background Visible")
     }
     else if(e.target.id === "visibleIcon" ){
-      // iconText = 
       setIconText(iconText => iconText="Make Background Invisible")
     }
     else if(e.target.id === "tornado" ){
-      // iconText = 
       setIconText(iconText => iconText="Speed Up Spinning")
     }
     else if(e.target.id === "snail" ){
-      // iconText = 
       setIconText(iconText => iconText="Slow Down Spinning")
     }
     else if(e.target.id === "stop" ){
-      // iconText = 
       setIconText(iconText => iconText="Stop Spinning")
     }
     else if(e.target.id === "go" ){
-      // iconText = 
       setIconText(iconText => iconText="Start Spinning")
     }
     else if(e.target.id === "recPostsFullScreen" ){
-      // iconText = 
       setIconText(iconText => iconText="View Posts In Fullscreen")
     }
     else if(e.target.className === "controls" ){
-      // iconText = 
       setIconText(iconText => iconText="")
     }
     // if(e.target.id === ""){

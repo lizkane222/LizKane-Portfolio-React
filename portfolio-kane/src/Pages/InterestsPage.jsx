@@ -118,14 +118,14 @@ const InterestsPage=() => {
 
                     <div id="obsessionsImgContainer" >
                         <ul className="Interests-list"  data-offset="10">
-                            {/* <li id="obsessionsHeading" className="Interests-list-item" data-offset="30">
+                            <li id="obsessionsHeading" className="Interests-list-item" data-offset="30">
                                 Obsessions
                                     <span className="InterestMask"><span>Obsessions</span></span>
                                     <span className="InterestMask"><span>Obsessions</span></span>
-                            </li> */}
+                            </li>
                         </ul>
 
-                        <img src={Obsessions} alt="" id="obsessionsImg" className="thematicImg responsive-img "/>
+                        <img src={Obsessions} alt="coffee cup" id="obsessionsImg" className="thematicImg responsive-img "/>
                     </div>
                 </section>
             </Wrapper>
@@ -134,9 +134,9 @@ const InterestsPage=() => {
                 <div id="linkedInPosts">
                     <ul className="Interests-list"  data-offset="10">
                         <li className="Interests-list-item" id="linkedInPostLi" data-offset="20">
-                            Recent Posts
-                                <span className="InterestMask"><span>Recent Posts</span></span>
-                                <span className="InterestMask"><span>Recent Posts</span></span>
+                            Linked In Posts
+                                <span className="InterestMask"><span>Linked In Posts</span></span>
+                                <span className="InterestMask"><span>Linked In Posts</span></span>
                         </li>
                     </ul>
                 </div>

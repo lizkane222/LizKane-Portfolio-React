@@ -103,12 +103,12 @@ const FloatBox =(props) => {
                     <div className="projectGithub">   
                         {props.github2 ?
                                     <>
-                                        <a href={props.github} className="githubProject float-right"><p id="githubProject1">{props.github}</p></a>
-                                        <a href={props.github2} className="githubProject githubProject2 float-right"><p id="githubProject2">{props.github2}</p></a>
+                                        <a href={props.github} target="_blank" rel="noreferrer" className="githubProject float-right"><p id="githubProject1">{props.github}</p></a>
+                                        <a href={props.github2} target="_blank" rel="noreferrer" className="githubProject githubProject2 float-right"><p id="githubProject2">{props.github2}</p></a>
                                     </>
                                 :
                                 <>
-                                        <a href={props.github} className="githubProject"><p id="githubProject1">{props.github}</p></a>
+                                        <a href={props.github} target="_blank" rel="noreferrer" className="githubProject"><p id="githubProject1">{props.github}</p></a>
                                     </>
                         }
                     </div>

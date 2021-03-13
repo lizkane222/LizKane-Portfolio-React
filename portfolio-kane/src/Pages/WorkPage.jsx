@@ -59,6 +59,9 @@ const WorkPage=() => {
         }
     }
 
+    const cursor = {
+        "cursor": "default"
+    }
 
 
     return(
@@ -69,19 +72,19 @@ const WorkPage=() => {
                         <img src={Desert} alt="" id="desertImg" className="thematicImg responsive-img"/>
                     </div>
                     {/* <h2 onClick={toggleActive} id="rfpInactive">Request<br/>&emsp;To Hire <br/>&emsp;&emsp;Liz Kane<br/>&emsp;&emsp;&emsp;For A <br/>&emsp;&emsp;&emsp;&emsp;Project</h2> */}
-                    <h2 onClick={toggleActive} className="text3DHover" id="rfpInactive">HIRE LIZ FOR A PROJECT</h2>
+                    <h2 onClick={toggleActive} className="text3DHover" id="rfpInactive">Hire Liz For Your Next Project</h2>
                     {/* <hr id="hireLine"/> */}
 
                     <div id="workDescription">
-                        <h3 className="inactive controlsIcon" ><GiDropletSplash/> PURPOSE </h3>
-                        <h3 className="inactive controlsIcon" ><BiDonateHeart/>  IMPACT</h3>
-                        <h3 className="inactive controlsIcon" ><GoLightBulb/>  PERSPECTIVE</h3>
-                        <h3 className="inactive controlsIcon" ><HiColorSwatch/>  CREATIVITY</h3>
+                        <h3 className="inactive" ><GiDropletSplash className="spin"/> PURPOSE </h3>
+                        <h3 className="inactive" ><BiDonateHeart className="spin"/>  IMPACT</h3>
+                        <h3 className="inactive" ><GoLightBulb className="spin"/>  PERSPECTIVE</h3>
+                        <h3 className="inactive" ><HiColorSwatch className="spin"/>  CREATIVITY</h3>
                         <br/><br/>
                         {/* <p>PURPOSE</p>
                         <p>IMPACT</p>
                         <p>PERSPECTIVE</p> */}
-                        <p>When developing a project I keep these concepts at the forefront of my mind.<br/> From features <i><CgArrowLongRightE/></i> to design <i><CgArrowLongRightE/></i> to development <i><CgArrowLongRightE/></i> I retain these concepts to maintain integrity.</p>
+                        <p>When developing a project I keep these concepts at the forefront of my mind.<br/> From features <i><CgArrowLongRightE/></i> to design <i><CgArrowLongRightE/></i> to development </p>
                     </div>
 
 
@@ -93,7 +96,7 @@ const WorkPage=() => {
                                     <div className="rFPContainer animate"> 
                                         <a><i id="postBackArrow" className="float-left" onClick={toggleActive}><TiArrowBackOutline/> </i></a>                       
                                         <div id="rfpInstructions">
-                                            <h3 className="blueText">How to fill in this<br/>Request for Proposal</h3>
+                                            <h3 className="redText">How to fill in this<br/>Request for Proposal</h3>
                                             {/* <h5>Instructions To Fill Out The Form</h5> */}
                                             <div>
                                             <h5 className="browserBox" onClick={toggleBrowserBox}><span> In The Browser</span> :</h5>
@@ -128,14 +131,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed1 ?
                                                     <>
-                                                        <h3 className="yellowText">1. Background / Introduction</h3>
-                                                        <i onClick={toggleCompletedIcon1} className="icon1 yellowText"><BsCheckCircle/></i>
+                                                        <h3 className="blueText">1. Background / Introduction</h3>
+                                                        <i onClick={toggleCompletedIcon1} className="icon1 blueText"><BsCheckCircle/></i>
                                                     </>
                                                     :
                                                     <>
-                                                        <h3>1. Background / Introduction</h3>
-                                                        <i onClick={toggleCompletedIcon1} className="icon1"><BsCircle/></i>
-                                                        <p>In your introductory paragraph, you’ll want to include useful background information about your company — who founded it, what product or service your company offers, what sets you apart from competitors, and where you’re located.</p>
+                                                        <h3 className="redText">1. Background / Introduction</h3>
+                                                        <i onClick={toggleCompletedIcon1} className="icon1 redText"><BsCircle/></i>
+                                                        <p className="redText">In your introductory paragraph, you’ll want to include useful background information about your company — who founded it, what product or service your company offers, what sets you apart from competitors, and where you’re located.</p>
                                                     </>
                                                 }
                                             </div>
@@ -143,14 +146,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed2 ?
                                                     <>
-                                                    <h3 className="yellowText">2. Project Goals and Scope of Services</h3>
-                                                    <i onClick={toggleCompletedIcon2} className="icon2 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">2. Project Goals and Scope of Services</h3>
+                                                    <i onClick={toggleCompletedIcon2} className="icon2 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>2. Project Goals and Scope of Services</h3>
-                                                        <i onClick={toggleCompletedIcon2} className="icon2"><BsCircle/></i>
-                                                        <p>Next, you’ll want to outline the project you need completed, and the goals you expect to accomplish from the project. It’s important you get as specific as possible — even outlining individual tasks and criteria involved.</p>
+                                                        <h3 className="redText">2. Project Goals and Scope of Services</h3>
+                                                        <i onClick={toggleCompletedIcon2} className="icon2 redText"><BsCircle/></i>
+                                                        <p className="redText">Next, you’ll want to outline the project you need completed, and the goals you expect to accomplish from the project. It’s important you get as specific as possible — even outlining individual tasks and criteria involved.</p>
                                                     </>
                                                 }
                                             </div>
@@ -158,14 +161,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed3 ?
                                                     <>
-                                                    <h3 className="yellowText">3. Anticipated Selection Schedule</h3>
-                                                    <i onClick={toggleCompletedIcon3} className="icon3 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">3. Anticipated Selection Schedule</h3>
+                                                    <i onClick={toggleCompletedIcon3} className="icon3 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>3. Anticipated Selection Schedule</h3>
-                                                        <i onClick={toggleCompletedIcon3} className="icon3"><BsCircle/></i>
-                                                        <p>It’s crucial you include a detailed schedule so the developer <i>(Liz Kane)</i> knows if they can meet your deadlines. You’ll also need to give vendors a window for when they can ask questions regarding your project. This will limit the hassle, for you and for them.</p>
+                                                        <h3 className="redText">3. Anticipated Selection Schedule</h3>
+                                                        <i onClick={toggleCompletedIcon3} className="icon3 redText"><BsCircle/></i>
+                                                        <p className="redText">It’s crucial you include a detailed schedule so the developer <i>(Liz Kane)</i> knows if they can meet your deadlines. You’ll also need to give vendors a window for when they can ask questions regarding your project. This will limit the hassle, for you and for them.</p>
                                                     </>
                                                 }
                                             </div>
@@ -173,14 +176,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed4 ?
                                                     <>
-                                                    <h3 className="yellowText">4. Time and Place of Submission of Proposals</h3>
-                                                    <i onClick={toggleCompletedIcon4} className="icon4 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">4. Time and Place of Submission of Proposals</h3>
+                                                    <i onClick={toggleCompletedIcon4} className="icon4 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>4. Time and Place of Submission of Proposals</h3>
-                                                        <i onClick={toggleCompletedIcon4} className="icon4"><BsCircle/></i>
-                                                        <p>Similar to #3, this is important information you’ll want to clearly present, so the developer <i>(Liz Kane)</i> knows how and where to submit themselves for consideration.</p>
+                                                        <h3 className="redText">4. Time and Place of Submission of Proposals</h3>
+                                                        <i onClick={toggleCompletedIcon4} className="icon4 redText"><BsCircle/></i>
+                                                        <p className="redText">Similar to #3, this is important information you’ll want to clearly present, so the developer <i>(Liz Kane)</i> knows how and where to submit themselves for consideration.</p>
                                                     </>
                                                 }
                                             </div>
@@ -188,14 +191,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed5 ?
                                                     <>
-                                                    <h3 className="yellowText">5. Timeline</h3>
-                                                    <i onClick={toggleCompletedIcon5} className="icon5 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">5. Timeline</h3>
+                                                    <i onClick={toggleCompletedIcon5} className="icon5 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>5. Timeline</h3>
-                                                        <i onClick={toggleCompletedIcon5} className="icon5"><BsCircle/></i>
-                                                        <p>By including a time frame in your RFP, we are able to identify if this project is feasible within your time constraints. If you’re flexible on your time, you can write something like, “Our company hopes to finish the project within six months, but we’re open to negotiation.”</p>
+                                                        <h3 className="redText">5. Timeline</h3>
+                                                        <i onClick={toggleCompletedIcon5} className="icon5 redText"><BsCircle/></i>
+                                                        <p className="redText">By including a time frame in your RFP, we are able to identify if this project is feasible within your time constraints. If you’re flexible on your time, you can write something like, “Our company hopes to finish the project within six months, but we’re open to negotiation.”</p>
                                                     </>
                                                 }
                                             </div>
@@ -203,14 +206,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed6 ?
                                                     <>
-                                                    <h3 className="yellowText">6. Elements of Proposal</h3>
-                                                    <i onClick={toggleCompletedIcon6} className="icon6 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">6. Elements of Proposal</h3>
+                                                    <i onClick={toggleCompletedIcon6} className="icon6 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>6. Elements of Proposal</h3>
-                                                        <i onClick={toggleCompletedIcon6} className="icon6"><BsCircle/></i>
-                                                        <p>It’s critical you outline a checklist so the developer <i>(Liz Kane)</i> knows which elements you’re expecting to receive. It’s also a good test if the vendor <i>(Liz Kane)</i> is able to meet your demands.</p>
+                                                        <h3 className="redText">6. Elements of Proposal</h3>
+                                                        <i onClick={toggleCompletedIcon6} className="icon6 redText"><BsCircle/></i>
+                                                        <p className="redText">It’s critical you outline a checklist so the developer <i>(Liz Kane)</i> knows which elements you’re expecting to receive. It’s also a good test if the vendor <i>(Liz Kane)</i> is able to meet your demands.</p>
                                                     </>
                                                 }
                                             </div>
@@ -218,14 +221,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed7 ?
                                                     <>
-                                                    <h3 className="yellowText">7. Evaluation Criteria</h3>
-                                                    <i onClick={toggleCompletedIcon7} className="icon7 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">7. Evaluation Criteria</h3>
+                                                    <i onClick={toggleCompletedIcon7} className="icon7 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>7. Evaluation Criteria</h3>
-                                                        <i onClick={toggleCompletedIcon7} className="icon7"><BsCircle/></i>
-                                                        <p>Outlining your expectations will help identify if we're able to meet them. For this section, you’ll want to do some brainstorming with your team to come up with a mandatory list of items you feel the developer <i>(Liz Kane)</i> should be able to meet. Your list could include samples of past work, a proven success record with companies in similar industries, the expertise and technical skills to meet your demands, and a cost of services within your price range.</p>
+                                                        <h3 className="redText">7. Evaluation Criteria</h3>
+                                                        <i onClick={toggleCompletedIcon7} className="icon7 redText"><BsCircle/></i>
+                                                        <p className="redText">Outlining your expectations will help identify if we're able to meet them. For this section, you’ll want to do some brainstorming with your team to come up with a mandatory list of items you feel the developer <i>(Liz Kane)</i> should be able to meet. Your list could include samples of past work, a proven success record with companies in similar industries, the expertise and technical skills to meet your demands, and a cost of services within your price range.</p>
                                                     </>
                                                 }
                                             </div>
@@ -233,14 +236,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed8 ?
                                                     <>
-                                                    <h3 className="yellowText">8. Possible Roadblocks</h3>
-                                                    <i onClick={toggleCompletedIcon8} className="icon8 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">8. Possible Roadblocks</h3>
+                                                    <i onClick={toggleCompletedIcon8} className="icon8 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>8. Possible Roadblocks</h3>
-                                                        <i onClick={toggleCompletedIcon8} className="icon8"><BsCircle/></i>
-                                                        <p>Here, you’ll want to outline any roadblocks, such as limited resources or a custom website, that might prevent certain the developer <i>(Liz Kane)</i> from successfully completing the project. This allows to determine if <i>(Liz Kane)</i> has the skills and expertise to tackle those challenges.</p>
+                                                        <h3 className="redText">8. Possible Roadblocks</h3>
+                                                        <i onClick={toggleCompletedIcon8} className="icon8 redText"><BsCircle/></i>
+                                                        <p className="redText">Here, you’ll want to outline any roadblocks, such as limited resources or a custom website, that might prevent certain the developer <i>(Liz Kane)</i> from successfully completing the project. This allows to determine if <i>(Liz Kane)</i> has the skills and expertise to tackle those challenges.</p>
                                                     </>
                                                 }
                                             </div>
@@ -248,14 +251,14 @@ const WorkPage=() => {
                                             <div >
                                                     {completed9 ?
                                                     <>
-                                                    <h3 className="yellowText">9. Budget</h3>
-                                                    <i onClick={toggleCompletedIcon9} className="icon9 yellowText"><BsCheckCircle/></i>
+                                                    <h3 className="blueText">9. Budget</h3>
+                                                    <i onClick={toggleCompletedIcon9} className="icon9 blueText"><BsCheckCircle/></i>
                                                     </>
                                                      :
                                                      <>
-                                                        <h3>9. Budget</h3>
-                                                        <i onClick={toggleCompletedIcon9} className="icon9"><BsCircle/></i>
-                                                        <p>Any vendor needs to know how much you’re able to pay them for their services before they’ll move forward with their bid.</p>
+                                                        <h3 className="redText">9. Budget</h3>
+                                                        <i onClick={toggleCompletedIcon9} className="icon9 redText"><BsCircle/></i>
+                                                        <p className="redText">Any vendor needs to know how much you’re able to pay them for their services before they’ll move forward with their bid.</p>
                                                     </>
                                                 }
                                             </div>                                            

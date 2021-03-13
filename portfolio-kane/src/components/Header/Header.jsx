@@ -39,7 +39,7 @@ const NavbarStyled = styled.div`
   width: 100%;
   z-index: 2990;
   .navbar {
-    background: rgba(56,56,56,1);
+    background: rgb(45,45,45);
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -153,27 +153,28 @@ const Header = (props) => {
                                 LK
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="resumePage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" className="navLinks" to="resumePage" spy={true} smooth={true} duration={1100}>
                                 Resume
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" className="navLinks" to="educationPage" spy={true} smooth={true} duration={1200}>
                                 Education
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" className="navLinks" to="projectsPage" spy={true} smooth={true} duration={1300}>
                                 Projects
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" className="navLinks" to="interestsPage" spy={true} smooth={true} duration={1400}>
                                 Interests
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1000}>
+                            <Link activeClass="active" className="navLinks" to="workPage" spy={true} smooth={true} duration={1500}>
                                 Work
                             </Link>
 
-                            <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}>
+                            {/* <Link activeClass="active" className="navLinks" to="contactPage" spy={true} smooth={true} duration={1000}> */}
+                            <Link activeClass="active" className="navLinks" to="footer" spy={true} smooth={true} duration={3000}>
                                 Contact
                             </Link>
 
