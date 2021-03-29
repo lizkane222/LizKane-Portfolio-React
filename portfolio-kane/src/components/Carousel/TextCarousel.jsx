@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 // import "./textCarousel.css"
-import "../../styles/CarouselStyle/textCarousel.css"
+// import "../../styles/CarouselStyle/textCarousel.css"
 import Item from "./TextItem"
 import { TransitionGroup } from 'react-transition-group';
 // import { CSSTransition, TransitionGroup } from 'react-transition-group';
